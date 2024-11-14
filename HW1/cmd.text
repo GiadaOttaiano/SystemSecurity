@@ -1,0 +1,12 @@
+1) Genera una chiave privata, necessaria per firmare il certificato.
+openssl genpkey -algorithm RSA -out private_key.key
+
+2) Verifica che la chiave sia generata correttamente.
+openssl rsa -in private_key.key -check
+
+3) Genera una CSR (Certificate Signing Request): la CSR è una richiesta di firma che contiene informazioni sul proprietario del certificato.
+   Questa è necessaria quando si richiede il certificato a una CA (Certificate Authority).
+openssl req -new -key private_key.key -out request.csr
+
+4) Genera il certificato auto-firmato, ossia firmato direttamente con la chiave privata.
+openssl x509 -req -days 365 -in request.csr -signkey private_key.key -out certificate.crt

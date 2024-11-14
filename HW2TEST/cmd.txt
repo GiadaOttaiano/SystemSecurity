@@ -1,0 +1,12 @@
+1) Importare il Certificato in un Keystore Java usando keytool
+keytool -importcert -file certificate.crt -alias mioCertificato -keystore keystore.jks
+
+Questo creerà un file keystore (keystore.jks) che contiene il certificato generato.
+
+2) Verifica del Keystore
+keytool -list -v -keystore keystore.jks
+
+Verifica che il certificato sia stato importato correttamente.
+
+PROVARE A CREARE UN CERTIFICATO CON JAVA CRYPTOGRAPHY ARCHITECTURE E RIFARE LE STESSE COSE
+
