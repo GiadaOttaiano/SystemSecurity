@@ -3,24 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benvenuto su Apache!</title>
-    <!-- Collega il file CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>Informazioni del Certificato SSL</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Benvenuto su Apache!</h1>
-    </header>
-    <section>
-        <p>Questa è una semplice pagina web per testare Apache con HTTPS.</p>
-        <button onclick="mostraMessaggio()">Clicca qui!</button>
-    </section>
+    <div class="container">
+        <h1>Informazioni del Certificato SSL</h1>
+        <p>Clicca sul pulsante per visualizzare i dettagli del certificato.</p>
+        <button onclick="mostraCertificato()">Mostra Certificato</button>
+        <pre id="certInfo">Le informazioni verranno visualizzate qui...</pre>
+    </div>
 
-    <!-- Aggiungi qui il codice JavaScript -->
-    <script>
-        function mostraMessaggio() {
-            alert("Ciao! Questo è un messaggio di benvenuto.");
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,54 @@
+/* Centra il contenuto sia orizzontalmente che verticalmente */
+html, body {
+    height: 100%; /* Assicura che il corpo della pagina prenda tutta l'altezza */
+    margin: 0;    /* Rimuove il margine predefinito */
+    display: flex; /* Usa Flexbox */
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Contenitore principale */
+.container {
+    text-align: center; /* Allinea il testo al centro */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stile del titolo */
+h1 {
+    color: #0056b3;
+}
+
+/* Stile del paragrafo e del bottone */
+p, button {
+    font-size: 18px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+/* Preformattato per i dettagli del certificato */
+pre {
+    background: #eee;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+    max-width: 100%;
+    word-wrap: break-word;
+}
