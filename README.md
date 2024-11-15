@@ -1,6 +1,6 @@
 1)	OpenSSL             (FATTO)
 2)	Java Cryptography Architecture      (FATTO)
-3)	Configurazione Apache/Tomcat con https  (FATTO?)
+3)	Configurazione Apache/Tomcat con https  (FATTO)
 4)	Protezioni di credenziali private con Vault
 5)	Semplice Webapp protetta con XACML + LDAP 
 6)	Semplice Webapp protetta con KeyCloack e OpenID
