@@ -6,13 +6,11 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
     <style>
-        /* Personalizza il tema in base alla preferenza dell'utente */
         body {
             background-color: {% if theme == 'dark' %} #333 {% else %} #fff {% endif %};
             color: {% if theme == 'dark' %} #fff {% else %} #000 {% endif %};
         }
 
-        /* Posiziona il menu del tema in alto a destra */
         .theme-selector {
             position: absolute;
             top: 20px;
@@ -33,7 +31,6 @@
             font-size: 14px;
         }
 
-        /* Messaggi flash */
         .flash-messages {
             margin-bottom: 20px;
         }
@@ -53,23 +50,65 @@
             border-radius: 5px;
             margin-bottom: 10px;
         }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Centra meglio il contenuto */
+        }
+
+        .card h3 {
+            margin-bottom: 10px; /* Aggiunge spazio tra il titolo e il resto del contenuto */
+        }
+
+        .card-btn {
+            display: block;
+            margin-top: 20px; /* Maggiore distanza tra testo e bottone */
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .card-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .logout-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
     </style>
 </head>
 <body class="{{ 'dark' if theme == 'dark' else 'light' }}">
     <div class="dashboard-container">
-        <!-- Selezione Tema in alto a destra -->
-        <div class="theme-selector">
-            <form method="POST">
-                <label for="theme">Choose Theme:</label>
-                <select name="theme" id="theme">
-                    <option value="light" {% if theme == 'light' %}selected{% endif %}>Light</option>
-                    <option value="dark" {% if theme == 'dark' %}selected{% endif %}>Dark</option>
-                </select>
-                <button type="submit">Save</button>
-            </form>
-        </div>
-
-        <!-- Messaggi Flash -->
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
                 <div class="flash-messages">
@@ -82,37 +121,31 @@
             {% endif %}
         {% endwith %}
 
-        <!-- Header della Dashboard -->
         <div class="header">
             <h2>Welcome, {{ username }}!</h2>
             <p>Your personalized dashboard.</p>
         </div>
 
-        <!-- Container con le Card -->
         <div class="card-container">
-            <!-- Card 1: Account Settings -->
             <div class="card">
                 <h3>Account Settings</h3>
                 <p>Manage your personal information and preferences.</p>
-                <a href="#" class="card-btn">Go to Account</a>
+                <a href="/account-settings" class="card-btn">Go to Account</a>
             </div>
 
-            <!-- Card 2: Notifications -->
             <div class="card">
                 <h3>Notifications</h3>
                 <p>View and manage your notifications.</p>
-                <a href="#" class="card-btn">Go to Notifications</a>
+                <a href="/notifications" class="card-btn">Go to Notifications</a>
             </div>
 
-            <!-- Card 3: Security Settings -->
             <div class="card">
                 <h3>Security</h3>
-                <p>Update your password.</p>
-                <a href="/change-password" class="card-btn">Change Password</a>
+                <p>Manage password.</p>
+                <a href="/change-password" class="card-btn">Change Password</a> 
             </div>
         </div>
 
-        <!-- Logout Button -->
         <a href="/logout" class="logout-btn">Logout</a>
     </div>
 </body>

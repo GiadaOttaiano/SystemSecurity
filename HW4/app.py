@@ -44,8 +44,9 @@ def login():
 
         return redirect("/dashboard")
 
-    except requests.exceptions.RequestException as e:
-        return f"Login failed: {e}", 401
+    except requests.exceptions.RequestException:
+        flash("Invalid credentials. Please try again.", "error")  # Messaggio di errore
+        return redirect("/")  # Torna alla pagina di login
 
 @app.route("/dashboard", methods=["GET", "POST"])
 def dashboard():
@@ -79,6 +80,39 @@ def dashboard():
             return f"Failed to update theme: {e}", 500
 
     return render_template("dashboard.html", username=username, theme=theme, role=role)
+
+@app.route("/account-settings", methods=["GET", "POST"])
+def account_settings():
+    if "vault_token" not in session:
+        return redirect("/")
+
+    username = session["username"]
+    role = session.get("role", "standard")
+    theme = session.get("theme", "light")
+
+    if request.method == "POST":
+        # Aggiorna il tema selezionato
+        new_theme = request.form.get("theme")
+        try:
+            url = f"{VAULT_ADDR}/v1/kv/data/secret/webapp/{username}"
+            headers = {"X-Vault-Token": session["vault_token"]}
+            response = requests.get(url, headers=headers, verify=VAULT_VERIFY)
+            response.raise_for_status()
+
+            secret_data = response.json().get("data", {}).get("data", {})
+            secret_data["theme"] = new_theme
+            payload = {"data": secret_data}
+
+            # Salva il tema aggiornato su Vault
+            response = requests.post(url, headers=headers, json=payload, verify=VAULT_VERIFY)
+            response.raise_for_status()
+
+            session["theme"] = new_theme
+            flash("Theme updated successfully!", "success")
+        except requests.exceptions.RequestException as e:
+            flash(f"Failed to update theme: {e}", "error")
+
+    return render_template("account_settings.html", username=username, role=role, theme=theme)
 
 @app.route("/change-password", methods=["GET", "POST"])
 def change_password():

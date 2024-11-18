@@ -63,3 +63,25 @@ input[type="submit"]:hover {
     font-size: 14px;
     margin-top: 10px;
 }
+
+.flash-messages {
+    margin-bottom: 20px;
+}
+
+.flash {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.flash.error {
+    background-color: #ffdddd;
+    color: #d8000c;
+    border: 1px solid #d8000c;
+}
+
+.flash.success {
+    background-color: #ddffdd;
+    color: #4f8a10;
+    border: 1px solid #4f8a10;
+}

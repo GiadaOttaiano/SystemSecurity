@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: {{ '#333' if theme == 'dark' else '#fff' }};
+            color: {{ '#fff' if theme == 'dark' else '#000' }};
+        }
+
+        .account-settings-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .flash {
+            margin-top: 30px; /* Spostato verso il basso */
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .flash.success {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .flash.error {
+            background-color: #f44336;
+            color: white;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        select {
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 15px;
+            cursor: pointer;
+            background-color: #007bff; /* Colore blu del bottone */
+            color: white;
+            border-radius: 25px; /* Bordo arrotondato */
+            border: none;
+            transition: background-color 0.3s, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Colore blu scuro al passaggio del mouse */
+            transform: translateY(-2px); /* Leggera animazione quando il mouse passa sopra */
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #007bff; /* Colore blu del bottone */
+            color: white;
+            border-radius: 30px;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3; /* Colore blu scuro al passaggio del mouse */
+        }
+
+        /* Imposta sempre il colore nero per il testo */
+        h2, p, label {
+            color: #000 !important; /* Colore sempre nero per il titolo, i paragrafi e le etichette */
+        }
+
+        /* Mantieni il colore fisso per il testo del logout */
+        .logout-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="account-settings-container">
+        <h2>Account Settings</h2>
+        <p>Name: {{ username }}</p>
+        <p>Account Type: {{ role }}</p>
+
+        <form method="POST">
+            <label for="theme">Choose Theme:</label>
+            <select name="theme" id="theme">
+                <option value="light" {% if theme == 'light' %}selected{% endif %}>Light</option>
+                <option value="dark" {% if theme == 'dark' %}selected{% endif %}>Dark</option>
+            </select>
+            <button type="submit">Save</button>
+        </form>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <a href="/dashboard" class="back-btn">Back to Dashboard</a>
+    </div>
+</body>
+</html>
