@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <style>
+        /* Personalizza il tema in base alla preferenza dell'utente */
+        body {
+            background-color: {% if theme == 'dark' %} #333 {% else %} #fff {% endif %};
+            color: {% if theme == 'dark' %} #fff {% else %} #000 {% endif %};
+        }
+
+        /* Posiziona il menu del tema in alto a destra */
+        .theme-selector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .theme-selector label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .theme-selector select {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Messaggi flash */
+        .flash-messages {
+            margin-bottom: 20px;
+        }
+
+        .flash.success {
+            color: white;
+            background-color: green;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .flash.error {
+            color: white;
+            background-color: red;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body class="{{ 'dark' if theme == 'dark' else 'light' }}">
+    <div class="dashboard-container">
+        <!-- Selezione Tema in alto a destra -->
+        <div class="theme-selector">
+            <form method="POST">
+                <label for="theme">Choose Theme:</label>
+                <select name="theme" id="theme">
+                    <option value="light" {% if theme == 'light' %}selected{% endif %}>Light</option>
+                    <option value="dark" {% if theme == 'dark' %}selected{% endif %}>Dark</option>
+                </select>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+
+        <!-- Messaggi Flash -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Header della Dashboard -->
+        <div class="header">
+            <h2>Welcome, {{ username }}!</h2>
+            <p>Your personalized dashboard.</p>
+        </div>
+
+        <!-- Container con le Card -->
+        <div class="card-container">
+            <!-- Card 1: Account Settings -->
+            <div class="card">
+                <h3>Account Settings</h3>
+                <p>Manage your personal information and preferences.</p>
+                <a href="#" class="card-btn">Go to Account</a>
+            </div>
+
+            <!-- Card 2: Notifications -->
+            <div class="card">
+                <h3>Notifications</h3>
+                <p>View and manage your notifications.</p>
+                <a href="#" class="card-btn">Go to Notifications</a>
+            </div>
+
+            <!-- Card 3: Security Settings -->
+            <div class="card">
+                <h3>Security</h3>
+                <p>Update your password.</p>
+                <a href="/change-password" class="card-btn">Change Password</a>
+            </div>
+        </div>
+
+        <!-- Logout Button -->
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+</body>
+</html>
