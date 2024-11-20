@@ -1,0 +1,66 @@
+# Root entry
+dn: dc=example,dc=com
+objectClass: top
+objectClass: domain
+dc: example
+
+# Organizational Unit for Users
+dn: ou=users,dc=example,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: users
+
+# Organizational Unit for Groups
+dn: ou=groups,dc=example,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: groups
+
+# User: admin
+dn: uid=admin1,ou=users,dc=example,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Administrator
+sn: Admin
+uid: admin1
+userPassword: {SSHA}aUxyO7gGL0imtVABglKWTIDTYUzKMzrO
+description: LDAP administrator
+
+# User: user1
+dn: uid=user1,ou=users,dc=example,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Regular User 1
+sn: User1
+uid: user1
+userPassword: {SSHA}ycmdySBNgZrg32htX3ZZKC9INFqJEg1K
+
+# User: user2
+dn: uid=user2,ou=users,dc=example,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Regular User 2
+sn: User2
+uid: user2
+userPassword: {SSHA}crdBYgefbO+rTzaojwRL2TtYsGqNDPO/
+
+# Group: standard users
+dn: cn=standard-users,ou=groups,dc=example,dc=com
+objectclass: top
+objectclass: groupOfNames
+cn: standard-users
+member: uid=user1,ou=users,dc=example,dc=com
+member: uid=user2,ou=users,dc=example,dc=com
+
+# Group: administrators
+dn: cn=administrators,ou=groups,dc=example,dc=com
+objectclass: top
+objectclass: groupOfNames
+cn: administrators
+member: uid=admin1,ou=users,dc=example,dc=com

@@ -1,0 +1,20 @@
+Per ottenere la password hashata
+C:\OpenLDAP>slappasswd.exe
+New password: admin
+Re-enter new password: admin
+{SSHA}aUxyO7gGL0imtVABglKWTIDTYUzKMzrO
+
+
+Per importare le modifiche al base.ldif
+C:\OpenLDAP>slapadd.exe -f C:\OpenLDAP\slapd.conf -l base.ldif
+
+C:\OpenLDAP>slapd.exe -f C:\OpenLDAP\slapd.conf -h "ldap://localhost:389 ldaps://localhost:636" -d 256
+673dfbd5 OpenLDAP 2.4.49 Standalone LDAP Server (slapd)mdb_monitor_db_open: monitoring disabled; configure monitor database to enable
+673dfbd5 slapd starting
+673dfbdd conn=1000 fd=6 ACCEPT from IP=[::1]:57564 (IP=[::1]:389)
+673dfbdd conn=1000 op=0 BIND dn="cn=admin,dc=example,dc=com" method=128
+673dfbdd conn=1000 op=0 BIND dn="cn=admin,dc=example,dc=com" mech=SIMPLE ssf=0
+673dfbdd conn=1000 op=0 RESULT tag=97 err=0 text=
+673dfbdd conn=1000 op=1 SRCH base="ou=users,dc=example,dc=com" scope=2 deref=0 filter="(uid=admin1)"
+673dfbdd conn=1000 op=1 SEARCH RESULT tag=101 err=32 nentries=0 text=
+673dfbdd conn=1000 fd=6 closed (connection lost)
