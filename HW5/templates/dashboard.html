@@ -105,9 +105,34 @@
         .logout-btn:hover {
             background-color: #d32f2f;
         }
+
+        .note-container {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .note-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .note-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .note-card p {
+            margin: 0;
+        }
     </style>
 </head>
 <body class="{{ 'dark' if theme == 'dark' else 'light' }}">
+
     <div class="dashboard-container">
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
@@ -140,12 +165,12 @@
             </div>
 
             <div class="card">
-                <h3>Security</h3>
-                <p>Manage password.</p>
-                <a href="/change-password" class="card-btn">Change Password</a> 
+                <h3>Gestisci le Tue Note</h3>
+                <p>Visualizza e aggiungi note personali.</p>
+                <a href="/add-note" class="card-btn">Aggiungi una Nuova Nota</a>
+                <a href="/notes" class="card-btn">Visualizza le Tue Note</a>
             </div>
         </div>
-
         <a href="/logout" class="logout-btn">Logout</a>
     </div>
 </body>

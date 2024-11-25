@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggiungi Nota</title>
+    <style>
+        /* Impostazioni generali per la pagina di aggiunta nota */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: {% if theme == 'dark' %} #333 {% else %} #fff {% endif %};
+            color: {% if theme == 'dark' %} #fff {% else %} #000 {% endif %};
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Allinea tutto al centro */
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        /* Contenitore della form */
+        .note-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        .note-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .note-form textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .note-form button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+        }
+
+        .note-form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Bottoni in stile dashboard */
+        .back-btn, .dashboard-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #007bff; /* Colore blu del bottone */
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover, .dashboard-btn:hover {
+            background-color: #0056b3; /* Colore blu scuro al passaggio del mouse */
+            text-decoration: none; /* Rimuove la sottolineatura */
+        }
+
+        /* Pulsante logout */
+        .logout-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Aggiungi una Nota</h1>
+
+    <!-- Contenitore della form -->
+    <div class="note-container">
+        <form method="POST" class="note-form">
+            <label for="content">Contenuto della Nota:</label>
+            <textarea name="content" id="content" rows="4" cols="50"></textarea><br><br>
+            <button type="submit">Aggiungi Nota</button>
+        </form>
+
+        <!-- Bottoni per tornare alla dashboard o alle note -->
+        <a href="/notes" class="back-btn">Torna alle Note</a>
+        <a href="/dashboard" class="dashboard-btn">Back to Dashboard</a>
+    </div>
+
+</body>
+</html>
