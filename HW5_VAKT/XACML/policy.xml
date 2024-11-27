@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Policy PolicyId="RestrictNotesPolicy" RuleCombiningAlgorithm="permit-overrides">
+  <!-- Target per le operazioni sulle note -->
+  <Target>
+    <AnyOf>
+      <AllOf>
+        <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:action-equal">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">modify</AttributeValue>
+        </Match>
+        <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:resource-equal">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">note</AttributeValue>
+        </Match>
+      </AllOf>
+    </AnyOf>
+  </Target>
+
+  <!-- Permetti l'operazione durante l'orario di lavoro -->
+  <Rule RuleId="AllowOperationDuringWorkingHours" Effect="Permit">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-in-range">
+        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">09:00:00</AttributeValue>
+        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">18:00:00</AttributeValue>
+      </Apply>
+    </Condition>
+  </Rule>
+
+  <!-- Negare l'operazione fuori orario -->
+  <Rule RuleId="DenyOperationOutsideWorkingHours" Effect="Deny">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-not-in-range">
+        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">09:00:00</AttributeValue>
+        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">18:00:00</AttributeValue>
+      </Apply>
+    </Condition>
+  </Rule>
+</Policy>

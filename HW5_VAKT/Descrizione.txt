@@ -1,0 +1,49 @@
+Per la configurazione di LDAP con Vault è stato necessario usare OpenLDAP for Windows. Esso permette di gestire gli utenti
+e avviare un server che comunicherà con Vault. In particolare, è stato necessario configurare LDAP tramite il file "slapd.conf",
+per poi configurare il file "base.ldif". Per apportare le modifiche ad LDAP, si è eseguito il seguente comando:
+
+slapadd.exe -f C:\OpenLDAP\slapd.conf -l base.ldif
+
+All'interno del file "base.ldif", tutte le password sono protette mediante hashing, ottenendole con il seguente comando:
+
+slappasswd.exe
+
+È possibile avviare LDAP con il seguente comando, il quale abilita anche il debug (-d 256):
+
+slapd.exe -f C:\OpenLDAP\slapd.conf -h "ldap://localhost:389 ldaps://localhost:636" -d 256
+
+Infine, è stato necessario configurare Vault per funzionare con LDAP. Questo è stato possibile mediante l'aggiunta di un nuovo
+metodo di autenticazione, il quale viene configurato nel seguente modo:
+
+vault write auth/ldap/config url="ldap://localhost:389" binddn="uid=admin1,ou=users,dc=example,dc=com" 
+    bindpass="admin" userdn="ou=users,dc=example,dc=com" userattr="uid" userfilter="({{.UserAttr}}={{.Username}})" 
+    groupdn="ou=groups,dc=example,dc=com" groupfilter="(member={{.UserDN}})" groupattr="cn" insecure_tls=true
+
+Nello specifico:
+- url="ldap://localhost:389": definisce l'URL del server LDAP a cui Vault si connetterà per l'autenticazione.
+- binddn="uid=admin1,ou=users,dc=example,dc=com": è il "Distinguished Name" (DN) dell'utente che Vault usa per connettersi al
+  server LDAP in modo da poter eseguire le operazioni di ricerca. Vault deve usare un account con sufficienti privilegi per cercare gli
+  utenti e i gruppi nel database LDAP. In genere, questo è un utente amministratore LDAP.
+- bindpass="admin": è la password associata al binddn (l'utente che si autentica su LDAP).
+- userdn="ou=users,dc=example,dc=com": specifica il DN di base dove Vault cercherà gli utenti nel server LDAP. In questo caso, gli utenti 
+  sono organizzati nell'OU users dentro il dominio example.com.
+- userattr="uid": definisce quale attributo deve essere usato per identificare l'utente LDAP.
+- userfilter="({{.UserAttr}}={{.Username}})": è un filtro LDAP che specifica come trovare un utente nel database LDAP. Il filtro è scritto 
+ in un formato di query LDAP standard. {{.UserAttr}} è una variabile che viene sostituita con il nome dell'attributo dell'utente (in questo caso, uid).
+ {{.Username}} è una variabile che verrà sostituita con il nome utente fornito dall'utente durante il login.
+- groupdn="ou=groups,dc=example,dc=com": specifica il DN di base in cui Vault cercherà i gruppi nel server LDAP. In questo esempio, i gruppi sono
+ organizzati nell'OU groups dentro il dominio example.com.
+- groupfilter="(member={{.UserDN}})": è un filtro LDAP che determina come trovare i gruppi a cui un utente appartiene. Il filtro cerca nei gruppi LDAP per
+ trovare il campo member che corrisponde al DN dell'utente. {{.UserDN}} è una variabile che viene sostituita con il DN completo dell'utente.
+- groupattr="cn": specifica quale attributo del gruppo LDAP deve essere usato come identificatore del gruppo. In questo caso, cn (Common Name) è l'attributo 
+ che identifica il nome del gruppo.
+- insecure_tls=true: indica se Vault deve permettere la connessione non sicura a LDAP (senza cifratura TLS). true significa che la connessione utilizza il 
+ protocollo LDAP standard (ldap://) senza cifratura. 
+
+Fatto questo è stato possibile effettuare l'accesso a Vault tramite LDAP, ad esempio:
+
+vault login -method=ldap username="admin1" password="admin"
+
+N.B. Con il seguente comando è possibile controllare la configurazione di LDAP:
+
+slapcat -f C:\OpenLDAP\slapd.conf
