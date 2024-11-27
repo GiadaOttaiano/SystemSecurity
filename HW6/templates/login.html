@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">
+            <h1>Web App System Security</h1>
+        </div>
+        <div class="form-container">
+
+            <!-- Form per login LDAP -->
+            <form method="POST" action="/login">
+                <h2>Login LDAP</h2>
+
+                <!-- Mostra i messaggi di flash -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        <div class="flash-messages">
+                            {% for category, message in messages %}
+                                <div class="flash {{ category }}">{{ message }}</div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+
+                <label for="username">Username:</label>
+                <input type="text" name="username" placeholder="Inserisci il tuo username" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="Inserisci la tua password" required>
+                <br>
+                <input type="submit" value="Login">
+            </form>
+
+            <!-- Divider per separare i metodi -->
+            <div class="divider">
+                <span>oppure</span>
+            </div>
+
+            <!-- Pulsante per login con Keycloak -->
+            <form action="/login-keycloak" method="get">
+                <button type="submit" class="btn btn-primary">Login con Keycloak</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Contenitore principale */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Larghezza uniforme */
+}
+
+/* Stile per il titolo principale */
+.header {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Contenitore del form */
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Stessa larghezza del titolo */
+    text-align: center;
+}
+
+/* Stile per etichette e input */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Stile per il bottone "Login con Keycloak" */
+button.btn.btn-primary {
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.btn.btn-primary:hover {
+    background-color: #0056b3; /* Tonalità più scura per hover */
+    transform: translateY(-2px); /* Effetto di sollevamento */
+}
+
+button.btn.btn-primary:active {
+    background-color: #003f7f; /* Tonalità ancora più scura per clic */
+    transform: translateY(0); /* Rimuove l'effetto di sollevamento */
+}
+
+button.btn.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.4); 
+}
+
+/* Messaggio di errore */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.flash-messages {
+    margin-bottom: 20px;
+}
+
+.flash {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.flash.error {
+    background-color: #ffdddd;
+    color: #d8000c;
+    border: 1px solid #d8000c;
+}
+
+.flash.success {
+    background-color: #ddffdd;
+    color: #4f8a10;
+    border: 1px solid #4f8a10;
+}
+
+.divider {
+    margin: 20px 0;
+    position: relative;
+    text-align: center;
+}
+
+.divider span {
+    background: #f4f4f9;
+    padding: 0 10px;
+    position: relative;
+    color: #666;
+}
+
+.divider:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    z-index: -1;
+}
