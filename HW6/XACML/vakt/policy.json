@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "policies": [
+    {
+      "id": "time-based-modify-policy",
+      "effect": "deny",
+      "rule": {
+        "if": {
+          "resource": "notes",
+          "action": "modify",
+          "and": [
+            {
+              "attribute": "current_time",
+              "operator": "lt",
+              "value": "09:00"
+            },
+            {
+              "attribute": "current_time",
+              "operator": "gt",
+              "value": "18:00"
+            }
+          ]
+        },
+        "then": "deny"
+      }
+    }
+  ]
+}

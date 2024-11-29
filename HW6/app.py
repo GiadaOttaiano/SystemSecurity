@@ -1,13 +1,13 @@
-from flask import Flask, flash, render_template, request, redirect, session, url_for
+from flask import Flask, flash, render_template, request, redirect, session
 from werkzeug.middleware.proxy_fix import ProxyFix
 import requests
 import secrets
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-from XACML.policy_parser import parse_policy
-from XACML.pdp import evaluate_request
 from keycloak import KeycloakOpenID
 import logging
+import vakt
+from vakt.rules import Eq, StartsWith, And, Greater, Less, Any
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(32)
@@ -23,9 +23,21 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///notes.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-# Carica la policy XML all'avvio dell'applicazione
-policy = parse_policy("XACML/policy.xml")
+# Definisci la policy in VAKT
+policy = vakt.Policy(
+    123456,
+    actions=[Eq('modify')],
+    resources=[StartsWith('note')],
+    subjects=[{'username': Any()}],  # L'utente può essere qualsiasi
+    effect=vakt.ALLOW_ACCESS,
+    context={'current_time': And(Greater('09:00:00'), Less('18:00:00'))},
+    description="""Consenti la modifica delle note solo tra le 9:00 e le 18:00"""
+)
 
+# Memorizza la policy in VAKT
+storage = vakt.MemoryStorage()
+storage.add(policy)
+guard = vakt.Guard(storage, vakt.RulesChecker())
 # Configurazione Keycloak
 KEYCLOAK_SERVER_URL = "http://localhost:8081/"
 REALM_NAME = "Webapp"
@@ -45,6 +57,7 @@ class Note(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(500), nullable=False)
     username = db.Column(db.String(100), nullable=False)
+    role = db.Column(db.String(50), nullable=False)
 
     def __repr__(self):
         return f"<Note {self.id} - {self.username}>"
@@ -87,65 +100,63 @@ def login():
 
         return redirect("/dashboard")
     except requests.exceptions.RequestException:
-        flash("Credenziali non valide. Riprova.", "error")
+        flash("Credenziali non validre. Riprova.", "error")
         return redirect("/")
 
 @app.route("/login-keycloak")
 def login_keycloak():
     # Redirige l'utente al provider Keycloak per l'autenticazione
     redirect_uri = "https://localhost:443/callback"
-    auth_url = keycloak_openid.auth_url(redirect_uri)
-    return redirect(auth_url)
-
-@app.before_request
-def before_request():
-    # Forza HTTPS se Apache sta gestendo la connessione
-    if request.headers.get('X-Forwarded-Proto') == 'https':
-        request.url = request.url.replace("http://", "https://")
+    auth_url = f"{KEYCLOAK_SERVER_URL}realms/{REALM_NAME}/protocol/openid-connect/auth"
+    params = {
+        "client_id": CLIENT_ID,
+        "response_type": "code",
+        "redirect_uri": redirect_uri,
+        "scope": "openid email profile"
+    }
+    auth_request_url = f"{auth_url}?{requests.compat.urlencode(params)}"
+    return redirect(auth_request_url)
 
 @app.route("/callback")
 def callback():
     code = request.args.get("code")
-    
-    if code is None: 
-        logging.error("Authorization code not received") 
-        flash("Codice di autorizzazione non ricevuto.", "error") 
+    if not code:
+        flash("Codice di autorizzazione non ricevuto.", "error")
         return redirect("/")
-    
+
+    token_url = f"{KEYCLOAK_SERVER_URL}realms/{REALM_NAME}/protocol/openid-connect/token"
     redirect_uri = "https://localhost:443/callback"
+
+    data = {
+        "grant_type": "authorization_code",
+        "code": code,
+        "redirect_uri": redirect_uri,
+        "client_id": CLIENT_ID,
+        "client_secret": CLIENT_SECRET
+    }
+
     try:
-        print("RICEVUTO CALLBACK")
-        # Log the code to see if we get it correctly
-        print(f"Received code: {code}")
-        
-        # Exchange code for token
-        print("STO SCAMBIANDO")
-        token = keycloak_openid.token(code=code, redirect_uri=redirect_uri)
-        print("HO SCAMBIATO")
-        print(f"Redirect URI: {redirect_uri}")
+        response = requests.post(token_url, data=data, verify=False)
+        response.raise_for_status()
 
-        # Log the token to see what we get back
-        print(f"Token received: {token}")
+        token_data = response.json()
+        session["access_token"] = token_data["access_token"]
+        session["refresh_token"] = token_data["refresh_token"]
 
-        # Save the token and user info
-        session["access_token"] = token["access_token"]
-        session["refresh_token"] = token["refresh_token"]
+        # Recupera informazioni sull'utente
+        userinfo_url = f"{KEYCLOAK_SERVER_URL}realms/{REALM_NAME}/protocol/openid-connect/userinfo"
+        headers = {"Authorization": f"Bearer {token_data['access_token']}"}
+        user_info = requests.get(userinfo_url, headers=headers, verify=False).json()
 
-        user_info = keycloak_openid.userinfo(token["access_token"])
         session["username"] = user_info["preferred_username"]
-        
-        # Decode the JWT token to get roles
-        token_decoded = keycloak_openid.decode_token(
-            token["access_token"], key=keycloak_openid.public_key(), options={"verify_aud": False}
-        )
-        session["roles"] = token_decoded.get("realm_access", {}).get("roles", [])
-        
-        return redirect("/dashboard")
-    except Exception as e:
-        print(f"Error during authentication: {str(e)}")  # Per log di debug
-        flash(f"Errore: {str(e)}", "error")  # Mostra l'errore specifico
-        return redirect("/")
+        session["email"] = user_info.get("email")
+        session["roles"] = token_data.get("realm_access", {}).get("roles", [])
 
+        return redirect("/dashboard")
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Errore durante l'autenticazione con Keycloak: {e}")
+        flash("Errore durante l'autenticazione.", "error")
+        return redirect("/")
 
 @app.route("/logout")
 def logout():
@@ -225,37 +236,44 @@ def account_settings():
 
 @app.route("/notes")
 def notes():
-    if "access_token" not in session:
+    if "vault_token" not in session:
         return redirect("/")
 
     username = session["username"]
-    roles = session.get("roles", [])
+    role = session.get("role", "standard")
     theme = session.get("theme", "light")
 
-    if "admin" in roles:
+    if role == "admin" or role == "manager":
         all_notes = Note.query.all()
     else:
         all_notes = Note.query.filter_by(username=username).all()
 
-    return render_template("notes.html", notes=all_notes, roles=roles, theme=theme)
+    return render_template("notes.html", notes=all_notes, role=role, theme=theme)
 
 @app.route("/add-note", methods=["GET", "POST"])
 def add_note():
-    if "access_token" not in session:
+    if "vault_token" not in session:
         return redirect("/")
 
-    roles = session.get("roles", [])
+    role = session.get("role", "standard")
     theme = session.get("theme", "light")
 
     if request.method == "POST":
         current_time = datetime.now().strftime("%H:%M:%S")
-        decision = evaluate_request("modify", "note", policy, current_time)
+        # Crea l'inquiry per VAKT
+        inquiry = vakt.Inquiry(
+            action='modify',
+            resource='note',
+            subject={'username': session['username']},
+            context={'current_time': current_time}
+        )
 
-        if decision == "Permit":
+        # Verifica se l'accesso è permesso
+        if guard.is_allowed(inquiry):
             content = request.form.get("content")
             username = session["username"]
             if content:
-                new_note = Note(content=content, username=username)
+                new_note = Note(content=content, username=username, role=role)
                 db.session.add(new_note)
                 db.session.commit()
                 flash("Nota aggiunta con successo!", "success")
@@ -263,27 +281,34 @@ def add_note():
         else:
             flash("Non hai i permessi per aggiungere una nota in questo momento.", "error")
 
-    return render_template("add_note.html", roles=roles, theme=theme)
+    return render_template("add_note.html", role=role, theme=theme)
 
 @app.route("/edit-note/<int:id>", methods=["GET", "POST"])
 def edit_note(id):
-    if "access_token" not in session:
+    if "vault_token" not in session:
         return redirect("/")
 
     note = Note.query.get_or_404(id)
     username = session["username"]
-    roles = session.get("roles", [])
+    role = session.get("role", "standard")
     theme = session.get("theme", "light")
 
-    if note.username != username and "admin" not in roles:
+    if note.username != username and role != "admin":
         flash("Non hai i permessi per modificare questa nota.", "error")
         return redirect("/notes")
 
     if request.method == "POST":
         current_time = datetime.now().strftime("%H:%M:%S")
-        decision = evaluate_request("modify", "note", policy, current_time)
+        # Crea l'inquiry per VAKT
+        inquiry = vakt.Inquiry(
+            action='modify',
+            resource='note',
+            subject={'username': session['username']},
+            context={'current_time': current_time}
+        )
 
-        if decision == "Permit":
+        # Verifica se l'accesso è permesso
+        if guard.is_allowed(inquiry):
             new_content = request.form.get("content")
             if new_content:
                 note.content = new_content
@@ -297,21 +322,28 @@ def edit_note(id):
 
 @app.route("/delete-note/<int:id>", methods=["POST"])
 def delete_note(id):
-    if "access_token" not in session:
+    if "vault_token" not in session:
         return redirect("/")
 
     note = Note.query.get_or_404(id)
     username = session["username"]
-    roles = session.get("roles", [])
+    role = session.get("role", "standard")
 
-    if note.username != username and "admin" not in roles:
+    if note.username != username and role != "admin":
         flash("Non hai i permessi per eliminare questa nota.", "error")
         return redirect("/notes")
 
     current_time = datetime.now().strftime("%H:%M:%S")
-    decision = evaluate_request("modify", "note", policy, current_time)
+    # Crea l'inquiry per VAKT
+    inquiry = vakt.Inquiry(
+        action='modify',
+        resource='note',
+        subject={'username': session['username']},
+        context={'current_time': current_time}
+    )
 
-    if decision == "Permit":
+    # Verifica se l'accesso è permesso
+    if guard.is_allowed(inquiry):
         db.session.delete(note)
         db.session.commit()
         flash("Nota eliminata con successo!", "success")
@@ -319,6 +351,7 @@ def delete_note(id):
         flash("Non hai i permessi per eliminare questa nota in questo momento.", "error")
 
     return redirect("/notes")
+
 
 if __name__ == "__main__":
     context = ('Config/localhost.crt', 'Config/private_key.key')

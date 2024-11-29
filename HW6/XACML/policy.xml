@@ -33,17 +33,4 @@
       </Apply>
     </Condition>
   </Rule>
-
-  <Rule RuleId="ManagerCanEditStandardNotes" Effect="Permit">
-    <Condition>
-      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">manager</AttributeValue>
-        <AttributeDesignator AttributeId="role" DataType="http://www.w3.org/2001/XMLSchema#string" Category="urn:oasis:names:tc:xacml:2.0:subject-category:access-subject"/>
-      </Apply>
-      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">standard</AttributeValue>
-        <AttributeDesignator AttributeId="note_owner_role" DataType="http://www.w3.org/2001/XMLSchema#string" Category="urn:oasis:names:tc:xacml:2.0:resource-category:resource"/>
-      </Apply>
-    </Condition>
-  </Rule>
 </Policy>
