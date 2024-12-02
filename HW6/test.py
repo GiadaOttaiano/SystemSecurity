@@ -124,14 +124,18 @@ def callback():
         
         logging.debug(f"Access Token: {token_data['access_token']}")
 
+        # Decodifica il token per ottenere informazioni
+        roles = get_roles_from_token(token_data["access_token"])
+        session["roles"] = roles
+        
+        print("Info session:", session["roles"])
+        
         # Recupera informazioni sull'utente
         userinfo_url = f"{KEYCLOAK_SERVER_URL}realms/{REALM_NAME}/protocol/openid-connect/userinfo"
         headers = {"Authorization": f"Bearer {token_data['access_token']}"}
         user_info = requests.get(userinfo_url, headers=headers, verify=False).json()
 
         session["username"] = user_info["preferred_username"]
-        session["email"] = user_info.get("email")
-        session["roles"] = token_data.get("realm_access", {}).get("roles", [])
 
         # Usa direttamente il JWT di Keycloak per Vault
         vault_token = token_data["access_token"]  
@@ -142,6 +146,19 @@ def callback():
         logging.error(f"Errore durante l'autenticazione con Keycloak: {e}")
         flash("Errore durante l'autenticazione.", "error")
         return redirect("/")
+
+@app.route("/admin_page")
+def admin_page():
+    if "access_token" not in session:
+        return redirect("/")
+
+    # Controlla se l'utente ha il ruolo 'admin'
+    roles = session.get("roles", [])
+    if "admin" in roles:
+        return render_template("admin_page.html")
+    else:
+        flash("Accesso negato: non hai i permessi per vedere questa pagina.", "error")
+        return redirect("/dashboard")
 
 @app.route("/logout")
 def logout():
@@ -188,18 +205,16 @@ def dashboard():
 
     return render_template("dashboard.html", username=username, theme=theme, role=role)
 
-@app.route("/admin_page")
-def admin_page():
-    if "access_token" not in session:
-        return redirect("/")
-
-    # Controlla se l'utente ha il ruolo 'admin'
-    roles = session.get("roles", [])
-    if "admin" in roles:
-        return render_template("admin_page.html")
-    else:
-        flash("Accesso negato: non hai i permessi per vedere questa pagina.", "error")
-        return redirect("/dashboard")
+# Decodifica il token JWT e ottieni i ruoli
+def get_roles_from_token(token):
+    try:
+        # Decodifica il token JWT senza verificarne la firma
+        decoded_token = jwt.decode(token, options={"verify_signature": False})
+        return decoded_token.get("realm_access", {}).get("roles", [])
+    except jwt.ExpiredSignatureError:
+        return []
+    except jwt.DecodeError:
+        return []
 
 @app.route("/account-settings", methods=["GET", "POST"])  # Rotta per le impostazioni dell'account
 def account_settings():
