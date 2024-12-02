@@ -133,37 +133,6 @@ def dashboard():
 
     return render_template("dashboard.html", username=username, theme=theme, role=role)
 
-@app.route("/account-settings", methods=["GET", "POST"])  # Rotta per le impostazioni dell'account
-def account_settings():
-    if "vault_token" not in session:  # Controlla se l'utente è autenticato
-        return redirect("/")  # Se no, reindirizza al login
-
-    username = session["username"]
-    role = session.get("role", "standard")
-    theme = session.get("theme", "light")
-
-    if request.method == "POST":  # Gestisce aggiornamenti tramite POST
-        new_theme = request.form.get("theme")  # Ottiene il nuovo tema
-        try:
-            url = f"{VAULT_ADDR}/v1/kv/data/secret/webapp-ldap/{username}"  # URL per i segreti utente
-            headers = {"X-Vault-Token": session["vault_token"]}  # Intestazioni con il token
-            response = requests.get(url, headers=headers, verify=VAULT_VERIFY)  # Richiesta GET
-            response.raise_for_status()
-
-            secret_data = response.json().get("data", {}).get("data", {})  # Estrae i dati
-            secret_data["theme"] = new_theme  # Aggiorna il tema
-            payload = {"data": secret_data}  # Prepara i dati aggiornati
-
-            response = requests.post(url, headers=headers, json=payload, verify=VAULT_VERIFY)  # Richiesta POST per aggiornare Vault
-            response.raise_for_status()
-
-            session["theme"] = new_theme  # Aggiorna il tema nella sessione
-            flash("Tema modificato con successo!", "success")  # Messaggio di successo
-        except requests.exceptions.RequestException as e:  # Gestisce errori HTTP
-            flash(f"Failed to update theme: {e}", "error")  # Messaggio di errore
-
-    return render_template("account_settings.html", username=username, role=role, theme=theme)  # Mostra le impostazioni
-
 @app.route("/notifications")
 def notifications():
     if "vault_token" not in session:

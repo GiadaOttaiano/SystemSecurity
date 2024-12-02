@@ -1,0 +1,151 @@
+/* Impostazioni generali per la pagina delle notifiche */
+.header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+/* Stile per le notifiche */
+.notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.notification-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notification-card p.notification-message {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.notification-card small.notification-timestamp {
+    font-size: 0.85rem;
+    color: #555;
+    text-align: right;
+}
+
+/* Pulsante per tornare alla dashboard */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Pulsante per cancellare singola notifica */
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    display: inline-block;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.delete-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.5);
+}
+
+/* Pulsante per cancellare tutte le notifiche */
+.clear-all-btn {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.clear-all-btn:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+.clear-all-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(243, 156, 18, 0.5);
+}
+
+/* Stile per i messaggi flash */
+.flash-messages {
+    margin-bottom: 20px;
+}
+
+.flash-message {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flash-message.success {
+    background-color: #28a745;
+    color: white;
+}
+
+.flash-message.error {
+    background-color: #dc3545;
+    color: white;
+}
+
+.flash-message.info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.flash-message.warning {
+    background-color: #ffc107;
+    color: black;
+}
