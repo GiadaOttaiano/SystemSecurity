@@ -96,6 +96,17 @@ def login_keycloak():
     auth_request_url = f"{auth_url}?{requests.compat.urlencode(params)}"
     return redirect(auth_request_url)
 
+# Decodifica il token JWT e ottieni i ruoli
+def get_roles_from_token(token):
+    try:
+        # Decodifica il token JWT senza verificarne la firma
+        decoded_token = jwt.decode(token, options={"verify_signature": False})
+        return decoded_token.get("realm_access", {}).get("roles", [])
+    except jwt.ExpiredSignatureError:
+        return []
+    except jwt.DecodeError:
+        return []
+
 @app.route("/callback")
 def callback():
     code = request.args.get("code")
@@ -124,24 +135,53 @@ def callback():
         
         logging.debug(f"Access Token: {token_data['access_token']}")
 
+        # Decodifica il token per ottenere informazioni sul ruolo
+        roles = get_roles_from_token(token_data["access_token"])
+        session["roles"] = roles
+        
+        print("Info session:", session["roles"])
+        
         # Recupera informazioni sull'utente
         userinfo_url = f"{KEYCLOAK_SERVER_URL}realms/{REALM_NAME}/protocol/openid-connect/userinfo"
         headers = {"Authorization": f"Bearer {token_data['access_token']}"}
         user_info = requests.get(userinfo_url, headers=headers, verify=False).json()
 
         session["username"] = user_info["preferred_username"]
-        session["email"] = user_info.get("email")
-        session["roles"] = token_data.get("realm_access", {}).get("roles", [])
 
         # Usa direttamente il JWT di Keycloak per Vault
         vault_token = token_data["access_token"]  
-        session["vault_token"] = vault_token
+
+        # Autenticazione a Vault con il token di Keycloak (OIDC)
+        vault_auth_url = f"{VAULT_ADDR}/v1/auth/oidc/login"
+        vault_auth_data = {
+            "role": "default",
+            "jwt": vault_token
+        }
+
+        vault_auth_response = requests.post(vault_auth_url, json=vault_auth_data, verify=VAULT_VERIFY)
+        vault_auth_response.raise_for_status()
+
+        vault_token_data = vault_auth_response.json()
+        session["vault_token"] = vault_token_data["auth"]["client_token"]
 
         return redirect("/dashboard")
     except requests.exceptions.RequestException as e:
         logging.error(f"Errore durante l'autenticazione con Keycloak: {e}")
         flash("Errore durante l'autenticazione.", "error")
         return redirect("/")
+
+@app.route("/admin_page")
+def admin_page():
+    if "access_token" not in session:
+        return redirect("/")
+
+    # Controlla se l'utente ha il ruolo 'admin'
+    roles = session.get("roles", [])
+    if "admin" in roles:
+        return render_template("admin_page.html")
+    else:
+        flash("Accesso negato: non hai i permessi per vedere questa pagina.", "error")
+        return redirect("/dashboard")
 
 @app.route("/logout")
 def logout():
@@ -160,7 +200,7 @@ def dashboard():
 
     theme = session.get("theme", "light")
     username = session["username"]
-    role = session.get("role", "standard")
+    role = session.get("roles", "standard")
 
     if request.method == "POST":
         new_theme = request.form.get("theme")
@@ -188,26 +228,20 @@ def dashboard():
 
     return render_template("dashboard.html", username=username, theme=theme, role=role)
 
-@app.route("/admin_page")
-def admin_page():
-    if "access_token" not in session:
-        return redirect("/")
-
-    # Controlla se l'utente ha il ruolo 'admin'
-    roles = session.get("roles", [])
-    if "admin" in roles:
-        return render_template("admin_page.html")
-    else:
-        flash("Accesso negato: non hai i permessi per vedere questa pagina.", "error")
-        return redirect("/dashboard")
-
 @app.route("/account-settings", methods=["GET", "POST"])  # Rotta per le impostazioni dell'account
 def account_settings():
     if "access_token" not in session:  # Controlla se l'utente è autenticato
         return redirect("/")  # Se no, reindirizza al login
 
     username = session["username"]
-    role = session.get("role", "standard")
+    
+    roles = session.get("roles", [])
+    
+    if "admin" in roles:
+        role = "admin"
+    else:
+        role = "standard"
+        
     theme = session.get("theme", "light")
 
     if request.method == "POST":  # Gestisce aggiornamenti tramite POST
@@ -234,7 +268,7 @@ def account_settings():
 
 @app.route("/notifications")
 def notifications():
-    if "vault_token" not in session:
+    if "access_token" not in session:
         return redirect("/")
 
     username = session["username"]
@@ -274,7 +308,7 @@ def delete_notification(id):
 
 @app.route("/notes")
 def notes():
-    if "vault_token" not in session:
+    if "access_token" not in session:
         return redirect("/")
 
     username = session["username"]
@@ -290,7 +324,7 @@ def notes():
 
 @app.route("/add-note", methods=["GET", "POST"])
 def add_note():
-    if "vault_token" not in session:
+    if "access_token" not in session:
         return redirect("/")
 
     role = session.get("role", "standard")
@@ -323,7 +357,7 @@ def add_note():
 
 @app.route("/edit-note/<int:id>", methods=["GET", "POST"])
 def edit_note(id):
-    if "vault_token" not in session:
+    if "access_token" not in session:
         return redirect("/")
 
     note = Note.query.get_or_404(id)
@@ -360,7 +394,7 @@ def edit_note(id):
 
 @app.route("/delete-note/<int:id>", methods=["POST"])
 def delete_note(id):
-    if "vault_token" not in session:
+    if "access_token" not in session:
         return redirect("/")
 
     note = Note.query.get_or_404(id)

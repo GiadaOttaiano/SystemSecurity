@@ -96,6 +96,17 @@ def login_keycloak():
     auth_request_url = f"{auth_url}?{requests.compat.urlencode(params)}"
     return redirect(auth_request_url)
 
+# Decodifica il token JWT e ottieni i ruoli
+def get_roles_from_token(token):
+    try:
+        # Decodifica il token JWT senza verificarne la firma
+        decoded_token = jwt.decode(token, options={"verify_signature": False})
+        return decoded_token.get("realm_access", {}).get("roles", [])
+    except jwt.ExpiredSignatureError:
+        return []
+    except jwt.DecodeError:
+        return []
+
 @app.route("/callback")
 def callback():
     code = request.args.get("code")
@@ -124,7 +135,7 @@ def callback():
         
         logging.debug(f"Access Token: {token_data['access_token']}")
 
-        # Decodifica il token per ottenere informazioni
+        # Decodifica il token per ottenere informazioni sul ruolo
         roles = get_roles_from_token(token_data["access_token"])
         session["roles"] = roles
         
@@ -139,7 +150,19 @@ def callback():
 
         # Usa direttamente il JWT di Keycloak per Vault
         vault_token = token_data["access_token"]  
-        session["vault_token"] = vault_token
+
+        # Autenticazione a Vault con il token di Keycloak (OIDC)
+        vault_auth_url = f"{VAULT_ADDR}/v1/auth/oidc/login"
+        vault_auth_data = {
+            "role": "default",
+            "jwt": vault_token
+        }
+
+        vault_auth_response = requests.post(vault_auth_url, json=vault_auth_data, verify=VAULT_VERIFY)
+        vault_auth_response.raise_for_status()
+
+        vault_token_data = vault_auth_response.json()
+        session["vault_token"] = vault_token_data["auth"]["client_token"]
 
         return redirect("/dashboard")
     except requests.exceptions.RequestException as e:
@@ -177,7 +200,7 @@ def dashboard():
 
     theme = session.get("theme", "light")
     username = session["username"]
-    role = session.get("role", "standard")
+    role = session.get("roles", "standard")
 
     if request.method == "POST":
         new_theme = request.form.get("theme")
@@ -205,24 +228,20 @@ def dashboard():
 
     return render_template("dashboard.html", username=username, theme=theme, role=role)
 
-# Decodifica il token JWT e ottieni i ruoli
-def get_roles_from_token(token):
-    try:
-        # Decodifica il token JWT senza verificarne la firma
-        decoded_token = jwt.decode(token, options={"verify_signature": False})
-        return decoded_token.get("realm_access", {}).get("roles", [])
-    except jwt.ExpiredSignatureError:
-        return []
-    except jwt.DecodeError:
-        return []
-
 @app.route("/account-settings", methods=["GET", "POST"])  # Rotta per le impostazioni dell'account
 def account_settings():
     if "access_token" not in session:  # Controlla se l'utente è autenticato
         return redirect("/")  # Se no, reindirizza al login
 
     username = session["username"]
-    role = session.get("role", "standard")
+    
+    roles = session.get("roles", [])
+    
+    if "admin" in roles:
+        role = "admin"
+    else:
+        role = "standard"
+        
     theme = session.get("theme", "light")
 
     if request.method == "POST":  # Gestisce aggiornamenti tramite POST
@@ -249,7 +268,7 @@ def account_settings():
 
 @app.route("/notifications")
 def notifications():
-    if "vault_token" not in session:
+    if "access_token" not in session:
         return redirect("/")
 
     username = session["username"]
@@ -289,7 +308,7 @@ def delete_notification(id):
 
 @app.route("/notes")
 def notes():
-    if "vault_token" not in session:
+    if "access_token" not in session:
         return redirect("/")
 
     username = session["username"]
@@ -305,7 +324,7 @@ def notes():
 
 @app.route("/add-note", methods=["GET", "POST"])
 def add_note():
-    if "vault_token" not in session:
+    if "access_token" not in session:
         return redirect("/")
 
     role = session.get("role", "standard")
@@ -338,7 +357,7 @@ def add_note():
 
 @app.route("/edit-note/<int:id>", methods=["GET", "POST"])
 def edit_note(id):
-    if "vault_token" not in session:
+    if "access_token" not in session:
         return redirect("/")
 
     note = Note.query.get_or_404(id)
@@ -375,7 +394,7 @@ def edit_note(id):
 
 @app.route("/delete-note/<int:id>", methods=["POST"])
 def delete_note(id):
-    if "vault_token" not in session:
+    if "access_token" not in session:
         return redirect("/")
 
     note = Note.query.get_or_404(id)
