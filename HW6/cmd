@@ -1,0 +1,3 @@
+vault read auth/oidc/role/default
+vault read auth/oidc/config
+vault write auth/oidc/role/default verbose_oidc_logging=true

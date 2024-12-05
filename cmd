@@ -1,5 +1,5 @@
 vault server -config="C:/Program Files/Vault_1.18.1/config/vault-config.hcl"
-slapd.exe -f C:\OpenLDAP\slapd.conf -h "ldap://localhost:389 ldaps://localhost:636" -d 256
+slapd.exe -f C:\OpenLDAP\slapd.conf -h "ldaps://localhost:636" -d 256
 httpd.exe
 
 pP9Wirfr/syrJlS2Sv7gURZBwRk888rDNLZ4oHfRc48F

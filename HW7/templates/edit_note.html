@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifica Nota</title>
+    <style>
+        /* Stile generale della pagina */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: {% if theme == 'dark' %} #333 {% else %} #f9f9f9 {% endif %};
+            color: {% if theme == 'dark' %} #fff {% else %} #000 {% endif %};
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        /* Contenitore della form */
+        .note-container {
+            background-color: #fff; /* Sempre bianco */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        .note-form textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .note-form textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        /* Stile dei bottoni */
+        .note-form button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .note-form button:hover {
+            background-color: #218838;
+        }
+
+        .cancel-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .cancel-btn:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modifica Nota</h1>
+
+    <!-- Contenitore della form -->
+    <div class="note-container">
+        <form method="POST" class="note-form">
+            {{ form.hidden_tag() }}
+            <textarea name="content" rows="4" cols="50">{{ form.content.data | e }}</textarea><br>
+            <button type="submit">Salva Modifiche</button>
+        </form>
+
+        <!-- Bottone per annullare -->
+        <a href="/notes" class="cancel-btn">Annulla</a>
+    </div>
+</body>
+</html>

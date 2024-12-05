@@ -15,9 +15,15 @@ slapd.exe -f C:\OpenLDAP\slapd.conf -h "ldap://localhost:389 ldaps://localhost:6
 Infine, è stato necessario configurare Vault per funzionare con LDAP. Questo è stato possibile mediante l'aggiunta di un nuovo
 metodo di autenticazione, il quale viene configurato nel seguente modo:
 
-vault write auth/ldap/config url="ldap://localhost:389" binddn="uid=admin1,ou=users,dc=example,dc=com" 
-    bindpass="admin" userdn="ou=users,dc=example,dc=com" userattr="uid" userfilter="({{.UserAttr}}={{.Username}})" 
-    groupdn="ou=groups,dc=example,dc=com" groupfilter="(member={{.UserDN}})" groupattr="cn" insecure_tls=true
+vault write auth/ldap/config url="ldap://localhost:389" \
+    binddn="uid=admin1,ou=users,dc=example,dc=com" \
+    bindpass="admin" \
+    userdn="ou=users,dc=example,dc=com" \
+    userattr="uid" userfilter="({{.UserAttr}}={{.Username}})" \
+    groupdn="ou=groups,dc=example,dc=com" \
+    groupfilter="(member={{.UserDN}})" \
+    groupattr="cn" \
+    insecure_tls=true
 
 Nello specifico:
 - url="ldap://localhost:389": definisce l'URL del server LDAP a cui Vault si connetterà per l'autenticazione.

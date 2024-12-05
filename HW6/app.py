@@ -31,7 +31,7 @@ policy = vakt.Policy(
     resources=[StartsWith('note')],
     subjects=[{'username': Any()}],  # L'utente può essere qualsiasi
     effect=vakt.ALLOW_ACCESS,
-    context={'current_time': And(Greater('09:00:00'), Less('18:00:00'))},
+    context={'current_time': And(Greater('09:00:00'), Less('22:00:00'))},
     description="""Consenti la modifica delle note solo tra le 9:00 e le 18:00"""
 )
 
@@ -106,6 +106,16 @@ def get_roles_from_token(token):
         return []
     except jwt.DecodeError:
         return []
+    
+def get_sub_from_token(token):
+    try:
+        # Decodifica il token JWT senza verificarne la firma
+        decoded_token = jwt.decode(token, options={"verify_signature": False})
+        return decoded_token.get("sub")  # Restituisce il campo "sub"
+    except jwt.ExpiredSignatureError:
+        return None  # Restituisce None se il token è scaduto
+    except jwt.DecodeError:
+        return None  # Restituisce None se c'è un errore nel decodificare il token
 
 @app.route("/callback")
 def callback():
@@ -134,6 +144,7 @@ def callback():
         session["refresh_token"] = token_data["refresh_token"]
         
         logging.debug(f"Access Token: {token_data['access_token']}")
+        print("Access Token:", token_data["access_token"])
 
         # Decodifica il token per ottenere informazioni sul ruolo
         roles = get_roles_from_token(token_data["access_token"])
@@ -148,27 +159,26 @@ def callback():
 
         session["username"] = user_info["preferred_username"]
 
-        # Usa direttamente il JWT di Keycloak per Vault
-        vault_token = token_data["access_token"]  
-
-        # Autenticazione a Vault con il token di Keycloak (OIDC)
-        vault_auth_url = f"{VAULT_ADDR}/v1/auth/oidc/login"
-        vault_auth_data = {
-            "role": "default",
-            "jwt": vault_token
-        }
-
-        vault_auth_response = requests.post(vault_auth_url, json=vault_auth_data, verify=VAULT_VERIFY)
-        vault_auth_response.raise_for_status()
-
-        vault_token_data = vault_auth_response.json()
-        session["vault_token"] = vault_token_data["auth"]["client_token"]
+        # Usa direttamente il token di Keycloak come token Vault
+        session["vault_token"] =  get_sub_from_token(token_data["access_token"])
+        print(f"Vault Token in session: {session.get('vault_token')}")
 
         return redirect("/dashboard")
     except requests.exceptions.RequestException as e:
         logging.error(f"Errore durante l'autenticazione con Keycloak: {e}")
         flash("Errore durante l'autenticazione.", "error")
         return redirect("/")
+
+def get_vault_secret(path):
+    try:
+        url = f"{VAULT_ADDR}/v1/kv/data/{path}"
+        headers = {"X-Vault-Token": session["vault_token"]}
+        response = requests.get(url, headers=headers, verify=VAULT_VERIFY)
+        response.raise_for_status()
+        return response.json().get("data", {}).get("data", {})
+    except requests.RequestException as e:
+        logging.error(f"Errore nel recupero del segreto Vault: {e}")
+        return None
 
 @app.route("/admin_page")
 def admin_page():
@@ -205,28 +215,28 @@ def dashboard():
     if request.method == "POST":
         new_theme = request.form.get("theme")
         try:
-            url = f"{VAULT_ADDR}/v1/kv/data/secret/webapp-ldap/{username}"
-            headers = {"X-Vault-Token": session["vault_token"]}
-            response = requests.get(url, headers=headers, verify=VAULT_VERIFY)
-            response.raise_for_status()
+            secret_path = f"{VAULT_ADDR}/v1/kv/data/secret/webapp-ldap/{username}"
+            secret_data = get_vault_secret(secret_path)
+            if not secret_data:
+                flash("Impossibile accedere ai dati su Vault.", "error")
+                return redirect("/dashboard")
 
-            secret_data = response.json().get("data", {}).get("data", {})
             secret_data["theme"] = new_theme  # Solo cambia il tema
 
-            # Verifica che l'utente abbia il permesso di aggiornare il tema
-            if role == "admin" or role == "standard":
-                payload = {"data": secret_data}
-                response = requests.post(url, headers=headers, json=payload, verify=VAULT_VERIFY)
-                response.raise_for_status()
+            # Aggiorna i dati su Vault
+            headers = {"X-Vault-Token": session["vault_token"]}
+            payload = {"data": secret_data}
+            url = f"{VAULT_ADDR}/v1/kv/data/{secret_path}"
+            response = requests.post(url, headers=headers, json=payload, verify=VAULT_VERIFY)
+            response.raise_for_status()
 
-                session["theme"] = new_theme
-            else:
-                flash("Non hai i permessi per modificare il tema.", "error")
-
+            session["theme"] = new_theme
+            flash("Tema aggiornato con successo!", "success")
         except requests.exceptions.RequestException as e:
-            return f"Failed to update theme: {e}", 500
+            flash(f"Errore durante l'aggiornamento del tema: {e}", "error")
 
     return render_template("dashboard.html", username=username, theme=theme, role=role)
+
 
 @app.route("/account-settings", methods=["GET", "POST"])  # Rotta per le impostazioni dell'account
 def account_settings():
@@ -246,11 +256,14 @@ def account_settings():
 
     if request.method == "POST":  # Gestisce aggiornamenti tramite POST
         new_theme = request.form.get("theme")  # Ottiene il nuovo tema
+        print("tema" + new_theme)
         try:
+            print("vault token account settings" + session["vault_token"])
             url = f"{VAULT_ADDR}/v1/kv/data/secret/webapp-ldap/{username}"  # URL per i segreti utente
             headers = {"X-Vault-Token": session["vault_token"]}  # Intestazioni con il token
             response = requests.get(url, headers=headers, verify=VAULT_VERIFY)  # Richiesta GET
             response.raise_for_status()
+            print("risposta:" + response.text)
 
             secret_data = response.json().get("data", {}).get("data", {})  # Estrae i dati
             secret_data["theme"] = new_theme  # Aggiorna il tema
@@ -263,6 +276,7 @@ def account_settings():
             flash("Tema modificato con successo!", "success")  # Messaggio di successo
         except requests.exceptions.RequestException as e:  # Gestisce errori HTTP
             flash(f"Failed to update theme: {e}", "error")  # Messaggio di errore
+            print(f"Vault response error: {response.text}")  # Mostra l'intero contenuto di errore
 
     return render_template("account_settings.html", username=username, role=role, theme=theme)  # Mostra le impostazioni
 

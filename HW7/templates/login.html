@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <form method="POST" action="/login">
+            <h2>Login</h2>
+
+            <!-- Mostra i messaggi di flash -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for category, message in messages %}
+                            <div class="flash {{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <!-- Token CSRF generato automaticamente -->
+            {{ form.hidden_tag() }}
+
+            <label for="username">Username:</label>
+            {{ form.username() }}  <!-- Campo username del modulo FlaskForm --><br>
+
+            <label for="password">Password:</label>
+            {{ form.password() }}  <!-- Campo password del modulo FlaskForm --><br>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>

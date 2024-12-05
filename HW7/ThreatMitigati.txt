@@ -1,0 +1,35 @@
+1. Protezione contro attacchi CSRF (Cross-Site Request Forgery)
+Il modulo CSRFProtect è una funzionalità fornita da Flask-WTF che offre una protezione aggiuntiva contro gli attacchi Cross-Site Request Forgery (CSRF).
+Un attacco CSRF cerca di ingannare un utente autenticato a inviare una richiesta non desiderata a un'applicazione web in cui è già autenticato. 
+Questo può accadere se l'attaccante riesce a indurre l'utente a cliccare su un link o inviare una richiesta che modifica i dati senza il suo consenso.
+La protezione CSRF funziona aggiungendo un token univoco ai moduli web. Questo token è generato dal server e inviato al client. Quando il client 
+invia una richiesta (come un modulo POST), il server verifica che il token inviato sia corretto e corrisponda al token generato in precedenza. 
+Ora un utente malintenzionato non può inviare una richiesta a nome di un altro utente, perché il token CSRF non sarà valido se non è associato alla sessione corrente dell'utente.
+Utilizzando Flask-WTF, la validazione dei dati (come l'input dell'utente) è centralizzata e gestita automaticamente attraverso i
+validatori come InputRequired(), evitando che i dati malformati o pericolosi vengano inviati al server.
+
+2. Prevenzione dell'iniezione di script (XSS)
+Flask-WTF, combinato con Jinja2 (il motore di template di Flask), si assicura che i dati vengano automaticamente escapati quando vengono resi nel template. 
+Questo significa che i dati dell'utente non possono essere interpretati come codice HTML/JavaScript, riducendo il rischio di Cross-Site Scripting (XSS).
+
+SPIEGAZIONE APPROFONDITA 1:
+Il flusso è il seguente:
+1) Quando l'utente carica il modulo, Flask-WTF genera un token CSRF e lo inserisce automaticamente nel modulo (grazie a form.hidden_tag()).
+2) Quando l'utente invia il modulo, il token CSRF viene inviato insieme agli altri dati del modulo.
+3) Flask verifica che il token inviato sia valido e appartenga alla sessione attuale dell'utente.
+4) Se il token è valido, Flask procede con l'elaborazione del modulo; altrimenti, rifiuta la richiesta per evitare un potenziale attacco CSRF.
+
+SPIEGAZIONE APPROFONDITA 2: 
+1) Escape dei dati (Jinja2 filter | e):
+    Abbiamo configurato i template per escape di tutti i dati provenienti da input dell'utente, impedendo che script maliziosi vengano eseguiti
+    quando i dati vengono visualizzati nel browser.
+2) Content Security Policy (CSP):
+    Abbiamo implementato una Content Security Policy (CSP) per limitare le fonti di script e risorse, impedendo che venga eseguito codice proveniente da fonti non sicure
+    (solo dominio di origine ('self'), prevenendo l'esecuzione di script non autorizzati da fonti esterne.). Inoltre, è ridotto il rischio di clickjacking (frame-ancestors
+    'none' fa in modo che nessuna origine possa incorporare la nostra pagina web), che è un tipo di attacco in cui un malintenzionato può incorporare una nostra pagina in 
+    un iframe, sovrapponendo sopra di essa un elemento invisibile, come un pulsante o un link. L'attaccante può quindi indurre l'utente a cliccare sull'elemento invisibile,
+    facendo eseguire azioni sul sito target (ad esempio inviare dati, fare acquisti, ecc.) senza che l'utente ne sia consapevole.
+3) X-XSS-Protection Header:
+    L'header X-XSS-Protection è stato aggiunto per proteggere i browser che lo supportano contro gli attacchi XSS, bloccando la pagina se un XSS viene rilevato.
+4) Validazione e Sanitizzazione dell'Input:
+    I dati in ingresso dai form sono stati validati e sanitizzati per evitare che contenuti dannosi vengano archiviati nel database.

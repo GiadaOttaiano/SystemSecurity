@@ -1,0 +1,161 @@
+/* Impostazioni generali per le pagine delle note */
+.header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+.card-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Specifico per la pagina di visualizzazione delle note */
+.note-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.note-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.note-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.note-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.note-card .note-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.note-card .note-actions a {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.note-card .note-actions a:hover {
+    background-color: #0056b3;
+}
+
+.note-card .note-actions .delete-btn {
+    background-color: #f44336;
+}
+
+.note-card .note-actions .delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Form per l'aggiunta delle note */
+.note-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.note-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.note-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.note-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.note-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Gestione del pulsante di logout */
+.logout-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f;
+}
+

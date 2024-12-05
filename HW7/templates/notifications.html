@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifiche</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='notifications.css') }}">
+</head>
+<body>
+    <header class="header">
+        <h2>Le tue Notifiche</h2>
+    </header>
+    <div class="container">
+        <!-- Pulsante per eliminare tutte le notifiche -->
+        <form method="POST" action="/notifications/clear-all" class="clear-all-form">
+            {{ form.hidden_tag() }} <!-- Assicura che il token CSRF venga incluso -->
+            <button type="submit" class="clear-all-btn">Elimina tutte le notifiche</button>
+        </form>
+
+
+        <!-- Flash messages section -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="flash-message {{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% endwith %}
+        
+        <div class="notification-list">
+            <!-- Iterazione delle notifiche -->
+            {% for notification in notifications %}
+            <div class="notification-card">
+                <p class="notification-message">{{ notification.message }}</p>
+                <small class="notification-timestamp">
+                    Ricevuta il {{ notification.timestamp.strftime('%d/%m/%Y alle %H:%M') }}
+                </small>
+                <!-- Pulsante per eliminare la singola notifica -->
+                <form action="{{ url_for('delete_notification', id=notification.id) }}" method="post">
+                    {{ form_delete[notification.id].hidden_tag() }}
+                    <button type="submit" class="delete-btn">Elimina</button>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <a href="/dashboard" class="back-btn">Torna alla Dashboard</a>
+    </div>
+</body>
+</html>

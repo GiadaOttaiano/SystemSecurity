@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <style>
+        body {
+            background-color: {% if theme == 'dark' %} #333 {% else %} #fff {% endif %};
+            color: {% if theme == 'dark' %} #fff {% else %} #000 {% endif %};
+        }
+
+        .theme-selector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .theme-selector label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .theme-selector select {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .flash-messages {
+            margin-bottom: 20px;
+        }
+
+        .flash.success {
+            color: white;
+            background-color: green;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .flash.error {
+            color: white;
+            background-color: red;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Centra meglio il contenuto */
+        }
+
+        .card h3 {
+            margin-bottom: 10px; /* Aggiunge spazio tra il titolo e il resto del contenuto */
+        }
+
+        .card-btn {
+            display: block;
+            margin-top: 20px; /* Maggiore distanza tra testo e bottone */
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .card-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .logout-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        .note-container {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .note-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .note-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .note-card p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="{{ 'dark' if theme == 'dark' else 'light' }}">
+
+    <div class="dashboard-container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <div class="header">
+            <h2>Welcome, {{ username }}!</h2>
+            <p>Your personalized dashboard.</p>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Account Settings</h3>
+                <p>Manage your personal information and preferences.</p>
+                <a href="/account-settings" class="card-btn">Go to Account</a>
+            </div>
+
+            <div class="card">
+                <h3>Notifications</h3>
+                <p>View and manage your notifications.</p>
+                <a href="/notifications" class="card-btn">Go to Notifications</a>
+            </div>
+
+            <div class="card">
+                <h3>Gestisci le Tue Note</h3>
+                <p>Visualizza e aggiungi note personali.</p>
+                <a href="/add-note" class="card-btn">Aggiungi una Nuova Nota</a>
+                <a href="/notes" class="card-btn">Visualizza le Tue Note</a>
+            </div>
+        </div>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+</body>
+</html>
