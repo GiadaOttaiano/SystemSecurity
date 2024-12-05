@@ -28,35 +28,46 @@ uid: admin1
 userPassword: {SSHA}aUxyO7gGL0imtVABglKWTIDTYUzKMzrO
 description: LDAP administrator
 
-# User: user1
-dn: uid=user1,ou=users,dc=example,dc=com
+# User: janedoe
+dn: uid=janedoe,ou=users,dc=example,dc=com
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-cn: Regular User 1
-sn: User1
-uid: user1
+cn: Jane Doe
+sn: Doe
+uid: janedoe
 userPassword: {SSHA}ycmdySBNgZrg32htX3ZZKC9INFqJEg1K
 
-# User: user2
-dn: uid=user2,ou=users,dc=example,dc=com
+# User: johndoe
+dn: uid=johndoe,ou=users,dc=example,dc=com
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-cn: Regular User 2
-sn: User2
-uid: user2
+cn: John Doe
+sn: Doe
+uid: johndoe
 userPassword: {SSHA}crdBYgefbO+rTzaojwRL2TtYsGqNDPO/
+
+# User: giadaott
+dn: uid=giadaott,ou=users,dc=example,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Giada Ottaiano
+sn: Ottaiano
+uid: giadaott
+userPassword: {SSHA}nEp/+9+I7/K9HJ8PihWTZvk3uNphZv64
 
 # Group: standard users
 dn: cn=standard-users,ou=groups,dc=example,dc=com
 objectclass: top
 objectclass: groupOfNames
 cn: standard-users
-member: uid=user1,ou=users,dc=example,dc=com
-member: uid=user2,ou=users,dc=example,dc=com
+member: uid=janedoe,ou=users,dc=example,dc=com
+member: uid=johndoe,ou=users,dc=example,dc=com
 
 # Group: administrators
 dn: cn=administrators,ou=groups,dc=example,dc=com
@@ -64,3 +75,10 @@ objectclass: top
 objectclass: groupOfNames
 cn: administrators
 member: uid=admin1,ou=users,dc=example,dc=com
+
+# Group: managers
+dn: cn=managers,ou=groups,dc=example,dc=com
+objectclass: top
+objectclass: groupOfNames
+cn: managers
+member: uid=giadaott,ou=users,dc=example,dc=com
