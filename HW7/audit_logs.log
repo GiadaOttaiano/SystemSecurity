@@ -1,0 +1,1330 @@
+2024-12-06 14:22:45,676 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2489367762480>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002439804C208>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000024399E19588>], 'actions': [<vakt.rules.operator.Eq object at 0x0000024399E19550>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000024399E195F8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:22:46,552 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 14:22:46,552 - [33mPress CTRL+C to quit[0m
+2024-12-06 14:22:46,553 -  * Restarting with stat
+2024-12-06 14:22:47,426 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2160309467064>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001F6FC7A76D8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001F6FC7A76A0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001F6FC7A7668>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001F6FC7A7780>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:22:47,445 -  * Debugger is active!
+2024-12-06 14:22:47,451 -  * Debugger PIN: 589-825-161
+2024-12-06 14:22:47,693 - 127.0.0.1 - - [06/Dec/2024 14:22:47] "GET / HTTP/1.1" 200 -
+2024-12-06 14:22:47,731 - 127.0.0.1 - - [06/Dec/2024 14:22:47] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 14:22:50,320 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento | Error: None
+2024-12-06 14:22:50,360 - User: admin1 | Action: accesso | Resource: sistema | Status: successo | Error: None
+2024-12-06 14:22:50,374 - 127.0.0.1 - - [06/Dec/2024 14:22:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:22:50,397 - 127.0.0.1 - - [06/Dec/2024 14:22:50] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:22:50,443 - 127.0.0.1 - - [06/Dec/2024 14:22:50] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 14:23:27,753 - 127.0.0.1 - - [06/Dec/2024 14:23:27] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:23:27,766 - 127.0.0.1 - - [06/Dec/2024 14:23:27] "GET / HTTP/1.1" 200 -
+2024-12-06 14:23:27,821 - 127.0.0.1 - - [06/Dec/2024 14:23:27] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 14:23:31,226 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento | Error: None
+2024-12-06 14:23:31,259 - User: admin1 | Action: accesso | Resource: sistema | Status: successo | Error: None
+2024-12-06 14:23:31,276 - 127.0.0.1 - - [06/Dec/2024 14:23:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:23:31,290 - 127.0.0.1 - - [06/Dec/2024 14:23:31] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:23:31,341 - 127.0.0.1 - - [06/Dec/2024 14:23:31] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 14:23:49,095 - 127.0.0.1 - - [06/Dec/2024 14:23:49] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:23:49,107 - 127.0.0.1 - - [06/Dec/2024 14:23:49] "GET / HTTP/1.1" 200 -
+2024-12-06 14:23:49,158 - 127.0.0.1 - - [06/Dec/2024 14:23:49] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:23:53,033 - User: giadaott | Action: accesso | Resource: sistema | Status: fallimento | Error: None
+2024-12-06 14:23:53,065 - User: giadaott | Action: accesso | Resource: sistema | Status: successo | Error: None
+2024-12-06 14:23:53,083 - 127.0.0.1 - - [06/Dec/2024 14:23:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:23:53,096 - 127.0.0.1 - - [06/Dec/2024 14:23:53] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:23:53,153 - 127.0.0.1 - - [06/Dec/2024 14:23:53] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 14:24:45,535 - 127.0.0.1 - - [06/Dec/2024 14:24:45] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:24:45,548 - 127.0.0.1 - - [06/Dec/2024 14:24:45] "GET / HTTP/1.1" 200 -
+2024-12-06 14:24:45,598 - 127.0.0.1 - - [06/Dec/2024 14:24:45] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:24:48,812 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento | Error: None
+2024-12-06 14:24:48,832 - 127.0.0.1 - - [06/Dec/2024 14:24:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:24:48,846 - 127.0.0.1 - - [06/Dec/2024 14:24:48] "GET / HTTP/1.1" 200 -
+2024-12-06 14:24:48,894 - 127.0.0.1 - - [06/Dec/2024 14:24:48] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:25:56,931 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:25:56,993 -  * Restarting with stat
+2024-12-06 14:25:57,804 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2124593534848>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001EEABA496A0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001EEABA49668>], 'actions': [<vakt.rules.operator.Eq object at 0x000001EEABA49630>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001EEABA49748>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:25:57,822 -  * Debugger is active!
+2024-12-06 14:25:57,828 -  * Debugger PIN: 589-825-161
+2024-12-06 14:26:02,807 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1960340178872>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001C86D6146D8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001C86B42E1D0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001C86B42E240>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001C86D614780>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:26:03,685 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 14:26:03,685 - [33mPress CTRL+C to quit[0m
+2024-12-06 14:26:03,686 -  * Restarting with stat
+2024-12-06 14:26:04,462 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2372672182312>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002286E485748>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002286E485710>], 'actions': [<vakt.rules.operator.Eq object at 0x000002286E4856D8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002286E4857F0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:26:04,485 -  * Debugger is active!
+2024-12-06 14:26:04,490 -  * Debugger PIN: 589-825-161
+2024-12-06 14:26:04,515 - 127.0.0.1 - - [06/Dec/2024 14:26:04] "GET / HTTP/1.1" 200 -
+2024-12-06 14:26:04,552 - 127.0.0.1 - - [06/Dec/2024 14:26:04] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:26:07,425 - 127.0.0.1 - - [06/Dec/2024 14:26:07] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-06 14:26:07,497 - 127.0.0.1 - - [06/Dec/2024 14:26:07] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 14:26:07,503 - 127.0.0.1 - - [06/Dec/2024 14:26:07] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-06 14:26:07,531 - 127.0.0.1 - - [06/Dec/2024 14:26:07] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 14:26:23,775 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\logging_manager.py', reloading
+2024-12-06 14:26:23,841 -  * Restarting with stat
+2024-12-06 14:26:24,764 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2248915068800>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000020B9DC8A6A0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000020B9DC8A668>], 'actions': [<vakt.rules.operator.Eq object at 0x0000020B9DC8A630>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000020B9DC8A748>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:26:24,784 -  * Debugger is active!
+2024-12-06 14:26:24,790 -  * Debugger PIN: 589-825-161
+2024-12-06 14:26:26,263 - 127.0.0.1 - - [06/Dec/2024 14:26:26] "GET / HTTP/1.1" 200 -
+2024-12-06 14:26:26,301 - 127.0.0.1 - - [06/Dec/2024 14:26:26] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:26:29,469 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 14:26:29,484 - 127.0.0.1 - - [06/Dec/2024 14:26:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:26:29,512 - 127.0.0.1 - - [06/Dec/2024 14:26:29] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:26:29,570 - 127.0.0.1 - - [06/Dec/2024 14:26:29] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 14:26:47,081 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:26:47,138 -  * Restarting with stat
+2024-12-06 14:26:47,890 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2041464923920>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001DB50CAA630>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001DB50CAA5F8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001DB50CAA5C0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001DB50CAA6D8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:26:47,907 -  * Debugger is active!
+2024-12-06 14:26:47,912 -  * Debugger PIN: 589-825-161
+2024-12-06 14:26:51,643 - 127.0.0.1 - - [06/Dec/2024 14:26:51] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:26:51,661 - 127.0.0.1 - - [06/Dec/2024 14:26:51] "GET / HTTP/1.1" 200 -
+2024-12-06 14:26:51,717 - 127.0.0.1 - - [06/Dec/2024 14:26:51] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:26:55,430 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 14:26:55,450 - 127.0.0.1 - - [06/Dec/2024 14:26:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:26:55,469 - 127.0.0.1 - - [06/Dec/2024 14:26:55] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:26:55,520 - 127.0.0.1 - - [06/Dec/2024 14:26:55] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 14:27:03,110 - 127.0.0.1 - - [06/Dec/2024 14:27:03] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:27:03,129 - 127.0.0.1 - - [06/Dec/2024 14:27:03] "GET / HTTP/1.1" 200 -
+2024-12-06 14:27:03,187 - 127.0.0.1 - - [06/Dec/2024 14:27:03] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:27:06,697 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:27:06,698 - 127.0.0.1 - - [06/Dec/2024 14:27:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:27:06,717 - 127.0.0.1 - - [06/Dec/2024 14:27:06] "GET / HTTP/1.1" 200 -
+2024-12-06 14:27:06,762 - 127.0.0.1 - - [06/Dec/2024 14:27:06] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:27:41,167 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:27:41,168 - 127.0.0.1 - - [06/Dec/2024 14:27:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:27:41,185 - 127.0.0.1 - - [06/Dec/2024 14:27:41] "GET / HTTP/1.1" 200 -
+2024-12-06 14:27:41,228 - 127.0.0.1 - - [06/Dec/2024 14:27:41] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:27:44,653 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:27:44,654 - 127.0.0.1 - - [06/Dec/2024 14:27:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:27:44,671 - 127.0.0.1 - - [06/Dec/2024 14:27:44] "GET / HTTP/1.1" 200 -
+2024-12-06 14:27:44,719 - 127.0.0.1 - - [06/Dec/2024 14:27:44] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:27:47,164 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:27:47,165 - 127.0.0.1 - - [06/Dec/2024 14:27:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:27:47,182 - 127.0.0.1 - - [06/Dec/2024 14:27:47] "GET / HTTP/1.1" 200 -
+2024-12-06 14:27:47,229 - 127.0.0.1 - - [06/Dec/2024 14:27:47] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:27:49,579 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:27:49,582 - 127.0.0.1 - - [06/Dec/2024 14:27:49] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:27:49,599 - 127.0.0.1 - - [06/Dec/2024 14:27:49] "GET / HTTP/1.1" 200 -
+2024-12-06 14:27:49,641 - 127.0.0.1 - - [06/Dec/2024 14:27:49] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:28:06,006 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:28:06,008 - 127.0.0.1 - - [06/Dec/2024 14:28:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:28:06,023 - 127.0.0.1 - - [06/Dec/2024 14:28:06] "GET / HTTP/1.1" 200 -
+2024-12-06 14:28:06,070 - 127.0.0.1 - - [06/Dec/2024 14:28:06] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:28:40,815 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:28:40,819 - 127.0.0.1 - - [06/Dec/2024 14:28:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:28:40,845 - 127.0.0.1 - - [06/Dec/2024 14:28:40] "GET / HTTP/1.1" 200 -
+2024-12-06 14:28:41,089 - 127.0.0.1 - - [06/Dec/2024 14:28:41] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:28:58,418 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:28:58,423 - 127.0.0.1 - - [06/Dec/2024 14:28:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:28:58,441 - 127.0.0.1 - - [06/Dec/2024 14:28:58] "GET / HTTP/1.1" 200 -
+2024-12-06 14:28:58,490 - 127.0.0.1 - - [06/Dec/2024 14:28:58] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:31:16,289 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:31:16,291 - 127.0.0.1 - - [06/Dec/2024 14:31:16] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:31:16,308 - 127.0.0.1 - - [06/Dec/2024 14:31:16] "GET / HTTP/1.1" 200 -
+2024-12-06 14:31:16,360 - 127.0.0.1 - - [06/Dec/2024 14:31:16] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:32:32,916 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:32:32,918 - 127.0.0.1 - - [06/Dec/2024 14:32:32] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:32:32,937 - 127.0.0.1 - - [06/Dec/2024 14:32:32] "GET / HTTP/1.1" 200 -
+2024-12-06 14:32:32,996 - 127.0.0.1 - - [06/Dec/2024 14:32:32] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 14:32:34,270 - 127.0.0.1 - - [06/Dec/2024 14:32:34] "GET / HTTP/1.1" 200 -
+2024-12-06 14:32:34,314 - 127.0.0.1 - - [06/Dec/2024 14:32:34] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:32:37,555 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:32:37,556 - 127.0.0.1 - - [06/Dec/2024 14:32:37] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:32:37,576 - 127.0.0.1 - - [06/Dec/2024 14:32:37] "GET / HTTP/1.1" 200 -
+2024-12-06 14:32:37,630 - 127.0.0.1 - - [06/Dec/2024 14:32:37] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:32:45,358 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:32:45,363 - 127.0.0.1 - - [06/Dec/2024 14:32:45] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:32:45,380 - 127.0.0.1 - - [06/Dec/2024 14:32:45] "GET / HTTP/1.1" 200 -
+2024-12-06 14:32:45,427 - 127.0.0.1 - - [06/Dec/2024 14:32:45] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:33:02,963 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:33:02,966 - 127.0.0.1 - - [06/Dec/2024 14:33:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:33:02,984 - 127.0.0.1 - - [06/Dec/2024 14:33:02] "GET / HTTP/1.1" 200 -
+2024-12-06 14:33:03,043 - 127.0.0.1 - - [06/Dec/2024 14:33:03] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:33:40,444 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:33:40,446 - 127.0.0.1 - - [06/Dec/2024 14:33:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:33:40,467 - 127.0.0.1 - - [06/Dec/2024 14:33:40] "GET / HTTP/1.1" 200 -
+2024-12-06 14:33:40,514 - 127.0.0.1 - - [06/Dec/2024 14:33:40] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:33:56,488 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:33:56,489 - 127.0.0.1 - - [06/Dec/2024 14:33:56] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:33:56,512 - 127.0.0.1 - - [06/Dec/2024 14:33:56] "GET / HTTP/1.1" 200 -
+2024-12-06 14:33:56,558 - 127.0.0.1 - - [06/Dec/2024 14:33:56] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:34:30,654 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:34:30,658 - 127.0.0.1 - - [06/Dec/2024 14:34:30] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:34:30,680 - 127.0.0.1 - - [06/Dec/2024 14:34:30] "GET / HTTP/1.1" 200 -
+2024-12-06 14:34:30,725 - 127.0.0.1 - - [06/Dec/2024 14:34:30] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:35:05,523 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:35:05,874 -  * Restarting with stat
+2024-12-06 14:35:06,844 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2356263732896>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002249C4345C0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002249C434588>], 'actions': [<vakt.rules.operator.Eq object at 0x000002249A019128>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002249C434668>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:35:06,864 -  * Debugger is active!
+2024-12-06 14:35:06,872 -  * Debugger PIN: 589-825-161
+2024-12-06 14:35:11,938 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:35:11,999 -  * Restarting with stat
+2024-12-06 14:35:12,897 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1892273657728>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001B8944C96A0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001B8944C9668>], 'actions': [<vakt.rules.operator.Eq object at 0x000001B8944C9630>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001B8944C9748>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:35:12,917 -  * Debugger is active!
+2024-12-06 14:35:12,923 -  * Debugger PIN: 589-825-161
+2024-12-06 14:35:14,388 - 127.0.0.1 - - [06/Dec/2024 14:35:14] "GET / HTTP/1.1" 200 -
+2024-12-06 14:35:14,424 - 127.0.0.1 - - [06/Dec/2024 14:35:14] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:35:14,816 - 127.0.0.1 - - [06/Dec/2024 14:35:14] "GET / HTTP/1.1" 200 -
+2024-12-06 14:35:14,853 - 127.0.0.1 - - [06/Dec/2024 14:35:14] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:35:14,967 - 127.0.0.1 - - [06/Dec/2024 14:35:14] "GET / HTTP/1.1" 200 -
+2024-12-06 14:35:15,014 - 127.0.0.1 - - [06/Dec/2024 14:35:15] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:35:18,275 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:35:18,279 - 127.0.0.1 - - [06/Dec/2024 14:35:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:35:18,302 - 127.0.0.1 - - [06/Dec/2024 14:35:18] "GET / HTTP/1.1" 200 -
+2024-12-06 14:35:18,347 - 127.0.0.1 - - [06/Dec/2024 14:35:18] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:35:35,484 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:35:35,486 - 127.0.0.1 - - [06/Dec/2024 14:35:35] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:35:35,504 - 127.0.0.1 - - [06/Dec/2024 14:35:35] "GET / HTTP/1.1" 200 -
+2024-12-06 14:35:35,554 - 127.0.0.1 - - [06/Dec/2024 14:35:35] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:36:43,364 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:36:43,366 - 127.0.0.1 - - [06/Dec/2024 14:36:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:36:43,390 - 127.0.0.1 - - [06/Dec/2024 14:36:43] "GET / HTTP/1.1" 200 -
+2024-12-06 14:36:43,433 - 127.0.0.1 - - [06/Dec/2024 14:36:43] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:38:09,197 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:38:09,292 -  * Restarting with stat
+2024-12-06 14:38:10,302 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1931919988440>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001C1CF6795F8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001C1CF6795C0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001C1CF679588>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001C1CF6796A0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:38:10,323 -  * Debugger is active!
+2024-12-06 14:38:10,332 -  * Debugger PIN: 589-825-161
+2024-12-06 14:38:11,852 - 127.0.0.1 - - [06/Dec/2024 14:38:11] "GET / HTTP/1.1" 200 -
+2024-12-06 14:38:11,890 - 127.0.0.1 - - [06/Dec/2024 14:38:11] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 14:38:11,903 - 127.0.0.1 - - [06/Dec/2024 14:38:11] "GET / HTTP/1.1" 200 -
+2024-12-06 14:38:11,948 - 127.0.0.1 - - [06/Dec/2024 14:38:11] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:38:12,302 - 127.0.0.1 - - [06/Dec/2024 14:38:12] "GET / HTTP/1.1" 200 -
+2024-12-06 14:38:12,336 - 127.0.0.1 - - [06/Dec/2024 14:38:12] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:38:15,020 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:38:15,022 - 127.0.0.1 - - [06/Dec/2024 14:38:15] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:38:15,041 - 127.0.0.1 - - [06/Dec/2024 14:38:15] "GET / HTTP/1.1" 200 -
+2024-12-06 14:38:15,091 - 127.0.0.1 - - [06/Dec/2024 14:38:15] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:38:19,335 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:38:19,337 - 127.0.0.1 - - [06/Dec/2024 14:38:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:38:19,355 - 127.0.0.1 - - [06/Dec/2024 14:38:19] "GET / HTTP/1.1" 200 -
+2024-12-06 14:38:19,396 - 127.0.0.1 - - [06/Dec/2024 14:38:19] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:38:33,620 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:38:33,698 -  * Restarting with stat
+2024-12-06 14:38:47,427 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1798150194680>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001A2AA1A8518>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001A2AA1A84E0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001A2AA1A84A8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001A2AA1A85C0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:38:48,306 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 14:38:48,306 - [33mPress CTRL+C to quit[0m
+2024-12-06 14:38:48,307 -  * Restarting with stat
+2024-12-06 14:38:49,130 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2622253602296>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002628A7E9518>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002628A7E94E0>], 'actions': [<vakt.rules.operator.Eq object at 0x00000262885FE2E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002628A7E95C0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:38:49,152 -  * Debugger is active!
+2024-12-06 14:38:49,158 -  * Debugger PIN: 589-825-161
+2024-12-06 14:38:49,189 - 127.0.0.1 - - [06/Dec/2024 14:38:49] "GET / HTTP/1.1" 200 -
+2024-12-06 14:38:49,232 - 127.0.0.1 - - [06/Dec/2024 14:38:49] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:38:52,601 - 127.0.0.1 - - [06/Dec/2024 14:38:52] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-06 14:38:52,686 - 127.0.0.1 - - [06/Dec/2024 14:38:52] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 14:38:52,692 - 127.0.0.1 - - [06/Dec/2024 14:38:52] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-06 14:39:23,648 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:39:23,722 -  * Restarting with stat
+2024-12-06 14:39:24,628 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2075729827712>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001E34B2396A0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E34B239668>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E34B239630>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E34B239748>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:39:24,648 -  * Debugger is active!
+2024-12-06 14:39:24,654 -  * Debugger PIN: 589-825-161
+2024-12-06 14:39:30,631 - 127.0.0.1 - - [06/Dec/2024 14:39:30] "GET / HTTP/1.1" 200 -
+2024-12-06 14:39:30,666 - 127.0.0.1 - - [06/Dec/2024 14:39:30] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:39:30,829 - 127.0.0.1 - - [06/Dec/2024 14:39:30] "GET / HTTP/1.1" 200 -
+2024-12-06 14:39:30,872 - 127.0.0.1 - - [06/Dec/2024 14:39:30] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:39:33,208 - 127.0.0.1 - - [06/Dec/2024 14:39:33] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-06 14:39:33,270 - 127.0.0.1 - - [06/Dec/2024 14:39:33] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 14:39:33,276 - 127.0.0.1 - - [06/Dec/2024 14:39:33] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-06 14:39:40,858 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:39:40,922 -  * Restarting with stat
+2024-12-06 14:39:41,725 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2887796627104>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002A05E1795C0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002A05E179588>], 'actions': [<vakt.rules.operator.Eq object at 0x000002A05E179550>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002A05E179668>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:39:41,744 -  * Debugger is active!
+2024-12-06 14:39:41,750 -  * Debugger PIN: 589-825-161
+2024-12-06 14:39:41,775 - 127.0.0.1 - - [06/Dec/2024 14:39:41] "GET / HTTP/1.1" 200 -
+2024-12-06 14:39:41,809 - 127.0.0.1 - - [06/Dec/2024 14:39:41] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:39:44,145 - 127.0.0.1 - - [06/Dec/2024 14:39:44] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-06 14:39:44,234 - 127.0.0.1 - - [06/Dec/2024 14:39:44] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-12-06 14:39:44,244 - 127.0.0.1 - - [06/Dec/2024 14:39:44] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-12-06 14:39:53,950 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:39:54,021 -  * Restarting with stat
+2024-12-06 14:39:54,829 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2115454736256>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001EC8AED96A0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001EC8AED9668>], 'actions': [<vakt.rules.operator.Eq object at 0x000001EC8AED9630>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001EC8AED9748>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:39:54,848 -  * Debugger is active!
+2024-12-06 14:39:54,853 -  * Debugger PIN: 589-825-161
+2024-12-06 14:39:54,880 - 127.0.0.1 - - [06/Dec/2024 14:39:54] "GET / HTTP/1.1" 200 -
+2024-12-06 14:39:54,882 - 127.0.0.1 - - [06/Dec/2024 14:39:54] "GET / HTTP/1.1" 200 -
+2024-12-06 14:39:54,917 - 127.0.0.1 - - [06/Dec/2024 14:39:54] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:39:57,410 - 127.0.0.1 - - [06/Dec/2024 14:39:57] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-06 14:39:57,482 - 127.0.0.1 - - [06/Dec/2024 14:39:57] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-12-06 14:39:57,488 - 127.0.0.1 - - [06/Dec/2024 14:39:57] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-12-06 14:40:05,005 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:40:05,069 -  * Restarting with stat
+2024-12-06 14:40:05,992 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2305942005464>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000218E4DAA5F8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000218E4DAA5C0>], 'actions': [<vakt.rules.operator.Eq object at 0x00000218E2988048>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000218E4DAA6A0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:40:06,012 -  * Debugger is active!
+2024-12-06 14:40:06,017 -  * Debugger PIN: 589-825-161
+2024-12-06 14:40:06,114 - 127.0.0.1 - - [06/Dec/2024 14:40:06] "GET / HTTP/1.1" 200 -
+2024-12-06 14:40:06,159 - 127.0.0.1 - - [06/Dec/2024 14:40:06] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:40:08,552 - 127.0.0.1 - - [06/Dec/2024 14:40:08] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-06 14:40:08,622 - 127.0.0.1 - - [06/Dec/2024 14:40:08] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 14:40:08,628 - 127.0.0.1 - - [06/Dec/2024 14:40:08] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-06 14:40:45,605 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:40:45,676 -  * Restarting with stat
+2024-12-06 14:40:46,502 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2376879282048>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000229690B96A0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000229690B9668>], 'actions': [<vakt.rules.operator.Eq object at 0x00000229690B9630>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000229690B9748>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:40:46,522 -  * Debugger is active!
+2024-12-06 14:40:46,527 -  * Debugger PIN: 589-825-161
+2024-12-06 14:41:52,555 - 127.0.0.1 - - [06/Dec/2024 14:41:52] "GET / HTTP/1.1" 200 -
+2024-12-06 14:41:52,596 - 127.0.0.1 - - [06/Dec/2024 14:41:52] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:41:55,921 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:41:55,925 - 127.0.0.1 - - [06/Dec/2024 14:41:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:41:55,943 - 127.0.0.1 - - [06/Dec/2024 14:41:55] "GET / HTTP/1.1" 200 -
+2024-12-06 14:41:55,997 - 127.0.0.1 - - [06/Dec/2024 14:41:55] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:44:15,727 - 127.0.0.1 - - [06/Dec/2024 14:44:15] "GET / HTTP/1.1" 200 -
+2024-12-06 14:44:15,766 - 127.0.0.1 - - [06/Dec/2024 14:44:15] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 14:44:18,913 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 14:44:18,946 - 127.0.0.1 - - [06/Dec/2024 14:44:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:44:18,967 - 127.0.0.1 - - [06/Dec/2024 14:44:18] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:44:19,020 - 127.0.0.1 - - [06/Dec/2024 14:44:19] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 14:47:56,931 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:47:57,021 -  * Restarting with stat
+2024-12-06 14:47:58,067 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2424571668240>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000023483BBA630>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000023483BBA5F8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000023483BBA5C0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000023483BBA6D8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:47:58,088 -  * Debugger is active!
+2024-12-06 14:47:58,095 -  * Debugger PIN: 589-825-161
+2024-12-06 14:48:03,104 - 127.0.0.1 - - [06/Dec/2024 14:48:03] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:48:03,125 - 127.0.0.1 - - [06/Dec/2024 14:48:03] "GET / HTTP/1.1" 200 -
+2024-12-06 14:48:03,182 - 127.0.0.1 - - [06/Dec/2024 14:48:03] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 14:48:04,336 - 127.0.0.1 - - [06/Dec/2024 14:48:04] "GET / HTTP/1.1" 200 -
+2024-12-06 14:48:04,371 - 127.0.0.1 - - [06/Dec/2024 14:48:04] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:08,032 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 14:48:08,050 - 127.0.0.1 - - [06/Dec/2024 14:48:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:48:08,075 - 127.0.0.1 - - [06/Dec/2024 14:48:08] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:48:08,125 - 127.0.0.1 - - [06/Dec/2024 14:48:08] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 14:48:13,761 - 127.0.0.1 - - [06/Dec/2024 14:48:13] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:48:13,782 - 127.0.0.1 - - [06/Dec/2024 14:48:13] "GET / HTTP/1.1" 200 -
+2024-12-06 14:48:13,841 - 127.0.0.1 - - [06/Dec/2024 14:48:13] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:17,084 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 14:48:17,104 - 127.0.0.1 - - [06/Dec/2024 14:48:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:48:17,120 - 127.0.0.1 - - [06/Dec/2024 14:48:17] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:48:17,177 - 127.0.0.1 - - [06/Dec/2024 14:48:17] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:18,914 - 127.0.0.1 - - [06/Dec/2024 14:48:18] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:48:18,929 - 127.0.0.1 - - [06/Dec/2024 14:48:18] "GET / HTTP/1.1" 200 -
+2024-12-06 14:48:18,990 - 127.0.0.1 - - [06/Dec/2024 14:48:18] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:21,722 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 14:48:21,745 - 127.0.0.1 - - [06/Dec/2024 14:48:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:48:21,762 - 127.0.0.1 - - [06/Dec/2024 14:48:21] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:48:21,815 - 127.0.0.1 - - [06/Dec/2024 14:48:21] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:23,564 - 127.0.0.1 - - [06/Dec/2024 14:48:23] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:48:23,579 - 127.0.0.1 - - [06/Dec/2024 14:48:23] "GET / HTTP/1.1" 200 -
+2024-12-06 14:48:23,637 - 127.0.0.1 - - [06/Dec/2024 14:48:23] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:28,293 - User: adin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:48:28,295 - 127.0.0.1 - - [06/Dec/2024 14:48:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:48:28,313 - 127.0.0.1 - - [06/Dec/2024 14:48:28] "GET / HTTP/1.1" 200 -
+2024-12-06 14:48:28,371 - 127.0.0.1 - - [06/Dec/2024 14:48:28] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:31,696 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 14:48:31,716 - 127.0.0.1 - - [06/Dec/2024 14:48:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:48:31,731 - 127.0.0.1 - - [06/Dec/2024 14:48:31] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:48:31,785 - 127.0.0.1 - - [06/Dec/2024 14:48:31] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:33,740 - 127.0.0.1 - - [06/Dec/2024 14:48:33] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:48:33,756 - 127.0.0.1 - - [06/Dec/2024 14:48:33] "GET / HTTP/1.1" 200 -
+2024-12-06 14:48:33,826 - 127.0.0.1 - - [06/Dec/2024 14:48:33] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:36,443 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 14:48:36,465 - 127.0.0.1 - - [06/Dec/2024 14:48:36] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:48:36,480 - 127.0.0.1 - - [06/Dec/2024 14:48:36] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:48:36,535 - 127.0.0.1 - - [06/Dec/2024 14:48:36] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:38,522 - 127.0.0.1 - - [06/Dec/2024 14:48:38] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:48:38,539 - 127.0.0.1 - - [06/Dec/2024 14:48:38] "GET / HTTP/1.1" 200 -
+2024-12-06 14:48:38,599 - 127.0.0.1 - - [06/Dec/2024 14:48:38] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:40,950 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 14:48:40,972 - 127.0.0.1 - - [06/Dec/2024 14:48:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:48:40,987 - 127.0.0.1 - - [06/Dec/2024 14:48:40] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:48:41,042 - 127.0.0.1 - - [06/Dec/2024 14:48:41] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:42,756 - 127.0.0.1 - - [06/Dec/2024 14:48:42] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:48:42,772 - 127.0.0.1 - - [06/Dec/2024 14:48:42] "GET / HTTP/1.1" 200 -
+2024-12-06 14:48:42,833 - 127.0.0.1 - - [06/Dec/2024 14:48:42] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:45,525 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:48:45,526 - 127.0.0.1 - - [06/Dec/2024 14:48:45] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:48:45,543 - 127.0.0.1 - - [06/Dec/2024 14:48:45] "GET / HTTP/1.1" 200 -
+2024-12-06 14:48:45,594 - 127.0.0.1 - - [06/Dec/2024 14:48:45] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:48,853 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:48:48,854 - 127.0.0.1 - - [06/Dec/2024 14:48:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:48:48,867 - 127.0.0.1 - - [06/Dec/2024 14:48:48] "GET / HTTP/1.1" 200 -
+2024-12-06 14:48:48,916 - 127.0.0.1 - - [06/Dec/2024 14:48:48] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:51,144 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:48:51,147 - 127.0.0.1 - - [06/Dec/2024 14:48:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:48:51,162 - 127.0.0.1 - - [06/Dec/2024 14:48:51] "GET / HTTP/1.1" 200 -
+2024-12-06 14:48:51,207 - 127.0.0.1 - - [06/Dec/2024 14:48:51] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:48:54,787 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:48:54,789 - 127.0.0.1 - - [06/Dec/2024 14:48:54] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:48:54,805 - 127.0.0.1 - - [06/Dec/2024 14:48:54] "GET / HTTP/1.1" 200 -
+2024-12-06 14:48:54,854 - 127.0.0.1 - - [06/Dec/2024 14:48:54] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:49:07,120 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 14:49:07,136 - 127.0.0.1 - - [06/Dec/2024 14:49:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:49:07,154 - 127.0.0.1 - - [06/Dec/2024 14:49:07] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:49:07,210 - 127.0.0.1 - - [06/Dec/2024 14:49:07] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 14:49:10,771 - 127.0.0.1 - - [06/Dec/2024 14:49:10] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:49:10,783 - 127.0.0.1 - - [06/Dec/2024 14:49:10] "GET / HTTP/1.1" 200 -
+2024-12-06 14:49:10,850 - 127.0.0.1 - - [06/Dec/2024 14:49:10] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:49:13,703 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:49:13,705 - 127.0.0.1 - - [06/Dec/2024 14:49:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:49:13,721 - 127.0.0.1 - - [06/Dec/2024 14:49:13] "GET / HTTP/1.1" 200 -
+2024-12-06 14:49:13,770 - 127.0.0.1 - - [06/Dec/2024 14:49:13] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:49:18,625 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 14:49:18,640 - 127.0.0.1 - - [06/Dec/2024 14:49:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:49:18,658 - 127.0.0.1 - - [06/Dec/2024 14:49:18] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:49:18,711 - 127.0.0.1 - - [06/Dec/2024 14:49:18] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 14:49:21,401 - 127.0.0.1 - - [06/Dec/2024 14:49:21] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:49:21,415 - 127.0.0.1 - - [06/Dec/2024 14:49:21] "GET / HTTP/1.1" 200 -
+2024-12-06 14:49:21,472 - 127.0.0.1 - - [06/Dec/2024 14:49:21] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:49:24,106 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 14:49:24,124 - 127.0.0.1 - - [06/Dec/2024 14:49:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:49:24,138 - 127.0.0.1 - - [06/Dec/2024 14:49:24] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:49:24,196 - 127.0.0.1 - - [06/Dec/2024 14:49:24] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 14:49:25,809 - 127.0.0.1 - - [06/Dec/2024 14:49:25] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:49:25,824 - 127.0.0.1 - - [06/Dec/2024 14:49:25] "GET / HTTP/1.1" 200 -
+2024-12-06 14:49:25,872 - 127.0.0.1 - - [06/Dec/2024 14:49:25] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:49:28,474 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:49:28,475 - 127.0.0.1 - - [06/Dec/2024 14:49:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:49:28,489 - 127.0.0.1 - - [06/Dec/2024 14:49:28] "GET / HTTP/1.1" 200 -
+2024-12-06 14:49:28,542 - 127.0.0.1 - - [06/Dec/2024 14:49:28] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:49:32,005 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:49:32,006 - 127.0.0.1 - - [06/Dec/2024 14:49:32] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:49:32,020 - 127.0.0.1 - - [06/Dec/2024 14:49:32] "GET / HTTP/1.1" 200 -
+2024-12-06 14:49:32,064 - 127.0.0.1 - - [06/Dec/2024 14:49:32] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:49:34,566 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:49:34,567 - 127.0.0.1 - - [06/Dec/2024 14:49:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:49:34,581 - 127.0.0.1 - - [06/Dec/2024 14:49:34] "GET / HTTP/1.1" 200 -
+2024-12-06 14:49:34,627 - 127.0.0.1 - - [06/Dec/2024 14:49:34] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:49:38,083 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:49:38,086 - 127.0.0.1 - - [06/Dec/2024 14:49:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:49:38,103 - 127.0.0.1 - - [06/Dec/2024 14:49:38] "GET / HTTP/1.1" 200 -
+2024-12-06 14:49:38,145 - 127.0.0.1 - - [06/Dec/2024 14:49:38] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:49:40,845 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:49:40,846 - 127.0.0.1 - - [06/Dec/2024 14:49:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:49:40,862 - 127.0.0.1 - - [06/Dec/2024 14:49:40] "GET / HTTP/1.1" 200 -
+2024-12-06 14:49:40,912 - 127.0.0.1 - - [06/Dec/2024 14:49:40] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:49:52,684 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:49:52,688 - 127.0.0.1 - - [06/Dec/2024 14:49:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:49:52,710 - 127.0.0.1 - - [06/Dec/2024 14:49:52] "GET / HTTP/1.1" 200 -
+2024-12-06 14:49:52,756 - 127.0.0.1 - - [06/Dec/2024 14:49:52] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:51:58,085 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:51:58,086 - 127.0.0.1 - - [06/Dec/2024 14:51:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:51:58,102 - 127.0.0.1 - - [06/Dec/2024 14:51:58] "GET / HTTP/1.1" 200 -
+2024-12-06 14:51:58,163 - 127.0.0.1 - - [06/Dec/2024 14:51:58] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:52:32,551 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:52:32,616 -  * Restarting with stat
+2024-12-06 14:52:33,474 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2394380453984>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000022D7C324780>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000022D7C324748>], 'actions': [<vakt.rules.operator.Eq object at 0x0000022D7C324710>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000022D7C324828>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:52:33,493 -  * Debugger is active!
+2024-12-06 14:52:33,500 -  * Debugger PIN: 589-825-161
+2024-12-06 14:53:10,379 - 127.0.0.1 - - [06/Dec/2024 14:53:10] "GET / HTTP/1.1" 200 -
+2024-12-06 14:53:10,414 - 127.0.0.1 - - [06/Dec/2024 14:53:10] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:53:13,416 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:53:13,417 - 127.0.0.1 - - [06/Dec/2024 14:53:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:53:13,432 - 127.0.0.1 - - [06/Dec/2024 14:53:13] "GET / HTTP/1.1" 200 -
+2024-12-06 14:53:13,479 - 127.0.0.1 - - [06/Dec/2024 14:53:13] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:53:19,060 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:53:19,121 -  * Restarting with stat
+2024-12-06 14:53:19,992 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2076747867920>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001E387D1A630>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E387D1A5F8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E387D1A5C0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E387D1A6D8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:53:20,011 -  * Debugger is active!
+2024-12-06 14:53:20,016 -  * Debugger PIN: 589-825-161
+2024-12-06 14:53:20,474 - 127.0.0.1 - - [06/Dec/2024 14:53:20] "GET / HTTP/1.1" 200 -
+2024-12-06 14:53:20,512 - 127.0.0.1 - - [06/Dec/2024 14:53:20] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:53:23,809 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:53:23,810 - 127.0.0.1 - - [06/Dec/2024 14:53:23] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:53:23,826 - 127.0.0.1 - - [06/Dec/2024 14:53:23] "GET / HTTP/1.1" 200 -
+2024-12-06 14:53:23,872 - 127.0.0.1 - - [06/Dec/2024 14:53:23] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:53:26,912 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:53:26,914 - 127.0.0.1 - - [06/Dec/2024 14:53:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:53:26,931 - 127.0.0.1 - - [06/Dec/2024 14:53:26] "GET / HTTP/1.1" 200 -
+2024-12-06 14:53:26,981 - 127.0.0.1 - - [06/Dec/2024 14:53:26] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:54:46,187 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:54:46,255 -  * Restarting with stat
+2024-12-06 14:54:47,027 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2731618301656>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000027C012375F8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000027C012375C0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000027C01237588>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000027C012376A0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:54:47,046 -  * Debugger is active!
+2024-12-06 14:54:47,051 -  * Debugger PIN: 589-825-161
+2024-12-06 14:54:54,194 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:54:54,267 -  * Restarting with stat
+2024-12-06 14:54:55,058 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2934461859880>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002AB3B8E8748>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002AB3B8E8710>], 'actions': [<vakt.rules.operator.Eq object at 0x000002AB396FC208>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002AB3B8E87F0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:54:55,076 -  * Debugger is active!
+2024-12-06 14:54:55,082 -  * Debugger PIN: 589-825-161
+2024-12-06 14:54:57,960 - 127.0.0.1 - - [06/Dec/2024 14:54:57] "GET / HTTP/1.1" 200 -
+2024-12-06 14:54:58,012 - 127.0.0.1 - - [06/Dec/2024 14:54:58] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:54:58,547 - 127.0.0.1 - - [06/Dec/2024 14:54:58] "GET / HTTP/1.1" 200 -
+2024-12-06 14:54:58,588 - 127.0.0.1 - - [06/Dec/2024 14:54:58] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:55:07,519 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2779809294152>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000287398BA668>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000287398BA630>], 'actions': [<vakt.rules.operator.Eq object at 0x00000287398BA5F8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000287398BA710>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:55:08,393 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 14:55:08,393 - [33mPress CTRL+C to quit[0m
+2024-12-06 14:55:08,395 -  * Restarting with stat
+2024-12-06 14:55:09,364 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2162453555072>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001F77C46A6A0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001F77C46A668>], 'actions': [<vakt.rules.operator.Eq object at 0x000001F77C46A630>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001F77C46A748>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:55:09,391 -  * Debugger is active!
+2024-12-06 14:55:09,397 -  * Debugger PIN: 589-825-161
+2024-12-06 14:55:10,158 - 127.0.0.1 - - [06/Dec/2024 14:55:10] "GET / HTTP/1.1" 200 -
+2024-12-06 14:55:10,194 - 127.0.0.1 - - [06/Dec/2024 14:55:10] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:55:12,762 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:55:12,763 - 127.0.0.1 - - [06/Dec/2024 14:55:12] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:55:12,777 - 127.0.0.1 - - [06/Dec/2024 14:55:12] "GET / HTTP/1.1" 200 -
+2024-12-06 14:55:12,825 - 127.0.0.1 - - [06/Dec/2024 14:55:12] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:55:48,906 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:55:48,987 -  * Restarting with stat
+2024-12-06 14:55:49,837 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2245526640624>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000020AD3D15710>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000020AD3D156D8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000020AD3D152B0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000020AD3D157B8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:55:49,858 -  * Debugger is active!
+2024-12-06 14:55:49,863 -  * Debugger PIN: 589-825-161
+2024-12-06 14:55:51,349 - 127.0.0.1 - - [06/Dec/2024 14:55:51] "GET / HTTP/1.1" 200 -
+2024-12-06 14:55:51,384 - 127.0.0.1 - - [06/Dec/2024 14:55:51] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:55:54,267 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:55:54,268 - 127.0.0.1 - - [06/Dec/2024 14:55:54] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:55:54,286 - 127.0.0.1 - - [06/Dec/2024 14:55:54] "GET / HTTP/1.1" 200 -
+2024-12-06 14:55:54,339 - 127.0.0.1 - - [06/Dec/2024 14:55:54] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:56:02,059 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:56:02,121 -  * Restarting with stat
+2024-12-06 14:56:03,021 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2105641752504>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001EA420756D8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001EA420756A0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001EA42075668>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001EA42075780>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:56:03,044 -  * Debugger is active!
+2024-12-06 14:56:03,052 -  * Debugger PIN: 589-825-161
+2024-12-06 14:56:03,343 - 127.0.0.1 - - [06/Dec/2024 14:56:03] "GET / HTTP/1.1" 200 -
+2024-12-06 14:56:03,384 - 127.0.0.1 - - [06/Dec/2024 14:56:03] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:56:06,084 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:56:06,086 - 127.0.0.1 - - [06/Dec/2024 14:56:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:56:06,103 - 127.0.0.1 - - [06/Dec/2024 14:56:06] "GET / HTTP/1.1" 200 -
+2024-12-06 14:56:06,164 - 127.0.0.1 - - [06/Dec/2024 14:56:06] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:57:12,002 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:57:12,063 -  * Restarting with stat
+2024-12-06 14:57:12,993 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1933536741080>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001C22FC545F8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001C22FC545C0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001C22FC54588>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001C22FC546A0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:57:13,013 -  * Debugger is active!
+2024-12-06 14:57:13,018 -  * Debugger PIN: 589-825-161
+2024-12-06 14:57:13,923 - 127.0.0.1 - - [06/Dec/2024 14:57:13] "GET / HTTP/1.1" 200 -
+2024-12-06 14:57:13,961 - 127.0.0.1 - - [06/Dec/2024 14:57:13] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:57:16,616 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:57:16,617 - 127.0.0.1 - - [06/Dec/2024 14:57:16] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:57:16,633 - 127.0.0.1 - - [06/Dec/2024 14:57:16] "GET / HTTP/1.1" 200 -
+2024-12-06 14:57:16,683 - 127.0.0.1 - - [06/Dec/2024 14:57:16] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:57:43,431 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 14:57:43,490 -  * Restarting with stat
+2024-12-06 14:57:44,288 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2364655892016>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000022690797550>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000022690797518>], 'actions': [<vakt.rules.operator.Eq object at 0x000002268C6644E0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000226907975F8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:57:44,305 -  * Debugger is active!
+2024-12-06 14:57:44,310 -  * Debugger PIN: 589-825-161
+2024-12-06 14:57:48,458 - 127.0.0.1 - - [06/Dec/2024 14:57:48] "GET / HTTP/1.1" 200 -
+2024-12-06 14:57:48,493 - 127.0.0.1 - - [06/Dec/2024 14:57:48] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:57:51,218 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:57:51,220 - 127.0.0.1 - - [06/Dec/2024 14:57:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:57:51,235 - 127.0.0.1 - - [06/Dec/2024 14:57:51] "GET / HTTP/1.1" 200 -
+2024-12-06 14:57:51,279 - 127.0.0.1 - - [06/Dec/2024 14:57:51] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:57:57,628 - User: janedoe | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:57:57,629 - 127.0.0.1 - - [06/Dec/2024 14:57:57] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:57:57,642 - 127.0.0.1 - - [06/Dec/2024 14:57:57] "GET / HTTP/1.1" 200 -
+2024-12-06 14:57:57,680 - 127.0.0.1 - - [06/Dec/2024 14:57:57] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:58:04,586 - User: janedoe | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 14:58:04,607 - 127.0.0.1 - - [06/Dec/2024 14:58:04] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:58:04,625 - 127.0.0.1 - - [06/Dec/2024 14:58:04] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 14:58:04,674 - 127.0.0.1 - - [06/Dec/2024 14:58:04] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 14:58:06,574 - 127.0.0.1 - - [06/Dec/2024 14:58:06] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 14:58:06,589 - 127.0.0.1 - - [06/Dec/2024 14:58:06] "GET / HTTP/1.1" 200 -
+2024-12-06 14:58:06,652 - 127.0.0.1 - - [06/Dec/2024 14:58:06] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:58:12,515 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:58:12,516 - 127.0.0.1 - - [06/Dec/2024 14:58:12] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:58:12,531 - 127.0.0.1 - - [06/Dec/2024 14:58:12] "GET / HTTP/1.1" 200 -
+2024-12-06 14:58:12,570 - 127.0.0.1 - - [06/Dec/2024 14:58:12] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:59:06,578 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2605903823984>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000025EBA804BE0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000025EBBF8C390>], 'actions': [<vakt.rules.operator.Eq object at 0x0000025EBBF8C358>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000025EBBF8C438>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:59:07,461 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 14:59:07,462 - [33mPress CTRL+C to quit[0m
+2024-12-06 14:59:07,463 -  * Restarting with stat
+2024-12-06 14:59:08,239 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2772783383608>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000028596C4C358>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000028596C4C320>], 'actions': [<vakt.rules.operator.Eq object at 0x0000028596C4C2E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000028596C4C400>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 14:59:08,256 -  * Debugger is active!
+2024-12-06 14:59:08,262 -  * Debugger PIN: 589-825-161
+2024-12-06 14:59:10,415 - The CSRF session token is missing.
+2024-12-06 14:59:10,416 - 127.0.0.1 - - [06/Dec/2024 14:59:10] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2024-12-06 14:59:13,538 - 127.0.0.1 - - [06/Dec/2024 14:59:13] "GET / HTTP/1.1" 200 -
+2024-12-06 14:59:13,578 - 127.0.0.1 - - [06/Dec/2024 14:59:13] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:59:16,406 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:59:16,407 - 127.0.0.1 - - [06/Dec/2024 14:59:16] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:59:16,421 - 127.0.0.1 - - [06/Dec/2024 14:59:16] "GET / HTTP/1.1" 200 -
+2024-12-06 14:59:16,464 - 127.0.0.1 - - [06/Dec/2024 14:59:16] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:59:51,878 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:59:51,878 - 127.0.0.1 - - [06/Dec/2024 14:59:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:59:51,896 - 127.0.0.1 - - [06/Dec/2024 14:59:51] "GET / HTTP/1.1" 200 -
+2024-12-06 14:59:51,935 - 127.0.0.1 - - [06/Dec/2024 14:59:51] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:59:55,406 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:59:55,407 - 127.0.0.1 - - [06/Dec/2024 14:59:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:59:55,419 - 127.0.0.1 - - [06/Dec/2024 14:59:55] "GET / HTTP/1.1" 200 -
+2024-12-06 14:59:55,467 - 127.0.0.1 - - [06/Dec/2024 14:59:55] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 14:59:58,585 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 14:59:58,586 - 127.0.0.1 - - [06/Dec/2024 14:59:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 14:59:58,601 - 127.0.0.1 - - [06/Dec/2024 14:59:58] "GET / HTTP/1.1" 200 -
+2024-12-06 14:59:58,648 - 127.0.0.1 - - [06/Dec/2024 14:59:58] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:01:42,097 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2623540143440>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000262D72DA470>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000262D72DA438>], 'actions': [<vakt.rules.operator.Eq object at 0x00000262D72DA400>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000262D72DA518>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 15:01:43,073 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 15:01:43,073 - [33mPress CTRL+C to quit[0m
+2024-12-06 15:01:43,074 -  * Restarting with stat
+2024-12-06 15:01:43,892 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2831826994400>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000293560AC400>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000293560AC3C8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000293560AC390>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000293560AC4A8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 15:01:43,910 -  * Debugger is active!
+2024-12-06 15:01:43,918 -  * Debugger PIN: 589-825-161
+2024-12-06 15:01:45,403 - 127.0.0.1 - - [06/Dec/2024 15:01:45] "GET / HTTP/1.1" 200 -
+2024-12-06 15:01:45,475 - 127.0.0.1 - - [06/Dec/2024 15:01:45] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:01:48,399 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:01:48,400 - 127.0.0.1 - - [06/Dec/2024 15:01:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:01:48,422 - 127.0.0.1 - - [06/Dec/2024 15:01:48] "GET / HTTP/1.1" 200 -
+2024-12-06 15:01:48,472 - 127.0.0.1 - - [06/Dec/2024 15:01:48] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:01:51,639 - 127.0.0.1 - - [06/Dec/2024 15:01:51] "GET / HTTP/1.1" 200 -
+2024-12-06 15:01:51,710 - 127.0.0.1 - - [06/Dec/2024 15:01:51] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 15:01:55,623 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:01:55,624 - 127.0.0.1 - - [06/Dec/2024 15:01:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:01:55,640 - 127.0.0.1 - - [06/Dec/2024 15:01:55] "GET / HTTP/1.1" 200 -
+2024-12-06 15:01:55,686 - 127.0.0.1 - - [06/Dec/2024 15:01:55] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:02:01,204 - User: giadaott | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 15:02:01,236 - 127.0.0.1 - - [06/Dec/2024 15:02:01] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:02:01,259 - 127.0.0.1 - - [06/Dec/2024 15:02:01] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:02:01,307 - 127.0.0.1 - - [06/Dec/2024 15:02:01] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 15:02:02,507 - 127.0.0.1 - - [06/Dec/2024 15:02:02] "GET /account-settings HTTP/1.1" 200 -
+2024-12-06 15:02:04,194 - 127.0.0.1 - - [06/Dec/2024 15:02:04] "POST /account-settings HTTP/1.1" 200 -
+2024-12-06 15:02:05,131 - 127.0.0.1 - - [06/Dec/2024 15:02:05] "POST /account-settings HTTP/1.1" 200 -
+2024-12-06 15:02:06,591 - 127.0.0.1 - - [06/Dec/2024 15:02:06] "POST /account-settings HTTP/1.1" 200 -
+2024-12-06 15:02:07,276 - 127.0.0.1 - - [06/Dec/2024 15:02:07] "POST /account-settings HTTP/1.1" 200 -
+2024-12-06 15:02:07,857 - 127.0.0.1 - - [06/Dec/2024 15:02:07] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:02:07,900 - 127.0.0.1 - - [06/Dec/2024 15:02:07] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 15:02:08,435 - 127.0.0.1 - - [06/Dec/2024 15:02:08] "GET /notes HTTP/1.1" 200 -
+2024-12-06 15:02:08,488 - 127.0.0.1 - - [06/Dec/2024 15:02:08] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-06 15:02:09,515 - 127.0.0.1 - - [06/Dec/2024 15:02:09] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:02:09,562 - 127.0.0.1 - - [06/Dec/2024 15:02:09] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 15:02:10,039 - 127.0.0.1 - - [06/Dec/2024 15:02:10] "GET /notifications HTTP/1.1" 200 -
+2024-12-06 15:02:10,092 - 127.0.0.1 - - [06/Dec/2024 15:02:10] "GET /static/notifications.css HTTP/1.1" 200 -
+2024-12-06 15:02:10,932 - 127.0.0.1 - - [06/Dec/2024 15:02:10] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:02:10,980 - 127.0.0.1 - - [06/Dec/2024 15:02:10] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 15:02:11,682 - 127.0.0.1 - - [06/Dec/2024 15:02:11] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 15:02:11,696 - 127.0.0.1 - - [06/Dec/2024 15:02:11] "GET / HTTP/1.1" 200 -
+2024-12-06 15:02:11,752 - 127.0.0.1 - - [06/Dec/2024 15:02:11] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:02:14,473 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:02:14,474 - 127.0.0.1 - - [06/Dec/2024 15:02:14] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:02:14,490 - 127.0.0.1 - - [06/Dec/2024 15:02:14] "GET / HTTP/1.1" 200 -
+2024-12-06 15:02:14,535 - 127.0.0.1 - - [06/Dec/2024 15:02:14] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:10:34,968 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 15:10:35,012 - 127.0.0.1 - - [06/Dec/2024 15:10:35] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:10:35,038 - 127.0.0.1 - - [06/Dec/2024 15:10:35] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:10:35,209 - 127.0.0.1 - - [06/Dec/2024 15:10:35] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 15:10:37,955 - 127.0.0.1 - - [06/Dec/2024 15:10:37] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 15:10:37,975 - 127.0.0.1 - - [06/Dec/2024 15:10:37] "GET / HTTP/1.1" 200 -
+2024-12-06 15:10:38,038 - 127.0.0.1 - - [06/Dec/2024 15:10:38] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:10:41,224 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 15:10:41,242 - 127.0.0.1 - - [06/Dec/2024 15:10:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:10:41,260 - 127.0.0.1 - - [06/Dec/2024 15:10:41] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:10:41,335 - 127.0.0.1 - - [06/Dec/2024 15:10:41] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 15:10:49,288 - 127.0.0.1 - - [06/Dec/2024 15:10:49] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 15:10:49,306 - 127.0.0.1 - - [06/Dec/2024 15:10:49] "GET / HTTP/1.1" 200 -
+2024-12-06 15:10:49,374 - 127.0.0.1 - - [06/Dec/2024 15:10:49] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:10:52,497 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:10:52,499 - 127.0.0.1 - - [06/Dec/2024 15:10:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:10:52,520 - 127.0.0.1 - - [06/Dec/2024 15:10:52] "GET / HTTP/1.1" 200 -
+2024-12-06 15:10:52,579 - 127.0.0.1 - - [06/Dec/2024 15:10:52] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:10:54,957 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:10:54,959 - 127.0.0.1 - - [06/Dec/2024 15:10:54] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:10:54,988 - 127.0.0.1 - - [06/Dec/2024 15:10:54] "GET / HTTP/1.1" 200 -
+2024-12-06 15:10:55,036 - 127.0.0.1 - - [06/Dec/2024 15:10:55] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:10:57,306 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:10:57,308 - 127.0.0.1 - - [06/Dec/2024 15:10:57] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:10:57,328 - 127.0.0.1 - - [06/Dec/2024 15:10:57] "GET / HTTP/1.1" 200 -
+2024-12-06 15:10:57,390 - 127.0.0.1 - - [06/Dec/2024 15:10:57] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:10:59,498 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:10:59,505 - 127.0.0.1 - - [06/Dec/2024 15:10:59] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:10:59,527 - 127.0.0.1 - - [06/Dec/2024 15:10:59] "GET / HTTP/1.1" 200 -
+2024-12-06 15:10:59,589 - 127.0.0.1 - - [06/Dec/2024 15:10:59] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:11:01,830 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:11:01,833 - 127.0.0.1 - - [06/Dec/2024 15:11:01] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:11:01,857 - 127.0.0.1 - - [06/Dec/2024 15:11:01] "GET / HTTP/1.1" 200 -
+2024-12-06 15:11:01,908 - 127.0.0.1 - - [06/Dec/2024 15:11:01] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:11:04,330 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:11:04,331 - 127.0.0.1 - - [06/Dec/2024 15:11:04] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:11:04,358 - 127.0.0.1 - - [06/Dec/2024 15:11:04] "GET / HTTP/1.1" 200 -
+2024-12-06 15:11:04,418 - 127.0.0.1 - - [06/Dec/2024 15:11:04] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:11:07,856 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:11:07,860 - 127.0.0.1 - - [06/Dec/2024 15:11:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:11:07,892 - 127.0.0.1 - - [06/Dec/2024 15:11:07] "GET / HTTP/1.1" 200 -
+2024-12-06 15:11:07,974 - 127.0.0.1 - - [06/Dec/2024 15:11:07] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:14:48,111 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:14:48,112 - 127.0.0.1 - - [06/Dec/2024 15:14:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:14:48,135 - 127.0.0.1 - - [06/Dec/2024 15:14:48] "GET / HTTP/1.1" 200 -
+2024-12-06 15:14:48,196 - 127.0.0.1 - - [06/Dec/2024 15:14:48] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 15:15:23,819 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2997962458168>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002BA047CC358>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002BA047CC320>], 'actions': [<vakt.rules.operator.Eq object at 0x000002BA047CC2E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002BA047CC400>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 15:15:24,730 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 15:15:24,730 - [33mPress CTRL+C to quit[0m
+2024-12-06 15:15:24,732 -  * Restarting with stat
+2024-12-06 15:15:25,749 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1813583537544>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001A64200A4A8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001A64200A470>], 'actions': [<vakt.rules.operator.Eq object at 0x000001A64200A438>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001A64200A550>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 15:15:25,771 -  * Debugger is active!
+2024-12-06 15:15:25,783 -  * Debugger PIN: 589-825-161
+2024-12-06 15:15:26,332 - 127.0.0.1 - - [06/Dec/2024 15:15:26] "GET / HTTP/1.1" 200 -
+2024-12-06 15:15:26,384 - 127.0.0.1 - - [06/Dec/2024 15:15:26] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 15:15:29,933 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:15:29,934 - 127.0.0.1 - - [06/Dec/2024 15:15:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:15:29,950 - 127.0.0.1 - - [06/Dec/2024 15:15:29] "GET / HTTP/1.1" 200 -
+2024-12-06 15:15:30,014 - 127.0.0.1 - - [06/Dec/2024 15:15:30] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:16:07,575 - 127.0.0.1 - - [06/Dec/2024 15:16:07] "GET / HTTP/1.1" 200 -
+2024-12-06 15:16:07,626 - 127.0.0.1 - - [06/Dec/2024 15:16:07] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:16:07,779 - 127.0.0.1 - - [06/Dec/2024 15:16:07] "GET / HTTP/1.1" 200 -
+2024-12-06 15:16:07,834 - 127.0.0.1 - - [06/Dec/2024 15:16:07] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:16:10,846 - 127.0.0.1 - - [06/Dec/2024 15:16:10] "GET / HTTP/1.1" 200 -
+2024-12-06 15:16:10,990 - 127.0.0.1 - - [06/Dec/2024 15:16:10] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 15:16:17,123 - User: giadaott | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 15:16:17,141 - 127.0.0.1 - - [06/Dec/2024 15:16:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:16:17,168 - 127.0.0.1 - - [06/Dec/2024 15:16:17] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:16:17,239 - 127.0.0.1 - - [06/Dec/2024 15:16:17] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 15:16:19,673 - 127.0.0.1 - - [06/Dec/2024 15:16:19] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 15:16:19,690 - 127.0.0.1 - - [06/Dec/2024 15:16:19] "GET / HTTP/1.1" 200 -
+2024-12-06 15:16:19,754 - 127.0.0.1 - - [06/Dec/2024 15:16:19] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:16:23,517 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:16:23,520 - 127.0.0.1 - - [06/Dec/2024 15:16:23] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:16:23,541 - 127.0.0.1 - - [06/Dec/2024 15:16:23] "GET / HTTP/1.1" 200 -
+2024-12-06 15:16:23,606 - 127.0.0.1 - - [06/Dec/2024 15:16:23] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:16:27,147 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:16:27,148 - 127.0.0.1 - - [06/Dec/2024 15:16:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:16:27,170 - 127.0.0.1 - - [06/Dec/2024 15:16:27] "GET / HTTP/1.1" 200 -
+2024-12-06 15:16:27,226 - 127.0.0.1 - - [06/Dec/2024 15:16:27] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:27:07,144 - 127.0.0.1 - - [06/Dec/2024 15:27:07] "GET / HTTP/1.1" 200 -
+2024-12-06 15:27:07,182 - 127.0.0.1 - - [06/Dec/2024 15:27:07] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:27:10,415 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 15:27:10,447 - 127.0.0.1 - - [06/Dec/2024 15:27:10] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:27:10,463 - 127.0.0.1 - - [06/Dec/2024 15:27:10] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:27:10,512 - 127.0.0.1 - - [06/Dec/2024 15:27:10] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 15:35:00,759 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2221376586864>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000205345CC390>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000205345CC358>], 'actions': [<vakt.rules.operator.Eq object at 0x00000205345CC320>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000205345CC438>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 15:35:01,636 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 15:35:01,636 - [33mPress CTRL+C to quit[0m
+2024-12-06 15:35:01,637 -  * Restarting with stat
+2024-12-06 15:35:02,490 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1754590266536>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000019885BAC3C8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000019885BAC390>], 'actions': [<vakt.rules.operator.Eq object at 0x0000019885BAC358>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000019885BAC470>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 15:35:02,507 -  * Debugger is active!
+2024-12-06 15:35:02,513 -  * Debugger PIN: 589-825-161
+2024-12-06 15:35:04,707 - The CSRF token is missing.
+2024-12-06 15:35:04,708 - 127.0.0.1 - - [06/Dec/2024 15:35:04] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2024-12-06 15:35:06,959 - 127.0.0.1 - - [06/Dec/2024 15:35:06] "GET / HTTP/1.1" 200 -
+2024-12-06 15:35:06,996 - 127.0.0.1 - - [06/Dec/2024 15:35:06] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 15:35:20,994 - 127.0.0.1 - - [06/Dec/2024 15:35:20] "GET / HTTP/1.1" 200 -
+2024-12-06 15:35:21,261 - 127.0.0.1 - - [06/Dec/2024 15:35:21] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 15:35:43,822 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:35:43,827 - 127.0.0.1 - - [06/Dec/2024 15:35:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:35:43,848 - User: janedoe | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 15:35:43,875 - 127.0.0.1 - - [06/Dec/2024 15:35:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:35:43,903 - 127.0.0.1 - - [06/Dec/2024 15:35:43] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:35:43,949 - 127.0.0.1 - - [06/Dec/2024 15:35:43] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 15:35:54,903 - 127.0.0.1 - - [06/Dec/2024 15:35:54] "GET /account-settings HTTP/1.1" 200 -
+2024-12-06 15:35:58,859 - 127.0.0.1 - - [06/Dec/2024 15:35:58] "POST /account-settings HTTP/1.1" 200 -
+2024-12-06 15:36:00,389 - 127.0.0.1 - - [06/Dec/2024 15:36:00] "POST /account-settings HTTP/1.1" 200 -
+2024-12-06 15:36:00,997 - 127.0.0.1 - - [06/Dec/2024 15:36:00] "POST /account-settings HTTP/1.1" 200 -
+2024-12-06 15:36:26,583 - 127.0.0.1 - - [06/Dec/2024 15:36:26] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:36:26,623 - 127.0.0.1 - - [06/Dec/2024 15:36:26] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 15:36:28,236 - 127.0.0.1 - - [06/Dec/2024 15:36:28] "GET /account-settings HTTP/1.1" 200 -
+2024-12-06 15:36:29,420 - 127.0.0.1 - - [06/Dec/2024 15:36:29] "POST /account-settings HTTP/1.1" 200 -
+2024-12-06 15:36:30,776 - 127.0.0.1 - - [06/Dec/2024 15:36:30] "POST /account-settings HTTP/1.1" 200 -
+2024-12-06 15:36:32,657 - 127.0.0.1 - - [06/Dec/2024 15:36:32] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:36:32,695 - 127.0.0.1 - - [06/Dec/2024 15:36:32] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 15:36:33,243 - 127.0.0.1 - - [06/Dec/2024 15:36:33] "GET /notes HTTP/1.1" 200 -
+2024-12-06 15:36:33,294 - 127.0.0.1 - - [06/Dec/2024 15:36:33] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-06 15:36:34,229 - 127.0.0.1 - - [06/Dec/2024 15:36:34] "GET /add-note HTTP/1.1" 200 -
+2024-12-06 15:36:40,521 - All matching policies have allow effect
+2024-12-06 15:36:40,521 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1754591980008>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'janedoe'}, 'context': {'current_time': '15:36:40'}}
+2024-12-06 15:36:40,530 - User: janedoe | Action: creazione | Resource: note | Status: successo 
+2024-12-06 15:36:40,541 - 127.0.0.1 - - [06/Dec/2024 15:36:40] "[32mPOST /add-note HTTP/1.1[0m" 302 -
+2024-12-06 15:36:40,557 - 127.0.0.1 - - [06/Dec/2024 15:36:40] "GET /notes HTTP/1.1" 200 -
+2024-12-06 15:36:40,607 - 127.0.0.1 - - [06/Dec/2024 15:36:40] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-06 15:36:41,467 - 127.0.0.1 - - [06/Dec/2024 15:36:41] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:36:41,510 - 127.0.0.1 - - [06/Dec/2024 15:36:41] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 15:36:42,286 - 127.0.0.1 - - [06/Dec/2024 15:36:42] "GET /notifications HTTP/1.1" 200 -
+2024-12-06 15:36:42,336 - 127.0.0.1 - - [06/Dec/2024 15:36:42] "GET /static/notifications.css HTTP/1.1" 200 -
+2024-12-06 15:36:43,350 - 127.0.0.1 - - [06/Dec/2024 15:36:43] "[32mPOST /notifications/delete/1 HTTP/1.1[0m" 302 -
+2024-12-06 15:36:43,366 - 127.0.0.1 - - [06/Dec/2024 15:36:43] "GET /notifications HTTP/1.1" 200 -
+2024-12-06 15:36:43,414 - 127.0.0.1 - - [06/Dec/2024 15:36:43] "[36mGET /static/notifications.css HTTP/1.1[0m" 304 -
+2024-12-06 15:36:43,981 - 127.0.0.1 - - [06/Dec/2024 15:36:43] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:36:44,025 - 127.0.0.1 - - [06/Dec/2024 15:36:44] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 15:36:44,781 - 127.0.0.1 - - [06/Dec/2024 15:36:44] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 15:36:44,795 - 127.0.0.1 - - [06/Dec/2024 15:36:44] "GET / HTTP/1.1" 200 -
+2024-12-06 15:36:44,843 - 127.0.0.1 - - [06/Dec/2024 15:36:44] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 15:36:47,452 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:36:47,454 - 127.0.0.1 - - [06/Dec/2024 15:36:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:36:47,473 - 127.0.0.1 - - [06/Dec/2024 15:36:47] "GET / HTTP/1.1" 200 -
+2024-12-06 15:36:47,525 - 127.0.0.1 - - [06/Dec/2024 15:36:47] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:36:52,119 - User: janedoe | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 15:36:52,135 - 127.0.0.1 - - [06/Dec/2024 15:36:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:36:52,147 - 127.0.0.1 - - [06/Dec/2024 15:36:52] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:36:52,198 - 127.0.0.1 - - [06/Dec/2024 15:36:52] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 15:37:05,387 - 127.0.0.1 - - [06/Dec/2024 15:37:05] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 15:37:05,402 - 127.0.0.1 - - [06/Dec/2024 15:37:05] "GET / HTTP/1.1" 200 -
+2024-12-06 15:37:05,454 - 127.0.0.1 - - [06/Dec/2024 15:37:05] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:37:08,929 - User: giadaott | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 15:37:08,969 - 127.0.0.1 - - [06/Dec/2024 15:37:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:37:08,981 - 127.0.0.1 - - [06/Dec/2024 15:37:08] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:37:09,034 - 127.0.0.1 - - [06/Dec/2024 15:37:09] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 15:37:10,076 - 127.0.0.1 - - [06/Dec/2024 15:37:10] "GET /account-settings HTTP/1.1" 200 -
+2024-12-06 15:37:11,777 - 127.0.0.1 - - [06/Dec/2024 15:37:11] "POST /account-settings HTTP/1.1" 200 -
+2024-12-06 15:37:12,501 - 127.0.0.1 - - [06/Dec/2024 15:37:12] "POST /account-settings HTTP/1.1" 200 -
+2024-12-06 15:37:12,993 - 127.0.0.1 - - [06/Dec/2024 15:37:12] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:37:13,038 - 127.0.0.1 - - [06/Dec/2024 15:37:13] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 15:38:24,044 - 127.0.0.1 - - [06/Dec/2024 15:38:24] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 15:38:24,060 - 127.0.0.1 - - [06/Dec/2024 15:38:24] "GET / HTTP/1.1" 200 -
+2024-12-06 15:38:24,108 - 127.0.0.1 - - [06/Dec/2024 15:38:24] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:38:28,385 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:38:28,386 - 127.0.0.1 - - [06/Dec/2024 15:38:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:38:28,407 - 127.0.0.1 - - [06/Dec/2024 15:38:28] "GET / HTTP/1.1" 200 -
+2024-12-06 15:38:28,446 - 127.0.0.1 - - [06/Dec/2024 15:38:28] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:39:31,253 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:39:31,255 - 127.0.0.1 - - [06/Dec/2024 15:39:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:39:31,275 - 127.0.0.1 - - [06/Dec/2024 15:39:31] "GET / HTTP/1.1" 200 -
+2024-12-06 15:39:31,331 - 127.0.0.1 - - [06/Dec/2024 15:39:31] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:42:13,604 - User: admin1 | Action: accesso | Resource: sistema | Status: fallimento 
+2024-12-06 15:42:13,605 - 127.0.0.1 - - [06/Dec/2024 15:42:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:42:13,624 - 127.0.0.1 - - [06/Dec/2024 15:42:13] "GET / HTTP/1.1" 200 -
+2024-12-06 15:42:13,667 - 127.0.0.1 - - [06/Dec/2024 15:42:13] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 15:46:49,855 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 15:46:49,911 - 127.0.0.1 - - [06/Dec/2024 15:46:49] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 15:46:49,922 - 127.0.0.1 - - [06/Dec/2024 15:46:49] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:46:49,969 - 127.0.0.1 - - [06/Dec/2024 15:46:49] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 15:46:58,211 - 127.0.0.1 - - [06/Dec/2024 15:46:58] "GET /account-settings HTTP/1.1" 200 -
+2024-12-06 15:46:59,750 - 127.0.0.1 - - [06/Dec/2024 15:46:59] "POST /account-settings HTTP/1.1" 200 -
+2024-12-06 15:47:00,964 - 127.0.0.1 - - [06/Dec/2024 15:47:00] "POST /account-settings HTTP/1.1" 200 -
+2024-12-06 15:47:01,444 - 127.0.0.1 - - [06/Dec/2024 15:47:01] "POST /account-settings HTTP/1.1" 200 -
+2024-12-06 15:47:02,176 - 127.0.0.1 - - [06/Dec/2024 15:47:02] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:47:02,216 - 127.0.0.1 - - [06/Dec/2024 15:47:02] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 15:47:02,983 - 127.0.0.1 - - [06/Dec/2024 15:47:02] "GET /notifications HTTP/1.1" 200 -
+2024-12-06 15:47:03,030 - 127.0.0.1 - - [06/Dec/2024 15:47:03] "GET /static/notifications.css HTTP/1.1" 200 -
+2024-12-06 15:47:03,756 - 127.0.0.1 - - [06/Dec/2024 15:47:03] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 15:47:03,803 - 127.0.0.1 - - [06/Dec/2024 15:47:03] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 15:47:04,231 - 127.0.0.1 - - [06/Dec/2024 15:47:04] "GET /notes HTTP/1.1" 200 -
+2024-12-06 15:47:04,282 - 127.0.0.1 - - [06/Dec/2024 15:47:04] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-06 16:00:19,278 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:00:19,559 -  * Restarting with stat
+2024-12-06 16:00:20,839 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1657168172424>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000181D6EB94A8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000181D6EB9470>], 'actions': [<vakt.rules.operator.Eq object at 0x00000181D6EB9438>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000181D6EB9550>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:00:20,922 -  * Debugger is active!
+2024-12-06 16:00:20,971 -  * Debugger PIN: 589-825-161
+2024-12-06 16:00:25,902 - 127.0.0.1 - - [06/Dec/2024 16:00:25] "GET / HTTP/1.1" 200 -
+2024-12-06 16:00:25,996 - 127.0.0.1 - - [06/Dec/2024 16:00:25] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:00:32,286 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 16:00:32,302 - 127.0.0.1 - - [06/Dec/2024 16:00:32] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:00:32,323 - 127.0.0.1 - - [06/Dec/2024 16:00:32] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:00:32,373 - 127.0.0.1 - - [06/Dec/2024 16:00:32] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 16:00:39,432 - 127.0.0.1 - - [06/Dec/2024 16:00:39] "GET /notifications HTTP/1.1" 200 -
+2024-12-06 16:00:39,479 - 127.0.0.1 - - [06/Dec/2024 16:00:39] "GET /static/notifications.css HTTP/1.1" 200 -
+2024-12-06 16:00:40,235 - 127.0.0.1 - - [06/Dec/2024 16:00:40] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:00:40,285 - 127.0.0.1 - - [06/Dec/2024 16:00:40] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 16:01:49,126 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:01:49,210 -  * Restarting with stat
+2024-12-06 16:01:50,409 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2306414658672>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002190106C390>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002190106C358>], 'actions': [<vakt.rules.operator.Eq object at 0x000002190106C320>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002190106C438>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:01:50,429 -  * Debugger is active!
+2024-12-06 16:01:50,437 -  * Debugger PIN: 589-825-161
+2024-12-06 16:02:24,271 - 127.0.0.1 - - [06/Dec/2024 16:02:24] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 16:02:24,294 - 127.0.0.1 - - [06/Dec/2024 16:02:24] "GET / HTTP/1.1" 200 -
+2024-12-06 16:02:24,338 - 127.0.0.1 - - [06/Dec/2024 16:02:24] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:02:24,887 - 127.0.0.1 - - [06/Dec/2024 16:02:24] "GET / HTTP/1.1" 200 -
+2024-12-06 16:02:24,930 - 127.0.0.1 - - [06/Dec/2024 16:02:24] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:02:25,754 - 127.0.0.1 - - [06/Dec/2024 16:02:25] "GET / HTTP/1.1" 200 -
+2024-12-06 16:02:25,793 - 127.0.0.1 - - [06/Dec/2024 16:02:25] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:02:29,031 - 127.0.0.1 - - [06/Dec/2024 16:02:29] "GET / HTTP/1.1" 200 -
+2024-12-06 16:02:29,066 - 127.0.0.1 - - [06/Dec/2024 16:02:29] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:03:21,707 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:03:21,775 -  * Restarting with stat
+2024-12-06 16:03:22,622 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1923069752544>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001BFBFE3B400>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001BFBFE3B3C8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001BFBFE3B390>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001BFBFE3B4A8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:03:22,640 -  * Debugger is active!
+2024-12-06 16:03:22,646 -  * Debugger PIN: 589-825-161
+2024-12-06 16:03:26,956 - The CSRF session token is missing.
+2024-12-06 16:03:26,957 - 127.0.0.1 - - [06/Dec/2024 16:03:26] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2024-12-06 16:03:28,691 - 127.0.0.1 - - [06/Dec/2024 16:03:28] "GET / HTTP/1.1" 200 -
+2024-12-06 16:03:28,732 - 127.0.0.1 - - [06/Dec/2024 16:03:28] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:03:31,621 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 16:03:31,639 - 127.0.0.1 - - [06/Dec/2024 16:03:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:03:31,658 - 127.0.0.1 - - [06/Dec/2024 16:03:31] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:03:31,709 - 127.0.0.1 - - [06/Dec/2024 16:03:31] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 16:06:11,087 - 127.0.0.1 - - [06/Dec/2024 16:06:11] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:06:11,127 - 127.0.0.1 - - [06/Dec/2024 16:06:11] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 16:06:12,406 - 127.0.0.1 - - [06/Dec/2024 16:06:12] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 16:06:12,423 - 127.0.0.1 - - [06/Dec/2024 16:06:12] "GET / HTTP/1.1" 200 -
+2024-12-06 16:06:12,475 - 127.0.0.1 - - [06/Dec/2024 16:06:12] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:06:13,750 - 127.0.0.1 - - [06/Dec/2024 16:06:13] "GET / HTTP/1.1" 200 -
+2024-12-06 16:06:13,786 - 127.0.0.1 - - [06/Dec/2024 16:06:13] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:06:14,714 - 127.0.0.1 - - [06/Dec/2024 16:06:14] "GET / HTTP/1.1" 200 -
+2024-12-06 16:06:14,745 - 127.0.0.1 - - [06/Dec/2024 16:06:14] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:06:15,163 - 127.0.0.1 - - [06/Dec/2024 16:06:15] "GET / HTTP/1.1" 200 -
+2024-12-06 16:06:15,199 - 127.0.0.1 - - [06/Dec/2024 16:06:15] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:06:15,392 - 127.0.0.1 - - [06/Dec/2024 16:06:15] "GET / HTTP/1.1" 200 -
+2024-12-06 16:06:15,428 - 127.0.0.1 - - [06/Dec/2024 16:06:15] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:06:18,812 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 16:06:18,835 - 127.0.0.1 - - [06/Dec/2024 16:06:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:06:18,850 - 127.0.0.1 - - [06/Dec/2024 16:06:18] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:06:18,901 - 127.0.0.1 - - [06/Dec/2024 16:06:18] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 16:07:12,807 - 127.0.0.1 - - [06/Dec/2024 16:07:12] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:07:12,847 - 127.0.0.1 - - [06/Dec/2024 16:07:12] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 16:07:13,907 - 127.0.0.1 - - [06/Dec/2024 16:07:13] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 16:07:13,924 - 127.0.0.1 - - [06/Dec/2024 16:07:13] "GET / HTTP/1.1" 200 -
+2024-12-06 16:07:13,975 - 127.0.0.1 - - [06/Dec/2024 16:07:13] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:07:14,513 - 127.0.0.1 - - [06/Dec/2024 16:07:14] "GET / HTTP/1.1" 200 -
+2024-12-06 16:07:14,554 - 127.0.0.1 - - [06/Dec/2024 16:07:14] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:07:23,213 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 16:07:23,232 - 127.0.0.1 - - [06/Dec/2024 16:07:23] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:07:23,246 - 127.0.0.1 - - [06/Dec/2024 16:07:23] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:07:23,297 - 127.0.0.1 - - [06/Dec/2024 16:07:23] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 16:07:37,210 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:07:37,281 -  * Restarting with stat
+2024-12-06 16:07:38,229 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1892775675048>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001B8B238C3C8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001B8B238C390>], 'actions': [<vakt.rules.operator.Eq object at 0x000001B8B238C358>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001B8B238C470>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:07:38,246 -  * Debugger is active!
+2024-12-06 16:07:38,252 -  * Debugger PIN: 589-825-161
+2024-12-06 16:09:04,885 - 127.0.0.1 - - [06/Dec/2024 16:09:04] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2024-12-06 16:09:04,905 - 127.0.0.1 - - [06/Dec/2024 16:09:04] "GET / HTTP/1.1" 200 -
+2024-12-06 16:09:04,947 - 127.0.0.1 - - [06/Dec/2024 16:09:04] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:09:47,750 - 127.0.0.1 - - [06/Dec/2024 16:09:47] "GET / HTTP/1.1" 200 -
+2024-12-06 16:09:47,791 - 127.0.0.1 - - [06/Dec/2024 16:09:47] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:11:49,940 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 16:11:49,958 - 127.0.0.1 - - [06/Dec/2024 16:11:49] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:11:49,995 - 127.0.0.1 - - [06/Dec/2024 16:11:49] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:11:50,075 - 127.0.0.1 - - [06/Dec/2024 16:11:50] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 16:12:12,489 - 127.0.0.1 - - [06/Dec/2024 16:12:12] "GET / HTTP/1.1" 200 -
+2024-12-06 16:12:12,537 - 127.0.0.1 - - [06/Dec/2024 16:12:12] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:12:16,995 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 16:12:17,023 - 127.0.0.1 - - [06/Dec/2024 16:12:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:12:17,049 - 127.0.0.1 - - [06/Dec/2024 16:12:17] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:12:17,191 - 127.0.0.1 - - [06/Dec/2024 16:12:17] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 16:12:21,116 - 127.0.0.1 - - [06/Dec/2024 16:12:21] "GET /account-settings HTTP/1.1" 200 -
+2024-12-06 16:12:24,475 - 127.0.0.1 - - [06/Dec/2024 16:12:24] "GET /account-settings HTTP/1.1" 200 -
+2024-12-06 16:12:59,736 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:12:59,930 -  * Restarting with stat
+2024-12-06 16:13:01,083 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1963961074912>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001C94533C400>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001C94533C3C8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001C94533C390>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001C94533C4A8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:13:01,107 -  * Debugger is active!
+2024-12-06 16:13:01,125 -  * Debugger PIN: 589-825-161
+2024-12-06 16:15:20,158 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:15:20,235 -  * Restarting with stat
+2024-12-06 16:15:21,184 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2276680554480>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000021214BC5710>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000021214BC56D8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000021212DF02E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000021214BC57B8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:15:21,210 -  * Debugger is active!
+2024-12-06 16:15:21,217 -  * Debugger PIN: 589-825-161
+2024-12-06 16:15:23,984 - 127.0.0.1 - - [06/Dec/2024 16:15:23] "GET / HTTP/1.1" 200 -
+2024-12-06 16:15:24,043 - 127.0.0.1 - - [06/Dec/2024 16:15:24] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:15:27,721 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 16:15:27,739 - 127.0.0.1 - - [06/Dec/2024 16:15:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:15:27,760 - 127.0.0.1 - - [06/Dec/2024 16:15:27] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:15:27,809 - 127.0.0.1 - - [06/Dec/2024 16:15:27] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 16:15:32,878 - 127.0.0.1 - - [06/Dec/2024 16:15:32] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:15:32,961 - 127.0.0.1 - - [06/Dec/2024 16:15:32] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 16:15:48,954 - 127.0.0.1 - - [06/Dec/2024 16:15:48] "GET / HTTP/1.1" 200 -
+2024-12-06 16:15:49,054 - 127.0.0.1 - - [06/Dec/2024 16:15:49] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:15:52,871 - 127.0.0.1 - - [06/Dec/2024 16:15:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:15:52,898 - 127.0.0.1 - - [06/Dec/2024 16:15:52] "GET / HTTP/1.1" 200 -
+2024-12-06 16:15:52,955 - 127.0.0.1 - - [06/Dec/2024 16:15:52] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:16:16,519 - 127.0.0.1 - - [06/Dec/2024 16:16:16] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 16:16:16,533 - 127.0.0.1 - - [06/Dec/2024 16:16:16] "GET / HTTP/1.1" 200 -
+2024-12-06 16:16:16,586 - 127.0.0.1 - - [06/Dec/2024 16:16:16] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:16:20,718 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 16:16:20,748 - 127.0.0.1 - - [06/Dec/2024 16:16:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:16:20,764 - 127.0.0.1 - - [06/Dec/2024 16:16:20] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:16:20,914 - 127.0.0.1 - - [06/Dec/2024 16:16:20] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 16:16:26,080 - 127.0.0.1 - - [06/Dec/2024 16:16:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:16:26,101 - 127.0.0.1 - - [06/Dec/2024 16:16:26] "GET / HTTP/1.1" 200 -
+2024-12-06 16:16:26,140 - 127.0.0.1 - - [06/Dec/2024 16:16:26] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:16:40,292 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:16:40,385 -  * Restarting with stat
+2024-12-06 16:16:41,298 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1437992249384>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000014ECF046748>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000014ECF046710>], 'actions': [<vakt.rules.operator.Eq object at 0x0000014ECF0466D8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000014ECF0467F0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:16:41,317 -  * Debugger is active!
+2024-12-06 16:16:41,325 -  * Debugger PIN: 589-825-161
+2024-12-06 16:24:24,748 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:24:25,081 -  * Restarting with stat
+2024-12-06 16:24:26,664 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1794613082096>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001A1D7467710>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001A1D74676D8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001A1D74676A0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001A1D74677B8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:24:26,689 -  * Debugger is active!
+2024-12-06 16:24:26,703 -  * Debugger PIN: 589-825-161
+2024-12-06 16:24:52,128 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:24:52,194 -  * Restarting with stat
+2024-12-06 16:24:53,145 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2540646139888>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000024F8A4F8710>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000024F8A4F86D8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000024F8A4F86A0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000024F8A4F87B8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:24:53,167 -  * Debugger is active!
+2024-12-06 16:24:53,175 -  * Debugger PIN: 589-825-161
+2024-12-06 16:25:01,317 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:25:01,405 -  * Restarting with stat
+2024-12-06 16:25:02,450 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1158965397544>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000010DD7B88748>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000010DD7B88710>], 'actions': [<vakt.rules.operator.Eq object at 0x0000010DD7B886D8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000010DD7B887F0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:25:02,469 -  * Debugger is active!
+2024-12-06 16:25:02,476 -  * Debugger PIN: 589-825-161
+2024-12-06 16:25:04,248 - 127.0.0.1 - - [06/Dec/2024 16:25:04] "GET / HTTP/1.1" 200 -
+2024-12-06 16:25:04,357 - 127.0.0.1 - - [06/Dec/2024 16:25:04] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:25:09,389 - 127.0.0.1 - - [06/Dec/2024 16:25:09] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:25:09,438 - 127.0.0.1 - - [06/Dec/2024 16:25:09] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-12-06 16:25:09,570 - 127.0.0.1 - - [06/Dec/2024 16:25:09] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 16:25:09,581 - 127.0.0.1 - - [06/Dec/2024 16:25:09] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-06 16:25:09,732 - 127.0.0.1 - - [06/Dec/2024 16:25:09] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 16:26:22,656 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:26:22,722 -  * Restarting with stat
+2024-12-06 16:26:23,864 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2854665500936>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000298A752B828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000298A752B7F0>], 'actions': [<vakt.rules.operator.Eq object at 0x00000298A752B7B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000298A752B8D0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:26:23,884 -  * Debugger is active!
+2024-12-06 16:26:23,896 -  * Debugger PIN: 589-825-161
+2024-12-06 16:26:24,849 - 127.0.0.1 - - [06/Dec/2024 16:26:24] "GET / HTTP/1.1" 200 -
+2024-12-06 16:26:24,898 - 127.0.0.1 - - [06/Dec/2024 16:26:24] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:26:27,655 - 127.0.0.1 - - [06/Dec/2024 16:26:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:26:27,677 - 127.0.0.1 - - [06/Dec/2024 16:26:27] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-12-06 16:26:27,726 - 127.0.0.1 - - [06/Dec/2024 16:26:27] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 16:26:27,734 - 127.0.0.1 - - [06/Dec/2024 16:26:27] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-12-06 16:26:27,797 - 127.0.0.1 - - [06/Dec/2024 16:26:27] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 16:26:58,465 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:26:58,588 -  * Restarting with stat
+2024-12-06 16:26:59,695 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2429927581792>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000235C2F86780>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000235C2F86748>], 'actions': [<vakt.rules.operator.Eq object at 0x00000235C2F86710>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000235C2F86828>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:26:59,715 -  * Debugger is active!
+2024-12-06 16:26:59,721 -  * Debugger PIN: 589-825-161
+2024-12-06 16:26:59,747 - 127.0.0.1 - - [06/Dec/2024 16:26:59] "GET / HTTP/1.1" 200 -
+2024-12-06 16:26:59,786 - 127.0.0.1 - - [06/Dec/2024 16:26:59] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:27:02,557 - 127.0.0.1 - - [06/Dec/2024 16:27:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:27:02,603 - 127.0.0.1 - - [06/Dec/2024 16:27:02] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-12-06 16:27:02,676 - 127.0.0.1 - - [06/Dec/2024 16:27:02] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 16:27:02,684 - 127.0.0.1 - - [06/Dec/2024 16:27:02] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-12-06 16:27:02,740 - 127.0.0.1 - - [06/Dec/2024 16:27:02] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 16:27:30,230 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:27:30,472 -  * Restarting with stat
+2024-12-06 16:27:31,461 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1612951500952>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001778B66B7B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001778B66B780>], 'actions': [<vakt.rules.operator.Eq object at 0x000001778B66B748>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001778B66B860>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:27:31,481 -  * Debugger is active!
+2024-12-06 16:27:31,487 -  * Debugger PIN: 589-825-161
+2024-12-06 16:27:31,515 - 127.0.0.1 - - [06/Dec/2024 16:27:31] "GET / HTTP/1.1" 200 -
+2024-12-06 16:27:31,555 - 127.0.0.1 - - [06/Dec/2024 16:27:31] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:27:34,423 - 127.0.0.1 - - [06/Dec/2024 16:27:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:27:34,440 - 127.0.0.1 - - [06/Dec/2024 16:27:34] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-06 16:27:34,458 - 127.0.0.1 - - [06/Dec/2024 16:27:34] "GET / HTTP/1.1" 200 -
+2024-12-06 16:27:34,503 - 127.0.0.1 - - [06/Dec/2024 16:27:34] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:27:37,490 - 127.0.0.1 - - [06/Dec/2024 16:27:37] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:27:37,510 - 127.0.0.1 - - [06/Dec/2024 16:27:37] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-06 16:27:37,525 - 127.0.0.1 - - [06/Dec/2024 16:27:37] "GET / HTTP/1.1" 200 -
+2024-12-06 16:27:37,569 - 127.0.0.1 - - [06/Dec/2024 16:27:37] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:28:39,398 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:28:39,467 -  * Restarting with stat
+2024-12-06 16:28:40,575 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1421241989328>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000014AE89FB7F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000014AE89FB7B8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000014AE89FB780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000014AE89FB898>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:28:40,598 -  * Debugger is active!
+2024-12-06 16:28:40,606 -  * Debugger PIN: 589-825-161
+2024-12-06 16:28:41,166 - 127.0.0.1 - - [06/Dec/2024 16:28:41] "GET / HTTP/1.1" 200 -
+2024-12-06 16:28:41,203 - 127.0.0.1 - - [06/Dec/2024 16:28:41] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:28:44,108 - 127.0.0.1 - - [06/Dec/2024 16:28:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:28:44,130 - 127.0.0.1 - - [06/Dec/2024 16:28:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-12-06 16:28:44,184 - 127.0.0.1 - - [06/Dec/2024 16:28:44] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 16:28:44,191 - 127.0.0.1 - - [06/Dec/2024 16:28:44] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-06 16:28:44,251 - 127.0.0.1 - - [06/Dec/2024 16:28:44] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 16:29:15,093 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:29:15,224 -  * Restarting with stat
+2024-12-06 16:29:16,603 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1754178173080>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001986D2AB7B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001986D2AB780>], 'actions': [<vakt.rules.operator.Eq object at 0x000001986D2AB748>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001986D2AB860>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:29:16,627 -  * Debugger is active!
+2024-12-06 16:29:16,637 -  * Debugger PIN: 589-825-161
+2024-12-06 16:29:17,446 - 127.0.0.1 - - [06/Dec/2024 16:29:17] "GET / HTTP/1.1" 200 -
+2024-12-06 16:29:17,793 - 127.0.0.1 - - [06/Dec/2024 16:29:17] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:29:20,732 - 127.0.0.1 - - [06/Dec/2024 16:29:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:29:20,751 - 127.0.0.1 - - [06/Dec/2024 16:29:20] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-12-06 16:29:20,797 - 127.0.0.1 - - [06/Dec/2024 16:29:20] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 16:29:20,806 - 127.0.0.1 - - [06/Dec/2024 16:29:20] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-12-06 16:29:20,870 - 127.0.0.1 - - [06/Dec/2024 16:29:20] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 16:29:47,154 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:29:47,230 -  * Restarting with stat
+2024-12-06 16:29:48,171 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2713092012240>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000277B0E2B7F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000277B0E2B7B8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000277B0E2B780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000277B0E2B898>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:29:48,215 -  * Debugger is active!
+2024-12-06 16:29:48,228 -  * Debugger PIN: 589-825-161
+2024-12-06 16:29:49,344 - 127.0.0.1 - - [06/Dec/2024 16:29:49] "GET / HTTP/1.1" 200 -
+2024-12-06 16:29:49,386 - 127.0.0.1 - - [06/Dec/2024 16:29:49] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:29:51,108 - 127.0.0.1 - - [06/Dec/2024 16:29:51] "GET / HTTP/1.1" 200 -
+2024-12-06 16:29:51,148 - 127.0.0.1 - - [06/Dec/2024 16:29:51] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:29:51,256 - 127.0.0.1 - - [06/Dec/2024 16:29:51] "GET / HTTP/1.1" 200 -
+2024-12-06 16:29:51,295 - 127.0.0.1 - - [06/Dec/2024 16:29:51] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:29:51,419 - 127.0.0.1 - - [06/Dec/2024 16:29:51] "GET / HTTP/1.1" 200 -
+2024-12-06 16:29:51,450 - 127.0.0.1 - - [06/Dec/2024 16:29:51] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:29:54,188 - 127.0.0.1 - - [06/Dec/2024 16:29:54] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:29:54,205 - 127.0.0.1 - - [06/Dec/2024 16:29:54] "GET / HTTP/1.1" 200 -
+2024-12-06 16:29:54,244 - 127.0.0.1 - - [06/Dec/2024 16:29:54] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:29:58,402 - 127.0.0.1 - - [06/Dec/2024 16:29:58] "GET / HTTP/1.1" 200 -
+2024-12-06 16:29:58,440 - 127.0.0.1 - - [06/Dec/2024 16:29:58] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:30:00,427 - 127.0.0.1 - - [06/Dec/2024 16:30:00] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 16:30:00,483 - 127.0.0.1 - - [06/Dec/2024 16:30:00] "GET / HTTP/1.1" 200 -
+2024-12-06 16:30:00,649 - 127.0.0.1 - - [06/Dec/2024 16:30:00] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:30:04,375 - 127.0.0.1 - - [06/Dec/2024 16:30:04] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:30:04,393 - 127.0.0.1 - - [06/Dec/2024 16:30:04] "GET / HTTP/1.1" 200 -
+2024-12-06 16:30:04,428 - 127.0.0.1 - - [06/Dec/2024 16:30:04] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:30:06,893 - 127.0.0.1 - - [06/Dec/2024 16:30:06] "GET / HTTP/1.1" 200 -
+2024-12-06 16:30:06,937 - 127.0.0.1 - - [06/Dec/2024 16:30:06] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:30:10,425 - 127.0.0.1 - - [06/Dec/2024 16:30:10] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:30:10,444 - 127.0.0.1 - - [06/Dec/2024 16:30:10] "GET / HTTP/1.1" 200 -
+2024-12-06 16:30:10,484 - 127.0.0.1 - - [06/Dec/2024 16:30:10] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:30:18,371 - 127.0.0.1 - - [06/Dec/2024 16:30:18] "GET / HTTP/1.1" 200 -
+2024-12-06 16:30:18,431 - 127.0.0.1 - - [06/Dec/2024 16:30:18] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:30:21,994 - 127.0.0.1 - - [06/Dec/2024 16:30:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:30:22,012 - 127.0.0.1 - - [06/Dec/2024 16:30:22] "GET / HTTP/1.1" 200 -
+2024-12-06 16:30:22,058 - 127.0.0.1 - - [06/Dec/2024 16:30:22] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:30:39,439 - 127.0.0.1 - - [06/Dec/2024 16:30:39] "GET / HTTP/1.1" 200 -
+2024-12-06 16:30:39,482 - 127.0.0.1 - - [06/Dec/2024 16:30:39] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:30:43,340 - 127.0.0.1 - - [06/Dec/2024 16:30:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:30:43,357 - 127.0.0.1 - - [06/Dec/2024 16:30:43] "GET / HTTP/1.1" 200 -
+2024-12-06 16:30:43,395 - 127.0.0.1 - - [06/Dec/2024 16:30:43] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:30:46,940 - User: giadaott | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 16:30:46,995 - 127.0.0.1 - - [06/Dec/2024 16:30:46] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:30:47,101 - 127.0.0.1 - - [06/Dec/2024 16:30:47] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:30:47,171 - 127.0.0.1 - - [06/Dec/2024 16:30:47] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 16:30:48,344 - 127.0.0.1 - - [06/Dec/2024 16:30:48] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 16:30:48,358 - 127.0.0.1 - - [06/Dec/2024 16:30:48] "GET / HTTP/1.1" 200 -
+2024-12-06 16:30:48,409 - 127.0.0.1 - - [06/Dec/2024 16:30:48] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:30:52,144 - 127.0.0.1 - - [06/Dec/2024 16:30:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:30:52,161 - 127.0.0.1 - - [06/Dec/2024 16:30:52] "GET / HTTP/1.1" 200 -
+2024-12-06 16:30:52,209 - 127.0.0.1 - - [06/Dec/2024 16:30:52] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:31:02,575 - 127.0.0.1 - - [06/Dec/2024 16:31:02] "GET / HTTP/1.1" 200 -
+2024-12-06 16:31:02,690 - 127.0.0.1 - - [06/Dec/2024 16:31:02] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:31:02,793 - 127.0.0.1 - - [06/Dec/2024 16:31:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-06 16:31:05,799 - 127.0.0.1 - - [06/Dec/2024 16:31:05] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:31:05,825 - 127.0.0.1 - - [06/Dec/2024 16:31:05] "GET / HTTP/1.1" 200 -
+2024-12-06 16:31:05,875 - 127.0.0.1 - - [06/Dec/2024 16:31:05] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:31:27,685 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:31:27,817 -  * Restarting with stat
+2024-12-06 16:31:28,771 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2712755406832>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002779CD28710>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002779CD286D8>], 'actions': [<vakt.rules.operator.Eq object at 0x000002779CD286A0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002779CD287B8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:31:28,789 -  * Debugger is active!
+2024-12-06 16:31:28,796 -  * Debugger PIN: 589-825-161
+2024-12-06 16:31:29,116 - 127.0.0.1 - - [06/Dec/2024 16:31:29] "GET / HTTP/1.1" 200 -
+2024-12-06 16:31:29,160 - 127.0.0.1 - - [06/Dec/2024 16:31:29] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:31:32,158 - 127.0.0.1 - - [06/Dec/2024 16:31:32] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:31:32,177 - 127.0.0.1 - - [06/Dec/2024 16:31:32] "GET / HTTP/1.1" 200 -
+2024-12-06 16:31:32,219 - 127.0.0.1 - - [06/Dec/2024 16:31:32] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:31:46,589 - 127.0.0.1 - - [06/Dec/2024 16:31:46] "GET / HTTP/1.1" 200 -
+2024-12-06 16:31:46,655 - 127.0.0.1 - - [06/Dec/2024 16:31:46] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:31:49,778 - 127.0.0.1 - - [06/Dec/2024 16:31:49] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:31:49,797 - 127.0.0.1 - - [06/Dec/2024 16:31:49] "GET / HTTP/1.1" 200 -
+2024-12-06 16:31:49,840 - 127.0.0.1 - - [06/Dec/2024 16:31:49] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:32:05,601 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2009827538928>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001D3F30E7710>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001D3F30E76D8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001D3F30E76A0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001D3F30E77B8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:32:06,476 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 16:32:06,476 - [33mPress CTRL+C to quit[0m
+2024-12-06 16:32:06,478 -  * Restarting with stat
+2024-12-06 16:32:07,293 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2164024326408>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001F7D9E6B828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001F7D9E6B7F0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001F7D9E6B7B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001F7D9E6B8D0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:32:07,311 -  * Debugger is active!
+2024-12-06 16:32:07,317 -  * Debugger PIN: 589-825-161
+2024-12-06 16:32:07,345 - 127.0.0.1 - - [06/Dec/2024 16:32:07] "GET / HTTP/1.1" 200 -
+2024-12-06 16:32:07,389 - 127.0.0.1 - - [06/Dec/2024 16:32:07] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:32:11,153 - User: giadaott | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 16:32:11,173 - 127.0.0.1 - - [06/Dec/2024 16:32:11] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:32:11,190 - 127.0.0.1 - - [06/Dec/2024 16:32:11] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:32:11,244 - 127.0.0.1 - - [06/Dec/2024 16:32:11] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 16:32:13,939 - 127.0.0.1 - - [06/Dec/2024 16:32:13] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 16:32:13,955 - 127.0.0.1 - - [06/Dec/2024 16:32:13] "GET / HTTP/1.1" 200 -
+2024-12-06 16:32:14,010 - 127.0.0.1 - - [06/Dec/2024 16:32:14] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:32:16,968 - 127.0.0.1 - - [06/Dec/2024 16:32:16] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:32:16,986 - 127.0.0.1 - - [06/Dec/2024 16:32:16] "GET / HTTP/1.1" 200 -
+2024-12-06 16:32:17,029 - 127.0.0.1 - - [06/Dec/2024 16:32:17] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:32:42,779 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1907684759760>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001BC2ADF57F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001BC2ADF57B8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001BC2ADF5780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001BC2ADF5898>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:32:43,665 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 16:32:43,665 - [33mPress CTRL+C to quit[0m
+2024-12-06 16:32:43,667 -  * Restarting with stat
+2024-12-06 16:32:44,499 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1801023293480>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001A3555A8748>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001A3555A8710>], 'actions': [<vakt.rules.operator.Eq object at 0x000001A3555A86D8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001A3555A87F0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:32:44,516 -  * Debugger is active!
+2024-12-06 16:32:44,521 -  * Debugger PIN: 589-825-161
+2024-12-06 16:32:47,061 - 127.0.0.1 - - [06/Dec/2024 16:32:47] "GET / HTTP/1.1" 200 -
+2024-12-06 16:32:47,107 - 127.0.0.1 - - [06/Dec/2024 16:32:47] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:32:50,008 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 16:32:50,022 - 127.0.0.1 - - [06/Dec/2024 16:32:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:32:50,044 - 127.0.0.1 - - [06/Dec/2024 16:32:50] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:32:50,093 - 127.0.0.1 - - [06/Dec/2024 16:32:50] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 16:33:53,811 - 127.0.0.1 - - [06/Dec/2024 16:33:53] "[32mGET /account-settings HTTP/1.1[0m" 302 -
+2024-12-06 16:33:53,826 - 127.0.0.1 - - [06/Dec/2024 16:33:53] "GET / HTTP/1.1" 200 -
+2024-12-06 16:33:53,874 - 127.0.0.1 - - [06/Dec/2024 16:33:53] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:33:59,471 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 16:33:59,493 - 127.0.0.1 - - [06/Dec/2024 16:33:59] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:33:59,509 - 127.0.0.1 - - [06/Dec/2024 16:33:59] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:33:59,559 - 127.0.0.1 - - [06/Dec/2024 16:33:59] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 16:34:01,398 - 127.0.0.1 - - [06/Dec/2024 16:34:01] "GET /account-settings HTTP/1.1" 200 -
+2024-12-06 16:34:02,271 - 127.0.0.1 - - [06/Dec/2024 16:34:02] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:34:02,314 - 127.0.0.1 - - [06/Dec/2024 16:34:02] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 16:34:03,463 - 127.0.0.1 - - [06/Dec/2024 16:34:03] "GET /account-settings HTTP/1.1" 200 -
+2024-12-06 16:34:04,094 - 127.0.0.1 - - [06/Dec/2024 16:34:04] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:34:04,145 - 127.0.0.1 - - [06/Dec/2024 16:34:04] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 16:34:04,686 - 127.0.0.1 - - [06/Dec/2024 16:34:04] "GET /account-settings HTTP/1.1" 200 -
+2024-12-06 16:34:05,215 - 127.0.0.1 - - [06/Dec/2024 16:34:05] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:34:05,268 - 127.0.0.1 - - [06/Dec/2024 16:34:05] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 16:34:05,995 - 127.0.0.1 - - [06/Dec/2024 16:34:05] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 16:34:06,009 - 127.0.0.1 - - [06/Dec/2024 16:34:06] "GET / HTTP/1.1" 200 -
+2024-12-06 16:34:06,062 - 127.0.0.1 - - [06/Dec/2024 16:34:06] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 16:34:09,518 - User: admin1 | Action: accesso | Resource: sistema | Status: successo 
+2024-12-06 16:34:09,539 - 127.0.0.1 - - [06/Dec/2024 16:34:09] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 16:34:09,553 - 127.0.0.1 - - [06/Dec/2024 16:34:09] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:34:09,601 - 127.0.0.1 - - [06/Dec/2024 16:34:09] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 16:34:32,210 - 127.0.0.1 - - [06/Dec/2024 16:34:32] "GET /notes HTTP/1.1" 200 -
+2024-12-06 16:34:32,294 - 127.0.0.1 - - [06/Dec/2024 16:34:32] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-06 16:34:33,160 - 127.0.0.1 - - [06/Dec/2024 16:34:33] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:34:33,208 - 127.0.0.1 - - [06/Dec/2024 16:34:33] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 16:35:16,223 - 127.0.0.1 - - [06/Dec/2024 16:35:16] "GET /notifications HTTP/1.1" 200 -
+2024-12-06 16:35:16,286 - 127.0.0.1 - - [06/Dec/2024 16:35:16] "GET /static/notifications.css HTTP/1.1" 200 -
+2024-12-06 16:35:17,199 - 127.0.0.1 - - [06/Dec/2024 16:35:17] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 16:35:17,249 - 127.0.0.1 - - [06/Dec/2024 16:35:17] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 16:36:44,198 - 127.0.0.1 - - [06/Dec/2024 16:36:44] "[32mGET /account-settings HTTP/1.1[0m" 302 -
+2024-12-06 16:36:44,212 - 127.0.0.1 - - [06/Dec/2024 16:36:44] "GET / HTTP/1.1" 200 -
+2024-12-06 16:36:44,271 - 127.0.0.1 - - [06/Dec/2024 16:36:44] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 16:36:55,832 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:36:55,935 -  * Restarting with stat
+2024-12-06 16:36:56,954 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1325316552856>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001349305B7B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001349305B780>], 'actions': [<vakt.rules.operator.Eq object at 0x000001349305B358>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001349305B860>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:36:56,978 -  * Debugger is active!
+2024-12-06 16:36:56,992 -  * Debugger PIN: 589-825-161
+2024-12-06 16:36:59,042 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 16:36:59,108 -  * Restarting with stat
+2024-12-06 16:36:59,928 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2116087363904>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001ECB0A2B860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001ECB0A2B828>], 'actions': [<vakt.rules.operator.Eq object at 0x000001ECB0A2B7F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001ECB0A2B908>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 16:36:59,946 -  * Debugger is active!
+2024-12-06 16:36:59,951 -  * Debugger PIN: 589-825-161
+2024-12-06 17:04:36,944 - 127.0.0.1 - - [06/Dec/2024 17:04:36] "GET / HTTP/1.1" 200 -
+2024-12-06 17:04:37,013 - 127.0.0.1 - - [06/Dec/2024 17:04:37] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 17:07:20,208 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\logging_manager.py', reloading
+2024-12-06 17:07:20,557 -  * Restarting with stat
+2024-12-06 17:07:22,236 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1976188114928>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001CC1DFD9710>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001CC1DFD96D8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001CC1BBA0518>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001CC1DFD97B8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 17:07:22,261 -  * Debugger is active!
+2024-12-06 17:07:22,273 -  * Debugger PIN: 589-825-161
+2024-12-06 17:08:25,092 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\logging_manager.py', reloading
+2024-12-06 17:08:25,169 -  * Restarting with stat
+2024-12-06 17:08:26,057 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2234451278144>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002083FACB860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002083FACB828>], 'actions': [<vakt.rules.operator.Eq object at 0x000002083FACB7F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002083FACB908>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 17:08:26,075 -  * Debugger is active!
+2024-12-06 17:08:26,081 -  * Debugger PIN: 589-825-161
+2024-12-06 17:09:59,381 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 17:09:59,455 -  * Restarting with stat
+2024-12-06 17:10:00,309 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2419480160464>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000233544167F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000233544167B8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000023354416780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000023354416898>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 17:10:00,328 -  * Debugger is active!
+2024-12-06 17:10:00,334 -  * Debugger PIN: 589-825-161
+2024-12-06 17:10:15,529 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 17:10:15,589 -  * Restarting with stat
+2024-12-06 17:10:16,541 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2074474473792>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001E300506860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E300506828>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E3005067F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E300506908>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 17:10:16,561 -  * Debugger is active!
+2024-12-06 17:10:16,568 -  * Debugger PIN: 589-825-161
+2024-12-06 17:10:24,194 - 127.0.0.1 - - [06/Dec/2024 17:10:24] "GET / HTTP/1.1" 200 -
+2024-12-06 17:10:24,308 - 127.0.0.1 - - [06/Dec/2024 17:10:24] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 17:10:27,643 - User: admin1 | Action: accesso | Resource: sistema | Timestamp: 2024-12-06 17:10:27 | Session ID: 332d802fb28d82938d98c5d72ea37f63 | Status: successo 
+2024-12-06 17:10:27,684 - 127.0.0.1 - - [06/Dec/2024 17:10:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 17:10:27,708 - 127.0.0.1 - - [06/Dec/2024 17:10:27] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 17:10:27,763 - 127.0.0.1 - - [06/Dec/2024 17:10:27] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 17:10:40,443 - 127.0.0.1 - - [06/Dec/2024 17:10:40] "GET /notes HTTP/1.1" 200 -
+2024-12-06 17:10:40,503 - 127.0.0.1 - - [06/Dec/2024 17:10:40] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-06 17:10:41,660 - 127.0.0.1 - - [06/Dec/2024 17:10:41] "GET /add-note HTTP/1.1" 200 -
+2024-12-06 17:10:44,061 - All matching policies have allow effect
+2024-12-06 17:10:44,061 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2074476793528>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '17:10:44'}}
+2024-12-06 17:10:44,068 - User: admin1 | Action: creazione | Resource: note | Timestamp: 2024-12-06 17:10:44 | Session ID: 332d802fb28d82938d98c5d72ea37f63 | Status: successo 
+2024-12-06 17:10:44,079 - 127.0.0.1 - - [06/Dec/2024 17:10:44] "[32mPOST /add-note HTTP/1.1[0m" 302 -
+2024-12-06 17:10:44,095 - 127.0.0.1 - - [06/Dec/2024 17:10:44] "GET /notes HTTP/1.1" 200 -
+2024-12-06 17:10:44,147 - 127.0.0.1 - - [06/Dec/2024 17:10:44] "[36mGET /static/notes.css HTTP/1.1[0m" 304 -
+2024-12-06 17:10:52,871 - 127.0.0.1 - - [06/Dec/2024 17:10:52] "GET /edit-note/1 HTTP/1.1" 200 -
+2024-12-06 17:10:54,310 - All matching policies have allow effect
+2024-12-06 17:10:54,310 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2074476929208>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '17:10:54'}}
+2024-12-06 17:10:54,316 - User: admin1 | Action: modifica | Resource: note | Timestamp: 17:10:54 | Session ID: 332d802fb28d82938d98c5d72ea37f63 | Status: successo 
+2024-12-06 17:10:54,330 - 127.0.0.1 - - [06/Dec/2024 17:10:54] "[32mPOST /edit-note/1 HTTP/1.1[0m" 302 -
+2024-12-06 17:10:54,350 - 127.0.0.1 - - [06/Dec/2024 17:10:54] "GET /notes HTTP/1.1" 200 -
+2024-12-06 17:10:54,406 - 127.0.0.1 - - [06/Dec/2024 17:10:54] "[36mGET /static/notes.css HTTP/1.1[0m" 304 -
+2024-12-06 17:10:55,018 - All matching policies have allow effect
+2024-12-06 17:10:55,019 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2074476932848>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '17:10:55'}}
+2024-12-06 17:10:55,024 - User: admin1 | Action: eliminazione | Resource: note | Timestamp: 17:10:55 | Session ID: 332d802fb28d82938d98c5d72ea37f63 | Status: successo 
+2024-12-06 17:10:55,032 - 127.0.0.1 - - [06/Dec/2024 17:10:55] "[32mPOST /delete-note/1 HTTP/1.1[0m" 302 -
+2024-12-06 17:10:55,046 - 127.0.0.1 - - [06/Dec/2024 17:10:55] "GET /notes HTTP/1.1" 200 -
+2024-12-06 17:10:55,091 - 127.0.0.1 - - [06/Dec/2024 17:10:55] "[36mGET /static/notes.css HTTP/1.1[0m" 304 -
+2024-12-06 17:11:03,374 - 127.0.0.1 - - [06/Dec/2024 17:11:03] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 17:11:03,425 - 127.0.0.1 - - [06/Dec/2024 17:11:03] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 17:11:04,250 - 127.0.0.1 - - [06/Dec/2024 17:11:04] "GET /notifications HTTP/1.1" 200 -
+2024-12-06 17:11:04,312 - 127.0.0.1 - - [06/Dec/2024 17:11:04] "GET /static/notifications.css HTTP/1.1" 200 -
+2024-12-06 17:11:05,532 - 127.0.0.1 - - [06/Dec/2024 17:11:05] "[32mPOST /notifications/delete/4 HTTP/1.1[0m" 302 -
+2024-12-06 17:11:05,549 - 127.0.0.1 - - [06/Dec/2024 17:11:05] "GET /notifications HTTP/1.1" 200 -
+2024-12-06 17:11:05,594 - 127.0.0.1 - - [06/Dec/2024 17:11:05] "[36mGET /static/notifications.css HTTP/1.1[0m" 304 -
+2024-12-06 17:11:06,106 - 127.0.0.1 - - [06/Dec/2024 17:11:06] "[32mPOST /notifications/clear-all HTTP/1.1[0m" 302 -
+2024-12-06 17:11:06,120 - 127.0.0.1 - - [06/Dec/2024 17:11:06] "GET /notifications HTTP/1.1" 200 -
+2024-12-06 17:11:06,156 - 127.0.0.1 - - [06/Dec/2024 17:11:06] "[36mGET /static/notifications.css HTTP/1.1[0m" 304 -
+2024-12-06 17:22:37,300 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\logging_manager.py', reloading
+2024-12-06 17:22:37,538 -  * Restarting with stat
+2024-12-06 17:22:38,691 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2260144449856>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000020E3B1B6860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000020E3B1B6828>], 'actions': [<vakt.rules.operator.Eq object at 0x0000020E3B1B67F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000020E3B1B6908>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 17:22:38,715 -  * Debugger is active!
+2024-12-06 17:22:38,723 -  * Debugger PIN: 589-825-161
+2024-12-06 17:23:18,252 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\logging_manager.py', reloading
+2024-12-06 17:23:18,327 -  * Restarting with stat
+2024-12-06 17:23:19,211 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2023266633656>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001D71416C6D8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001D71416C6A0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001D71416C668>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001D71416C780>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 17:23:19,235 -  * Debugger is active!
+2024-12-06 17:23:19,242 -  * Debugger PIN: 589-825-161
+2024-12-06 17:23:50,668 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 17:23:50,758 -  * Restarting with stat
+2024-12-06 17:23:51,747 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1932093929456>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001C1D9C5B710>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001C1D9C5B6D8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001C1D9C5B6A0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001C1D9C5B7B8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 17:23:51,767 -  * Debugger is active!
+2024-12-06 17:23:51,772 -  * Debugger PIN: 589-825-161
+2024-12-06 17:25:52,359 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 17:25:52,442 -  * Restarting with stat
+2024-12-06 17:25:53,417 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2977192241472>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002B52E7C6860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002B52E7C6828>], 'actions': [<vakt.rules.operator.Eq object at 0x000002B52E7C67F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002B52E7C6908>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 17:25:53,435 -  * Debugger is active!
+2024-12-06 17:25:53,441 -  * Debugger PIN: 589-825-161
+2024-12-06 17:25:57,190 - 127.0.0.1 - - [06/Dec/2024 17:25:57] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2024-12-06 17:25:57,219 - 127.0.0.1 - - [06/Dec/2024 17:25:57] "GET / HTTP/1.1" 200 -
+2024-12-06 17:25:57,686 - 127.0.0.1 - - [06/Dec/2024 17:25:57] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 17:26:01,500 - 127.0.0.1 - - [06/Dec/2024 17:26:01] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-06 17:26:01,580 - 127.0.0.1 - - [06/Dec/2024 17:26:01] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 17:26:01,587 - 127.0.0.1 - - [06/Dec/2024 17:26:01] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-06 17:26:01,684 - 127.0.0.1 - - [06/Dec/2024 17:26:01] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 17:26:40,055 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 17:26:40,123 -  * Restarting with stat
+2024-12-06 17:26:40,946 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2751406893264>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002809CA167F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002809CA167B8>], 'actions': [<vakt.rules.operator.Eq object at 0x000002809CA16780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002809CA16898>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 17:26:40,968 -  * Debugger is active!
+2024-12-06 17:26:40,975 -  * Debugger PIN: 589-825-161
+2024-12-06 17:26:43,311 - The CSRF session token is missing.
+2024-12-06 17:26:43,312 - 127.0.0.1 - - [06/Dec/2024 17:26:43] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2024-12-06 17:26:44,982 - 127.0.0.1 - - [06/Dec/2024 17:26:44] "GET / HTTP/1.1" 200 -
+2024-12-06 17:26:45,024 - 127.0.0.1 - - [06/Dec/2024 17:26:45] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 17:26:47,683 - 127.0.0.1 - - [06/Dec/2024 17:26:47] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-06 17:26:47,740 - 127.0.0.1 - - [06/Dec/2024 17:26:47] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 17:26:47,746 - 127.0.0.1 - - [06/Dec/2024 17:26:47] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-12-06 17:26:47,810 - 127.0.0.1 - - [06/Dec/2024 17:26:47] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 17:27:29,614 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 17:27:29,704 -  * Restarting with stat
+2024-12-06 17:27:30,704 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2002644330760>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001D246E76828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001D246E767F0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001D246E767B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001D246E768D0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 17:27:30,728 -  * Debugger is active!
+2024-12-06 17:27:30,733 -  * Debugger PIN: 589-825-161
+2024-12-06 17:27:33,577 - 127.0.0.1 - - [06/Dec/2024 17:27:33] "GET / HTTP/1.1" 200 -
+2024-12-06 17:27:33,616 - 127.0.0.1 - - [06/Dec/2024 17:27:33] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 17:27:36,019 - User: admin1 | Action: accesso | Resource: sistema | Timestamp: 2024-12-06 17:27:36 | Session ID: None | Status: fallimento 
+2024-12-06 17:27:36,021 - 127.0.0.1 - - [06/Dec/2024 17:27:36] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 17:27:36,040 - 127.0.0.1 - - [06/Dec/2024 17:27:36] "GET / HTTP/1.1" 200 -
+2024-12-06 17:27:36,081 - 127.0.0.1 - - [06/Dec/2024 17:27:36] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 17:27:48,913 - 127.0.0.1 - - [06/Dec/2024 17:27:48] "GET / HTTP/1.1" 200 -
+2024-12-06 17:27:48,979 - 127.0.0.1 - - [06/Dec/2024 17:27:48] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 17:27:51,857 - User: admin1 | Action: accesso | Resource: sistema | Timestamp: 2024-12-06 17:27:51 | Session ID: None | Status: fallimento 
+2024-12-06 17:27:51,861 - 127.0.0.1 - - [06/Dec/2024 17:27:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 17:27:51,878 - 127.0.0.1 - - [06/Dec/2024 17:27:51] "GET / HTTP/1.1" 200 -
+2024-12-06 17:27:51,921 - 127.0.0.1 - - [06/Dec/2024 17:27:51] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 17:28:18,750 - 127.0.0.1 - - [06/Dec/2024 17:28:18] "GET / HTTP/1.1" 200 -
+2024-12-06 17:28:18,821 - 127.0.0.1 - - [06/Dec/2024 17:28:18] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 17:28:23,804 - User: admin1 | Action: accesso | Resource: sistema | Timestamp: 2024-12-06 17:28:23 | Session ID: None | Status: fallimento 
+2024-12-06 17:28:23,806 - 127.0.0.1 - - [06/Dec/2024 17:28:23] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 17:28:23,823 - 127.0.0.1 - - [06/Dec/2024 17:28:23] "GET / HTTP/1.1" 200 -
+2024-12-06 17:28:23,866 - 127.0.0.1 - - [06/Dec/2024 17:28:23] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 17:28:35,511 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2365676427528>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000226CD4D9828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000226CD4D97F0>], 'actions': [<vakt.rules.operator.Eq object at 0x00000226CD4D97B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000226CD4D98D0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 17:28:36,412 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 17:28:36,413 - [33mPress CTRL+C to quit[0m
+2024-12-06 17:28:36,414 -  * Restarting with stat
+2024-12-06 17:28:37,199 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2796411971904>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000028B17246860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000028B17246828>], 'actions': [<vakt.rules.operator.Eq object at 0x0000028B172467F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000028B17246908>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 17:28:37,217 -  * Debugger is active!
+2024-12-06 17:28:37,222 -  * Debugger PIN: 589-825-161
+2024-12-06 17:28:37,536 - 127.0.0.1 - - [06/Dec/2024 17:28:37] "GET / HTTP/1.1" 200 -
+2024-12-06 17:28:37,573 - 127.0.0.1 - - [06/Dec/2024 17:28:37] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 17:28:42,932 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-06 17:28:42 | Session ID: c075b2c70ef7e1eb84cdac38fa8b2923 | Status: successo 
+2024-12-06 17:28:42,982 - 127.0.0.1 - - [06/Dec/2024 17:28:42] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 17:28:43,000 - 127.0.0.1 - - [06/Dec/2024 17:28:43] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 17:28:43,056 - 127.0.0.1 - - [06/Dec/2024 17:28:43] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 17:29:09,247 - 127.0.0.1 - - [06/Dec/2024 17:29:09] "GET / HTTP/1.1" 200 -
+2024-12-06 17:29:09,365 - 127.0.0.1 - - [06/Dec/2024 17:29:09] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 17:29:09,418 - 127.0.0.1 - - [06/Dec/2024 17:29:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-06 17:29:12,637 - User: admin1 | Action: accesso | Resource: sistema | Timestamp: 2024-12-06 17:29:12 | Session ID: None | Status: fallimento 
+2024-12-06 17:29:12,638 - 127.0.0.1 - - [06/Dec/2024 17:29:12] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 17:29:12,675 - 127.0.0.1 - - [06/Dec/2024 17:29:12] "GET / HTTP/1.1" 200 -
+2024-12-06 17:29:12,722 - 127.0.0.1 - - [06/Dec/2024 17:29:12] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 17:29:35,992 - 127.0.0.1 - - [06/Dec/2024 17:29:35] "[35m[1mGET /logout HTTP/1.1[0m" 500 -
+2024-12-06 17:29:36,091 - 127.0.0.1 - - [06/Dec/2024 17:29:36] "GET /logout?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 17:29:36,098 - 127.0.0.1 - - [06/Dec/2024 17:29:36] "GET /logout?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-06 17:29:36,198 - 127.0.0.1 - - [06/Dec/2024 17:29:36] "GET /logout?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 17:29:54,294 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 17:29:54,468 -  * Restarting with stat
+2024-12-06 17:29:55,487 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1714054719696>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000018F159F67F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000018F159F67B8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000018F159F6780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000018F159F6898>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 17:29:55,509 -  * Debugger is active!
+2024-12-06 17:29:55,518 -  * Debugger PIN: 589-825-161
+2024-12-06 17:29:57,730 - 127.0.0.1 - - [06/Dec/2024 17:29:57] "[35m[1mGET /logout HTTP/1.1[0m" 500 -
+2024-12-06 17:29:57,782 - 127.0.0.1 - - [06/Dec/2024 17:29:57] "GET /logout?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 17:29:57,789 - 127.0.0.1 - - [06/Dec/2024 17:29:57] "[36mGET /logout?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-12-06 17:29:57,827 - 127.0.0.1 - - [06/Dec/2024 17:29:57] "GET /logout?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 17:30:12,515 - 127.0.0.1 - - [06/Dec/2024 17:30:12] "[35m[1mGET /logout HTTP/1.1[0m" 500 -
+2024-12-06 17:30:12,563 - 127.0.0.1 - - [06/Dec/2024 17:30:12] "[36mGET /logout?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-12-06 17:30:12,570 - 127.0.0.1 - - [06/Dec/2024 17:30:12] "[36mGET /logout?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-12-06 17:30:12,596 - 127.0.0.1 - - [06/Dec/2024 17:30:12] "GET /logout?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 17:30:13,560 - 127.0.0.1 - - [06/Dec/2024 17:30:13] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2024-12-06 17:30:13,585 - 127.0.0.1 - - [06/Dec/2024 17:30:13] "GET / HTTP/1.1" 200 -
+2024-12-06 17:30:13,645 - 127.0.0.1 - - [06/Dec/2024 17:30:13] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 17:30:16,595 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-06 17:30:16 | Session ID: 0da6a1003287c5e42b243662ed586d02 | Status: successo 
+2024-12-06 17:30:16,614 - 127.0.0.1 - - [06/Dec/2024 17:30:16] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 17:30:16,635 - 127.0.0.1 - - [06/Dec/2024 17:30:16] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 17:30:16,690 - 127.0.0.1 - - [06/Dec/2024 17:30:16] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 17:30:20,549 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 17:30:20 | Session ID: 0da6a1003287c5e42b243662ed586d02 | Status: successo 
+2024-12-06 17:30:20,550 - 127.0.0.1 - - [06/Dec/2024 17:30:20] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 17:30:20,565 - 127.0.0.1 - - [06/Dec/2024 17:30:20] "GET / HTTP/1.1" 200 -
+2024-12-06 17:30:20,664 - 127.0.0.1 - - [06/Dec/2024 17:30:20] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
