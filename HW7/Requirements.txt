@@ -1,0 +1,5 @@
+NomeComponente       Tipo               Versione
+Apache               http server        2.4.62  
+Vault                gestione segreti   1.18.1
+Flask                framework web      2.2.5
+Keycloak             autenticazione     26.0.5

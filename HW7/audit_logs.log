@@ -1328,3 +1328,1315 @@
 2024-12-06 17:30:20,550 - 127.0.0.1 - - [06/Dec/2024 17:30:20] "[32mGET /logout HTTP/1.1[0m" 302 -
 2024-12-06 17:30:20,565 - 127.0.0.1 - - [06/Dec/2024 17:30:20] "GET / HTTP/1.1" 200 -
 2024-12-06 17:30:20,664 - 127.0.0.1 - - [06/Dec/2024 17:30:20] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 18:22:35,294 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 18:22:35,767 -  * Restarting with stat
+2024-12-06 18:22:37,052 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2723008964984>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000279FFFB6898>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000279FFFB6860>], 'actions': [<vakt.rules.operator.Eq object at 0x00000279FFFB6828>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000279FFFB6940>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:22:37,073 -  * Debugger is active!
+2024-12-06 18:22:37,103 -  * Debugger PIN: 589-825-161
+2024-12-06 18:22:37,142 - 127.0.0.1 - - [06/Dec/2024 18:22:37] "GET / HTTP/1.1" 200 -
+2024-12-06 18:22:37,179 - 127.0.0.1 - - [06/Dec/2024 18:22:37] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 18:22:41,291 - 127.0.0.1 - - [06/Dec/2024 18:22:41] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-06 18:22:41,352 - 127.0.0.1 - - [06/Dec/2024 18:22:41] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 18:22:41,358 - 127.0.0.1 - - [06/Dec/2024 18:22:41] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-06 18:22:41,459 - 127.0.0.1 - - [06/Dec/2024 18:22:41] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 18:22:55,431 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 18:22:55,494 -  * Restarting with stat
+2024-12-06 18:22:56,477 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1544783685840>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000167AC4867F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000167AC4867B8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000167AC486780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000167AC486898>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:22:56,497 -  * Debugger is active!
+2024-12-06 18:22:56,502 -  * Debugger PIN: 589-825-161
+2024-12-06 18:22:58,204 - The CSRF session token is missing.
+2024-12-06 18:22:58,205 - 127.0.0.1 - - [06/Dec/2024 18:22:58] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2024-12-06 18:22:59,521 - 127.0.0.1 - - [06/Dec/2024 18:22:59] "GET / HTTP/1.1" 200 -
+2024-12-06 18:22:59,569 - 127.0.0.1 - - [06/Dec/2024 18:22:59] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 18:23:02,176 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-06 18:23:02 | Session ID: 5b6ac045d8985df37a9cba5d5848e393 | Status: successo 
+2024-12-06 18:23:02,215 - 127.0.0.1 - - [06/Dec/2024 18:23:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 18:23:02,234 - 127.0.0.1 - - [06/Dec/2024 18:23:02] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 18:23:02,286 - 127.0.0.1 - - [06/Dec/2024 18:23:02] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 18:23:05,482 - 127.0.0.1 - - [06/Dec/2024 18:23:05] "GET /notes HTTP/1.1" 200 -
+2024-12-06 18:23:05,544 - 127.0.0.1 - - [06/Dec/2024 18:23:05] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-06 18:23:06,437 - 127.0.0.1 - - [06/Dec/2024 18:23:06] "GET /add-note HTTP/1.1" 200 -
+2024-12-06 18:23:10,069 - No potential policies were found
+2024-12-06 18:23:10,070 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1544786066008>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '18:23:10'}}
+2024-12-06 18:23:10,073 - 127.0.0.1 - - [06/Dec/2024 18:23:10] "[35m[1mPOST /add-note HTTP/1.1[0m" 500 -
+2024-12-06 18:23:10,131 - 127.0.0.1 - - [06/Dec/2024 18:23:10] "GET /add-note?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-06 18:23:10,137 - 127.0.0.1 - - [06/Dec/2024 18:23:10] "GET /add-note?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 18:23:10,196 - 127.0.0.1 - - [06/Dec/2024 18:23:10] "GET /add-note?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 18:23:47,286 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 18:23:47,349 -  * Restarting with stat
+2024-12-06 18:23:48,160 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2332210129104>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000021F028E67F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000021F028E67B8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000021F028E6780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000021F028E6898>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:23:48,179 -  * Debugger is active!
+2024-12-06 18:23:48,186 -  * Debugger PIN: 589-825-161
+2024-12-06 18:23:55,723 - The CSRF session token is missing.
+2024-12-06 18:23:55,723 - 127.0.0.1 - - [06/Dec/2024 18:23:55] "[31m[1mPOST /add-note HTTP/1.1[0m" 400 -
+2024-12-06 18:23:56,865 - 127.0.0.1 - - [06/Dec/2024 18:23:56] "[32mGET /add-note HTTP/1.1[0m" 302 -
+2024-12-06 18:23:56,886 - 127.0.0.1 - - [06/Dec/2024 18:23:56] "GET / HTTP/1.1" 200 -
+2024-12-06 18:23:56,925 - 127.0.0.1 - - [06/Dec/2024 18:23:56] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 18:24:00,139 - User: admin1 | Action: accesso | Resource: sistema | Timestamp: 2024-12-06 18:24:00 | Session ID: None | Status: fallimento 
+2024-12-06 18:24:00,140 - 127.0.0.1 - - [06/Dec/2024 18:24:00] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 18:24:00,159 - 127.0.0.1 - - [06/Dec/2024 18:24:00] "GET / HTTP/1.1" 200 -
+2024-12-06 18:24:00,200 - 127.0.0.1 - - [06/Dec/2024 18:24:00] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 18:24:08,124 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2749122193392>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002801473A710>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002801473A6D8>], 'actions': [<vakt.rules.operator.Eq object at 0x000002801473A6A0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002801473A7B8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:24:09,026 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 18:24:09,026 - [33mPress CTRL+C to quit[0m
+2024-12-06 18:24:09,027 -  * Restarting with stat
+2024-12-06 18:24:09,821 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2722303666384>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000279D5F167F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000279D5F167B8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000279D5F16780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000279D5F16898>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:24:09,840 -  * Debugger is active!
+2024-12-06 18:24:09,845 -  * Debugger PIN: 589-825-161
+2024-12-06 18:24:09,960 - 127.0.0.1 - - [06/Dec/2024 18:24:09] "GET / HTTP/1.1" 200 -
+2024-12-06 18:24:10,159 - 127.0.0.1 - - [06/Dec/2024 18:24:10] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 18:24:10,315 - 127.0.0.1 - - [06/Dec/2024 18:24:10] "GET / HTTP/1.1" 200 -
+2024-12-06 18:24:10,360 - 127.0.0.1 - - [06/Dec/2024 18:24:10] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 18:24:13,248 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-06 18:24:13 | Session ID: 525a01992f36ca5baedb71ea5a606615 | Status: successo 
+2024-12-06 18:24:13,269 - 127.0.0.1 - - [06/Dec/2024 18:24:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 18:24:13,289 - 127.0.0.1 - - [06/Dec/2024 18:24:13] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 18:24:13,343 - 127.0.0.1 - - [06/Dec/2024 18:24:13] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 18:24:15,616 - 127.0.0.1 - - [06/Dec/2024 18:24:15] "GET /notes HTTP/1.1" 200 -
+2024-12-06 18:24:15,665 - 127.0.0.1 - - [06/Dec/2024 18:24:15] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-06 18:24:16,357 - 127.0.0.1 - - [06/Dec/2024 18:24:16] "GET /add-note HTTP/1.1" 200 -
+2024-12-06 18:24:17,471 - No potential policies were found
+2024-12-06 18:24:17,471 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2722305983544>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '18:24:17'}}
+2024-12-06 18:24:17,473 - 127.0.0.1 - - [06/Dec/2024 18:24:17] "[35m[1mPOST /add-note HTTP/1.1[0m" 500 -
+2024-12-06 18:24:17,525 - 127.0.0.1 - - [06/Dec/2024 18:24:17] "GET /add-note?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 18:24:17,532 - 127.0.0.1 - - [06/Dec/2024 18:24:17] "GET /add-note?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-06 18:24:17,589 - 127.0.0.1 - - [06/Dec/2024 18:24:17] "GET /add-note?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 18:24:35,212 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 18:24:35,323 -  * Restarting with stat
+2024-12-06 18:24:36,217 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2854455372040>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002989ACC6828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002989ACC67F0>], 'actions': [<vakt.rules.operator.Eq object at 0x000002989ACC67B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002989ACC68D0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:24:36,238 -  * Debugger is active!
+2024-12-06 18:24:36,245 -  * Debugger PIN: 589-825-161
+2024-12-06 18:24:36,643 - 127.0.0.1 - - [06/Dec/2024 18:24:36] "[32mGET /add-note HTTP/1.1[0m" 302 -
+2024-12-06 18:24:36,669 - 127.0.0.1 - - [06/Dec/2024 18:24:36] "GET / HTTP/1.1" 200 -
+2024-12-06 18:24:36,719 - 127.0.0.1 - - [06/Dec/2024 18:24:36] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 18:25:15,428 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2976587884584>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002B50A76A748>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002B50A76A710>], 'actions': [<vakt.rules.operator.Eq object at 0x000002B50A76A6D8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002B50A76A7F0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:25:16,318 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 18:25:16,318 - [33mPress CTRL+C to quit[0m
+2024-12-06 18:25:16,320 -  * Restarting with stat
+2024-12-06 18:25:17,133 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1942966266120>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001C461D06828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001C461D067F0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001C461D067B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001C461D068D0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:25:17,155 -  * Debugger is active!
+2024-12-06 18:25:17,163 -  * Debugger PIN: 589-825-161
+2024-12-06 18:25:18,538 - 127.0.0.1 - - [06/Dec/2024 18:25:18] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2024-12-06 18:25:18,560 - 127.0.0.1 - - [06/Dec/2024 18:25:18] "GET / HTTP/1.1" 200 -
+2024-12-06 18:25:18,617 - 127.0.0.1 - - [06/Dec/2024 18:25:18] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 18:25:22,348 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-06 18:25:22 | Session ID: 2b586770a60e658b2147c8b647bf3b1f | Status: successo 
+2024-12-06 18:25:22,363 - 127.0.0.1 - - [06/Dec/2024 18:25:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 18:25:22,384 - 127.0.0.1 - - [06/Dec/2024 18:25:22] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 18:25:22,434 - 127.0.0.1 - - [06/Dec/2024 18:25:22] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 18:25:24,361 - 127.0.0.1 - - [06/Dec/2024 18:25:24] "GET /notes HTTP/1.1" 200 -
+2024-12-06 18:25:24,414 - 127.0.0.1 - - [06/Dec/2024 18:25:24] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-06 18:25:25,021 - 127.0.0.1 - - [06/Dec/2024 18:25:25] "GET /add-note HTTP/1.1" 200 -
+2024-12-06 18:25:26,159 - No potential policies were found
+2024-12-06 18:25:26,159 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1942968577944>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '18:25:26'}}
+2024-12-06 18:25:26,162 - 127.0.0.1 - - [06/Dec/2024 18:25:26] "[35m[1mPOST /add-note HTTP/1.1[0m" 500 -
+2024-12-06 18:25:26,215 - 127.0.0.1 - - [06/Dec/2024 18:25:26] "GET /add-note?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 18:25:26,221 - 127.0.0.1 - - [06/Dec/2024 18:25:26] "GET /add-note?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-06 18:25:26,278 - 127.0.0.1 - - [06/Dec/2024 18:25:26] "GET /add-note?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 18:26:13,948 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 18:26:14,020 -  * Restarting with stat
+2024-12-06 18:26:14,877 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2332691626304>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000021F1F417860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000021F1F417828>], 'actions': [<vakt.rules.operator.Eq object at 0x0000021F1F4177F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000021F1F417908>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:26:14,895 -  * Debugger is active!
+2024-12-06 18:26:14,901 -  * Debugger PIN: 589-825-161
+2024-12-06 18:27:44,191 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 18:27:44,258 -  * Restarting with stat
+2024-12-06 18:27:45,192 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1440038951008>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000014F49029780>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000014F49029748>], 'actions': [<vakt.rules.operator.Eq object at 0x0000014F49029710>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000014F49029828>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:27:45,218 -  * Debugger is active!
+2024-12-06 18:27:45,224 -  * Debugger PIN: 589-825-161
+2024-12-06 18:27:45,847 - 127.0.0.1 - - [06/Dec/2024 18:27:45] "[32mGET /add-note HTTP/1.1[0m" 302 -
+2024-12-06 18:27:45,870 - 127.0.0.1 - - [06/Dec/2024 18:27:45] "GET / HTTP/1.1" 200 -
+2024-12-06 18:27:45,926 - 127.0.0.1 - - [06/Dec/2024 18:27:45] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 18:27:49,881 - 127.0.0.1 - - [06/Dec/2024 18:27:49] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-06 18:27:49,946 - 127.0.0.1 - - [06/Dec/2024 18:27:49] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 18:27:49,951 - 127.0.0.1 - - [06/Dec/2024 18:27:49] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-06 18:27:50,011 - 127.0.0.1 - - [06/Dec/2024 18:27:50] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 18:29:04,396 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 18:29:04,464 -  * Restarting with stat
+2024-12-06 18:29:05,294 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2032899811592>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001D952456828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001D9524567F0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001D9524567B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001D9524568D0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:29:05,312 -  * Debugger is active!
+2024-12-06 18:29:05,318 -  * Debugger PIN: 589-825-161
+2024-12-06 18:29:08,444 - 127.0.0.1 - - [06/Dec/2024 18:29:08] "GET / HTTP/1.1" 200 -
+2024-12-06 18:29:08,479 - 127.0.0.1 - - [06/Dec/2024 18:29:08] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 18:29:11,836 - User: admin1 | Action: accesso | Resource: sistema | Timestamp: 2024-12-06 18:29:11 | Session ID: None | Status: fallimento 
+2024-12-06 18:29:11,837 - 127.0.0.1 - - [06/Dec/2024 18:29:11] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 18:29:11,851 - 127.0.0.1 - - [06/Dec/2024 18:29:11] "GET / HTTP/1.1" 200 -
+2024-12-06 18:29:11,893 - 127.0.0.1 - - [06/Dec/2024 18:29:11] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 18:29:24,294 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2509548398632>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002484CBDA748>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002484CBDA710>], 'actions': [<vakt.rules.operator.Eq object at 0x000002484CBDA6D8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002484CBDA7F0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:29:25,184 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 18:29:25,184 - [33mPress CTRL+C to quit[0m
+2024-12-06 18:29:25,185 -  * Restarting with stat
+2024-12-06 18:29:26,027 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1360856447408>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000013CD95D78D0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000013CD95D7898>], 'actions': [<vakt.rules.operator.Eq object at 0x0000013CD95D7860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000013CD95D7978>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:29:26,046 -  * Debugger is active!
+2024-12-06 18:29:26,053 -  * Debugger PIN: 589-825-161
+2024-12-06 18:29:26,080 - 127.0.0.1 - - [06/Dec/2024 18:29:26] "GET / HTTP/1.1" 200 -
+2024-12-06 18:29:26,119 - 127.0.0.1 - - [06/Dec/2024 18:29:26] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 18:29:31,079 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-06 18:29:31 | Session ID: 3823f55e81431ea47116ba0e50b9523b | Status: successo 
+2024-12-06 18:29:31,096 - 127.0.0.1 - - [06/Dec/2024 18:29:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 18:29:31,121 - 127.0.0.1 - - [06/Dec/2024 18:29:31] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 18:29:31,181 - 127.0.0.1 - - [06/Dec/2024 18:29:31] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 18:29:43,517 - 127.0.0.1 - - [06/Dec/2024 18:29:43] "GET /account-settings HTTP/1.1" 200 -
+2024-12-06 18:29:44,891 - 127.0.0.1 - - [06/Dec/2024 18:29:44] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 18:29:44,943 - 127.0.0.1 - - [06/Dec/2024 18:29:44] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 18:29:45,683 - 127.0.0.1 - - [06/Dec/2024 18:29:45] "GET /notes HTTP/1.1" 200 -
+2024-12-06 18:29:45,728 - 127.0.0.1 - - [06/Dec/2024 18:29:45] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-06 18:29:46,670 - 127.0.0.1 - - [06/Dec/2024 18:29:46] "GET /add-note HTTP/1.1" 200 -
+2024-12-06 18:29:47,534 - No potential policies were found
+2024-12-06 18:29:47,534 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1360858818096>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '18:29:47'}}
+2024-12-06 18:29:47,535 - User: admin1 | Action: creazione | Resource: note | Timestamp: 2024-12-06 18:29:47 | Session ID: 3823f55e81431ea47116ba0e50b9523b | Status: fallimento 
+2024-12-06 18:29:47,536 - 127.0.0.1 - - [06/Dec/2024 18:29:47] "POST /add-note HTTP/1.1" 200 -
+2024-12-06 18:29:49,177 - 127.0.0.1 - - [06/Dec/2024 18:29:49] "GET /notes HTTP/1.1" 200 -
+2024-12-06 18:29:49,216 - 127.0.0.1 - - [06/Dec/2024 18:29:49] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-06 18:30:09,727 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 18:30:09,810 -  * Restarting with stat
+2024-12-06 18:30:10,668 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2365941639376>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000226DD1C67F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000226DD1C67B8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000226DD183C50>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000226DD1C6898>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:30:10,687 -  * Debugger is active!
+2024-12-06 18:30:10,692 -  * Debugger PIN: 589-825-161
+2024-12-06 18:30:14,345 - 127.0.0.1 - - [06/Dec/2024 18:30:14] "[32mGET /notes HTTP/1.1[0m" 302 -
+2024-12-06 18:30:14,365 - 127.0.0.1 - - [06/Dec/2024 18:30:14] "GET / HTTP/1.1" 200 -
+2024-12-06 18:30:14,404 - 127.0.0.1 - - [06/Dec/2024 18:30:14] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 18:30:22,932 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2778778011800>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000286FC1387B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000286FC138780>], 'actions': [<vakt.rules.operator.Eq object at 0x00000286FC138748>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000286FC138860>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:30:23,829 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 18:30:23,829 - [33mPress CTRL+C to quit[0m
+2024-12-06 18:30:23,830 -  * Restarting with stat
+2024-12-06 18:30:24,616 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2467759155464>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000023E900D7588>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000023E900D7630>], 'actions': [<vakt.rules.operator.Eq object at 0x0000023E91E86828>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000023E91E868D0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:30:24,636 -  * Debugger is active!
+2024-12-06 18:30:24,642 -  * Debugger PIN: 589-825-161
+2024-12-06 18:30:24,669 - 127.0.0.1 - - [06/Dec/2024 18:30:24] "GET / HTTP/1.1" 200 -
+2024-12-06 18:30:24,710 - 127.0.0.1 - - [06/Dec/2024 18:30:24] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 18:30:28,093 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-06 18:30:28 | Session ID: ee63778e355642eb34e0e332059278e8 | Status: successo 
+2024-12-06 18:30:28,109 - 127.0.0.1 - - [06/Dec/2024 18:30:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 18:30:28,126 - 127.0.0.1 - - [06/Dec/2024 18:30:28] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 18:30:28,183 - 127.0.0.1 - - [06/Dec/2024 18:30:28] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-06 18:30:30,188 - 127.0.0.1 - - [06/Dec/2024 18:30:30] "GET /notifications HTTP/1.1" 200 -
+2024-12-06 18:30:30,247 - 127.0.0.1 - - [06/Dec/2024 18:30:30] "GET /static/notifications.css HTTP/1.1" 200 -
+2024-12-06 18:30:30,939 - 127.0.0.1 - - [06/Dec/2024 18:30:30] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 18:30:30,989 - 127.0.0.1 - - [06/Dec/2024 18:30:30] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 18:30:31,936 - 127.0.0.1 - - [06/Dec/2024 18:30:31] "GET /add-note HTTP/1.1" 200 -
+2024-12-06 18:30:32,943 - All matching policies have allow effect
+2024-12-06 18:30:32,943 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2467761495512>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '18:30:32'}}
+2024-12-06 18:30:32,949 - User: admin1 | Action: creazione | Resource: note | Timestamp: 2024-12-06 18:30:32 | Session ID: ee63778e355642eb34e0e332059278e8 | Status: successo 
+2024-12-06 18:30:32,957 - 127.0.0.1 - - [06/Dec/2024 18:30:32] "[32mPOST /add-note HTTP/1.1[0m" 302 -
+2024-12-06 18:30:32,980 - 127.0.0.1 - - [06/Dec/2024 18:30:32] "GET /notes HTTP/1.1" 200 -
+2024-12-06 18:30:33,038 - 127.0.0.1 - - [06/Dec/2024 18:30:33] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-06 18:30:42,541 - 127.0.0.1 - - [06/Dec/2024 18:30:42] "GET /edit-note/1 HTTP/1.1" 200 -
+2024-12-06 18:30:43,815 - All matching policies have allow effect
+2024-12-06 18:30:43,815 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2467760510232>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '18:30:43'}}
+2024-12-06 18:30:43,821 - User: admin1 | Action: modifica | Resource: note | Timestamp: 18:30:43 | Session ID: ee63778e355642eb34e0e332059278e8 | Status: successo 
+2024-12-06 18:30:43,830 - 127.0.0.1 - - [06/Dec/2024 18:30:43] "[32mPOST /edit-note/1 HTTP/1.1[0m" 302 -
+2024-12-06 18:30:43,845 - 127.0.0.1 - - [06/Dec/2024 18:30:43] "GET /notes HTTP/1.1" 200 -
+2024-12-06 18:30:43,895 - 127.0.0.1 - - [06/Dec/2024 18:30:43] "[36mGET /static/notes.css HTTP/1.1[0m" 304 -
+2024-12-06 18:30:50,698 - All matching policies have allow effect
+2024-12-06 18:30:50,698 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2467761701944>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '18:30:50'}}
+2024-12-06 18:30:50,703 - User: admin1 | Action: eliminazione | Resource: note | Timestamp: 18:30:50 | Session ID: ee63778e355642eb34e0e332059278e8 | Status: successo 
+2024-12-06 18:30:50,714 - 127.0.0.1 - - [06/Dec/2024 18:30:50] "[32mPOST /delete-note/1 HTTP/1.1[0m" 302 -
+2024-12-06 18:30:50,730 - 127.0.0.1 - - [06/Dec/2024 18:30:50] "GET /notes HTTP/1.1" 200 -
+2024-12-06 18:30:50,772 - 127.0.0.1 - - [06/Dec/2024 18:30:50] "[36mGET /static/notes.css HTTP/1.1[0m" 304 -
+2024-12-06 18:30:53,882 - 127.0.0.1 - - [06/Dec/2024 18:30:53] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 18:30:53,934 - 127.0.0.1 - - [06/Dec/2024 18:30:53] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 18:30:54,838 - 127.0.0.1 - - [06/Dec/2024 18:30:54] "GET /notifications HTTP/1.1" 200 -
+2024-12-06 18:30:54,892 - 127.0.0.1 - - [06/Dec/2024 18:30:54] "GET /static/notifications.css HTTP/1.1" 200 -
+2024-12-06 18:30:55,682 - 127.0.0.1 - - [06/Dec/2024 18:30:55] "[32mPOST /notifications/clear-all HTTP/1.1[0m" 302 -
+2024-12-06 18:30:55,698 - 127.0.0.1 - - [06/Dec/2024 18:30:55] "GET /notifications HTTP/1.1" 200 -
+2024-12-06 18:30:55,747 - 127.0.0.1 - - [06/Dec/2024 18:30:55] "GET /static/notifications.css HTTP/1.1" 200 -
+2024-12-06 18:31:01,889 - 127.0.0.1 - - [06/Dec/2024 18:31:01] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 18:31:01,941 - 127.0.0.1 - - [06/Dec/2024 18:31:01] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 18:31:03,460 - 127.0.0.1 - - [06/Dec/2024 18:31:03] "[35m[1mGET /logout HTTP/1.1[0m" 500 -
+2024-12-06 18:31:03,522 - 127.0.0.1 - - [06/Dec/2024 18:31:03] "GET /logout?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-06 18:31:03,529 - 127.0.0.1 - - [06/Dec/2024 18:31:03] "GET /logout?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-06 18:31:18,435 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 18:31:18,500 -  * Restarting with stat
+2024-12-06 18:31:19,382 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2282817738904>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000213828A57B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000213828A5780>], 'actions': [<vakt.rules.operator.Eq object at 0x00000213FF6C7400>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000213828A5860>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:31:19,408 -  * Debugger is active!
+2024-12-06 18:31:19,416 -  * Debugger PIN: 589-825-161
+2024-12-06 18:31:20,401 - 127.0.0.1 - - [06/Dec/2024 18:31:20] "[35m[1mGET /logout HTTP/1.1[0m" 500 -
+2024-12-06 18:31:20,453 - 127.0.0.1 - - [06/Dec/2024 18:31:20] "[36mGET /logout?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-12-06 18:31:20,459 - 127.0.0.1 - - [06/Dec/2024 18:31:20] "[36mGET /logout?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-12-06 18:31:20,489 - 127.0.0.1 - - [06/Dec/2024 18:31:20] "GET /logout?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-06 18:31:30,026 - 127.0.0.1 - - [06/Dec/2024 18:31:30] "[35m[1mGET /logout HTTP/1.1[0m" 500 -
+2024-12-06 18:31:30,092 - 127.0.0.1 - - [06/Dec/2024 18:31:30] "[36mGET /logout?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-12-06 18:31:30,097 - 127.0.0.1 - - [06/Dec/2024 18:31:30] "[36mGET /logout?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-12-06 18:31:36,037 - 127.0.0.1 - - [06/Dec/2024 18:31:36] "[32mGET /account-settings HTTP/1.1[0m" 302 -
+2024-12-06 18:31:36,113 - 127.0.0.1 - - [06/Dec/2024 18:31:36] "GET / HTTP/1.1" 200 -
+2024-12-06 18:31:36,172 - 127.0.0.1 - - [06/Dec/2024 18:31:36] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-06 18:31:45,915 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2170863319304>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001F971897828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001F9718977F0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001F9718977B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001F9718978D0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:31:46,805 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-06 18:31:46,805 - [33mPress CTRL+C to quit[0m
+2024-12-06 18:31:46,807 -  * Restarting with stat
+2024-12-06 18:31:47,619 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2095780370528>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001E7F63E9780>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E7F63E9748>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E7F63E9710>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E7F63E9828>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:31:47,637 -  * Debugger is active!
+2024-12-06 18:31:47,642 -  * Debugger PIN: 589-825-161
+2024-12-06 18:31:47,670 - 127.0.0.1 - - [06/Dec/2024 18:31:47] "GET / HTTP/1.1" 200 -
+2024-12-06 18:31:47,672 - 127.0.0.1 - - [06/Dec/2024 18:31:47] "GET / HTTP/1.1" 200 -
+2024-12-06 18:31:47,679 - 127.0.0.1 - - [06/Dec/2024 18:31:47] "GET / HTTP/1.1" 200 -
+2024-12-06 18:31:47,685 - 127.0.0.1 - - [06/Dec/2024 18:31:47] "GET / HTTP/1.1" 200 -
+2024-12-06 18:31:47,691 - 127.0.0.1 - - [06/Dec/2024 18:31:47] "GET / HTTP/1.1" 200 -
+2024-12-06 18:31:47,723 - 127.0.0.1 - - [06/Dec/2024 18:31:47] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 18:31:50,581 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-06 18:31:50 | Session ID: 3aaa35ba387c7aa5e054b729dc36f8b5 | Status: successo 
+2024-12-06 18:31:50,597 - 127.0.0.1 - - [06/Dec/2024 18:31:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-06 18:31:50,618 - 127.0.0.1 - - [06/Dec/2024 18:31:50] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 18:31:50,670 - 127.0.0.1 - - [06/Dec/2024 18:31:50] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 18:31:53,443 - 127.0.0.1 - - [06/Dec/2024 18:31:53] "GET /notes HTTP/1.1" 200 -
+2024-12-06 18:31:53,493 - 127.0.0.1 - - [06/Dec/2024 18:31:53] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-06 18:31:54,287 - 127.0.0.1 - - [06/Dec/2024 18:31:54] "GET /dashboard HTTP/1.1" 200 -
+2024-12-06 18:31:54,354 - 127.0.0.1 - - [06/Dec/2024 18:31:54] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-06 18:31:55,010 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 18:31:55 | Session ID: 3aaa35ba387c7aa5e054b729dc36f8b5 | Status: successo 
+2024-12-06 18:31:55,010 - 127.0.0.1 - - [06/Dec/2024 18:31:55] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-06 18:31:55,024 - 127.0.0.1 - - [06/Dec/2024 18:31:55] "GET / HTTP/1.1" 200 -
+2024-12-06 18:31:55,081 - 127.0.0.1 - - [06/Dec/2024 18:31:55] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-06 18:34:26,752 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 18:34:26,851 -  * Restarting with stat
+2024-12-06 18:34:27,831 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1968168724744>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001CA3FFF6828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001CA3FFF67F0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001CA3FFF67B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001CA3FFF68D0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:34:27,850 -  * Debugger is active!
+2024-12-06 18:34:27,856 -  * Debugger PIN: 589-825-161
+2024-12-06 18:36:34,597 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-06 18:36:34,671 -  * Restarting with stat
+2024-12-06 18:36:35,573 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1502499068168>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000015DD3EC5828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000015DD3EC57F0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000015DD3EC57B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000015DD3EC58D0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-06 18:36:35,592 -  * Debugger is active!
+2024-12-06 18:36:35,597 -  * Debugger PIN: 589-825-161
+2024-12-07 13:25:47,147 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2347881498776>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000222A8A487B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000222A8A48780>], 'actions': [<vakt.rules.operator.Eq object at 0x00000222A8A48748>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000222A8A48860>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-07 13:25:48,061 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-07 13:25:48,061 - [33mPress CTRL+C to quit[0m
+2024-12-07 13:25:48,065 -  * Restarting with stat
+2024-12-07 13:25:50,021 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2632678922560>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000264F7E45860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000264F7E45828>], 'actions': [<vakt.rules.operator.Eq object at 0x00000264F7E457F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000264F7E45908>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-07 13:25:50,051 -  * Debugger is active!
+2024-12-07 13:25:50,063 -  * Debugger PIN: 589-825-161
+2024-12-08 23:15:08,407 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2101097683096>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001E9332E57B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E9332E5780>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E9332E5748>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E9332E5860>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:15:09,319 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:15:09,319 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:15:09,322 -  * Restarting with stat
+2024-12-08 23:15:10,079 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1281500682336>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000012A5F649780>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000012A5F649748>], 'actions': [<vakt.rules.operator.Eq object at 0x0000012A5F649710>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000012A5F649828>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:15:10,097 -  * Debugger is active!
+2024-12-08 23:15:10,105 -  * Debugger PIN: 589-825-161
+2024-12-08 23:18:03,383 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-08 23:18:03,460 -  * Restarting with stat
+2024-12-08 23:19:15,561 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1882801452200>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001B65FA488D0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001B65FA48898>], 'actions': [<vakt.rules.operator.Eq object at 0x000001B65FA48860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001B65FB5AF28>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:19:16,425 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:19:16,426 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:19:16,428 -  * Restarting with stat
+2024-12-08 23:19:17,216 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1519689413800>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000161D47AA8D0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000161D47AA898>], 'actions': [<vakt.rules.operator.Eq object at 0x00000161D47AA860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000161D48BAF28>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:19:17,239 -  * Debugger is active!
+2024-12-08 23:19:17,245 -  * Debugger PIN: 589-825-161
+2024-12-08 23:19:23,614 - 127.0.0.1 - - [08/Dec/2024 23:19:23] "GET / HTTP/1.1" 200 -
+2024-12-08 23:19:23,668 - 127.0.0.1 - - [08/Dec/2024 23:19:23] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:19:23,789 - 127.0.0.1 - - [08/Dec/2024 23:19:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-08 23:19:27,789 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-08T23:19:27Z | Session ID: dc247ee535ff1e03df385c54772e2a97 | Status: successo 
+2024-12-08 23:19:27,860 - 127.0.0.1 - - [08/Dec/2024 23:19:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:19:27,881 - 127.0.0.1 - - [08/Dec/2024 23:19:27] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:19:27,935 - 127.0.0.1 - - [08/Dec/2024 23:19:27] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-08 23:19:31,418 - 127.0.0.1 - - [08/Dec/2024 23:19:31] "GET /notes HTTP/1.1" 200 -
+2024-12-08 23:19:31,468 - 127.0.0.1 - - [08/Dec/2024 23:19:31] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-08 23:19:32,437 - 127.0.0.1 - - [08/Dec/2024 23:19:32] "GET /add-note HTTP/1.1" 200 -
+2024-12-08 23:19:33,902 - No potential policies were found
+2024-12-08 23:19:33,902 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1519691024368>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '23:19:33'}}
+2024-12-08 23:19:33,902 - Accesso negato: policy restrictiva. Utente: admin1, Azione: modify, Risorsa: note.
+2024-12-08 23:19:33,902 - User: admin1 | Action: creazione | Resource: note | Timestamp: 2024-12-08T23:19:33Z | Session ID: dc247ee535ff1e03df385c54772e2a97 | Status: fallimento 
+2024-12-08 23:19:33,903 - 127.0.0.1 - - [08/Dec/2024 23:19:33] "POST /add-note HTTP/1.1" 200 -
+2024-12-08 23:19:35,710 - 127.0.0.1 - - [08/Dec/2024 23:19:35] "GET /notes HTTP/1.1" 200 -
+2024-12-08 23:19:35,751 - 127.0.0.1 - - [08/Dec/2024 23:19:35] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-08 23:20:34,268 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-08 23:20:34,330 -  * Restarting with stat
+2024-12-08 23:20:35,110 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2172161963456>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001F9BEDF9A20>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001F9BEDF99E8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001F9BEDF99B0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001F9BEF13080>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:20:35,131 -  * Debugger is active!
+2024-12-08 23:20:35,136 -  * Debugger PIN: 589-825-161
+2024-12-08 23:21:11,632 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-08 23:21:11,697 -  * Restarting with stat
+2024-12-08 23:21:12,600 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2892733695256>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002A1844B9940>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002A1844B9898>], 'actions': [<vakt.rules.operator.Eq object at 0x000002A1844B9860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002A1845CBF98>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:21:12,620 -  * Debugger is active!
+2024-12-08 23:21:12,625 -  * Debugger PIN: 589-825-161
+2024-12-08 23:21:13,359 - 127.0.0.1 - - [08/Dec/2024 23:21:13] "[32mGET /notes HTTP/1.1[0m" 302 -
+2024-12-08 23:21:13,378 - 127.0.0.1 - - [08/Dec/2024 23:21:13] "GET / HTTP/1.1" 200 -
+2024-12-08 23:21:13,407 - 127.0.0.1 - - [08/Dec/2024 23:21:13] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:21:16,845 - Limite di sessioni raggiunto per l'utente admin1. Accesso negato.
+2024-12-08 23:21:16,845 - User: admin1 | Action: accesso | Resource: sistema | Timestamp: 2024-12-08T23:21:16Z | Session ID: None | Status: fallimento 
+2024-12-08 23:21:16,846 - 127.0.0.1 - - [08/Dec/2024 23:21:16] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:21:16,865 - 127.0.0.1 - - [08/Dec/2024 23:21:16] "GET / HTTP/1.1" 200 -
+2024-12-08 23:21:16,909 - 127.0.0.1 - - [08/Dec/2024 23:21:16] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:21:30,119 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2193803981768>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001FEC8D687F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001FEC8D687B8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001FEC8D68780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001FEC8E7AE48>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:21:31,000 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:21:31,000 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:21:31,003 -  * Restarting with stat
+2024-12-08 23:21:31,788 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2497272689888>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000024570FBB908>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000024570FBB8D0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000024570FBB898>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000245710CAF60>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:21:31,805 -  * Debugger is active!
+2024-12-08 23:21:31,810 -  * Debugger PIN: 589-825-161
+2024-12-08 23:21:31,836 - 127.0.0.1 - - [08/Dec/2024 23:21:31] "GET / HTTP/1.1" 200 -
+2024-12-08 23:21:31,870 - 127.0.0.1 - - [08/Dec/2024 23:21:31] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:21:32,091 - 127.0.0.1 - - [08/Dec/2024 23:21:32] "GET / HTTP/1.1" 200 -
+2024-12-08 23:21:32,123 - 127.0.0.1 - - [08/Dec/2024 23:21:32] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:21:35,105 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-08T23:21:35Z | Session ID: 862531f387cecc723cdef5b23a07107f | Status: successo 
+2024-12-08 23:21:35,119 - 127.0.0.1 - - [08/Dec/2024 23:21:35] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:21:35,138 - 127.0.0.1 - - [08/Dec/2024 23:21:35] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:21:35,189 - 127.0.0.1 - - [08/Dec/2024 23:21:35] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-08 23:21:37,254 - 127.0.0.1 - - [08/Dec/2024 23:21:37] "GET /notes HTTP/1.1" 200 -
+2024-12-08 23:21:37,317 - 127.0.0.1 - - [08/Dec/2024 23:21:37] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-08 23:21:38,075 - 127.0.0.1 - - [08/Dec/2024 23:21:38] "GET /add-note HTTP/1.1" 200 -
+2024-12-08 23:21:39,189 - No potential policies were found
+2024-12-08 23:21:39,190 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2497274112992>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '23:21:39'}}
+2024-12-08 23:21:39,190 - Accesso negato: policy restrictiva. Utente: admin1, Azione: modify, Risorsa: note.
+2024-12-08 23:21:39,190 - User: admin1 | Action: creazione | Resource: note | Timestamp: 2024-12-08T23:21:39Z | Session ID: 862531f387cecc723cdef5b23a07107f | Status: fallimento 
+2024-12-08 23:21:39,191 - 127.0.0.1 - - [08/Dec/2024 23:21:39] "POST /add-note HTTP/1.1" 200 -
+2024-12-08 23:21:40,854 - 127.0.0.1 - - [08/Dec/2024 23:21:40] "GET /notes HTTP/1.1" 200 -
+2024-12-08 23:21:40,891 - 127.0.0.1 - - [08/Dec/2024 23:21:40] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-08 23:21:57,127 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-08 23:21:57,192 -  * Restarting with stat
+2024-12-08 23:21:59,262 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1547336662992>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000168446297B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000016844629710>], 'actions': [<vakt.rules.operator.Eq object at 0x00000168446296D8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001684473BE10>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:22:00,127 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:22:00,127 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:22:00,129 -  * Restarting with stat
+2024-12-08 23:22:00,968 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1441897395648>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000014FB7B6AA20>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000014FB7B6A9E8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000014FB7B6A9B0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000014FB7C83080>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:22:00,988 -  * Debugger is active!
+2024-12-08 23:22:00,993 -  * Debugger PIN: 589-825-161
+2024-12-08 23:22:08,425 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2902882661320>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002A3E1388828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002A3E13887F0>], 'actions': [<vakt.rules.operator.Eq object at 0x000002A3E13887B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002A3E149AE48>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:22:09,310 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:22:09,310 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:22:09,311 -  * Restarting with stat
+2024-12-08 23:22:10,063 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3121276466344>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002D6BA81B908>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002D6BA81B8D0>], 'actions': [<vakt.rules.operator.Eq object at 0x000002D6BA81B898>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002D6BA92AF28>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:22:10,081 -  * Debugger is active!
+2024-12-08 23:22:10,086 -  * Debugger PIN: 589-825-161
+2024-12-08 23:22:10,368 - 127.0.0.1 - - [08/Dec/2024 23:22:10] "[32mGET /notes HTTP/1.1[0m" 302 -
+2024-12-08 23:22:10,389 - 127.0.0.1 - - [08/Dec/2024 23:22:10] "GET / HTTP/1.1" 200 -
+2024-12-08 23:22:10,426 - 127.0.0.1 - - [08/Dec/2024 23:22:10] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:22:13,447 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-08T23:22:13Z | Session ID: 7e43be0c2c4f44f84233e70d0e7b3b42 | Status: successo 
+2024-12-08 23:22:13,462 - 127.0.0.1 - - [08/Dec/2024 23:22:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:22:13,482 - 127.0.0.1 - - [08/Dec/2024 23:22:13] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:22:13,534 - 127.0.0.1 - - [08/Dec/2024 23:22:13] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-08 23:22:15,333 - 127.0.0.1 - - [08/Dec/2024 23:22:15] "GET /notes HTTP/1.1" 200 -
+2024-12-08 23:22:15,386 - 127.0.0.1 - - [08/Dec/2024 23:22:15] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-08 23:22:15,973 - 127.0.0.1 - - [08/Dec/2024 23:22:15] "GET /add-note HTTP/1.1" 200 -
+2024-12-08 23:22:16,958 - All matching policies have allow effect
+2024-12-08 23:22:16,958 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 3121279083856>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '23:22:16'}}
+2024-12-08 23:22:16,963 - User: admin1 | Action: creazione | Resource: note | Timestamp: 2024-12-08T23:22:16Z | Session ID: 7e43be0c2c4f44f84233e70d0e7b3b42 | Status: successo 
+2024-12-08 23:22:16,976 - 127.0.0.1 - - [08/Dec/2024 23:22:16] "[32mPOST /add-note HTTP/1.1[0m" 302 -
+2024-12-08 23:22:16,990 - 127.0.0.1 - - [08/Dec/2024 23:22:16] "GET /notes HTTP/1.1" 200 -
+2024-12-08 23:22:17,048 - 127.0.0.1 - - [08/Dec/2024 23:22:17] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-08 23:22:23,403 - All matching policies have allow effect
+2024-12-08 23:22:23,403 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 3121279119144>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '23:22:23'}}
+2024-12-08 23:22:23,409 - User: admin1 | Action: eliminazione | Resource: note | Timestamp: 23:22:23 | Session ID: 7e43be0c2c4f44f84233e70d0e7b3b42 | Status: successo 
+2024-12-08 23:22:23,419 - 127.0.0.1 - - [08/Dec/2024 23:22:23] "[32mPOST /delete-note/1 HTTP/1.1[0m" 302 -
+2024-12-08 23:22:23,436 - 127.0.0.1 - - [08/Dec/2024 23:22:23] "GET /notes HTTP/1.1" 200 -
+2024-12-08 23:22:23,474 - 127.0.0.1 - - [08/Dec/2024 23:22:23] "[36mGET /static/notes.css HTTP/1.1[0m" 304 -
+2024-12-08 23:22:24,161 - 127.0.0.1 - - [08/Dec/2024 23:22:24] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:22:24,210 - 127.0.0.1 - - [08/Dec/2024 23:22:24] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-08 23:22:24,821 - 127.0.0.1 - - [08/Dec/2024 23:22:24] "GET /notifications HTTP/1.1" 200 -
+2024-12-08 23:22:24,876 - 127.0.0.1 - - [08/Dec/2024 23:22:24] "GET /static/notifications.css HTTP/1.1" 200 -
+2024-12-08 23:22:25,676 - 127.0.0.1 - - [08/Dec/2024 23:22:25] "[32mPOST /notifications/delete/3 HTTP/1.1[0m" 302 -
+2024-12-08 23:22:25,692 - 127.0.0.1 - - [08/Dec/2024 23:22:25] "GET /notifications HTTP/1.1" 200 -
+2024-12-08 23:22:25,738 - 127.0.0.1 - - [08/Dec/2024 23:22:25] "[36mGET /static/notifications.css HTTP/1.1[0m" 304 -
+2024-12-08 23:22:26,122 - 127.0.0.1 - - [08/Dec/2024 23:22:26] "[32mPOST /notifications/clear-all HTTP/1.1[0m" 302 -
+2024-12-08 23:22:26,138 - 127.0.0.1 - - [08/Dec/2024 23:22:26] "GET /notifications HTTP/1.1" 200 -
+2024-12-08 23:22:26,177 - 127.0.0.1 - - [08/Dec/2024 23:22:26] "[36mGET /static/notifications.css HTTP/1.1[0m" 304 -
+2024-12-08 23:22:37,431 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-08 23:22:37,523 -  * Restarting with stat
+2024-12-08 23:22:38,351 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2273267893360>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002114941A940>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002114941A898>], 'actions': [<vakt.rules.operator.Eq object at 0x000002114941A860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002114952BEF0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:22:38,382 -  * Debugger is active!
+2024-12-08 23:22:38,388 -  * Debugger PIN: 589-825-161
+2024-12-08 23:31:36,410 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2121462395848>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001EDF0F1A828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001EDF0F1A7B8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001EDF0F1A780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001EDF102AE48>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:31:37,295 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:31:37,296 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:31:37,297 -  * Restarting with stat
+2024-12-08 23:31:38,248 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2314200884672>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000021AD10DA9E8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000021AD10DA9B0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000021AD10DA978>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000021AD11F2080>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:31:38,266 -  * Debugger is active!
+2024-12-08 23:31:38,273 -  * Debugger PIN: 589-825-161
+2024-12-08 23:31:38,469 - 127.0.0.1 - - [08/Dec/2024 23:31:38] "[32mGET /notifications HTTP/1.1[0m" 302 -
+2024-12-08 23:31:38,628 - 127.0.0.1 - - [08/Dec/2024 23:31:38] "GET / HTTP/1.1" 200 -
+2024-12-08 23:31:38,672 - 127.0.0.1 - - [08/Dec/2024 23:31:38] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:31:42,377 - 127.0.0.1 - - [08/Dec/2024 23:31:42] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-08 23:31:42,485 - 127.0.0.1 - - [08/Dec/2024 23:31:42] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-08 23:31:42,542 - 127.0.0.1 - - [08/Dec/2024 23:31:42] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-08 23:32:26,953 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-08 23:32:27,018 -  * Restarting with stat
+2024-12-08 23:32:27,844 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2551721239832>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002521E5EB940>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002521E5EB908>], 'actions': [<vakt.rules.operator.Eq object at 0x000002521E5EB8D0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002521E6F9F98>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:32:27,863 -  * Debugger is active!
+2024-12-08 23:32:27,869 -  * Debugger PIN: 589-825-161
+2024-12-08 23:32:30,923 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-08 23:32:30,988 -  * Restarting with stat
+2024-12-08 23:32:31,805 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2083105944744>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001E502B8B908>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E502B8B898>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E502B8B860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E502C9AF28>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:32:31,827 -  * Debugger is active!
+2024-12-08 23:32:31,833 -  * Debugger PIN: 589-825-161
+2024-12-08 23:32:34,241 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3256231339064>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002F626719860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002F626719828>], 'actions': [<vakt.rules.operator.Eq object at 0x000002F6267197F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002F626829EB8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:32:35,113 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:32:35,113 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:32:35,115 -  * Restarting with stat
+2024-12-08 23:32:35,918 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1905365165224>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001BBA08BB8D0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001BBA08BB898>], 'actions': [<vakt.rules.operator.Eq object at 0x000001BBA08BB860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001BBA09C9F28>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:32:35,937 -  * Debugger is active!
+2024-12-08 23:32:35,942 -  * Debugger PIN: 589-825-161
+2024-12-08 23:32:37,361 - The CSRF session token is missing.
+2024-12-08 23:32:37,362 - 127.0.0.1 - - [08/Dec/2024 23:32:37] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2024-12-08 23:32:38,398 - 127.0.0.1 - - [08/Dec/2024 23:32:38] "GET / HTTP/1.1" 200 -
+2024-12-08 23:32:38,446 - 127.0.0.1 - - [08/Dec/2024 23:32:38] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:32:40,247 - 127.0.0.1 - - [08/Dec/2024 23:32:40] "GET / HTTP/1.1" 200 -
+2024-12-08 23:32:40,281 - 127.0.0.1 - - [08/Dec/2024 23:32:40] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:32:42,907 - No potential policies were found
+2024-12-08 23:32:42,907 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1905366731912>: {'resource': 'login', 'action': 'access', 'subject': {'username': 'admin1'}, 'context': {'current_time': '23:32:42'}}
+2024-12-08 23:32:42,910 - 127.0.0.1 - - [08/Dec/2024 23:32:42] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-08 23:32:42,971 - 127.0.0.1 - - [08/Dec/2024 23:32:42] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-08 23:32:42,977 - 127.0.0.1 - - [08/Dec/2024 23:32:42] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-08 23:32:43,046 - 127.0.0.1 - - [08/Dec/2024 23:32:43] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-08 23:33:45,011 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-08 23:33:45,083 -  * Restarting with stat
+2024-12-08 23:33:45,909 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2046343521784>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001DC7382AA58>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001DC7382AA20>], 'actions': [<vakt.rules.operator.Eq object at 0x000001DC7382A978>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001DC739420B8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:34:21,637 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1755765023968>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000198CBAEA908>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000198CBAEA8D0>], 'actions': [<vakt.rules.operator.Eq object at 0x00000198CBAEA898>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000198CBBF9F60>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:34:22,521 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:34:22,521 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:34:22,523 -  * Restarting with stat
+2024-12-08 23:34:23,547 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3064529159896>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002C9841AAB70>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002C9841AAB38>], 'actions': [<vakt.rules.operator.Eq object at 0x000002C9841AAB00>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002C9842C0198>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:34:23,572 -  * Debugger is active!
+2024-12-08 23:34:23,579 -  * Debugger PIN: 589-825-161
+2024-12-08 23:34:25,260 - The CSRF session token is missing.
+2024-12-08 23:34:25,261 - 127.0.0.1 - - [08/Dec/2024 23:34:25] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2024-12-08 23:34:26,163 - 127.0.0.1 - - [08/Dec/2024 23:34:26] "GET / HTTP/1.1" 200 -
+2024-12-08 23:34:26,219 - 127.0.0.1 - - [08/Dec/2024 23:34:26] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:34:26,894 - 127.0.0.1 - - [08/Dec/2024 23:34:26] "GET / HTTP/1.1" 200 -
+2024-12-08 23:34:26,949 - 127.0.0.1 - - [08/Dec/2024 23:34:26] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:34:29,792 - No potential policies were found
+2024-12-08 23:34:29,792 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 3064530877800>: {'resource': 'login', 'action': 'access', 'subject': {'username': 'admin1'}, 'context': {'current_time': '23:34:29'}}
+2024-12-08 23:34:29,792 - 127.0.0.1 - - [08/Dec/2024 23:34:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:34:29,805 - 127.0.0.1 - - [08/Dec/2024 23:34:29] "GET / HTTP/1.1" 200 -
+2024-12-08 23:34:29,848 - 127.0.0.1 - - [08/Dec/2024 23:34:29] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:34:51,997 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-08 23:34:52,058 -  * Restarting with stat
+2024-12-08 23:34:52,890 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2330075870544>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000021E8346C978>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000021E8346C908>], 'actions': [<vakt.rules.operator.Eq object at 0x0000021E8346C8D0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000021E8357AFD0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:34:52,909 -  * Debugger is active!
+2024-12-08 23:34:52,915 -  * Debugger PIN: 589-825-161
+2024-12-08 23:34:56,529 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1203069785592>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001181C7A9A58>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001181C7A9A20>], 'actions': [<vakt.rules.operator.Eq object at 0x000001181C7A99E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001181C8C10B8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:34:57,396 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:34:57,396 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:34:57,398 -  * Restarting with stat
+2024-12-08 23:34:58,215 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2814377006696>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000028F45DFBA90>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000028F45DFBA58>], 'actions': [<vakt.rules.operator.Eq object at 0x0000028F45DFBA20>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000028F45F11128>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:34:58,237 -  * Debugger is active!
+2024-12-08 23:34:58,243 -  * Debugger PIN: 589-825-161
+2024-12-08 23:34:58,271 - 127.0.0.1 - - [08/Dec/2024 23:34:58] "GET / HTTP/1.1" 200 -
+2024-12-08 23:34:58,308 - 127.0.0.1 - - [08/Dec/2024 23:34:58] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:35:01,815 - No potential policies were found
+2024-12-08 23:35:01,815 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2814378352480>: {'resource': 'login', 'action': 'access', 'subject': {'username': 'giadaott'}, 'context': {'current_time': '23:35:01'}}
+2024-12-08 23:35:01,816 - 127.0.0.1 - - [08/Dec/2024 23:35:01] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:35:01,834 - 127.0.0.1 - - [08/Dec/2024 23:35:01] "GET / HTTP/1.1" 200 -
+2024-12-08 23:35:01,873 - 127.0.0.1 - - [08/Dec/2024 23:35:01] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:35:07,626 - No potential policies were found
+2024-12-08 23:35:07,627 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2814378684088>: {'resource': 'login', 'action': 'access', 'subject': {'username': 'giadaott'}, 'context': {'current_time': '23:35:07'}}
+2024-12-08 23:35:07,627 - 127.0.0.1 - - [08/Dec/2024 23:35:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:35:07,641 - 127.0.0.1 - - [08/Dec/2024 23:35:07] "GET / HTTP/1.1" 200 -
+2024-12-08 23:35:07,680 - 127.0.0.1 - - [08/Dec/2024 23:35:07] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:35:20,536 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-08 23:35:20,595 -  * Restarting with stat
+2024-12-08 23:35:21,397 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2690808296896>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000272809AAA20>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000272809AA9B0>], 'actions': [<vakt.rules.operator.Eq object at 0x00000272809AA978>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000027280AC3080>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:35:21,418 -  * Debugger is active!
+2024-12-08 23:35:21,424 -  * Debugger PIN: 589-825-161
+2024-12-08 23:35:25,470 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2176710812952>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001FACE01A978>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001FACE01A940>], 'actions': [<vakt.rules.operator.Eq object at 0x000001FACE01A908>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001FACE129F98>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:35:26,341 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:35:26,341 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:35:26,343 -  * Restarting with stat
+2024-12-08 23:35:27,068 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2375032120600>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000228FAE0C940>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000228FAE0C908>], 'actions': [<vakt.rules.operator.Eq object at 0x00000228FAE0C8D0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000228FAF19F98>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:35:27,085 -  * Debugger is active!
+2024-12-08 23:35:27,090 -  * Debugger PIN: 589-825-161
+2024-12-08 23:35:27,116 - 127.0.0.1 - - [08/Dec/2024 23:35:27] "GET / HTTP/1.1" 200 -
+2024-12-08 23:35:27,154 - 127.0.0.1 - - [08/Dec/2024 23:35:27] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:35:27,217 - 127.0.0.1 - - [08/Dec/2024 23:35:27] "GET / HTTP/1.1" 200 -
+2024-12-08 23:35:27,255 - 127.0.0.1 - - [08/Dec/2024 23:35:27] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:35:33,986 - No potential policies were found
+2024-12-08 23:35:33,986 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2375033711472>: {'resource': 'login', 'action': 'access', 'subject': {'username': 'giadaott'}, 'context': {'current_time': '23:35:33'}}
+2024-12-08 23:35:33,987 - 127.0.0.1 - - [08/Dec/2024 23:35:33] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:35:34,003 - 127.0.0.1 - - [08/Dec/2024 23:35:34] "GET / HTTP/1.1" 200 -
+2024-12-08 23:35:34,042 - 127.0.0.1 - - [08/Dec/2024 23:35:34] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:37:45,924 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-08 23:37:45,997 -  * Restarting with stat
+2024-12-08 23:38:32,040 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2097082283176>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001E843C6A8D0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E843C6A860>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E843C6A828>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E843D7AF28>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:38:32,919 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:38:32,919 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:38:32,921 -  * Restarting with stat
+2024-12-08 23:38:33,754 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2202419340456>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000200CA5AB908>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000200CA5AB8D0>], 'actions': [<vakt.rules.operator.Eq object at 0x00000200CA5AB898>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000200CA6B9F28>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:38:33,776 -  * Debugger is active!
+2024-12-08 23:38:33,781 -  * Debugger PIN: 589-825-161
+2024-12-08 23:38:34,136 - 127.0.0.1 - - [08/Dec/2024 23:38:34] "GET / HTTP/1.1" 200 -
+2024-12-08 23:38:34,176 - 127.0.0.1 - - [08/Dec/2024 23:38:34] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:38:37,542 - No potential policies were found
+2024-12-08 23:38:37,542 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2202420924656>: {'resource': 'login', 'action': 'access', 'subject': {'username': 'admin1'}, 'context': {'current_time': '23:38:37'}}
+2024-12-08 23:38:37,543 - 127.0.0.1 - - [08/Dec/2024 23:38:37] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:38:37,555 - 127.0.0.1 - - [08/Dec/2024 23:38:37] "GET / HTTP/1.1" 200 -
+2024-12-08 23:38:37,595 - 127.0.0.1 - - [08/Dec/2024 23:38:37] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:38:43,315 - No potential policies were found
+2024-12-08 23:38:43,315 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2202421003320>: {'resource': 'login', 'action': 'access', 'subject': {'username': 'janedoe'}, 'context': {'current_time': '23:38:43'}}
+2024-12-08 23:38:43,316 - 127.0.0.1 - - [08/Dec/2024 23:38:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:38:43,330 - 127.0.0.1 - - [08/Dec/2024 23:38:43] "GET / HTTP/1.1" 200 -
+2024-12-08 23:38:43,369 - 127.0.0.1 - - [08/Dec/2024 23:38:43] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:38:47,512 - No potential policies were found
+2024-12-08 23:38:47,512 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2202421238864>: {'resource': 'login', 'action': 'access', 'subject': {'username': 'giadaott'}, 'context': {'current_time': '23:38:47'}}
+2024-12-08 23:38:47,513 - 127.0.0.1 - - [08/Dec/2024 23:38:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:38:47,531 - 127.0.0.1 - - [08/Dec/2024 23:38:47] "GET / HTTP/1.1" 200 -
+2024-12-08 23:38:47,573 - 127.0.0.1 - - [08/Dec/2024 23:38:47] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:39:49,843 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-08 23:39:49,908 -  * Restarting with stat
+2024-12-08 23:39:50,709 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2789188187136>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002896880A828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002896880A7F0>], 'actions': [<vakt.rules.operator.Eq object at 0x000002896880A7B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002896891AE80>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:39:50,727 -  * Debugger is active!
+2024-12-08 23:39:50,733 -  * Debugger PIN: 589-825-161
+2024-12-08 23:41:33,130 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-08 23:41:33,199 -  * Restarting with stat
+2024-12-08 23:41:34,013 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2324930573368>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000021D5097A860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000021D5097A828>], 'actions': [<vakt.rules.operator.Eq object at 0x0000021D5097A7F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000021D50A8AEB8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:41:34,032 -  * Debugger is active!
+2024-12-08 23:41:34,037 -  * Debugger PIN: 589-825-161
+2024-12-08 23:42:11,557 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-08 23:42:11,646 -  * Restarting with stat
+2024-12-08 23:42:12,523 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1647486844208>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000017F95DE3BE0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000017F95DE3208>], 'actions': [<vakt.rules.operator.Eq object at 0x0000017F95DE3860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000017F95DE3CF8>}, 'description': 'Permette ai manager di modificare le note di tutti solo tra le 18:00 e le 19:00'}
+2024-12-08 23:42:12,541 -  * Debugger is active!
+2024-12-08 23:42:12,548 -  * Debugger PIN: 589-825-161
+2024-12-08 23:45:09,871 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-08 23:45:09,930 -  * Restarting with stat
+2024-12-08 23:45:10,759 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2547375161016>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002511B643D68>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002511B643390>], 'actions': [<vakt.rules.operator.Eq object at 0x000002511B6439E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002511B643E80>}, 'description': 'Permette ai manager di modificare le note di tutti solo tra le 18:00 e le 19:00'}
+2024-12-08 23:45:10,778 -  * Debugger is active!
+2024-12-08 23:45:10,783 -  * Debugger PIN: 589-825-161
+2024-12-08 23:45:13,438 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2183689616912>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001FC6E0B3CC0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001FC6E0B32E8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001FC6E0B3940>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001FC6E0B3DD8>}, 'description': 'Permette ai manager di modificare le note di tutti solo tra le 18:00 e le 19:00'}
+2024-12-08 23:45:14,312 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:45:14,313 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:45:14,314 -  * Restarting with stat
+2024-12-08 23:45:15,137 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1738515037824>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000194C7923390>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000194C79239E8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000194C5790E10>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000194C7923E48>}, 'description': 'Permette ai manager di modificare le note di tutti solo tra le 18:00 e le 19:00'}
+2024-12-08 23:45:15,154 -  * Debugger is active!
+2024-12-08 23:45:15,160 -  * Debugger PIN: 589-825-161
+2024-12-08 23:45:15,604 - 127.0.0.1 - - [08/Dec/2024 23:45:15] "GET / HTTP/1.1" 200 -
+2024-12-08 23:45:15,644 - 127.0.0.1 - - [08/Dec/2024 23:45:15] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:45:18,329 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-08T23:45:18Z | Session ID: ae7115a9ecc220aed28deac48f97f507 | Status: successo 
+2024-12-08 23:45:18,343 - 127.0.0.1 - - [08/Dec/2024 23:45:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:45:18,361 - 127.0.0.1 - - [08/Dec/2024 23:45:18] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:45:18,413 - 127.0.0.1 - - [08/Dec/2024 23:45:18] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-08 23:45:20,107 - 127.0.0.1 - - [08/Dec/2024 23:45:20] "GET /notes HTTP/1.1" 200 -
+2024-12-08 23:45:20,155 - 127.0.0.1 - - [08/Dec/2024 23:45:20] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-08 23:45:20,806 - 127.0.0.1 - - [08/Dec/2024 23:45:20] "GET /add-note HTTP/1.1" 200 -
+2024-12-08 23:45:22,095 - No potential policies were found
+2024-12-08 23:45:22,095 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1738517649560>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '23:45:22'}}
+2024-12-08 23:45:22,095 - Accesso negato: policy restrictiva. Utente: admin1, Azione: modify, Risorsa: note.
+2024-12-08 23:45:22,095 - User: admin1 | Action: creazione | Resource: note | Timestamp: 2024-12-08T23:45:22Z | Session ID: ae7115a9ecc220aed28deac48f97f507 | Status: fallimento 
+2024-12-08 23:45:22,096 - 127.0.0.1 - - [08/Dec/2024 23:45:22] "POST /add-note HTTP/1.1" 200 -
+2024-12-08 23:45:23,703 - 127.0.0.1 - - [08/Dec/2024 23:45:23] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:45:23,743 - 127.0.0.1 - - [08/Dec/2024 23:45:23] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-08 23:45:27,497 - 127.0.0.1 - - [08/Dec/2024 23:45:27] "GET /add-note HTTP/1.1" 200 -
+2024-12-08 23:45:28,774 - 127.0.0.1 - - [08/Dec/2024 23:45:28] "GET /notes HTTP/1.1" 200 -
+2024-12-08 23:45:28,822 - 127.0.0.1 - - [08/Dec/2024 23:45:28] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-08 23:45:39,452 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-08 23:45:39,522 -  * Restarting with stat
+2024-12-08 23:45:42,177 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1724833222104>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000019198124C88>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000191981242B0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000019198124908>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000019198124DA0>}, 'description': 'Permette ai manager di modificare le note di tutti solo tra le 18:00 e le 19:00'}
+2024-12-08 23:45:43,059 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:45:43,059 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:45:43,062 -  * Restarting with stat
+2024-12-08 23:45:48,655 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2111594577480>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001EBA4D83CF8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001EBA4D83320>], 'actions': [<vakt.rules.operator.Eq object at 0x000001EBA4D83978>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001EBA4D83E10>}, 'description': 'Permette ai manager di modificare le note di tutti solo tra le 18:00 e le 19:00'}
+2024-12-08 23:45:49,543 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:45:49,543 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:45:49,545 -  * Restarting with stat
+2024-12-08 23:45:50,335 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1992710893408>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001CFF6D32E10>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001CFF6D32438>], 'actions': [<vakt.rules.operator.Eq object at 0x000001CFF6D32A90>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001CFF6D32F28>}, 'description': 'Permette ai manager di modificare le note di tutti solo tra le 18:00 e le 19:00'}
+2024-12-08 23:45:50,353 -  * Debugger is active!
+2024-12-08 23:45:50,358 -  * Debugger PIN: 589-825-161
+2024-12-08 23:45:50,378 - 127.0.0.1 - - [08/Dec/2024 23:45:50] "[32mGET /notes HTTP/1.1[0m" 302 -
+2024-12-08 23:45:50,394 - 127.0.0.1 - - [08/Dec/2024 23:45:50] "GET / HTTP/1.1" 200 -
+2024-12-08 23:45:50,432 - 127.0.0.1 - - [08/Dec/2024 23:45:50] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:45:53,420 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-08T23:45:53Z | Session ID: aff3f8d044f7757eeb49eea7d8ba8f15 | Status: successo 
+2024-12-08 23:45:53,434 - 127.0.0.1 - - [08/Dec/2024 23:45:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:45:53,458 - 127.0.0.1 - - [08/Dec/2024 23:45:53] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:45:53,509 - 127.0.0.1 - - [08/Dec/2024 23:45:53] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-08 23:45:56,356 - 127.0.0.1 - - [08/Dec/2024 23:45:56] "GET /add-note HTTP/1.1" 200 -
+2024-12-08 23:45:57,928 - No potential policies were found
+2024-12-08 23:45:57,928 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1992712621976>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '23:45:57'}}
+2024-12-08 23:45:57,928 - Accesso negato: policy restrictiva. Utente: admin1, Azione: modify, Risorsa: note.
+2024-12-08 23:45:57,928 - User: admin1 | Action: creazione | Resource: note | Timestamp: 2024-12-08T23:45:57Z | Session ID: aff3f8d044f7757eeb49eea7d8ba8f15 | Status: fallimento 
+2024-12-08 23:45:57,929 - 127.0.0.1 - - [08/Dec/2024 23:45:57] "POST /add-note HTTP/1.1" 200 -
+2024-12-08 23:45:59,894 - 127.0.0.1 - - [08/Dec/2024 23:45:59] "GET /notes HTTP/1.1" 200 -
+2024-12-08 23:45:59,930 - 127.0.0.1 - - [08/Dec/2024 23:45:59] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-08 23:46:41,054 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-08 23:46:41,126 -  * Restarting with stat
+2024-12-08 23:46:42,259 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2295736651448>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000021684914D68>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000021684914390>], 'actions': [<vakt.rules.operator.Eq object at 0x00000216849149E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000021684914E80>}, 'description': 'Permette ai manager di modificare le note di tutti solo tra le 18:00 e le 19:00'}
+2024-12-08 23:46:42,283 -  * Debugger is active!
+2024-12-08 23:46:42,289 -  * Debugger PIN: 589-825-161
+2024-12-08 23:46:44,145 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2062813117856>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001E0493E3C50>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E0493E3278>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E0493E38D0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E0493E3D68>}, 'description': 'Permette ai manager di modificare le note di tutti solo tra le 18:00 e le 19:00'}
+2024-12-08 23:46:45,024 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:46:45,025 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:46:45,027 -  * Restarting with stat
+2024-12-08 23:46:45,833 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2852530372224>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000298280F3D30>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000298280F3358>], 'actions': [<vakt.rules.operator.Eq object at 0x00000298280F39B0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000298280F3E48>}, 'description': 'Permette ai manager di modificare le note di tutti solo tra le 18:00 e le 19:00'}
+2024-12-08 23:46:45,858 -  * Debugger is active!
+2024-12-08 23:46:45,865 -  * Debugger PIN: 589-825-161
+2024-12-08 23:46:45,886 - 127.0.0.1 - - [08/Dec/2024 23:46:45] "[32mGET /notes HTTP/1.1[0m" 302 -
+2024-12-08 23:46:45,908 - 127.0.0.1 - - [08/Dec/2024 23:46:45] "GET / HTTP/1.1" 200 -
+2024-12-08 23:46:45,932 - 127.0.0.1 - - [08/Dec/2024 23:46:45] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:46:49,673 - Limite di sessioni raggiunto per l'utente admin1. Accesso negato.
+2024-12-08 23:46:49,673 - User: admin1 | Action: accesso | Resource: sistema | Timestamp: 2024-12-08T23:46:49Z | Session ID: None | Status: fallimento 
+2024-12-08 23:46:49,674 - 127.0.0.1 - - [08/Dec/2024 23:46:49] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:46:49,691 - 127.0.0.1 - - [08/Dec/2024 23:46:49] "GET / HTTP/1.1" 200 -
+2024-12-08 23:46:49,733 - 127.0.0.1 - - [08/Dec/2024 23:46:49] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:46:57,923 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1615775350288>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000017833B73CC0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000017833B732E8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000017833B73940>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000017833B73DD8>}, 'description': 'Permette ai manager di modificare le note di tutti solo tra le 18:00 e le 19:00'}
+2024-12-08 23:46:58,817 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:46:58,818 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:46:58,819 -  * Restarting with stat
+2024-12-08 23:46:59,609 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2873389890976>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000029D03623C50>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000029D03623278>], 'actions': [<vakt.rules.operator.Eq object at 0x0000029D036238D0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000029D03623D68>}, 'description': 'Permette ai manager di modificare le note di tutti solo tra le 18:00 e le 19:00'}
+2024-12-08 23:46:59,627 -  * Debugger is active!
+2024-12-08 23:46:59,632 -  * Debugger PIN: 589-825-161
+2024-12-08 23:46:59,658 - 127.0.0.1 - - [08/Dec/2024 23:46:59] "GET / HTTP/1.1" 200 -
+2024-12-08 23:46:59,692 - 127.0.0.1 - - [08/Dec/2024 23:46:59] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:47:02,732 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-08T23:47:02Z | Session ID: d031a3bb4d89db62434bae01a73a33c8 | Status: successo 
+2024-12-08 23:47:02,747 - 127.0.0.1 - - [08/Dec/2024 23:47:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:47:02,767 - 127.0.0.1 - - [08/Dec/2024 23:47:02] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:47:02,819 - 127.0.0.1 - - [08/Dec/2024 23:47:02] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-08 23:47:04,782 - 127.0.0.1 - - [08/Dec/2024 23:47:04] "GET /add-note HTTP/1.1" 200 -
+2024-12-08 23:47:05,734 - No potential policies were found
+2024-12-08 23:47:05,734 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2873392452048>: {'resource': 'note', 'action': 'add', 'subject': {'username': 'admin1'}, 'context': {'current_time': '23:47:05'}}
+2024-12-08 23:47:05,734 - Accesso negato: policy restrictiva. Utente: admin1, Azione: add, Risorsa: note.
+2024-12-08 23:47:05,734 - User: admin1 | Action: creazione | Resource: note | Timestamp: 2024-12-08T23:47:05Z | Session ID: d031a3bb4d89db62434bae01a73a33c8 | Status: fallimento 
+2024-12-08 23:47:05,735 - 127.0.0.1 - - [08/Dec/2024 23:47:05] "POST /add-note HTTP/1.1" 200 -
+2024-12-08 23:47:06,808 - 127.0.0.1 - - [08/Dec/2024 23:47:06] "GET /notes HTTP/1.1" 200 -
+2024-12-08 23:47:06,846 - 127.0.0.1 - - [08/Dec/2024 23:47:06] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-08 23:47:15,954 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-08 23:47:16,028 -  * Restarting with stat
+2024-12-08 23:47:17,119 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1436086584600>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000014E5D5CA9B0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000014E5D5CA908>], 'actions': [<vakt.rules.operator.Eq object at 0x0000014E5D5CA8D0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000014E5D6DCF98>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:47:17,147 -  * Debugger is active!
+2024-12-08 23:47:17,157 -  * Debugger PIN: 589-825-161
+2024-12-08 23:47:22,274 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-08 23:47:22,343 -  * Restarting with stat
+2024-12-08 23:47:23,148 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1891803608288>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001B87836B940>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001B87836B908>], 'actions': [<vakt.rules.operator.Eq object at 0x000001B87836B8D0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001B87847AF60>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:47:23,167 -  * Debugger is active!
+2024-12-08 23:47:23,173 -  * Debugger PIN: 589-825-161
+2024-12-08 23:47:38,061 - 127.0.0.1 - - [08/Dec/2024 23:47:38] "[32mGET /notes HTTP/1.1[0m" 302 -
+2024-12-08 23:47:38,083 - 127.0.0.1 - - [08/Dec/2024 23:47:38] "GET / HTTP/1.1" 200 -
+2024-12-08 23:47:38,126 - 127.0.0.1 - - [08/Dec/2024 23:47:38] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:48:18,973 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-08 23:48:19,068 -  * Restarting with stat
+2024-12-08 23:48:20,012 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2839526853880>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000029520FD4BA8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000029520FD41D0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000029520FD4828>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000029520FD4CC0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:48:20,043 -  * Debugger is active!
+2024-12-08 23:48:20,050 -  * Debugger PIN: 589-825-161
+2024-12-08 23:48:35,344 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-08 23:48:35,412 -  * Restarting with stat
+2024-12-08 23:48:36,274 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2384750129048>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000022B3E2F2E48>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000022B3E2F2470>], 'actions': [<vakt.rules.operator.Eq object at 0x0000022B3E2F2AC8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000022B3E2F2F60>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:48:36,293 -  * Debugger is active!
+2024-12-08 23:48:36,298 -  * Debugger PIN: 589-825-161
+2024-12-08 23:48:41,113 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1754220936720>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001986FB73CC0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001986FB732E8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001986FB73940>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001986FB73DD8>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:48:41,993 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:48:41,993 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:48:41,995 -  * Restarting with stat
+2024-12-08 23:48:42,850 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2518858546928>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000024A77AB3DA0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000024A77AB33C8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000024A77AB3A20>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000024A77AB3EB8>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:48:42,870 -  * Debugger is active!
+2024-12-08 23:48:42,876 -  * Debugger PIN: 589-825-161
+2024-12-08 23:48:44,909 - 127.0.0.1 - - [08/Dec/2024 23:48:44] "GET / HTTP/1.1" 200 -
+2024-12-08 23:48:44,952 - 127.0.0.1 - - [08/Dec/2024 23:48:44] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:48:48,099 - Limite di sessioni raggiunto per l'utente admin1. Accesso negato.
+2024-12-08 23:48:48,099 - User: admin1 | Action: accesso | Resource: sistema | Timestamp: 2024-12-08T23:48:48Z | Session ID: None | Status: fallimento 
+2024-12-08 23:48:48,102 - 127.0.0.1 - - [08/Dec/2024 23:48:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:48:48,119 - 127.0.0.1 - - [08/Dec/2024 23:48:48] "GET / HTTP/1.1" 200 -
+2024-12-08 23:48:48,160 - 127.0.0.1 - - [08/Dec/2024 23:48:48] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:48:57,860 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2129887116928>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001EFE72A3D30>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001EFE72A3358>], 'actions': [<vakt.rules.operator.Eq object at 0x000001EFE72A39B0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001EFE72A3E48>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:48:58,755 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:48:58,755 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:48:58,757 -  * Restarting with stat
+2024-12-08 23:48:59,535 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1724760080056>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000019193B63D68>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000019193B63390>], 'actions': [<vakt.rules.operator.Eq object at 0x0000019193B639E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000019193B63E80>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:48:59,553 -  * Debugger is active!
+2024-12-08 23:48:59,559 -  * Debugger PIN: 589-825-161
+2024-12-08 23:48:59,584 - 127.0.0.1 - - [08/Dec/2024 23:48:59] "GET / HTTP/1.1" 200 -
+2024-12-08 23:48:59,621 - 127.0.0.1 - - [08/Dec/2024 23:48:59] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:49:02,449 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-08T23:49:02Z | Session ID: f166a28cb5ad6d7d4c181977a15eaea4 | Status: successo 
+2024-12-08 23:49:02,461 - 127.0.0.1 - - [08/Dec/2024 23:49:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:49:02,499 - 127.0.0.1 - - [08/Dec/2024 23:49:02] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:49:02,559 - 127.0.0.1 - - [08/Dec/2024 23:49:02] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-08 23:49:06,135 - 127.0.0.1 - - [08/Dec/2024 23:49:06] "GET /account-settings HTTP/1.1" 200 -
+2024-12-08 23:49:08,719 - 127.0.0.1 - - [08/Dec/2024 23:49:08] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:49:09,615 - 127.0.0.1 - - [08/Dec/2024 23:49:09] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:49:10,586 - 127.0.0.1 - - [08/Dec/2024 23:49:10] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:49:10,630 - 127.0.0.1 - - [08/Dec/2024 23:49:10] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-08 23:49:56,895 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-08T23:49:56Z | Session ID: f166a28cb5ad6d7d4c181977a15eaea4 | Status: successo 
+2024-12-08 23:49:56,896 - 127.0.0.1 - - [08/Dec/2024 23:49:56] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-08 23:49:56,908 - 127.0.0.1 - - [08/Dec/2024 23:49:56] "GET / HTTP/1.1" 200 -
+2024-12-08 23:49:56,952 - 127.0.0.1 - - [08/Dec/2024 23:49:56] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:50:02,111 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2923721997784>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002A8BB693C88>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002A8BB6932B0>], 'actions': [<vakt.rules.operator.Eq object at 0x000002A8BB693908>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002A8BB693DA0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:50:02,986 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:50:02,986 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:50:02,988 -  * Restarting with stat
+2024-12-08 23:50:03,777 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1979282894800>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001CCD6742E80>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001CCD67424A8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001CCD6742B00>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001CCD6742F98>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:50:03,796 -  * Debugger is active!
+2024-12-08 23:50:03,802 -  * Debugger PIN: 589-825-161
+2024-12-08 23:50:05,313 - The CSRF session token is missing.
+2024-12-08 23:50:05,315 - 127.0.0.1 - - [08/Dec/2024 23:50:05] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2024-12-08 23:50:07,282 - 127.0.0.1 - - [08/Dec/2024 23:50:07] "GET / HTTP/1.1" 200 -
+2024-12-08 23:50:07,319 - 127.0.0.1 - - [08/Dec/2024 23:50:07] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:50:10,954 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-08T23:50:10Z | Session ID: 9884493ae9bc558d616b94c2f7ee28ab | Status: successo 
+2024-12-08 23:50:10,971 - 127.0.0.1 - - [08/Dec/2024 23:50:10] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:50:10,994 - 127.0.0.1 - - [08/Dec/2024 23:50:10] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:50:11,054 - 127.0.0.1 - - [08/Dec/2024 23:50:11] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-08 23:50:12,890 - 127.0.0.1 - - [08/Dec/2024 23:50:12] "GET /account-settings HTTP/1.1" 200 -
+2024-12-08 23:50:16,078 - 127.0.0.1 - - [08/Dec/2024 23:50:16] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:50:17,040 - 127.0.0.1 - - [08/Dec/2024 23:50:17] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:50:17,727 - 127.0.0.1 - - [08/Dec/2024 23:50:17] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:50:17,777 - 127.0.0.1 - - [08/Dec/2024 23:50:17] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-08 23:51:11,559 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-08T23:51:11Z | Session ID: 9884493ae9bc558d616b94c2f7ee28ab | Status: successo 
+2024-12-08 23:51:11,559 - 127.0.0.1 - - [08/Dec/2024 23:51:11] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-08 23:51:11,576 - 127.0.0.1 - - [08/Dec/2024 23:51:11] "GET / HTTP/1.1" 200 -
+2024-12-08 23:51:11,636 - 127.0.0.1 - - [08/Dec/2024 23:51:11] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:51:19,831 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-08 23:51:19,904 -  * Restarting with stat
+2024-12-08 23:52:24,030 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2624293844080>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000026304089898>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000026304089860>], 'actions': [<vakt.rules.operator.Eq object at 0x0000026304089828>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002630419AEF0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:52:24,030 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2624293846432>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000263041A3C50>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000263041A3278>], 'actions': [<vakt.rules.operator.Eq object at 0x00000263041A38D0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000263041A3D68>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:52:24,898 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:52:24,899 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:52:24,900 -  * Restarting with stat
+2024-12-08 23:52:25,728 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2966639490440>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002B2B96CBA20>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002B2B96CB9E8>], 'actions': [<vakt.rules.operator.Eq object at 0x000002B2B96CB9B0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002B2B97E3048>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:52:25,728 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2966639492792>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002B2B97E3D68>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002B2B97E3390>], 'actions': [<vakt.rules.operator.Eq object at 0x000002B2B97E39E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002B2B97E3E80>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:52:25,746 -  * Debugger is active!
+2024-12-08 23:52:25,751 -  * Debugger PIN: 589-825-161
+2024-12-08 23:52:25,799 - 127.0.0.1 - - [08/Dec/2024 23:52:25] "GET / HTTP/1.1" 200 -
+2024-12-08 23:52:25,837 - 127.0.0.1 - - [08/Dec/2024 23:52:25] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:52:26,408 - 127.0.0.1 - - [08/Dec/2024 23:52:26] "GET / HTTP/1.1" 200 -
+2024-12-08 23:52:26,434 - 127.0.0.1 - - [08/Dec/2024 23:52:26] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:52:29,074 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-08T23:52:29Z | Session ID: 119ac6c1b70434a83fa8a72244210681 | Status: successo 
+2024-12-08 23:52:29,090 - 127.0.0.1 - - [08/Dec/2024 23:52:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:52:29,114 - 127.0.0.1 - - [08/Dec/2024 23:52:29] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:52:29,169 - 127.0.0.1 - - [08/Dec/2024 23:52:29] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-08 23:52:33,297 - All matching policies have allow effect
+2024-12-08 23:52:33,297 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2966641888560>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:52:33'}}
+2024-12-08 23:52:33,304 - 127.0.0.1 - - [08/Dec/2024 23:52:33] "GET /account-settings HTTP/1.1" 200 -
+2024-12-08 23:52:34,840 - All matching policies have allow effect
+2024-12-08 23:52:34,840 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2966642050608>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:52:34'}}
+2024-12-08 23:52:34,916 - 127.0.0.1 - - [08/Dec/2024 23:52:34] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:52:35,631 - All matching policies have allow effect
+2024-12-08 23:52:35,632 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2966642052848>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:52:35'}}
+2024-12-08 23:52:35,674 - 127.0.0.1 - - [08/Dec/2024 23:52:35] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:52:36,265 - 127.0.0.1 - - [08/Dec/2024 23:52:36] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:52:36,306 - 127.0.0.1 - - [08/Dec/2024 23:52:36] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-08 23:52:36,977 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-08T23:52:36Z | Session ID: 119ac6c1b70434a83fa8a72244210681 | Status: successo 
+2024-12-08 23:52:36,978 - 127.0.0.1 - - [08/Dec/2024 23:52:36] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-08 23:52:36,993 - 127.0.0.1 - - [08/Dec/2024 23:52:36] "GET / HTTP/1.1" 200 -
+2024-12-08 23:52:37,051 - 127.0.0.1 - - [08/Dec/2024 23:52:37] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:52:40,362 - User: giadaott | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-08T23:52:40Z | Session ID: f4606394b95de3c31ea995c80f3ee032 | Status: successo 
+2024-12-08 23:52:40,406 - 127.0.0.1 - - [08/Dec/2024 23:52:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:52:40,420 - 127.0.0.1 - - [08/Dec/2024 23:52:40] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:52:40,479 - 127.0.0.1 - - [08/Dec/2024 23:52:40] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-08 23:52:41,629 - All matching policies have allow effect
+2024-12-08 23:52:41,629 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2966642107672>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:52:41'}}
+2024-12-08 23:52:41,631 - 127.0.0.1 - - [08/Dec/2024 23:52:41] "GET /account-settings HTTP/1.1" 200 -
+2024-12-08 23:52:43,401 - All matching policies have allow effect
+2024-12-08 23:52:43,401 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2966642052792>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:52:43'}}
+2024-12-08 23:52:43,429 - 127.0.0.1 - - [08/Dec/2024 23:52:43] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:52:44,046 - All matching policies have allow effect
+2024-12-08 23:52:44,046 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2966642049936>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:52:44'}}
+2024-12-08 23:52:44,089 - 127.0.0.1 - - [08/Dec/2024 23:52:44] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:52:44,880 - 127.0.0.1 - - [08/Dec/2024 23:52:44] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:52:44,921 - 127.0.0.1 - - [08/Dec/2024 23:52:44] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-08 23:57:05,446 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-08 23:57:05,514 -  * Restarting with stat
+2024-12-08 23:57:16,133 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1352681735448>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000013AF20BA9B0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000013AF20BA940>], 'actions': [<vakt.rules.operator.Eq object at 0x0000013AF20BA908>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000013AF21CBF98>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:57:16,134 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1352681737800>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000013AF21D4CF8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000013AF21D4320>], 'actions': [<vakt.rules.operator.Eq object at 0x0000013AF21D4978>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000013AF21D4E10>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:57:17,019 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:57:17,019 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:57:17,020 -  * Restarting with stat
+2024-12-08 23:57:17,887 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1703042168200>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000018C8527AA58>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000018C8527AA20>], 'actions': [<vakt.rules.operator.Eq object at 0x0000018C8527A9E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000018C85393048>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:57:17,888 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1703042170552>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000018C85393D68>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000018C85393390>], 'actions': [<vakt.rules.operator.Eq object at 0x0000018C853939E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000018C85393E80>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:57:17,910 -  * Debugger is active!
+2024-12-08 23:57:17,915 -  * Debugger PIN: 589-825-161
+2024-12-08 23:57:17,936 - 127.0.0.1 - - [08/Dec/2024 23:57:17] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2024-12-08 23:57:17,954 - 127.0.0.1 - - [08/Dec/2024 23:57:17] "GET / HTTP/1.1" 200 -
+2024-12-08 23:57:18,008 - 127.0.0.1 - - [08/Dec/2024 23:57:18] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:57:20,821 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-08T23:57:20Z | Session ID: a74965f2f99204a95ef842e31638728d | Status: successo 
+2024-12-08 23:57:20,834 - 127.0.0.1 - - [08/Dec/2024 23:57:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:57:20,852 - 127.0.0.1 - - [08/Dec/2024 23:57:20] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:57:20,905 - 127.0.0.1 - - [08/Dec/2024 23:57:20] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-08 23:57:24,267 - All matching policies have allow effect
+2024-12-08 23:57:24,267 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1703044120872>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:57:24'}}
+2024-12-08 23:57:24,273 - 127.0.0.1 - - [08/Dec/2024 23:57:24] "GET /account-settings HTTP/1.1" 200 -
+2024-12-08 23:57:25,688 - All matching policies have allow effect
+2024-12-08 23:57:25,688 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1703043777368>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:57:25'}}
+2024-12-08 23:57:25,730 - 127.0.0.1 - - [08/Dec/2024 23:57:25] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:57:26,416 - All matching policies have allow effect
+2024-12-08 23:57:26,416 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1703044549208>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:57:26'}}
+2024-12-08 23:57:26,459 - 127.0.0.1 - - [08/Dec/2024 23:57:26] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:57:27,020 - 127.0.0.1 - - [08/Dec/2024 23:57:27] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:57:27,068 - 127.0.0.1 - - [08/Dec/2024 23:57:27] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-08 23:57:27,721 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-08T23:57:27Z | Session ID: a74965f2f99204a95ef842e31638728d | Status: successo 
+2024-12-08 23:57:27,722 - 127.0.0.1 - - [08/Dec/2024 23:57:27] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-08 23:57:27,736 - 127.0.0.1 - - [08/Dec/2024 23:57:27] "GET / HTTP/1.1" 200 -
+2024-12-08 23:57:27,788 - 127.0.0.1 - - [08/Dec/2024 23:57:27] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:57:31,385 - User: giadaott | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-08T23:57:31Z | Session ID: a4db045cf321e1ec06c10252a4d83d06 | Status: successo 
+2024-12-08 23:57:31,402 - 127.0.0.1 - - [08/Dec/2024 23:57:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:57:31,417 - 127.0.0.1 - - [08/Dec/2024 23:57:31] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:57:31,475 - 127.0.0.1 - - [08/Dec/2024 23:57:31] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-08 23:57:32,499 - All matching policies have allow effect
+2024-12-08 23:57:32,499 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1703044841200>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:57:32'}}
+2024-12-08 23:57:32,500 - 127.0.0.1 - - [08/Dec/2024 23:57:32] "GET /account-settings HTTP/1.1" 200 -
+2024-12-08 23:57:34,432 - All matching policies have allow effect
+2024-12-08 23:57:34,432 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1703044828240>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:57:34'}}
+2024-12-08 23:57:34,471 - 127.0.0.1 - - [08/Dec/2024 23:57:34] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:57:35,073 - All matching policies have allow effect
+2024-12-08 23:57:35,073 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1703044753672>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:57:35'}}
+2024-12-08 23:57:35,109 - 127.0.0.1 - - [08/Dec/2024 23:57:35] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:57:35,651 - 127.0.0.1 - - [08/Dec/2024 23:57:35] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:57:35,694 - 127.0.0.1 - - [08/Dec/2024 23:57:35] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-08 23:57:48,201 - User: giadaott | Action: logout | Resource: sistema | Timestamp: 2024-12-08T23:57:48Z | Session ID: a4db045cf321e1ec06c10252a4d83d06 | Status: successo 
+2024-12-08 23:57:48,202 - 127.0.0.1 - - [08/Dec/2024 23:57:48] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-08 23:57:48,217 - 127.0.0.1 - - [08/Dec/2024 23:57:48] "GET / HTTP/1.1" 200 -
+2024-12-08 23:57:48,271 - 127.0.0.1 - - [08/Dec/2024 23:57:48] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:57:50,384 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-08 23:57:50,455 -  * Restarting with stat
+2024-12-08 23:57:53,856 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2205083583768>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002016927A940>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002016927A8D0>], 'actions': [<vakt.rules.operator.Eq object at 0x000002016927A898>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002016938BF98>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:57:53,856 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2205083586120>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000020169394CF8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000020169394320>], 'actions': [<vakt.rules.operator.Eq object at 0x0000020169394978>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000020169394E10>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:57:54,722 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:57:54,723 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:57:54,724 -  * Restarting with stat
+2024-12-08 23:57:55,498 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2033323226392>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001D96B70B940>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001D96B70B908>], 'actions': [<vakt.rules.operator.Eq object at 0x000001D96B70B8D0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001D96B81AF98>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:57:55,498 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2033323228744>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001D96B823CF8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001D96B823320>], 'actions': [<vakt.rules.operator.Eq object at 0x000001D96B823978>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001D96B823E10>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:57:55,516 -  * Debugger is active!
+2024-12-08 23:57:55,522 -  * Debugger PIN: 589-825-161
+2024-12-08 23:57:55,548 - 127.0.0.1 - - [08/Dec/2024 23:57:55] "GET / HTTP/1.1" 200 -
+2024-12-08 23:57:55,583 - 127.0.0.1 - - [08/Dec/2024 23:57:55] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:57:59,123 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-08T23:57:59Z | Session ID: b4261b14683210fc61814e2513256658 | Status: successo 
+2024-12-08 23:57:59,137 - 127.0.0.1 - - [08/Dec/2024 23:57:59] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:57:59,159 - 127.0.0.1 - - [08/Dec/2024 23:57:59] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:57:59,216 - 127.0.0.1 - - [08/Dec/2024 23:57:59] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-08 23:58:01,212 - All matching policies have allow effect
+2024-12-08 23:58:01,212 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2033325180072>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:58:01'}}
+2024-12-08 23:58:01,219 - 127.0.0.1 - - [08/Dec/2024 23:58:01] "GET /account-settings HTTP/1.1" 200 -
+2024-12-08 23:58:03,367 - All matching policies have allow effect
+2024-12-08 23:58:03,368 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2033294947832>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:58:03'}}
+2024-12-08 23:58:03,409 - 127.0.0.1 - - [08/Dec/2024 23:58:03] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:58:04,135 - All matching policies have allow effect
+2024-12-08 23:58:04,135 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2033325604816>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:58:04'}}
+2024-12-08 23:58:04,166 - 127.0.0.1 - - [08/Dec/2024 23:58:04] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:58:04,655 - 127.0.0.1 - - [08/Dec/2024 23:58:04] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:58:04,705 - 127.0.0.1 - - [08/Dec/2024 23:58:04] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-08 23:59:14,638 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-08 23:59:14,799 -  * Restarting with stat
+2024-12-08 23:59:15,768 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1249711175160>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000122F885AA58>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000122F885A9E8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000122F885A9B0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000122F89730B8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:59:15,768 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1249711231272>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000122F8981048>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000122F8973F98>], 'actions': [<vakt.rules.operator.Eq object at 0x00000122F8973FD0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000122F89810F0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:59:15,787 -  * Debugger is active!
+2024-12-08 23:59:15,794 -  * Debugger PIN: 589-825-161
+2024-12-08 23:59:15,816 - 127.0.0.1 - - [08/Dec/2024 23:59:15] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2024-12-08 23:59:15,839 - 127.0.0.1 - - [08/Dec/2024 23:59:15] "GET / HTTP/1.1" 200 -
+2024-12-08 23:59:15,878 - 127.0.0.1 - - [08/Dec/2024 23:59:15] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-08 23:59:19,092 - Limite di sessioni raggiunto per l'utente admin1. Accesso negato.
+2024-12-08 23:59:19,092 - User: admin1 | Action: accesso | Resource: sistema | Timestamp: 2024-12-08T23:59:19Z | Session ID: None | Status: fallimento 
+2024-12-08 23:59:19,094 - 127.0.0.1 - - [08/Dec/2024 23:59:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:59:19,110 - 127.0.0.1 - - [08/Dec/2024 23:59:19] "GET / HTTP/1.1" 200 -
+2024-12-08 23:59:19,156 - 127.0.0.1 - - [08/Dec/2024 23:59:19] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:59:25,506 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2076435821624>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001E375269860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E375269828>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E3752697F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E37537AEB8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:59:25,507 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2076435824424>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001E375383E48>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E375383DD8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E375383E10>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E375383EF0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:59:26,397 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-08 23:59:26,398 - [33mPress CTRL+C to quit[0m
+2024-12-08 23:59:26,399 -  * Restarting with stat
+2024-12-08 23:59:27,172 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1900378666544>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001BA7753AA90>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001BA7753AA58>], 'actions': [<vakt.rules.operator.Eq object at 0x000001BA7753AA20>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001BA776530F0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-08 23:59:27,173 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1900378718560>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001BA77660080>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001BA77660048>], 'actions': [<vakt.rules.operator.Eq object at 0x000001BA77653FD0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001BA77660128>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-08 23:59:27,190 -  * Debugger is active!
+2024-12-08 23:59:27,195 -  * Debugger PIN: 589-825-161
+2024-12-08 23:59:27,222 - 127.0.0.1 - - [08/Dec/2024 23:59:27] "GET / HTTP/1.1" 200 -
+2024-12-08 23:59:27,224 - 127.0.0.1 - - [08/Dec/2024 23:59:27] "GET / HTTP/1.1" 200 -
+2024-12-08 23:59:27,258 - 127.0.0.1 - - [08/Dec/2024 23:59:27] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-08 23:59:31,641 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-08T23:59:31Z | Session ID: d3bef2310ca20896a927174f39148152 | Status: successo 
+2024-12-08 23:59:31,658 - 127.0.0.1 - - [08/Dec/2024 23:59:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-08 23:59:31,680 - 127.0.0.1 - - [08/Dec/2024 23:59:31] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:59:31,740 - 127.0.0.1 - - [08/Dec/2024 23:59:31] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-08 23:59:33,404 - All matching policies have allow effect
+2024-12-08 23:59:33,404 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1900380603504>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:59:33'}}
+2024-12-08 23:59:33,411 - 127.0.0.1 - - [08/Dec/2024 23:59:33] "GET /account-settings HTTP/1.1" 200 -
+2024-12-08 23:59:34,871 - All matching policies have allow effect
+2024-12-08 23:59:34,871 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1900381219024>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:59:34'}}
+2024-12-08 23:59:34,901 - 127.0.0.1 - - [08/Dec/2024 23:59:34] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:59:35,473 - All matching policies have allow effect
+2024-12-08 23:59:35,473 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1900381220648>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '23:59:35'}}
+2024-12-08 23:59:35,501 - 127.0.0.1 - - [08/Dec/2024 23:59:35] "POST /account-settings HTTP/1.1" 200 -
+2024-12-08 23:59:35,960 - 127.0.0.1 - - [08/Dec/2024 23:59:35] "GET /dashboard HTTP/1.1" 200 -
+2024-12-08 23:59:35,999 - 127.0.0.1 - - [08/Dec/2024 23:59:35] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-08 23:59:36,984 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-08T23:59:36Z | Session ID: d3bef2310ca20896a927174f39148152 | Status: successo 
+2024-12-08 23:59:36,985 - 127.0.0.1 - - [08/Dec/2024 23:59:36] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-08 23:59:36,998 - 127.0.0.1 - - [08/Dec/2024 23:59:36] "GET / HTTP/1.1" 200 -
+2024-12-08 23:59:37,049 - 127.0.0.1 - - [08/Dec/2024 23:59:37] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-09 00:00:04,668 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-09 00:00:04,738 -  * Restarting with stat
+2024-12-09 00:00:05,529 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2071666574448>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001E258E1C898>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E258E1C828>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E258E1C7F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E258F2BEF0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:00:05,529 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2071666577248>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001E258F34E80>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E258F34E10>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E258F34E48>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E258F34F28>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:00:05,547 -  * Debugger is active!
+2024-12-09 00:00:05,552 -  * Debugger PIN: 589-825-161
+2024-12-09 00:00:07,486 - 127.0.0.1 - - [09/Dec/2024 00:00:07] "GET / HTTP/1.1" 200 -
+2024-12-09 00:00:07,522 - 127.0.0.1 - - [09/Dec/2024 00:00:07] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-09 00:00:10,313 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-09T00:00:10Z | Session ID: dc0197592fa4448f626ecb64dc165448 | Status: successo 
+2024-12-09 00:00:10,331 - 127.0.0.1 - - [09/Dec/2024 00:00:10] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-09 00:00:10,352 - 127.0.0.1 - - [09/Dec/2024 00:00:10] "GET /dashboard HTTP/1.1" 200 -
+2024-12-09 00:00:10,412 - 127.0.0.1 - - [09/Dec/2024 00:00:10] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-09 00:00:12,162 - No potential policies were found
+2024-12-09 00:00:12,162 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2071668227040>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '00:00:12'}}
+2024-12-09 00:00:12,163 - 127.0.0.1 - - [09/Dec/2024 00:00:12] "[32mGET /account-settings HTTP/1.1[0m" 302 -
+2024-12-09 00:00:12,180 - 127.0.0.1 - - [09/Dec/2024 00:00:12] "GET / HTTP/1.1" 200 -
+2024-12-09 00:00:12,248 - 127.0.0.1 - - [09/Dec/2024 00:00:12] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-09 00:00:56,157 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-09 00:00:56,230 -  * Restarting with stat
+2024-12-09 00:00:56,992 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1436002436488>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000014E5858A9E8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000014E5858A978>], 'actions': [<vakt.rules.operator.Eq object at 0x0000014E5858A940>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000014E586A4048>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:01:52,098 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2184983626976>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001FCBB1AA940>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001FCBB1AA8D0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001FCBB1AA898>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001FCBB2BBF60>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:01:52,098 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2184983629328>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001FCBB2C4CC0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001FCBB2C42E8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001FCBB2C4940>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001FCBB2C4DD8>}, 'description': "Negare la modifica del tema agli utenti manager fuori dall'orario consentito (solo tra le 00:00 e le 02:00)"}
+2024-12-09 00:01:52,980 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-09 00:01:52,980 - [33mPress CTRL+C to quit[0m
+2024-12-09 00:01:52,981 -  * Restarting with stat
+2024-12-09 00:01:53,973 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1619573159248>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001791603A978>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001791603A940>], 'actions': [<vakt.rules.operator.Eq object at 0x000001791603A908>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001791614AFD0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:01:53,973 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1619573161600>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000017916153D30>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000017916153358>], 'actions': [<vakt.rules.operator.Eq object at 0x00000179161539B0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000017916153E48>}, 'description': "Negare la modifica del tema agli utenti manager fuori dall'orario consentito (solo tra le 00:00 e le 02:00)"}
+2024-12-09 00:01:53,992 -  * Debugger is active!
+2024-12-09 00:01:53,997 -  * Debugger PIN: 589-825-161
+2024-12-09 00:01:54,047 - 127.0.0.1 - - [09/Dec/2024 00:01:54] "GET / HTTP/1.1" 200 -
+2024-12-09 00:01:54,104 - 127.0.0.1 - - [09/Dec/2024 00:01:54] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-09 00:01:56,931 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-09T00:01:56Z | Session ID: 98783ba34c651bfd7f774fa6813c197a | Status: successo 
+2024-12-09 00:01:56,945 - 127.0.0.1 - - [09/Dec/2024 00:01:56] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-09 00:01:56,966 - 127.0.0.1 - - [09/Dec/2024 00:01:56] "GET /dashboard HTTP/1.1" 200 -
+2024-12-09 00:01:57,022 - 127.0.0.1 - - [09/Dec/2024 00:01:57] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-09 00:01:58,707 - One of matching policies has deny effect
+2024-12-09 00:01:58,707 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1619575549568>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '00:01:58'}}
+2024-12-09 00:01:58,708 - 127.0.0.1 - - [09/Dec/2024 00:01:58] "[32mGET /account-settings HTTP/1.1[0m" 302 -
+2024-12-09 00:01:58,726 - 127.0.0.1 - - [09/Dec/2024 00:01:58] "GET / HTTP/1.1" 200 -
+2024-12-09 00:01:58,798 - 127.0.0.1 - - [09/Dec/2024 00:01:58] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-09 00:03:18,108 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-09 00:03:18,203 -  * Restarting with stat
+2024-12-09 00:03:19,008 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1921311130792>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001BF56FFC940>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001BF56FFC8D0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001BF56FFC898>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001BF5710BF28>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:03:19,008 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1921311133536>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001BF57114E80>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001BF57114E10>], 'actions': [<vakt.rules.operator.Eq object at 0x000001BF57114E48>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001BF57114F28>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:03:19,026 -  * Debugger is active!
+2024-12-09 00:03:19,031 -  * Debugger PIN: 589-825-161
+2024-12-09 00:03:27,154 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-09 00:03:27,232 -  * Restarting with stat
+2024-12-09 00:03:28,236 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2821814298160>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000291012BAA58>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000291012BAA20>], 'actions': [<vakt.rules.operator.Eq object at 0x00000291012BA9E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000291013D20F0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:03:28,236 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2821814354216>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000291013E0048>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000291013D2F98>], 'actions': [<vakt.rules.operator.Eq object at 0x00000291013D2FD0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000291013E00F0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:03:28,254 -  * Debugger is active!
+2024-12-09 00:03:28,260 -  * Debugger PIN: 589-825-161
+2024-12-09 00:03:46,511 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-09 00:03:46,601 -  * Restarting with stat
+2024-12-09 00:03:55,033 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2025403135256>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001D7935DA940>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001D7935DA908>], 'actions': [<vakt.rules.operator.Eq object at 0x000001D7935DA8D0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001D7936EAF98>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:03:55,033 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2025403137608>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001D7936F3DA0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001D7936F3320>], 'actions': [<vakt.rules.operator.Eq object at 0x000001D7936F3978>], 'context': {'current_time': (<vakt.rules.operator.Less object at 0x000001D7936F3DD8>, <vakt.rules.operator.Greater object at 0x000001D7936F3E10>)}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:03:55,033 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2025403138000>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001D7936F3EF0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001D7936F3E80>], 'actions': [<vakt.rules.operator.Eq object at 0x000001D7936F3EB8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001D7936F3F98>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:03:55,928 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-09 00:03:55,928 - [33mPress CTRL+C to quit[0m
+2024-12-09 00:03:55,929 -  * Restarting with stat
+2024-12-09 00:03:56,835 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2212359910792>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002031ADBB9B0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002031ADBB978>], 'actions': [<vakt.rules.operator.Eq object at 0x000002031ADBB940>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002031AED3048>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:03:56,835 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2212359913144>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000002031AED3E10>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000002031AED3390>], 'actions': [<vakt.rules.operator.Eq object at 0x000002031AED39E8>], 'context': {'current_time': (<vakt.rules.operator.Less object at 0x000002031AED3E48>, <vakt.rules.operator.Greater object at 0x000002031AED3E80>)}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:03:56,835 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2212359962752>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002031AED3F60>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002031AED3EF0>], 'actions': [<vakt.rules.operator.Eq object at 0x000002031AED3F28>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002031AEE0048>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:03:56,854 -  * Debugger is active!
+2024-12-09 00:03:56,862 -  * Debugger PIN: 589-825-161
+2024-12-09 00:03:56,909 - 127.0.0.1 - - [09/Dec/2024 00:03:56] "GET / HTTP/1.1" 200 -
+2024-12-09 00:03:56,946 - 127.0.0.1 - - [09/Dec/2024 00:03:56] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-09 00:03:59,927 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-09T00:03:59Z | Session ID: fe30b4cad5a907513455600dcc6d8716 | Status: successo 
+2024-12-09 00:03:59,939 - 127.0.0.1 - - [09/Dec/2024 00:03:59] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-09 00:03:59,959 - 127.0.0.1 - - [09/Dec/2024 00:03:59] "GET /dashboard HTTP/1.1" 200 -
+2024-12-09 00:04:00,016 - 127.0.0.1 - - [09/Dec/2024 00:04:00] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-09 00:04:03,108 - Unexpected exception occurred while checking Inquiry <class 'vakt.guard.Inquiry'> <Object ID 2212361866824>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '00:04:03'}}
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\vakt\guard.py", line 96, in is_allowed_check
+    answer = self.check_policies_allow(inquiry, policies)
+  File "C:\Program Files\Python37\lib\site-packages\vakt\guard.py", line 107, in check_policies_allow
+    filtered = [p for p in policies if
+  File "C:\Program Files\Python37\lib\site-packages\vakt\guard.py", line 111, in <listcomp>
+    self.check_context_restriction(p, inquiry)]
+  File "C:\Program Files\Python37\lib\site-packages\vakt\guard.py", line 149, in check_context_restriction
+    if not rule.satisfied(ctx_value, inquiry):
+AttributeError: 'tuple' object has no attribute 'satisfied'
+2024-12-09 00:04:03,110 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2212361866824>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '00:04:03'}}
+2024-12-09 00:04:03,111 - 127.0.0.1 - - [09/Dec/2024 00:04:03] "[32mGET /account-settings HTTP/1.1[0m" 302 -
+2024-12-09 00:04:03,128 - 127.0.0.1 - - [09/Dec/2024 00:04:03] "GET / HTTP/1.1" 200 -
+2024-12-09 00:04:03,187 - 127.0.0.1 - - [09/Dec/2024 00:04:03] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-09 00:04:08,286 - User: giadaott | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-09T00:04:08Z | Session ID: 5e53db51ea6b805f088046db2292b8c7 | Status: successo 
+2024-12-09 00:04:08,304 - 127.0.0.1 - - [09/Dec/2024 00:04:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-09 00:04:08,320 - 127.0.0.1 - - [09/Dec/2024 00:04:08] "GET /dashboard HTTP/1.1" 200 -
+2024-12-09 00:04:08,384 - 127.0.0.1 - - [09/Dec/2024 00:04:08] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-09 00:04:09,621 - All matching policies have allow effect
+2024-12-09 00:04:09,621 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2212362351280>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '00:04:09'}}
+2024-12-09 00:04:09,628 - 127.0.0.1 - - [09/Dec/2024 00:04:09] "GET /account-settings HTTP/1.1" 200 -
+2024-12-09 00:04:12,320 - All matching policies have allow effect
+2024-12-09 00:04:12,321 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2212362351784>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '00:04:12'}}
+2024-12-09 00:04:12,377 - 127.0.0.1 - - [09/Dec/2024 00:04:12] "POST /account-settings HTTP/1.1" 200 -
+2024-12-09 00:04:12,992 - All matching policies have allow effect
+2024-12-09 00:04:12,992 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2212362566904>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '00:04:12'}}
+2024-12-09 00:04:13,031 - 127.0.0.1 - - [09/Dec/2024 00:04:13] "POST /account-settings HTTP/1.1" 200 -
+2024-12-09 00:04:13,563 - 127.0.0.1 - - [09/Dec/2024 00:04:13] "GET /dashboard HTTP/1.1" 200 -
+2024-12-09 00:04:13,608 - 127.0.0.1 - - [09/Dec/2024 00:04:13] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-09 00:04:14,242 - User: giadaott | Action: logout | Resource: sistema | Timestamp: 2024-12-09T00:04:14Z | Session ID: 5e53db51ea6b805f088046db2292b8c7 | Status: successo 
+2024-12-09 00:04:14,242 - 127.0.0.1 - - [09/Dec/2024 00:04:14] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-09 00:04:14,257 - 127.0.0.1 - - [09/Dec/2024 00:04:14] "GET / HTTP/1.1" 200 -
+2024-12-09 00:04:14,315 - 127.0.0.1 - - [09/Dec/2024 00:04:14] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-09 00:04:48,570 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-09 00:04:48,631 -  * Restarting with stat
+2024-12-09 00:04:49,410 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2125632128448>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001EEE97AAA20>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001EEE97AA9B0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001EEE97AA978>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001EEE98C4080>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:04:49,411 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2125632130744>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001EEE98C4DA0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001EEE98C43C8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001EEE98C49E8>], 'context': {'current_time': (<vakt.rules.operator.Less object at 0x000001EEE98C4E48>, <vakt.rules.operator.Greater object at 0x000001EEE98C4E80>)}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:04:49,411 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2125632180352>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001EEE98C4F60>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001EEE98C4EF0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001EEE98C4F28>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001EEE98D1048>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:04:49,427 -  * Debugger is active!
+2024-12-09 00:04:49,433 -  * Debugger PIN: 589-825-161
+2024-12-09 00:04:51,480 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-09 00:04:51,542 -  * Restarting with stat
+2024-12-09 00:04:52,331 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2495606900104>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002450DB1A9E8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002450DB1A978>], 'actions': [<vakt.rules.operator.Eq object at 0x000002450DB1A940>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002450DC34048>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:04:52,331 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2495606902512>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000002450DC34E10>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000002450DC34390>], 'actions': [<vakt.rules.operator.Eq object at 0x000002450DC349E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002450DC34EB8>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:04:52,332 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2495606952120>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002450DC34F98>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002450DC34F28>], 'actions': [<vakt.rules.operator.Eq object at 0x000002450DC34F60>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002450DC41080>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:04:52,349 -  * Debugger is active!
+2024-12-09 00:04:52,355 -  * Debugger PIN: 589-825-161
+2024-12-09 00:04:58,166 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2538751604048>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000024F19519978>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000024F19519940>], 'actions': [<vakt.rules.operator.Eq object at 0x0000024F19519908>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000024F1962AFD0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:04:58,166 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2538751606456>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000024F19633DD8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000024F19633358>], 'actions': [<vakt.rules.operator.Eq object at 0x0000024F196339B0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000024F19633E80>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:04:58,166 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2538751656064>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000024F19633F60>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000024F19633EF0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000024F19633F28>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000024F19640048>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:04:59,039 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-09 00:04:59,039 - [33mPress CTRL+C to quit[0m
+2024-12-09 00:04:59,042 -  * Restarting with stat
+2024-12-09 00:05:03,672 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1610612946256>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001777FF0A9B0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001777FF0A978>], 'actions': [<vakt.rules.operator.Eq object at 0x000001777FF0A940>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001770002AFD0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:05:03,673 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1610612948664>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000017700033DD8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000017700033358>], 'actions': [<vakt.rules.operator.Eq object at 0x00000177000339B0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000017700033E80>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:05:03,673 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1610612998272>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000017700033F60>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000017700033EF0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000017700033F28>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000017700040048>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:05:04,558 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-09 00:05:04,558 - [33mPress CTRL+C to quit[0m
+2024-12-09 00:05:04,559 -  * Restarting with stat
+2024-12-09 00:05:05,354 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3228504176008>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002EFB1C6B9B0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002EFB1C6B978>], 'actions': [<vakt.rules.operator.Eq object at 0x000002EFB1C6B940>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002EFB1D83048>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:05:05,355 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3228504178416>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000002EFB1D83E10>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000002EFB1D83390>], 'actions': [<vakt.rules.operator.Eq object at 0x000002EFB1D839E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002EFB1D83EB8>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:05:05,355 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3228504228024>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002EFB1D83F98>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002EFB1D83F28>], 'actions': [<vakt.rules.operator.Eq object at 0x000002EFB1D83F60>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002EFB1D90080>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:05:05,372 -  * Debugger is active!
+2024-12-09 00:05:05,377 -  * Debugger PIN: 589-825-161
+2024-12-09 00:05:06,814 - 127.0.0.1 - - [09/Dec/2024 00:05:06] "GET / HTTP/1.1" 200 -
+2024-12-09 00:05:06,844 - 127.0.0.1 - - [09/Dec/2024 00:05:06] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-09 00:05:07,264 - 127.0.0.1 - - [09/Dec/2024 00:05:07] "GET / HTTP/1.1" 200 -
+2024-12-09 00:05:07,296 - 127.0.0.1 - - [09/Dec/2024 00:05:07] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-09 00:05:10,670 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-09T00:05:10Z | Session ID: 7092152d1837d96bf9e891f91a30a3e6 | Status: successo 
+2024-12-09 00:05:10,684 - 127.0.0.1 - - [09/Dec/2024 00:05:10] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-09 00:05:10,708 - 127.0.0.1 - - [09/Dec/2024 00:05:10] "GET /dashboard HTTP/1.1" 200 -
+2024-12-09 00:05:10,764 - 127.0.0.1 - - [09/Dec/2024 00:05:10] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-09 00:05:13,621 - No potential policies were found
+2024-12-09 00:05:13,621 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 3228505755600>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '00:05:13'}}
+2024-12-09 00:05:13,622 - 127.0.0.1 - - [09/Dec/2024 00:05:13] "[32mGET /account-settings HTTP/1.1[0m" 302 -
+2024-12-09 00:05:13,637 - 127.0.0.1 - - [09/Dec/2024 00:05:13] "GET / HTTP/1.1" 200 -
+2024-12-09 00:05:13,693 - 127.0.0.1 - - [09/Dec/2024 00:05:13] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-09 00:05:24,218 - User: giadaott | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-09T00:05:24Z | Session ID: 0ea1b5cd52592aef5efc96112a4b64db | Status: successo 
+2024-12-09 00:05:24,235 - 127.0.0.1 - - [09/Dec/2024 00:05:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-09 00:05:24,249 - 127.0.0.1 - - [09/Dec/2024 00:05:24] "GET /dashboard HTTP/1.1" 200 -
+2024-12-09 00:05:24,312 - 127.0.0.1 - - [09/Dec/2024 00:05:24] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-09 00:05:25,355 - No potential policies were found
+2024-12-09 00:05:25,355 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 3228506794472>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '00:05:25'}}
+2024-12-09 00:05:25,356 - 127.0.0.1 - - [09/Dec/2024 00:05:25] "[32mGET /account-settings HTTP/1.1[0m" 302 -
+2024-12-09 00:05:25,373 - 127.0.0.1 - - [09/Dec/2024 00:05:25] "GET / HTTP/1.1" 200 -
+2024-12-09 00:05:25,448 - 127.0.0.1 - - [09/Dec/2024 00:05:25] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-09 00:05:37,736 - Limite di sessioni raggiunto per l'utente admin1. Accesso negato.
+2024-12-09 00:05:37,736 - User: admin1 | Action: accesso | Resource: sistema | Timestamp: 2024-12-09T00:05:37Z | Session ID: None | Status: fallimento 
+2024-12-09 00:05:37,737 - 127.0.0.1 - - [09/Dec/2024 00:05:37] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-09 00:05:37,756 - 127.0.0.1 - - [09/Dec/2024 00:05:37] "GET / HTTP/1.1" 200 -
+2024-12-09 00:05:37,804 - 127.0.0.1 - - [09/Dec/2024 00:05:37] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-09 00:06:14,618 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2558877181432>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000253C8E59A20>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000253C8E599E8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000253C8E599B0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000253C8F720B8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:06:14,618 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2558877183840>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x00000253C8F72E80>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x00000253C8F72400>], 'actions': [<vakt.rules.operator.Eq object at 0x00000253C8F72A58>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000253C8F72F28>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:06:14,618 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2558877233448>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000253C8F7F048>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000253C8F72F98>], 'actions': [<vakt.rules.operator.Eq object at 0x00000253C8F72FD0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000253C8F7F0F0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:06:15,508 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-09 00:06:15,508 - [33mPress CTRL+C to quit[0m
+2024-12-09 00:06:15,511 -  * Restarting with stat
+2024-12-09 00:06:17,588 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1718406952272>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000019018F7BA20>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000019018F7B9E8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000019018F7B9B0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000019017321240>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:06:17,588 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1718406954680>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000019019093DD8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000019019093208>], 'actions': [<vakt.rules.operator.Eq object at 0x00000190190939B0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000019019093E80>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:06:17,589 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1718407004288>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000019019093F60>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000019019093EF0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000019019093F28>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000190190A0048>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:06:17,641 -  * Debugger is active!
+2024-12-09 00:06:17,654 -  * Debugger PIN: 589-825-161
+2024-12-09 00:06:17,721 - 127.0.0.1 - - [09/Dec/2024 00:06:17] "GET / HTTP/1.1" 200 -
+2024-12-09 00:06:17,726 - 127.0.0.1 - - [09/Dec/2024 00:06:17] "GET / HTTP/1.1" 200 -
+2024-12-09 00:06:17,737 - 127.0.0.1 - - [09/Dec/2024 00:06:17] "GET / HTTP/1.1" 200 -
+2024-12-09 00:06:17,787 - 127.0.0.1 - - [09/Dec/2024 00:06:17] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-09 00:06:20,653 - 127.0.0.1 - - [09/Dec/2024 00:06:20] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-09 00:06:20,721 - 127.0.0.1 - - [09/Dec/2024 00:06:20] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-09 00:06:20,728 - 127.0.0.1 - - [09/Dec/2024 00:06:20] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-09 00:06:20,807 - 127.0.0.1 - - [09/Dec/2024 00:06:20] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-09 00:06:46,980 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2678419108976>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000026F9E26A898>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000026F9E26A860>], 'actions': [<vakt.rules.operator.Eq object at 0x0000026F9E26A828>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000026F9E37AEF0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:06:46,980 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2678419111384>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000026F9E383CF8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000026F9E383278>], 'actions': [<vakt.rules.operator.Eq object at 0x0000026F9E3838D0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000026F9E383DA0>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:06:46,980 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2678419111776>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000026F9E383E80>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000026F9E383E10>], 'actions': [<vakt.rules.operator.Eq object at 0x0000026F9E383E48>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000026F9E383F28>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:06:47,863 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-09 00:06:47,863 - [33mPress CTRL+C to quit[0m
+2024-12-09 00:06:47,865 -  * Restarting with stat
+2024-12-09 00:06:48,646 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3041438213736>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002C423C6AAC8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002C423C6AA90>], 'actions': [<vakt.rules.operator.Eq object at 0x000002C423C6AA58>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002C423D82128>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:06:48,647 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3041438216144>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000002C423D82EF0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000002C423D82470>], 'actions': [<vakt.rules.operator.Eq object at 0x000002C423D82AC8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002C423D82F98>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:06:48,647 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3041438269848>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002C423D900B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002C423D90080>], 'actions': [<vakt.rules.operator.Eq object at 0x000002C423D90048>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002C423D90160>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:06:48,664 -  * Debugger is active!
+2024-12-09 00:06:48,670 -  * Debugger PIN: 589-825-161
+2024-12-09 00:06:48,695 - 127.0.0.1 - - [09/Dec/2024 00:06:48] "GET / HTTP/1.1" 200 -
+2024-12-09 00:06:48,732 - 127.0.0.1 - - [09/Dec/2024 00:06:48] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-09 00:06:51,619 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-09T00:06:51Z | Session ID: e8b24d5fd99917d043a75dc68926d245 | Status: successo 
+2024-12-09 00:06:51,631 - 127.0.0.1 - - [09/Dec/2024 00:06:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-09 00:06:51,655 - 127.0.0.1 - - [09/Dec/2024 00:06:51] "GET /dashboard HTTP/1.1" 200 -
+2024-12-09 00:06:51,705 - 127.0.0.1 - - [09/Dec/2024 00:06:51] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-09 00:06:53,589 - No potential policies were found
+2024-12-09 00:06:53,589 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 3041440574264>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '00:06:53'}}
+2024-12-09 00:06:53,590 - 127.0.0.1 - - [09/Dec/2024 00:06:53] "[32mGET /account-settings HTTP/1.1[0m" 302 -
+2024-12-09 00:06:53,607 - 127.0.0.1 - - [09/Dec/2024 00:06:53] "GET /dashboard HTTP/1.1" 200 -
+2024-12-09 00:06:53,658 - 127.0.0.1 - - [09/Dec/2024 00:06:53] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-09 00:08:30,256 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-09T00:08:30Z | Session ID: e8b24d5fd99917d043a75dc68926d245 | Status: successo 
+2024-12-09 00:08:30,256 - 127.0.0.1 - - [09/Dec/2024 00:08:30] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-09 00:08:30,269 - 127.0.0.1 - - [09/Dec/2024 00:08:30] "GET / HTTP/1.1" 200 -
+2024-12-09 00:08:30,334 - 127.0.0.1 - - [09/Dec/2024 00:08:30] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-09 00:08:31,943 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-09 00:08:32,058 -  * Restarting with stat
+2024-12-09 00:08:32,959 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1271032067744>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000127EF58AB00>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000127EF58AAC8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000127EF58AA90>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000127EF6A3160>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:08:32,959 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1271032123464>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x00000127EF6A3F28>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x00000127EF6A34A8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000127EF6A3B00>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000127EF6A3FD0>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:08:32,959 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1271032123856>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000127EF6B10F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000127EF6B1080>], 'actions': [<vakt.rules.operator.Eq object at 0x00000127EF6B10B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000127EF6B1198>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:08:32,978 -  * Debugger is active!
+2024-12-09 00:08:32,984 -  * Debugger PIN: 589-825-161
+2024-12-09 00:08:34,067 - 127.0.0.1 - - [09/Dec/2024 00:08:34] "GET / HTTP/1.1" 200 -
+2024-12-09 00:08:34,104 - 127.0.0.1 - - [09/Dec/2024 00:08:34] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-09 00:08:37,141 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-09T00:08:37Z | Session ID: 5e24f509cfc96e7d3491474e5ca8a400 | Status: successo 
+2024-12-09 00:08:37,157 - 127.0.0.1 - - [09/Dec/2024 00:08:37] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-09 00:08:37,177 - 127.0.0.1 - - [09/Dec/2024 00:08:37] "GET /dashboard HTTP/1.1" 200 -
+2024-12-09 00:08:37,235 - 127.0.0.1 - - [09/Dec/2024 00:08:37] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-09 00:08:39,210 - 127.0.0.1 - - [09/Dec/2024 00:08:39] "GET /account-settings HTTP/1.1" 200 -
+2024-12-09 00:08:41,905 - No potential policies were found
+2024-12-09 00:08:41,905 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1271034016208>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '00:08:41'}}
+2024-12-09 00:08:41,906 - 127.0.0.1 - - [09/Dec/2024 00:08:41] "[32mPOST /account-settings HTTP/1.1[0m" 302 -
+2024-12-09 00:08:41,919 - 127.0.0.1 - - [09/Dec/2024 00:08:41] "GET /dashboard HTTP/1.1" 200 -
+2024-12-09 00:08:41,974 - 127.0.0.1 - - [09/Dec/2024 00:08:41] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-09 00:08:45,425 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-09T00:08:45Z | Session ID: 5e24f509cfc96e7d3491474e5ca8a400 | Status: successo 
+2024-12-09 00:08:45,425 - 127.0.0.1 - - [09/Dec/2024 00:08:45] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-09 00:08:45,439 - 127.0.0.1 - - [09/Dec/2024 00:08:45] "GET / HTTP/1.1" 200 -
+2024-12-09 00:08:45,488 - 127.0.0.1 - - [09/Dec/2024 00:08:45] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-09 00:12:16,850 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2200884037056>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002006ED7A9B0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002006ED7A940>], 'actions': [<vakt.rules.operator.Eq object at 0x000002006ED7A908>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002006EE94080>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:12:16,850 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2200884039464>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000002006EE94E48>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000002006EE943C8>], 'actions': [<vakt.rules.operator.Eq object at 0x000002006EE94A20>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002006EE94EF0>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:12:16,850 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2200884093168>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002006EE94FD0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002006EE94F60>], 'actions': [<vakt.rules.operator.Eq object at 0x000002006EE94F98>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002006EEA20B8>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:12:17,729 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-09 00:12:17,731 - [33mPress CTRL+C to quit[0m
+2024-12-09 00:12:17,733 -  * Restarting with stat
+2024-12-09 00:12:24,535 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1806936389000>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001A4B5BB99B0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001A4B5BB9978>], 'actions': [<vakt.rules.operator.Eq object at 0x000001A4B5BB9940>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001A4B5CD3048>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:12:24,535 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1806936391408>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001A4B5CD3E10>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001A4B5CD3390>], 'actions': [<vakt.rules.operator.Eq object at 0x000001A4B5CD39E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001A4B5CD3EB8>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:12:24,535 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1806936445112>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001A4B5CD3F98>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001A4B5CD3F28>], 'actions': [<vakt.rules.operator.Eq object at 0x000001A4B5CD3F60>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001A4B5CE1080>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:12:25,420 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-09 00:12:25,420 - [33mPress CTRL+C to quit[0m
+2024-12-09 00:12:25,421 -  * Restarting with stat
+2024-12-09 00:12:26,313 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2237744887344>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000020903EBAA58>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000020903EBAA20>], 'actions': [<vakt.rules.operator.Eq object at 0x0000020903EBA9E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000020903FD30F0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:12:26,313 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2237744889752>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000020903FD3EB8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000020903FD3438>], 'actions': [<vakt.rules.operator.Eq object at 0x0000020903FD3A90>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000020903FD3F60>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:12:26,313 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2237744943456>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000020903FE1080>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000020903FE1048>], 'actions': [<vakt.rules.operator.Eq object at 0x0000020903FD3FD0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000020903FE1128>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:12:26,330 -  * Debugger is active!
+2024-12-09 00:12:26,335 -  * Debugger PIN: 589-825-161
+2024-12-09 00:12:26,362 - 127.0.0.1 - - [09/Dec/2024 00:12:26] "GET / HTTP/1.1" 200 -
+2024-12-09 00:12:26,403 - 127.0.0.1 - - [09/Dec/2024 00:12:26] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-09 00:12:29,628 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-09T00:12:29Z | Session ID: 254a75f662e1343a9dfc59eb059ddd93 | Status: successo 
+2024-12-09 00:12:29,644 - 127.0.0.1 - - [09/Dec/2024 00:12:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-09 00:12:29,665 - 127.0.0.1 - - [09/Dec/2024 00:12:29] "GET /dashboard HTTP/1.1" 200 -
+2024-12-09 00:12:29,720 - 127.0.0.1 - - [09/Dec/2024 00:12:29] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-09 00:12:31,356 - 127.0.0.1 - - [09/Dec/2024 00:12:31] "GET /account-settings HTTP/1.1" 200 -
+2024-12-09 00:12:33,401 - No potential policies were found
+2024-12-09 00:12:33,401 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2237747272784>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '00:12:33'}}
+2024-12-09 00:12:33,402 - 127.0.0.1 - - [09/Dec/2024 00:12:33] "[32mPOST /account-settings HTTP/1.1[0m" 302 -
+2024-12-09 00:12:33,417 - 127.0.0.1 - - [09/Dec/2024 00:12:33] "GET /dashboard HTTP/1.1" 200 -
+2024-12-09 00:12:33,481 - 127.0.0.1 - - [09/Dec/2024 00:12:33] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-09 00:13:05,847 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-09 00:13:05,909 -  * Restarting with stat
+2024-12-09 00:13:06,684 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1719944951344>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000019074A3BA90>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000019074A3BA58>], 'actions': [<vakt.rules.operator.Eq object at 0x0000019074A3BA20>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000019074B530F0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:13:06,684 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1719944953752>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000019074B53EB8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000019074B53438>], 'actions': [<vakt.rules.operator.Eq object at 0x0000019074B53A90>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000019074B53F60>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:13:06,684 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1719945007456>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000019074B61080>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000019074B61048>], 'actions': [<vakt.rules.operator.Eq object at 0x0000019074B53FD0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000019074B61128>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:13:06,702 -  * Debugger is active!
+2024-12-09 00:13:06,707 -  * Debugger PIN: 589-825-161
+2024-12-09 00:13:37,393 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1231379506904>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000011EB3DE8AC8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000011EB3DE8A90>], 'actions': [<vakt.rules.operator.Eq object at 0x0000011EB3DE8A58>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000011EB3F02198>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:13:37,394 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1231379566720>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000011EB3F02F60>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000011EB3F024E0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000011EB3F02B38>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000011EB3F11048>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:13:37,394 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1231379567112>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000011EB3F11128>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000011EB3F110B8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000011EB3F110F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000011EB3F111D0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:13:38,284 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-09 00:13:38,285 - [33mPress CTRL+C to quit[0m
+2024-12-09 00:13:38,286 -  * Restarting with stat
+2024-12-09 00:13:39,127 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3011938494000>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002BD4574AA58>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002BD4574AA20>], 'actions': [<vakt.rules.operator.Eq object at 0x000002BD4574A9E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002BD458620F0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-09 00:13:39,128 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3011938496408>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000002BD45862EB8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000002BD45862438>], 'actions': [<vakt.rules.operator.Eq object at 0x000002BD45862A90>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002BD45862F60>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-09 00:13:39,128 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3011938554208>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002BD45871080>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002BD45871048>], 'actions': [<vakt.rules.operator.Eq object at 0x000002BD45862FD0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002BD45871128>}, 'description': 'Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59'}
+2024-12-09 00:13:39,147 -  * Debugger is active!
+2024-12-09 00:13:39,153 -  * Debugger PIN: 589-825-161
+2024-12-09 00:13:39,177 - 127.0.0.1 - - [09/Dec/2024 00:13:39] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2024-12-09 00:13:39,196 - 127.0.0.1 - - [09/Dec/2024 00:13:39] "GET / HTTP/1.1" 200 -
+2024-12-09 00:13:39,227 - 127.0.0.1 - - [09/Dec/2024 00:13:39] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-09 00:13:39,786 - 127.0.0.1 - - [09/Dec/2024 00:13:39] "GET / HTTP/1.1" 200 -
+2024-12-09 00:13:39,822 - 127.0.0.1 - - [09/Dec/2024 00:13:39] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-09 00:13:42,325 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-09T00:13:42Z | Session ID: cb9a10cdf96eb29e42dd4a9a1e9ad55f | Status: successo 
+2024-12-09 00:13:42,340 - 127.0.0.1 - - [09/Dec/2024 00:13:42] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-09 00:13:42,364 - 127.0.0.1 - - [09/Dec/2024 00:13:42] "GET /dashboard HTTP/1.1" 200 -
+2024-12-09 00:13:42,415 - 127.0.0.1 - - [09/Dec/2024 00:13:42] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-09 00:13:44,553 - 127.0.0.1 - - [09/Dec/2024 00:13:44] "GET /account-settings HTTP/1.1" 200 -
+2024-12-09 00:13:46,290 - No potential policies were found
+2024-12-09 00:13:46,290 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 3011940741472>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '00:13:46'}}
+2024-12-09 00:13:46,290 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-09T00:13:46Z | Session ID: cb9a10cdf96eb29e42dd4a9a1e9ad55f | Status: fallimento 
+2024-12-09 00:13:46,291 - 127.0.0.1 - - [09/Dec/2024 00:13:46] "[32mPOST /account-settings HTTP/1.1[0m" 302 -
+2024-12-09 00:13:46,304 - 127.0.0.1 - - [09/Dec/2024 00:13:46] "GET /dashboard HTTP/1.1" 200 -
+2024-12-09 00:13:46,363 - 127.0.0.1 - - [09/Dec/2024 00:13:46] "GET /static/dashboard.css HTTP/1.1" 200 -

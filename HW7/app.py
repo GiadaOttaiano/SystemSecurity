@@ -3,12 +3,12 @@ import requests
 import secrets
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime, timedelta
-import vakt
-from vakt.rules import Eq, StartsWith, And, Greater, Less, Any
+import logging
 from form import LoginForm, ThemeForm, NoteForm, DeleteNoteForm, NotificationForm
 from flask_wtf.csrf import CSRFProtect
 from markupsafe import escape  
 import logging_manager
+import XACML.vakt_manager
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(32)
@@ -25,21 +25,14 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SESSION_COOKIE_SECURE'] = True
 db = SQLAlchemy(app)
 
-# Definisci la policy in VAKT
-policy = vakt.Policy(
-    123456,
-    actions=[Eq('modify')],
-    resources=[StartsWith('note')],
-    subjects=[{'username': Any()}],  # L'utente può essere qualsiasi
-    effect=vakt.ALLOW_ACCESS,
-    context={'current_time': And(Greater('09:00:00'), Less('18:00:00'))},
-    description="""Consenti la modifica delle note solo tra le 9:00 e le 18:00"""
-)
+logging.basicConfig(level=logging.DEBUG)
 
 # Memorizza la policy in VAKT
-storage = vakt.MemoryStorage()
-storage.add(policy)
-guard = vakt.Guard(storage, vakt.RulesChecker())
+storage = XACML.vakt_manager.vakt.MemoryStorage()
+storage.add(XACML.vakt_manager.policy_note)
+storage.add(XACML.vakt_manager.policy_theme_non_manager_deny)
+storage.add(XACML.vakt_manager.policy_theme)
+guard = XACML.vakt_manager.vakt.Guard(storage, XACML.vakt_manager.vakt.RulesChecker())
 
 # Modelli di database
 class Note(db.Model):
@@ -111,6 +104,7 @@ def check_session_timeout():
 
         # Calcola la differenza temporale
         if datetime.now() - last_activity > SESSION_TIMEOUT:
+            logging.info(f"Sessione scaduta per inattività. Utente: {session.get('username')}, session_id: {session.get('session_id')}.")
             flash("La tua sessione è scaduta per inattività.", "error")
             return logout()  # Termina la sessione ed effettua il logout
         
@@ -132,6 +126,8 @@ def index():
 def login():
     username = request.form.get("username")
     password = request.form.get("password")
+    
+    timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
 
     url = f"{VAULT_ADDR}/v1/auth/ldap/login/{username}"
     payload = {"password": password}
@@ -143,13 +139,13 @@ def login():
         session["vault_token"] = data["auth"]["client_token"]
         session["username"] = username
         session["last_activity"] = datetime.now()
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         
         session_id = secrets.token_hex(16)
 
         # Verifica il numero di sessioni attive
         active_sessions = ActiveSession.query.filter_by(user_id=username).count()
         if active_sessions >= MAX_SESSIONS:
+            logging.warning(f"Limite di sessioni raggiunto per l'utente {username}. Accesso negato.")
             logging_manager.log_login(username, timestamp, "sistema", None, False)
             flash("Limite di sessioni attive raggiunto. Disconnettiti da un'altra sessione.", "error")
             return redirect("/")
@@ -177,7 +173,7 @@ def login():
 
         return redirect("/dashboard")
     except requests.exceptions.RequestException:
-        logging_manager.log_login(username, False)
+        logging_manager.log_login(username, timestamp, "sistema", session["session_id"], False)
         flash("Credenziali non valide. Riprova.", "error")
         return redirect("/")
     
@@ -224,6 +220,24 @@ def account_settings():
     username = session["username"]
     role = session.get("role", "standard")
     theme = session.get("theme", "light")
+    
+    timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    current_time = datetime.now().strftime("%H:%M:%S")  # Ottieni l'orario corrente
+
+    # Verifica solo se si tenta di modificare il tema
+    if request.method == "POST" and 'theme' in request.form:
+        inquiry = XACML.vakt_manager.vakt.Inquiry(
+            action='modify',
+            resource='theme',
+            subject={'role': session['role']},  # Solo per il manager
+            context={'current_time': current_time}
+        )
+
+        if not guard.is_allowed(inquiry):  # Se la policy non consente, blocca l'accesso
+            logging_manager.theme(username, timestamp, "account settings", session["session_id"], False)
+            flash("Non hai i permessi per modificare il tema in questo momento.", "error")
+            return redirect("/dashboard")  # Reindirizza alla dashboard se la modifica non è consentita
 
     form = ThemeForm()
 
@@ -243,8 +257,11 @@ def account_settings():
             response.raise_for_status()
 
             session["theme"] = new_theme  # Aggiorna il tema nella sessione
+            
+            logging_manager.theme(username, timestamp, "account settings", session["session_id"], True)
             flash("Tema modificato con successo!", "success")
         except requests.exceptions.RequestException as e:
+            logging_manager.theme(username, timestamp, "sistema", session["session_id"], False)
             flash(f"Errore nell'aggiornamento del tema: {e}", "error")
 
     return render_template("account_settings.html", username=username, role=role, theme=theme, form=form)
@@ -322,14 +339,12 @@ def notes():
     theme = session.get("theme", "light")
     form = DeleteNoteForm()
 
-    if role == "admin":
+    if role == "admin" or role == "manager":
         all_notes = Note.query.all()
     else:
         all_notes = Note.query.filter_by(username=username).all()
 
     return render_template("notes.html", notes=all_notes, role=role, theme=theme, form=form)
-
-from markupsafe import escape  # Importa il modulo per fare escape dei dati
 
 @app.route("/add-note", methods=["GET", "POST"])
 def add_note():
@@ -338,11 +353,12 @@ def add_note():
 
     role = session.get("role", "standard")
     theme = session.get("theme", "light")
+    timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
     form = NoteForm()  # Usa il NoteForm per gestire il modulo
     
     if request.method == "POST":
         current_time = datetime.now().strftime("%H:%M:%S")
-        inquiry = vakt.Inquiry(
+        inquiry = XACML.vakt_manager.vakt.Inquiry(
             action='modify',
             resource='note',
             subject={'username': session['username']},
@@ -361,8 +377,6 @@ def add_note():
                 db.session.add(new_note)
                 db.session.commit()
                 
-                timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                
                 # Log dell'azione
                 logging_manager.log_audit(username, 'creazione', 'note', timestamp, session['session_id'], 'successo')
 
@@ -372,7 +386,8 @@ def add_note():
                 flash("Nota aggiunta con successo!", "success")
                 return redirect("/notes")                
         else:
-            logging_manager.log_audit(username, 'creazione', 'note', 'fallimento')
+            logging.warning(f"Accesso negato: policy restrictiva. Utente: {session['username']}, Azione: {inquiry.action}, Risorsa: {inquiry.resource}.")
+            logging_manager.log_audit(session["username"], 'creazione', 'note', timestamp, session['session_id'], 'fallimento')
             flash("Non hai i permessi per aggiungere una nota in questo momento.", "error")
 
     return render_template("add_note.html", form=form, role=role, theme=theme)
@@ -387,6 +402,8 @@ def edit_note(id):
     username = session["username"]
     role = session.get("role", "standard")
     theme = session.get("theme", "light")
+    
+    timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
 
     # Verifica se l'utente ha il permesso di modificare la nota
     if note.username != username and role != "admin":
@@ -395,7 +412,7 @@ def edit_note(id):
 
     if request.method == "POST":
         current_time = datetime.now().strftime("%H:%M:%S")
-        inquiry = vakt.Inquiry(
+        inquiry = XACML.vakt_manager.vakt.Inquiry(
             action='modify',
             resource='note',
             subject={'username': session['username']},
@@ -409,7 +426,7 @@ def edit_note(id):
                 db.session.commit()  # Salva i cambiamenti nel DB
                 
                 # Log dell'azione
-                logging_manager.log_audit(username, 'modifica', 'note', current_time, session['session_id'], 'successo')
+                logging_manager.log_audit(username, 'modifica', 'note', timestamp, session['session_id'], 'successo')
 
                 # Notifica dell'aggiornamento
                 create_notification(note.username, f"Hai modificato una tua nota: '{old_content}' in '{note.content}'")
@@ -417,7 +434,8 @@ def edit_note(id):
                 flash("Nota modificata con successo!", "success")
                 return redirect("/notes")
         else:
-            logging_manager.log_audit(username, 'modifica', 'note', 'fallimento')
+            logging.warning(f"Accesso negato: policy restrittiva. Utente: {session['username']}, Azione: {inquiry.action}, Risorsa: {inquiry.resource}.")
+            logging_manager.log_audit(session["username"], 'modifica', 'note', timestamp, session['session_id'],'fallimento')
             flash("Non hai i permessi per modificare questa nota in questo momento.", "error")
 
     return render_template("edit_note.html", form=form, note=note, theme=theme)
@@ -430,6 +448,7 @@ def delete_note(id):
     note = Note.query.get_or_404(id)
     username = session["username"]
     role = session.get("role", "standard")
+    timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
 
     if note.username != username and role != "admin":
         flash("Non hai i permessi per eliminare questa nota.", "error")
@@ -440,7 +459,7 @@ def delete_note(id):
 
     if form.validate_on_submit():  # Gestisce il CSRF automaticamente
         current_time = datetime.now().strftime("%H:%M:%S")
-        inquiry = vakt.Inquiry(
+        inquiry = XACML.vakt_manager.vakt.Inquiry(
             action='modify',
             resource='note',
             subject={'username': session['username']},
@@ -461,10 +480,11 @@ def delete_note(id):
             flash("Nota eliminata con successo!", "success")
             return redirect("/notes")
         else:
+            logging.warning(f"Accesso negato: policy restrittiva. Utente: {session['username']}, Azione: {inquiry.action}, Risorsa: {inquiry.resource}.")
             flash("Non hai i permessi per eliminare questa nota in questo momento.", "error")
             return redirect("/notes")
     else:
-        logging_manager.log_audit(username, 'eliminazione', 'note', 'fallimento')
+        logging_manager.log_audit(session["username"], 'eliminazione', 'note', timestamp, session['session_id'], 'fallimento')
         flash("Errore nel tentativo di eliminare la nota.", "error")
         return redirect("/notes")
 
@@ -475,7 +495,7 @@ def logout():
         ActiveSession.query.filter_by(session_id=session_id).delete()
         db.session.commit()
         
-    current_time = datetime.now().strftime("%H:%M:%S")
+    current_time = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
     logging_manager.logout(session["username"], current_time, "sistema", session["session_id"])
 
     session.clear()

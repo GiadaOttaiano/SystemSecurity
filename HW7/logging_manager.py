@@ -30,3 +30,9 @@ def log_login(username, timestamp, resource, session_id, success):
 
 def logout(username, timestamp, resource, session_id):
     log_audit(username, 'logout', resource, timestamp, session_id, 'successo')
+    
+def theme(username, timestamp, resource, session_id, success):
+    status = 'successo' if success else 'fallimento'
+    
+    log_audit(username, 'theme-change', resource, timestamp, session_id, status)
+
