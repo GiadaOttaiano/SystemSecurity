@@ -173,7 +173,6 @@ def login():
 
         return redirect("/dashboard")
     except requests.exceptions.RequestException:
-        logging_manager.log_login(username, timestamp, "sistema", session["session_id"], False)
         flash("Credenziali non valide. Riprova.", "error")
         return redirect("/")
     

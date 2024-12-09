@@ -18,7 +18,7 @@ policy_theme_non_manager_deny = vakt.Policy(
     resources=[StartsWith('theme')],
     subjects=[{'role': Not(Eq('manager'))}],  # Solo utenti non manager
     effect=vakt.DENY_ACCESS,
-    context={'current_time': And(Less('15:00:00'), Greater('16:00:00'))},  # Fuori dall'orario consentito
+    context={'current_time': And(Less('08:00:00'), Greater('16:00:00'))},  # Orario consentito
     description="""Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"""
 )
 
@@ -28,6 +28,6 @@ policy_theme = vakt.Policy(
     resources=[StartsWith('theme')],
     subjects=[{'role': Eq('manager')}],  # Solo utenti con ruolo manager
     effect=vakt.ALLOW_ACCESS,
-    context={'current_time': And(Greater('15:00:00'), Less('16:00:00'))},  # Orario tra le 18:00 e le 23:59
-    description="""Permette ai manager di modificare il tema solo tra le 18:00 e le 23:59"""
+    context={'current_time': And(Greater('08:00:00'), Less('17:00:00'))},  
+    description="""Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00"""
 )

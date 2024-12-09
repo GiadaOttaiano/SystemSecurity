@@ -28,10 +28,10 @@
             {{ form.hidden_tag() }}
 
             <label for="username">Username:</label>
-            {{ form.username() }}  <!-- Campo username del modulo FlaskForm --><br>
+            {{ form.username(class="input-field", placeholder="Inserisci username") }}  <!-- Campo username del modulo FlaskForm -->
 
             <label for="password">Password:</label>
-            {{ form.password() }}  <!-- Campo password del modulo FlaskForm --><br>
+            {{ form.password(class="input-field", placeholder="Inserisci password") }}  <!-- Campo password del modulo FlaskForm -->
 
             <input type="submit" value="Login">
         </form>
