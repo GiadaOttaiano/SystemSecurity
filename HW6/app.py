@@ -119,7 +119,7 @@ def get_sub_from_token(token):
 
 @app.route("/callback")
 def callback():
-    code = request.args.get("code")
+    code = request.args.get("code")     # Authorization Code fornito da Keycloak
     if not code:
         flash("Codice di autorizzazione non ricevuto.", "error")
         return redirect("/")
