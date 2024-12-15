@@ -6765,3 +6765,999 @@ AttributeError: 'tuple' object has no attribute 'satisfied'
 2024-12-09 12:17:28,805 - 127.0.0.1 - - [09/Dec/2024 12:17:28] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
 2024-12-09 12:17:39,234 - 127.0.0.1 - - [09/Dec/2024 12:17:39] "GET / HTTP/1.1" 200 -
 2024-12-09 12:17:39,268 - 127.0.0.1 - - [09/Dec/2024 12:17:39] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-12 11:53:57,018 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1142715786912>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000010A0F198AC8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000010A0F198A90>], 'actions': [<vakt.rules.operator.Eq object at 0x0000010A0F198A58>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000010A0F2B2160>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-12 11:53:57,018 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1142715842632>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000010A0F2B2F28>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000010A0F2B24A8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000010A0F2B2B00>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000010A0F2B2FD0>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-12 11:53:57,018 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1142715843024>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000010A0F2C00F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000010A0F2C0080>], 'actions': [<vakt.rules.operator.Eq object at 0x0000010A0F2C00B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000010A0F2C0198>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-12 11:53:57,084 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-12 11:53:57,084 - [33mPress CTRL+C to quit[0m
+2024-12-12 11:53:57,088 -  * Restarting with stat
+2024-12-12 11:53:58,346 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2299893200264>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002177C3FB978>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002177C3FB940>], 'actions': [<vakt.rules.operator.Eq object at 0x000002177C3FB908>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002177C513048>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-12 11:53:58,346 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2299893202672>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000002177C513E10>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000002177C513390>], 'actions': [<vakt.rules.operator.Eq object at 0x000002177C5139E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002177C513EB8>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-12 11:53:58,346 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2299893260472>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002177C513F98>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002177C513F28>], 'actions': [<vakt.rules.operator.Eq object at 0x000002177C513F60>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002177C522080>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-12 11:53:58,374 -  * Debugger is active!
+2024-12-12 11:53:58,389 -  * Debugger PIN: 589-825-161
+2024-12-12 11:54:12,161 - 127.0.0.1 - - [12/Dec/2024 11:54:12] "GET / HTTP/1.1" 200 -
+2024-12-12 11:54:12,243 - 127.0.0.1 - - [12/Dec/2024 11:54:12] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-12 11:54:12,428 - 127.0.0.1 - - [12/Dec/2024 11:54:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-13 11:30:10,075 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2645632555664>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000267FBEBAC50>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000267FBEBAC18>], 'actions': [<vakt.rules.operator.Eq object at 0x00000267FBEBABE0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000267FBFD1550>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:30:10,076 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2645632603192>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x00000267FBFDD358>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x00000267FBFD1898>], 'actions': [<vakt.rules.operator.Eq object at 0x00000267FBFD1EF0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000267FBFDD400>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-13 11:30:10,076 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2645632603584>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000267FBFDD4E0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000267FBFDD470>], 'actions': [<vakt.rules.operator.Eq object at 0x00000267FBFDD4A8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000267FBFDD588>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:30:10,997 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-13 11:30:10,997 - [33mPress CTRL+C to quit[0m
+2024-12-13 11:30:10,999 -  * Restarting with stat
+2024-12-13 11:30:11,875 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2624604675040>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000263168FBDA0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000263168FBD68>], 'actions': [<vakt.rules.operator.Eq object at 0x00000263168FBD30>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000026316A116A0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:30:11,875 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2624604722568>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000026316A1D4A8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000026316A1D080>], 'actions': [<vakt.rules.operator.Eq object at 0x0000026316A119E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000026316A1D550>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-13 11:30:11,876 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2624604722960>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000026316A1D630>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000026316A1D5C0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000026316A1D5F8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000026316A1D6D8>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:30:11,896 -  * Debugger is active!
+2024-12-13 11:30:11,903 -  * Debugger PIN: 589-825-161
+2024-12-13 11:30:14,019 - 127.0.0.1 - - [13/Dec/2024 11:30:14] "GET / HTTP/1.1" 200 -
+2024-12-13 11:30:14,092 - 127.0.0.1 - - [13/Dec/2024 11:30:14] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:30:14,209 - 127.0.0.1 - - [13/Dec/2024 11:30:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-13 11:30:19,829 - User: janedoe | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:30:19Z | Session ID: f00d8ca9255f244e06c08bcc10ad6052 | Status: successo 
+2024-12-13 11:30:19,896 - 127.0.0.1 - - [13/Dec/2024 11:30:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:30:19,914 - 127.0.0.1 - - [13/Dec/2024 11:30:19] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:30:19,961 - 127.0.0.1 - - [13/Dec/2024 11:30:19] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-13 11:30:22,555 - 127.0.0.1 - - [13/Dec/2024 11:30:22] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:30:24,233 - No potential policies were found
+2024-12-13 11:30:24,234 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2624609001200>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'standard'}, 'context': {'current_time': '11:30:24'}}
+2024-12-13 11:30:24,234 - User: janedoe | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:30:24Z | Session ID: f00d8ca9255f244e06c08bcc10ad6052 | Status: fallimento 
+2024-12-13 11:30:24,234 - 127.0.0.1 - - [13/Dec/2024 11:30:24] "[32mPOST /account-settings HTTP/1.1[0m" 302 -
+2024-12-13 11:30:24,248 - 127.0.0.1 - - [13/Dec/2024 11:30:24] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:30:24,308 - 127.0.0.1 - - [13/Dec/2024 11:30:24] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:30:26,835 - 127.0.0.1 - - [13/Dec/2024 11:30:26] "GET /notes HTTP/1.1" 200 -
+2024-12-13 11:30:26,886 - 127.0.0.1 - - [13/Dec/2024 11:30:26] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-13 11:30:28,016 - 127.0.0.1 - - [13/Dec/2024 11:30:28] "GET /add-note HTTP/1.1" 200 -
+2024-12-13 11:30:29,417 - All matching policies have allow effect
+2024-12-13 11:30:29,417 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2624609000416>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'janedoe'}, 'context': {'current_time': '11:30:29'}}
+2024-12-13 11:30:29,423 - User: janedoe | Action: creazione | Resource: note | Timestamp: 2024-12-13T11:30:29Z | Session ID: f00d8ca9255f244e06c08bcc10ad6052 | Status: successo 
+2024-12-13 11:30:29,435 - 127.0.0.1 - - [13/Dec/2024 11:30:29] "[32mPOST /add-note HTTP/1.1[0m" 302 -
+2024-12-13 11:30:29,451 - 127.0.0.1 - - [13/Dec/2024 11:30:29] "GET /notes HTTP/1.1" 200 -
+2024-12-13 11:30:29,507 - 127.0.0.1 - - [13/Dec/2024 11:30:29] "[36mGET /static/notes.css HTTP/1.1[0m" 304 -
+2024-12-13 11:30:32,552 - 127.0.0.1 - - [13/Dec/2024 11:30:32] "GET /edit-note/1 HTTP/1.1" 200 -
+2024-12-13 11:30:35,138 - All matching policies have allow effect
+2024-12-13 11:30:35,138 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2624606515440>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'janedoe'}, 'context': {'current_time': '11:30:35'}}
+2024-12-13 11:30:35,142 - User: janedoe | Action: modifica | Resource: note | Timestamp: 2024-12-13T11:30:35Z | Session ID: f00d8ca9255f244e06c08bcc10ad6052 | Status: successo 
+2024-12-13 11:30:35,150 - 127.0.0.1 - - [13/Dec/2024 11:30:35] "[32mPOST /edit-note/1 HTTP/1.1[0m" 302 -
+2024-12-13 11:30:35,164 - 127.0.0.1 - - [13/Dec/2024 11:30:35] "GET /notes HTTP/1.1" 200 -
+2024-12-13 11:30:35,223 - 127.0.0.1 - - [13/Dec/2024 11:30:35] "[36mGET /static/notes.css HTTP/1.1[0m" 304 -
+2024-12-13 11:30:36,053 - All matching policies have allow effect
+2024-12-13 11:30:36,053 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2624609448680>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'janedoe'}, 'context': {'current_time': '11:30:36'}}
+2024-12-13 11:30:36,058 - User: janedoe | Action: eliminazione | Resource: note | Timestamp: 11:30:36 | Session ID: f00d8ca9255f244e06c08bcc10ad6052 | Status: successo 
+2024-12-13 11:30:36,069 - 127.0.0.1 - - [13/Dec/2024 11:30:36] "[32mPOST /delete-note/1 HTTP/1.1[0m" 302 -
+2024-12-13 11:30:36,083 - 127.0.0.1 - - [13/Dec/2024 11:30:36] "GET /notes HTTP/1.1" 200 -
+2024-12-13 11:30:36,125 - 127.0.0.1 - - [13/Dec/2024 11:30:36] "[36mGET /static/notes.css HTTP/1.1[0m" 304 -
+2024-12-13 11:30:36,970 - 127.0.0.1 - - [13/Dec/2024 11:30:36] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:30:37,019 - 127.0.0.1 - - [13/Dec/2024 11:30:37] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:30:37,624 - 127.0.0.1 - - [13/Dec/2024 11:30:37] "GET /notifications HTTP/1.1" 200 -
+2024-12-13 11:30:37,685 - 127.0.0.1 - - [13/Dec/2024 11:30:37] "GET /static/notifications.css HTTP/1.1" 200 -
+2024-12-13 11:30:38,816 - 127.0.0.1 - - [13/Dec/2024 11:30:38] "[32mPOST /notifications/delete/4 HTTP/1.1[0m" 302 -
+2024-12-13 11:30:38,835 - 127.0.0.1 - - [13/Dec/2024 11:30:38] "GET /notifications HTTP/1.1" 200 -
+2024-12-13 11:30:38,884 - 127.0.0.1 - - [13/Dec/2024 11:30:38] "[36mGET /static/notifications.css HTTP/1.1[0m" 304 -
+2024-12-13 11:30:39,403 - 127.0.0.1 - - [13/Dec/2024 11:30:39] "[32mPOST /notifications/clear-all HTTP/1.1[0m" 302 -
+2024-12-13 11:30:39,420 - 127.0.0.1 - - [13/Dec/2024 11:30:39] "GET /notifications HTTP/1.1" 200 -
+2024-12-13 11:30:39,465 - 127.0.0.1 - - [13/Dec/2024 11:30:39] "[36mGET /static/notifications.css HTTP/1.1[0m" 304 -
+2024-12-13 11:30:40,372 - 127.0.0.1 - - [13/Dec/2024 11:30:40] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:30:40,423 - 127.0.0.1 - - [13/Dec/2024 11:30:40] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:30:41,151 - 127.0.0.1 - - [13/Dec/2024 11:30:41] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:31:36,790 - 127.0.0.1 - - [13/Dec/2024 11:31:36] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:31:36,839 - 127.0.0.1 - - [13/Dec/2024 11:31:36] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:31:37,937 - User: janedoe | Action: logout | Resource: sistema | Timestamp: 2024-12-13T11:31:37Z | Session ID: f00d8ca9255f244e06c08bcc10ad6052 | Status: successo 
+2024-12-13 11:31:37,938 - 127.0.0.1 - - [13/Dec/2024 11:31:37] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 11:31:37,953 - 127.0.0.1 - - [13/Dec/2024 11:31:37] "GET / HTTP/1.1" 200 -
+2024-12-13 11:31:38,011 - 127.0.0.1 - - [13/Dec/2024 11:31:38] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:31:42,671 - User: giadaott | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:31:42Z | Session ID: 4f00e05c1121b062983439b87f5ecf98 | Status: successo 
+2024-12-13 11:31:42,713 - 127.0.0.1 - - [13/Dec/2024 11:31:42] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:31:42,725 - 127.0.0.1 - - [13/Dec/2024 11:31:42] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:31:42,777 - 127.0.0.1 - - [13/Dec/2024 11:31:42] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:31:43,758 - 127.0.0.1 - - [13/Dec/2024 11:31:43] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:31:45,931 - All matching policies have allow effect
+2024-12-13 11:31:45,931 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2624609183728>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '11:31:45'}}
+2024-12-13 11:31:45,985 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:31:45Z | Session ID: 4f00e05c1121b062983439b87f5ecf98 | Status: successo 
+2024-12-13 11:31:45,986 - 127.0.0.1 - - [13/Dec/2024 11:31:45] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:31:46,718 - All matching policies have allow effect
+2024-12-13 11:31:46,718 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2624609234112>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '11:31:46'}}
+2024-12-13 11:31:46,756 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:31:46Z | Session ID: 4f00e05c1121b062983439b87f5ecf98 | Status: successo 
+2024-12-13 11:31:46,758 - 127.0.0.1 - - [13/Dec/2024 11:31:46] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:31:49,362 - 127.0.0.1 - - [13/Dec/2024 11:31:49] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:31:49,404 - 127.0.0.1 - - [13/Dec/2024 11:31:49] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:32:55,944 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-13 11:32:56,012 -  * Restarting with stat
+2024-12-13 11:32:56,838 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1711025368088>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000018E60FDCDD8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000018E60FDCD68>], 'actions': [<vakt.rules.operator.Eq object at 0x0000018E60FDCD30>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000018E610F26D8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:32:56,838 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1711025419712>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000018E610FF4E0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000018E610FF0B8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000018E610F2A20>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000018E610FF588>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-13 11:32:56,838 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1711025420104>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000018E610FF668>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000018E610FF5F8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000018E610FF630>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000018E610FF710>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:32:56,859 -  * Debugger is active!
+2024-12-13 11:32:56,864 -  * Debugger PIN: 589-825-161
+2024-12-13 11:33:00,451 - 127.0.0.1 - - [13/Dec/2024 11:33:00] "[35m[1mGET /logout HTTP/1.1[0m" 500 -
+2024-12-13 11:33:00,534 - 127.0.0.1 - - [13/Dec/2024 11:33:00] "GET /logout?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-13 11:33:00,587 - 127.0.0.1 - - [13/Dec/2024 11:33:00] "GET /logout?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-13 11:33:13,304 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1872984939320>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001B41688ACC0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001B41688AC88>], 'actions': [<vakt.rules.operator.Eq object at 0x000001B41688AC50>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001B4169A15F8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:33:13,304 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1872984990888>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001B4169AE358>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001B4169A1940>], 'actions': [<vakt.rules.operator.Eq object at 0x000001B4169A1F98>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001B4169AE470>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-13 11:33:13,304 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1872984991280>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001B4169AE550>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001B4169AE4E0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001B4169AE518>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001B4169AE5F8>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:33:14,190 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-13 11:33:14,190 - [33mPress CTRL+C to quit[0m
+2024-12-13 11:33:14,192 -  * Restarting with stat
+2024-12-13 11:33:15,085 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2915699399704>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002A6DD28BDD8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002A6DD28BDA0>], 'actions': [<vakt.rules.operator.Eq object at 0x000002A6DD28BD68>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002A6DB6305F8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:33:15,085 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2915699451328>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000002A6DD3AE4E0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000002A6DD3AE0B8>], 'actions': [<vakt.rules.operator.Eq object at 0x000002A6DD3A18D0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002A6DD3AE588>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-13 11:33:15,085 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2915699451720>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002A6DD3AE668>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002A6DD3AE5F8>], 'actions': [<vakt.rules.operator.Eq object at 0x000002A6DD3AE630>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002A6DD3AE710>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:33:15,105 -  * Debugger is active!
+2024-12-13 11:33:15,111 -  * Debugger PIN: 589-825-161
+2024-12-13 11:33:15,135 - 127.0.0.1 - - [13/Dec/2024 11:33:15] "[35m[1mGET /logout HTTP/1.1[0m" 500 -
+2024-12-13 11:33:15,207 - 127.0.0.1 - - [13/Dec/2024 11:33:15] "[36mGET /logout?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-12-13 11:33:15,214 - 127.0.0.1 - - [13/Dec/2024 11:33:15] "[36mGET /logout?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-12-13 11:33:16,647 - 127.0.0.1 - - [13/Dec/2024 11:33:16] "[35m[1mGET /logout HTTP/1.1[0m" 500 -
+2024-12-13 11:33:16,705 - 127.0.0.1 - - [13/Dec/2024 11:33:16] "[36mGET /logout?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-12-13 11:33:16,712 - 127.0.0.1 - - [13/Dec/2024 11:33:16] "[36mGET /logout?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-12-13 11:33:16,745 - 127.0.0.1 - - [13/Dec/2024 11:33:16] "GET /logout?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-13 11:33:20,190 - 127.0.0.1 - - [13/Dec/2024 11:33:20] "GET / HTTP/1.1" 200 -
+2024-12-13 11:33:20,233 - 127.0.0.1 - - [13/Dec/2024 11:33:20] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:33:26,945 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:33:26Z | Session ID: a8b81579db37436cadd052a40c6259e6 | Status: successo 
+2024-12-13 11:33:26,992 - 127.0.0.1 - - [13/Dec/2024 11:33:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:33:27,014 - 127.0.0.1 - - [13/Dec/2024 11:33:27] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:33:27,066 - 127.0.0.1 - - [13/Dec/2024 11:33:27] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:33:30,620 - 127.0.0.1 - - [13/Dec/2024 11:33:30] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:33:32,146 - No potential policies were found
+2024-12-13 11:33:32,146 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2915704097984>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '11:33:32'}}
+2024-12-13 11:33:32,146 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:33:32Z | Session ID: a8b81579db37436cadd052a40c6259e6 | Status: fallimento 
+2024-12-13 11:33:32,147 - 127.0.0.1 - - [13/Dec/2024 11:33:32] "[32mPOST /account-settings HTTP/1.1[0m" 302 -
+2024-12-13 11:33:32,162 - 127.0.0.1 - - [13/Dec/2024 11:33:32] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:33:32,224 - 127.0.0.1 - - [13/Dec/2024 11:33:32] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:33:54,862 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-13T11:33:54Z | Session ID: a8b81579db37436cadd052a40c6259e6 | Status: successo 
+2024-12-13 11:33:54,862 - 127.0.0.1 - - [13/Dec/2024 11:33:54] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 11:33:54,876 - 127.0.0.1 - - [13/Dec/2024 11:33:54] "GET / HTTP/1.1" 200 -
+2024-12-13 11:33:54,939 - 127.0.0.1 - - [13/Dec/2024 11:33:54] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:35:46,303 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1912749697904>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001BD58B29D30>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001BD58B29CC0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001BD58B29C88>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001BD58C42630>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:35:46,304 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1912749745768>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001BD58C4E588>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001BD58C4E4E0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001BD58C4E518>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001BD58C4E630>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-13 11:35:46,304 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1912749746160>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001BD58C4E710>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001BD58C4E6A0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001BD58C4E6D8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001BD58C4E7B8>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:35:47,485 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-13 11:35:47,485 - [33mPress CTRL+C to quit[0m
+2024-12-13 11:35:47,486 -  * Restarting with stat
+2024-12-13 11:35:48,339 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2768669776864>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000284A182CD68>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000284A182CD30>], 'actions': [<vakt.rules.operator.Eq object at 0x00000284A182CCF8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000284A19416A0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:35:48,339 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2768669828880>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x00000284A194E630>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x00000284A194E588>], 'actions': [<vakt.rules.operator.Eq object at 0x00000284A194E5C0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000284A194E6D8>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-13 11:35:48,339 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2768669829272>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000284A194E7B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000284A194E748>], 'actions': [<vakt.rules.operator.Eq object at 0x00000284A194E780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000284A194E860>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:35:48,356 -  * Debugger is active!
+2024-12-13 11:35:48,362 -  * Debugger PIN: 589-825-161
+2024-12-13 11:35:49,440 - The CSRF session token is missing.
+2024-12-13 11:35:49,441 - 127.0.0.1 - - [13/Dec/2024 11:35:49] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2024-12-13 11:35:52,891 - The CSRF session token is missing.
+2024-12-13 11:35:52,891 - 127.0.0.1 - - [13/Dec/2024 11:35:52] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2024-12-13 11:35:54,777 - 127.0.0.1 - - [13/Dec/2024 11:35:54] "GET / HTTP/1.1" 200 -
+2024-12-13 11:35:54,823 - 127.0.0.1 - - [13/Dec/2024 11:35:54] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:35:58,673 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:35:58Z | Session ID: 8c089a3f222eb59dc8cfe01c21d4b876 | Status: successo 
+2024-12-13 11:35:58,686 - 127.0.0.1 - - [13/Dec/2024 11:35:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:35:58,708 - 127.0.0.1 - - [13/Dec/2024 11:35:58] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:35:58,777 - 127.0.0.1 - - [13/Dec/2024 11:35:58] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-13 11:36:00,720 - 127.0.0.1 - - [13/Dec/2024 11:36:00] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:36:03,344 - No potential policies were found
+2024-12-13 11:36:03,344 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2768674283984>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '11:36:03'}}
+2024-12-13 11:36:03,344 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:36:03Z | Session ID: 8c089a3f222eb59dc8cfe01c21d4b876 | Status: fallimento 
+2024-12-13 11:36:03,345 - 127.0.0.1 - - [13/Dec/2024 11:36:03] "[32mPOST /account-settings HTTP/1.1[0m" 302 -
+2024-12-13 11:36:03,360 - 127.0.0.1 - - [13/Dec/2024 11:36:03] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:36:03,409 - 127.0.0.1 - - [13/Dec/2024 11:36:03] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-13 11:37:36,707 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-13T11:37:36Z | Session ID: 8c089a3f222eb59dc8cfe01c21d4b876 | Status: successo 
+2024-12-13 11:37:36,708 - 127.0.0.1 - - [13/Dec/2024 11:37:36] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 11:37:36,722 - 127.0.0.1 - - [13/Dec/2024 11:37:36] "GET / HTTP/1.1" 200 -
+2024-12-13 11:37:36,772 - 127.0.0.1 - - [13/Dec/2024 11:37:36] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:37:42,420 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2068605971312>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001E1A274ACF8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E1A274AC88>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E1A274AC50>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E1A2862630>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:37:42,421 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2068606023328>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001E1A286F5C0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E1A286F518>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E1A286F550>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E1A286F668>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-13 11:37:42,421 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2068606023720>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001E1A286F748>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E1A286F6D8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E1A286F710>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E1A286F7F0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:37:43,298 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-13 11:37:43,298 - [33mPress CTRL+C to quit[0m
+2024-12-13 11:37:43,300 -  * Restarting with stat
+2024-12-13 11:37:44,143 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1874498362392>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001B470BDCDA0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001B470BDCD68>], 'actions': [<vakt.rules.operator.Eq object at 0x000001B470BDCD30>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001B470CF16D8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:37:44,143 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1874498414352>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001B470CFE630>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001B470CFE588>], 'actions': [<vakt.rules.operator.Eq object at 0x000001B470CFE5C0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001B470CFE6D8>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-13 11:37:44,143 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1874498414744>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001B470CFE7B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001B470CFE748>], 'actions': [<vakt.rules.operator.Eq object at 0x000001B470CFE780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001B470CFE860>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:37:44,161 -  * Debugger is active!
+2024-12-13 11:37:44,167 -  * Debugger PIN: 589-825-161
+2024-12-13 11:37:44,192 - 127.0.0.1 - - [13/Dec/2024 11:37:44] "GET / HTTP/1.1" 200 -
+2024-12-13 11:37:44,233 - 127.0.0.1 - - [13/Dec/2024 11:37:44] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:37:47,421 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:37:47Z | Session ID: 66b04595fa3e4ec63539b4f6471000eb | Status: successo 
+2024-12-13 11:37:47,436 - 127.0.0.1 - - [13/Dec/2024 11:37:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:37:47,453 - 127.0.0.1 - - [13/Dec/2024 11:37:47] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:37:47,507 - 127.0.0.1 - - [13/Dec/2024 11:37:47] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-13 11:37:50,962 - 127.0.0.1 - - [13/Dec/2024 11:37:50] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:37:53,465 - No potential policies were found
+2024-12-13 11:37:53,465 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1874502663864>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '11:37:53'}}
+2024-12-13 11:37:53,465 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:37:53Z | Session ID: 66b04595fa3e4ec63539b4f6471000eb | Status: fallimento 
+2024-12-13 11:37:53,465 - 127.0.0.1 - - [13/Dec/2024 11:37:53] "[32mPOST /account-settings HTTP/1.1[0m" 302 -
+2024-12-13 11:37:53,479 - 127.0.0.1 - - [13/Dec/2024 11:37:53] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:37:53,535 - 127.0.0.1 - - [13/Dec/2024 11:37:53] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-13 11:37:58,747 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-13T11:37:58Z | Session ID: 66b04595fa3e4ec63539b4f6471000eb | Status: successo 
+2024-12-13 11:37:58,748 - 127.0.0.1 - - [13/Dec/2024 11:37:58] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 11:37:58,761 - 127.0.0.1 - - [13/Dec/2024 11:37:58] "GET / HTTP/1.1" 200 -
+2024-12-13 11:37:58,819 - 127.0.0.1 - - [13/Dec/2024 11:37:58] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:39:24,997 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2494568602480>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000244CFCEAD30>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000244CFCEACF8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000244CFCEACC0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000244CFE01630>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:39:24,997 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2494568654496>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x00000244CFE0E5C0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x00000244CFE0E518>], 'actions': [<vakt.rules.operator.Eq object at 0x00000244CFE0E550>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000244CFE0E668>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-13 11:39:24,997 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2494568654888>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000244CFE0E748>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000244CFE0E6D8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000244CFE0E710>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000244CFE0E7F0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:39:25,882 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-13 11:39:25,882 - [33mPress CTRL+C to quit[0m
+2024-12-13 11:39:25,884 -  * Restarting with stat
+2024-12-13 11:39:26,826 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1830804003920>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001AA445ABDD8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001AA445ABDA0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001AA445ABD68>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001AA446C1710>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:39:26,826 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1830804051840>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001AA446CD6A0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001AA446CD5F8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001AA446CD630>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001AA446CD748>}, 'description': "Negare la modifica del tema agli utenti non manager fuori dall'orario consentito"}
+2024-12-13 11:39:26,827 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1830804052232>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001AA446CD828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001AA446CD7B8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001AA446CD7F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001AA446CD8D0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:39:26,847 -  * Debugger is active!
+2024-12-13 11:39:26,854 -  * Debugger PIN: 589-825-161
+2024-12-13 11:39:27,324 - 127.0.0.1 - - [13/Dec/2024 11:39:27] "GET / HTTP/1.1" 200 -
+2024-12-13 11:39:27,361 - 127.0.0.1 - - [13/Dec/2024 11:39:27] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:39:30,994 - User: giadaott | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:39:30Z | Session ID: 9095d46fbdd0fd49bac89c3dcdad639f | Status: successo 
+2024-12-13 11:39:31,007 - 127.0.0.1 - - [13/Dec/2024 11:39:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:39:31,026 - 127.0.0.1 - - [13/Dec/2024 11:39:31] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:39:31,079 - 127.0.0.1 - - [13/Dec/2024 11:39:31] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-13 11:39:32,129 - 127.0.0.1 - - [13/Dec/2024 11:39:32] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:39:33,567 - All matching policies have allow effect
+2024-12-13 11:39:33,567 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1830808308312>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '11:39:33'}}
+2024-12-13 11:39:33,615 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:39:33Z | Session ID: 9095d46fbdd0fd49bac89c3dcdad639f | Status: successo 
+2024-12-13 11:39:33,617 - 127.0.0.1 - - [13/Dec/2024 11:39:33] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:39:34,243 - All matching policies have allow effect
+2024-12-13 11:39:34,243 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1830808521360>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '11:39:34'}}
+2024-12-13 11:39:34,284 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:39:34Z | Session ID: 9095d46fbdd0fd49bac89c3dcdad639f | Status: successo 
+2024-12-13 11:39:34,285 - 127.0.0.1 - - [13/Dec/2024 11:39:34] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:39:35,130 - 127.0.0.1 - - [13/Dec/2024 11:39:35] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:39:35,171 - 127.0.0.1 - - [13/Dec/2024 11:39:35] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:39:36,293 - 127.0.0.1 - - [13/Dec/2024 11:39:36] "GET /notifications HTTP/1.1" 200 -
+2024-12-13 11:39:36,360 - 127.0.0.1 - - [13/Dec/2024 11:39:36] "GET /static/notifications.css HTTP/1.1" 200 -
+2024-12-13 11:39:37,464 - 127.0.0.1 - - [13/Dec/2024 11:39:37] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:39:37,516 - 127.0.0.1 - - [13/Dec/2024 11:39:37] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:39:38,635 - User: giadaott | Action: logout | Resource: sistema | Timestamp: 2024-12-13T11:39:38Z | Session ID: 9095d46fbdd0fd49bac89c3dcdad639f | Status: successo 
+2024-12-13 11:39:38,636 - 127.0.0.1 - - [13/Dec/2024 11:39:38] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 11:39:38,649 - 127.0.0.1 - - [13/Dec/2024 11:39:38] "GET / HTTP/1.1" 200 -
+2024-12-13 11:39:38,701 - 127.0.0.1 - - [13/Dec/2024 11:39:38] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-13 11:40:59,947 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-13 11:41:00,021 -  * Restarting with stat
+2024-12-13 11:41:00,919 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2310013332280>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000219D774BCF8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000219D774BC88>], 'actions': [<vakt.rules.operator.Eq object at 0x00000219D774BC50>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000219D78625F8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:41:00,919 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2310013379808>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x00000219D786E400>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x00000219D7862940>], 'actions': [<vakt.rules.operator.Eq object at 0x00000219D7862F98>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000219D786E4A8>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 17:00 e le 23:59'}
+2024-12-13 11:41:00,919 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2310013380200>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000219D786E588>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000219D786E518>], 'actions': [<vakt.rules.operator.Eq object at 0x00000219D786E550>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000219D786E630>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:41:00,939 -  * Debugger is active!
+2024-12-13 11:41:00,945 -  * Debugger PIN: 589-825-161
+2024-12-13 11:41:51,612 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-13 11:41:51,676 -  * Restarting with stat
+2024-12-13 11:41:52,553 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3186212416536>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002E5D8FDBDD8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002E5D8FDBD68>], 'actions': [<vakt.rules.operator.Eq object at 0x000002E5D8FDBD30>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002E5D90F26D8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:41:52,553 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3186212464456>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000002E5D90FE668>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000002E5D90FE5C0>], 'actions': [<vakt.rules.operator.Eq object at 0x000002E5D90FE5F8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002E5D90FE710>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 17:00 e le 23:59'}
+2024-12-13 11:41:52,553 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3186212464848>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002E5D90FE7F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002E5D90FE780>], 'actions': [<vakt.rules.operator.Eq object at 0x000002E5D90FE7B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002E5D90FE898>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:41:52,572 -  * Debugger is active!
+2024-12-13 11:41:52,578 -  * Debugger PIN: 589-825-161
+2024-12-13 11:42:11,808 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-13 11:42:11,870 -  * Restarting with stat
+2024-12-13 11:42:12,712 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1660630805472>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000182A53DCD68>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000182A53DCCF8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000182A53DCCC0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000182A54F26A0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:42:12,712 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1660630853392>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x00000182A54FE630>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x00000182A54FE588>], 'actions': [<vakt.rules.operator.Eq object at 0x00000182A54FE5C0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000182A54FE6D8>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 17:00 e le 23:59'}
+2024-12-13 11:42:12,712 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1660630853784>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000182A54FE7B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000182A54FE748>], 'actions': [<vakt.rules.operator.Eq object at 0x00000182A54FE780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000182A54FE860>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:42:12,731 -  * Debugger is active!
+2024-12-13 11:42:12,737 -  * Debugger PIN: 589-825-161
+2024-12-13 11:42:19,823 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-13 11:42:19,886 -  * Restarting with stat
+2024-12-13 11:42:20,795 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1798989228856>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001A2DC0BBCC0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001A2DC0BBC50>], 'actions': [<vakt.rules.operator.Eq object at 0x000001A2DC0BBC18>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001A2DC1D25F8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:42:20,796 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1798989272680>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001A2DC1DD588>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001A2DC1DD4E0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001A2DC1DD518>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001A2DC1DD630>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 17:00 e le 23:59'}
+2024-12-13 11:42:20,796 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1798989273072>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001A2DC1DD710>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001A2DC1DD6A0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001A2DC1DD6D8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001A2DC1DD7B8>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:42:20,813 -  * Debugger is active!
+2024-12-13 11:42:20,819 -  * Debugger PIN: 589-825-161
+2024-12-13 11:42:25,472 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1581893098464>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000170501B9D68>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000170501B9D30>], 'actions': [<vakt.rules.operator.Eq object at 0x00000170501B9CF8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000170502D16A0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:42:25,472 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1581893142288>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x00000170502DC630>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x00000170502DC588>], 'actions': [<vakt.rules.operator.Eq object at 0x00000170502DC5C0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000170502DC6D8>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 17:00 e le 23:59'}
+2024-12-13 11:42:25,473 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1581893142680>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000170502DC7B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000170502DC748>], 'actions': [<vakt.rules.operator.Eq object at 0x00000170502DC780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000170502DC860>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:42:26,347 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-13 11:42:26,347 - [33mPress CTRL+C to quit[0m
+2024-12-13 11:42:26,349 -  * Restarting with stat
+2024-12-13 11:42:27,270 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1826663897856>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001A94D95CCF8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001A94D95CCC0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001A94D95CC88>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001A94DA715C0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:42:27,270 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1826663945776>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001A94DA7D550>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001A94DA7D4A8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001A94DA7D4E0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001A94DA7D5F8>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 17:00 e le 23:59'}
+2024-12-13 11:42:27,270 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1826663946168>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001A94DA7D6D8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001A94DA7D668>], 'actions': [<vakt.rules.operator.Eq object at 0x000001A94DA7D6A0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001A94DA7D780>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:42:27,289 -  * Debugger is active!
+2024-12-13 11:42:27,294 -  * Debugger PIN: 589-825-161
+2024-12-13 11:42:28,084 - 127.0.0.1 - - [13/Dec/2024 11:42:28] "GET / HTTP/1.1" 200 -
+2024-12-13 11:42:28,118 - 127.0.0.1 - - [13/Dec/2024 11:42:28] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-13 11:42:31,290 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:42:31Z | Session ID: cafcadff83cc9fe8c7f1bc775549dae9 | Status: successo 
+2024-12-13 11:42:31,302 - 127.0.0.1 - - [13/Dec/2024 11:42:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:42:31,326 - 127.0.0.1 - - [13/Dec/2024 11:42:31] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:42:31,380 - 127.0.0.1 - - [13/Dec/2024 11:42:31] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:42:33,192 - 127.0.0.1 - - [13/Dec/2024 11:42:33] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:42:34,898 - No potential policies were found
+2024-12-13 11:42:34,898 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1826667010928>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '11:42:34'}}
+2024-12-13 11:42:34,898 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:42:34Z | Session ID: cafcadff83cc9fe8c7f1bc775549dae9 | Status: fallimento 
+2024-12-13 11:42:34,899 - 127.0.0.1 - - [13/Dec/2024 11:42:34] "[32mPOST /account-settings HTTP/1.1[0m" 302 -
+2024-12-13 11:42:34,911 - 127.0.0.1 - - [13/Dec/2024 11:42:34] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:42:34,970 - 127.0.0.1 - - [13/Dec/2024 11:42:34] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:42:56,451 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2379770686656>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000022A1551AEB8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000022A1551AE80>], 'actions': [<vakt.rules.operator.Eq object at 0x0000022A1551AE48>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000022A1562E780>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:42:56,452 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2379770746864>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000022A1563D710>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000022A1563D668>], 'actions': [<vakt.rules.operator.Eq object at 0x0000022A1563D6A0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000022A1563D7B8>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 17:00 e le 23:59'}
+2024-12-13 11:42:56,452 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2379770747256>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000022A1563D898>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000022A1563D828>], 'actions': [<vakt.rules.operator.Eq object at 0x0000022A1563D860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000022A1563D940>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:42:57,342 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-13 11:42:57,342 - [33mPress CTRL+C to quit[0m
+2024-12-13 11:42:57,343 -  * Restarting with stat
+2024-12-13 11:42:58,178 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1684585249928>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001883909BE80>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001883909BE48>], 'actions': [<vakt.rules.operator.Eq object at 0x000001883909BE10>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000188391AF748>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:42:58,179 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1684585306040>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x00000188391BD6D8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x00000188391BD630>], 'actions': [<vakt.rules.operator.Eq object at 0x00000188391BD668>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000188391BD780>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 17:00 e le 23:59'}
+2024-12-13 11:42:58,179 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1684585306432>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000188391BD860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000188391BD7F0>], 'actions': [<vakt.rules.operator.Eq object at 0x00000188391BD828>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000188391BD908>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:42:58,200 -  * Debugger is active!
+2024-12-13 11:42:58,206 -  * Debugger PIN: 589-825-161
+2024-12-13 11:42:59,133 - 127.0.0.1 - - [13/Dec/2024 11:42:59] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2024-12-13 11:42:59,153 - 127.0.0.1 - - [13/Dec/2024 11:42:59] "GET / HTTP/1.1" 200 -
+2024-12-13 11:42:59,197 - 127.0.0.1 - - [13/Dec/2024 11:42:59] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:43:06,097 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:43:06Z | Session ID: 918101202a57252998461af7cc3533aa | Status: successo 
+2024-12-13 11:43:06,111 - 127.0.0.1 - - [13/Dec/2024 11:43:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:43:06,131 - 127.0.0.1 - - [13/Dec/2024 11:43:06] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:43:06,181 - 127.0.0.1 - - [13/Dec/2024 11:43:06] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:43:07,743 - 127.0.0.1 - - [13/Dec/2024 11:43:07] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:43:09,450 - No potential policies were found
+2024-12-13 11:43:09,450 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1684589721416>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '11:43:09'}}
+2024-12-13 11:43:09,450 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:43:09Z | Session ID: 918101202a57252998461af7cc3533aa | Status: fallimento 
+2024-12-13 11:43:09,451 - 127.0.0.1 - - [13/Dec/2024 11:43:09] "[32mPOST /account-settings HTTP/1.1[0m" 302 -
+2024-12-13 11:43:09,464 - 127.0.0.1 - - [13/Dec/2024 11:43:09] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:43:09,528 - 127.0.0.1 - - [13/Dec/2024 11:43:09] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:43:11,201 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-13T11:43:11Z | Session ID: 918101202a57252998461af7cc3533aa | Status: successo 
+2024-12-13 11:43:11,202 - 127.0.0.1 - - [13/Dec/2024 11:43:11] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 11:43:11,214 - 127.0.0.1 - - [13/Dec/2024 11:43:11] "GET / HTTP/1.1" 200 -
+2024-12-13 11:43:11,265 - 127.0.0.1 - - [13/Dec/2024 11:43:11] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-13 11:43:16,025 - User: giadaott | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:43:15Z | Session ID: 670d3f332fbb3ecb91c98262e2361c13 | Status: successo 
+2024-12-13 11:43:16,039 - 127.0.0.1 - - [13/Dec/2024 11:43:16] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:43:16,052 - 127.0.0.1 - - [13/Dec/2024 11:43:16] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:43:16,105 - 127.0.0.1 - - [13/Dec/2024 11:43:16] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:43:17,141 - 127.0.0.1 - - [13/Dec/2024 11:43:17] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:43:18,492 - All matching policies have allow effect
+2024-12-13 11:43:18,492 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1684588718400>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '11:43:18'}}
+2024-12-13 11:43:18,531 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:43:18Z | Session ID: 670d3f332fbb3ecb91c98262e2361c13 | Status: successo 
+2024-12-13 11:43:18,532 - 127.0.0.1 - - [13/Dec/2024 11:43:18] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:43:19,113 - All matching policies have allow effect
+2024-12-13 11:43:19,113 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1684588621272>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '11:43:19'}}
+2024-12-13 11:43:19,153 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:43:19Z | Session ID: 670d3f332fbb3ecb91c98262e2361c13 | Status: successo 
+2024-12-13 11:43:19,154 - 127.0.0.1 - - [13/Dec/2024 11:43:19] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:43:20,936 - All matching policies have allow effect
+2024-12-13 11:43:20,937 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1684589825776>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '11:43:20'}}
+2024-12-13 11:43:20,973 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:43:20Z | Session ID: 670d3f332fbb3ecb91c98262e2361c13 | Status: successo 
+2024-12-13 11:43:20,975 - 127.0.0.1 - - [13/Dec/2024 11:43:20] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:43:21,121 - All matching policies have allow effect
+2024-12-13 11:43:21,121 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1684589825440>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '11:43:21'}}
+2024-12-13 11:43:21,157 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:43:21Z | Session ID: 670d3f332fbb3ecb91c98262e2361c13 | Status: successo 
+2024-12-13 11:43:21,158 - 127.0.0.1 - - [13/Dec/2024 11:43:21] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:43:21,987 - 127.0.0.1 - - [13/Dec/2024 11:43:21] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:43:22,033 - 127.0.0.1 - - [13/Dec/2024 11:43:22] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:48:01,329 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2350066903976>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002232AD5ADD8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002232AD5AD68>], 'actions': [<vakt.rules.operator.Eq object at 0x000002232AD5AD30>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002232AE72668>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:48:01,329 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2350066951840>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000002232AE7E5C0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000002232AE7E518>], 'actions': [<vakt.rules.operator.Eq object at 0x000002232AE7E550>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002232AE7E668>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-13 11:48:01,330 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2350066952232>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002232AE7E748>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002232AE7E6D8>], 'actions': [<vakt.rules.operator.Eq object at 0x000002232AE7E710>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002232AE7E7F0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:48:02,216 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-13 11:48:02,217 - [33mPress CTRL+C to quit[0m
+2024-12-13 11:48:02,218 -  * Restarting with stat
+2024-12-13 11:48:03,093 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2235330730920>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002087406CDA0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002087406CD68>], 'actions': [<vakt.rules.operator.Eq object at 0x000002087406CD30>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000020874181668>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:48:03,093 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2235330778784>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000002087418D5C0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000002087418D518>], 'actions': [<vakt.rules.operator.Eq object at 0x000002087418D550>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002087418D668>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-13 11:48:03,093 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2235330779176>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002087418D748>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002087418D6D8>], 'actions': [<vakt.rules.operator.Eq object at 0x000002087418D710>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002087418D7F0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:48:03,111 -  * Debugger is active!
+2024-12-13 11:48:03,117 -  * Debugger PIN: 589-825-161
+2024-12-13 11:48:03,136 - 127.0.0.1 - - [13/Dec/2024 11:48:03] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2024-12-13 11:48:03,156 - 127.0.0.1 - - [13/Dec/2024 11:48:03] "GET / HTTP/1.1" 200 -
+2024-12-13 11:48:03,196 - 127.0.0.1 - - [13/Dec/2024 11:48:03] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:48:05,927 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:48:05Z | Session ID: 8c1c4ec4822ecb8f86d7ab08b2eaf118 | Status: successo 
+2024-12-13 11:48:05,942 - 127.0.0.1 - - [13/Dec/2024 11:48:05] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:48:05,962 - 127.0.0.1 - - [13/Dec/2024 11:48:05] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:48:06,022 - 127.0.0.1 - - [13/Dec/2024 11:48:06] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-13 11:48:07,852 - 127.0.0.1 - - [13/Dec/2024 11:48:07] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:48:09,929 - No potential policies were found
+2024-12-13 11:48:09,929 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2235335243648>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '11:48:09'}}
+2024-12-13 11:48:09,929 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:48:09Z | Session ID: 8c1c4ec4822ecb8f86d7ab08b2eaf118 | Status: fallimento 
+2024-12-13 11:48:09,930 - 127.0.0.1 - - [13/Dec/2024 11:48:09] "[32mPOST /account-settings HTTP/1.1[0m" 302 -
+2024-12-13 11:48:09,945 - 127.0.0.1 - - [13/Dec/2024 11:48:09] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:48:10,002 - 127.0.0.1 - - [13/Dec/2024 11:48:10] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-13 11:48:12,938 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-13T11:48:12Z | Session ID: 8c1c4ec4822ecb8f86d7ab08b2eaf118 | Status: successo 
+2024-12-13 11:48:12,939 - 127.0.0.1 - - [13/Dec/2024 11:48:12] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 11:48:12,955 - 127.0.0.1 - - [13/Dec/2024 11:48:12] "GET / HTTP/1.1" 200 -
+2024-12-13 11:48:13,007 - 127.0.0.1 - - [13/Dec/2024 11:48:13] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:48:18,629 - User: giadaott | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:48:18Z | Session ID: cb4fb81570b433b4774ce598ee22cb02 | Status: successo 
+2024-12-13 11:48:18,643 - 127.0.0.1 - - [13/Dec/2024 11:48:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:48:18,657 - 127.0.0.1 - - [13/Dec/2024 11:48:18] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:48:18,710 - 127.0.0.1 - - [13/Dec/2024 11:48:18] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:48:19,671 - 127.0.0.1 - - [13/Dec/2024 11:48:19] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:48:21,284 - All matching policies have allow effect
+2024-12-13 11:48:21,284 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2235335246008>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '11:48:21'}}
+2024-12-13 11:48:21,320 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:48:21Z | Session ID: cb4fb81570b433b4774ce598ee22cb02 | Status: successo 
+2024-12-13 11:48:21,322 - 127.0.0.1 - - [13/Dec/2024 11:48:21] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:48:21,882 - All matching policies have allow effect
+2024-12-13 11:48:21,882 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2235334197992>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '11:48:21'}}
+2024-12-13 11:48:21,914 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:48:21Z | Session ID: cb4fb81570b433b4774ce598ee22cb02 | Status: successo 
+2024-12-13 11:48:21,918 - 127.0.0.1 - - [13/Dec/2024 11:48:21] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:48:35,414 - 127.0.0.1 - - [13/Dec/2024 11:48:35] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:48:35,457 - 127.0.0.1 - - [13/Dec/2024 11:48:35] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:48:35,962 - User: giadaott | Action: logout | Resource: sistema | Timestamp: 2024-12-13T11:48:35Z | Session ID: cb4fb81570b433b4774ce598ee22cb02 | Status: successo 
+2024-12-13 11:48:35,962 - 127.0.0.1 - - [13/Dec/2024 11:48:35] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 11:48:35,974 - 127.0.0.1 - - [13/Dec/2024 11:48:35] "GET / HTTP/1.1" 200 -
+2024-12-13 11:48:36,026 - 127.0.0.1 - - [13/Dec/2024 11:48:36] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:48:39,583 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\XACML\\vakt_manager.py', reloading
+2024-12-13 11:48:39,667 -  * Restarting with stat
+2024-12-13 11:48:42,349 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2851753044848>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000297F9A89D30>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000297F9A89CC0>], 'actions': [<vakt.rules.operator.Eq object at 0x00000297F9A89C88>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000297F9BA2630>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:49:22,956 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2130458192864>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001F00922ADD8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001F00922AD68>], 'actions': [<vakt.rules.operator.Eq object at 0x000001F00922AD30>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001F0075DA940>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:49:22,956 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2130458240784>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001F00934E630>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001F00934E588>], 'actions': [<vakt.rules.operator.Eq object at 0x000001F00934E5C0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001F00934E6D8>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-13 11:49:22,956 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2130458241176>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001F00934E7B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001F00934E748>], 'actions': [<vakt.rules.operator.Eq object at 0x000001F00934E780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001F00934E860>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:49:22,956 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2130458240336>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x000001F00934E400>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001F00934E080>], 'actions': [<vakt.rules.operator.Eq object at 0x000001F009342898>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001F00934E518>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-13 11:49:23,827 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-13 11:49:23,827 - [33mPress CTRL+C to quit[0m
+2024-12-13 11:49:23,828 -  * Restarting with stat
+2024-12-13 11:49:24,694 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2204617153560>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002014D5ABDD8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002014D5ABDA0>], 'actions': [<vakt.rules.operator.Eq object at 0x000002014D5ABD68>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002014D6C16D8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:49:24,694 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2204617197384>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000002014D6CC668>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000002014D6CC5C0>], 'actions': [<vakt.rules.operator.Eq object at 0x000002014D6CC5F8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002014D6CC710>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-13 11:49:24,694 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2204617197776>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002014D6CC7F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002014D6CC780>], 'actions': [<vakt.rules.operator.Eq object at 0x000002014D6CC7B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002014D6CC898>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:49:24,694 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2204617196936>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x000002014D6CC438>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002014D6CC0B8>], 'actions': [<vakt.rules.operator.Eq object at 0x000002014D6C1A20>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002014D6CC550>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-13 11:49:24,712 -  * Debugger is active!
+2024-12-13 11:49:24,718 -  * Debugger PIN: 589-825-161
+2024-12-13 11:49:25,021 - 127.0.0.1 - - [13/Dec/2024 11:49:25] "GET / HTTP/1.1" 200 -
+2024-12-13 11:49:25,059 - 127.0.0.1 - - [13/Dec/2024 11:49:25] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:49:27,909 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:49:27Z | Session ID: ce526cd9e2da6f5df2f9bc49bd7ae72d | Status: successo 
+2024-12-13 11:49:27,922 - 127.0.0.1 - - [13/Dec/2024 11:49:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:49:27,942 - 127.0.0.1 - - [13/Dec/2024 11:49:27] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:49:28,001 - 127.0.0.1 - - [13/Dec/2024 11:49:28] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:49:29,787 - 127.0.0.1 - - [13/Dec/2024 11:49:29] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:49:30,910 - 127.0.0.1 - - [13/Dec/2024 11:49:30] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:49:30,965 - 127.0.0.1 - - [13/Dec/2024 11:49:30] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:49:31,790 - 127.0.0.1 - - [13/Dec/2024 11:49:31] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:49:33,762 - All matching policies have allow effect
+2024-12-13 11:49:33,762 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2204621675880>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '11:49:33'}}
+2024-12-13 11:49:33,801 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:49:33Z | Session ID: ce526cd9e2da6f5df2f9bc49bd7ae72d | Status: successo 
+2024-12-13 11:49:33,802 - 127.0.0.1 - - [13/Dec/2024 11:49:33] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:49:34,777 - All matching policies have allow effect
+2024-12-13 11:49:34,777 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2204621736480>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '11:49:34'}}
+2024-12-13 11:49:34,813 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:49:34Z | Session ID: ce526cd9e2da6f5df2f9bc49bd7ae72d | Status: successo 
+2024-12-13 11:49:34,816 - 127.0.0.1 - - [13/Dec/2024 11:49:34] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:49:35,563 - 127.0.0.1 - - [13/Dec/2024 11:49:35] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:49:35,609 - 127.0.0.1 - - [13/Dec/2024 11:49:35] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:49:36,542 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-13T11:49:36Z | Session ID: ce526cd9e2da6f5df2f9bc49bd7ae72d | Status: successo 
+2024-12-13 11:49:36,542 - 127.0.0.1 - - [13/Dec/2024 11:49:36] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 11:49:36,554 - 127.0.0.1 - - [13/Dec/2024 11:49:36] "GET / HTTP/1.1" 200 -
+2024-12-13 11:49:36,606 - 127.0.0.1 - - [13/Dec/2024 11:49:36] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-13 11:49:40,729 - User: giadaott | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:49:40Z | Session ID: fb6ad03fc9602db28d83bf96d9ad236a | Status: successo 
+2024-12-13 11:49:40,744 - 127.0.0.1 - - [13/Dec/2024 11:49:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:49:40,759 - 127.0.0.1 - - [13/Dec/2024 11:49:40] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:49:40,818 - 127.0.0.1 - - [13/Dec/2024 11:49:40] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:49:42,110 - 127.0.0.1 - - [13/Dec/2024 11:49:42] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:49:43,674 - All matching policies have allow effect
+2024-12-13 11:49:43,674 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2204621673584>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '11:49:43'}}
+2024-12-13 11:49:43,706 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:49:43Z | Session ID: fb6ad03fc9602db28d83bf96d9ad236a | Status: successo 
+2024-12-13 11:49:43,708 - 127.0.0.1 - - [13/Dec/2024 11:49:43] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:49:44,346 - All matching policies have allow effect
+2024-12-13 11:49:44,346 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2204621737320>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '11:49:44'}}
+2024-12-13 11:49:44,376 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:49:44Z | Session ID: fb6ad03fc9602db28d83bf96d9ad236a | Status: successo 
+2024-12-13 11:49:44,378 - 127.0.0.1 - - [13/Dec/2024 11:49:44] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:49:45,019 - 127.0.0.1 - - [13/Dec/2024 11:49:45] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:49:45,058 - 127.0.0.1 - - [13/Dec/2024 11:49:45] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:49:46,419 - User: giadaott | Action: logout | Resource: sistema | Timestamp: 2024-12-13T11:49:46Z | Session ID: fb6ad03fc9602db28d83bf96d9ad236a | Status: successo 
+2024-12-13 11:49:46,419 - 127.0.0.1 - - [13/Dec/2024 11:49:46] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 11:49:46,431 - 127.0.0.1 - - [13/Dec/2024 11:49:46] "GET / HTTP/1.1" 200 -
+2024-12-13 11:49:46,488 - 127.0.0.1 - - [13/Dec/2024 11:49:46] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-13 11:50:26,430 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1357873097360>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000013C2779BC88>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000013C2779BC18>], 'actions': [<vakt.rules.operator.Eq object at 0x0000013C2779BBE0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000013C278B2550>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:50:26,430 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1357873145280>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000013C278BE4E0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000013C278BE438>], 'actions': [<vakt.rules.operator.Eq object at 0x0000013C278BE470>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000013C278BE588>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-13 11:50:26,430 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1357873145672>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000013C278BE668>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000013C278BE5F8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000013C278BE630>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000013C278BE710>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:50:26,430 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1357873144832>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x0000013C278BE2B0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000013C278B2898>], 'actions': [<vakt.rules.operator.Eq object at 0x0000013C278B2EF0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000013C278BE3C8>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-13 11:50:27,309 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-13 11:50:27,309 - [33mPress CTRL+C to quit[0m
+2024-12-13 11:50:27,311 -  * Restarting with stat
+2024-12-13 11:50:28,135 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2088731351976>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001E65205BD30>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E65205BCF8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E65205BCC0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E652171668>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:50:28,135 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2088731395800>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001E65217C5F8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E65217C550>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E65217C588>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E65217C6A0>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-13 11:50:28,135 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2088731396192>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001E65217C780>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E65217C710>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E65217C748>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E65217C828>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:50:28,135 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2088731395352>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x000001E65217C3C8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E65217C048>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E6521719B0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E65217C4E0>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-13 11:50:28,154 -  * Debugger is active!
+2024-12-13 11:50:28,159 -  * Debugger PIN: 589-825-161
+2024-12-13 11:50:28,502 - 127.0.0.1 - - [13/Dec/2024 11:50:28] "GET / HTTP/1.1" 200 -
+2024-12-13 11:50:28,541 - 127.0.0.1 - - [13/Dec/2024 11:50:28] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-13 11:50:36,550 - User: janedoe | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:50:36Z | Session ID: dc9cad76961636a909ac81c266fe42a4 | Status: successo 
+2024-12-13 11:50:36,565 - 127.0.0.1 - - [13/Dec/2024 11:50:36] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:50:36,584 - 127.0.0.1 - - [13/Dec/2024 11:50:36] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:50:36,645 - 127.0.0.1 - - [13/Dec/2024 11:50:36] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:50:38,528 - 127.0.0.1 - - [13/Dec/2024 11:50:38] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:50:39,936 - No potential policies were found
+2024-12-13 11:50:39,936 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2088735672696>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'standard'}, 'context': {'current_time': '11:50:39'}}
+2024-12-13 11:50:39,936 - User: janedoe | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:50:39Z | Session ID: dc9cad76961636a909ac81c266fe42a4 | Status: fallimento 
+2024-12-13 11:50:39,937 - 127.0.0.1 - - [13/Dec/2024 11:50:39] "[32mPOST /account-settings HTTP/1.1[0m" 302 -
+2024-12-13 11:50:39,952 - 127.0.0.1 - - [13/Dec/2024 11:50:39] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:50:40,009 - 127.0.0.1 - - [13/Dec/2024 11:50:40] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:50:41,155 - User: janedoe | Action: logout | Resource: sistema | Timestamp: 2024-12-13T11:50:41Z | Session ID: dc9cad76961636a909ac81c266fe42a4 | Status: successo 
+2024-12-13 11:50:41,156 - 127.0.0.1 - - [13/Dec/2024 11:50:41] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 11:50:41,169 - 127.0.0.1 - - [13/Dec/2024 11:50:41] "GET / HTTP/1.1" 200 -
+2024-12-13 11:50:41,220 - 127.0.0.1 - - [13/Dec/2024 11:50:41] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-13 11:50:44,710 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:50:44Z | Session ID: d4ed5d06e91cab6bddc83936ff047a6a | Status: successo 
+2024-12-13 11:50:44,723 - 127.0.0.1 - - [13/Dec/2024 11:50:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:50:44,738 - 127.0.0.1 - - [13/Dec/2024 11:50:44] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:50:44,799 - 127.0.0.1 - - [13/Dec/2024 11:50:44] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:50:47,621 - 127.0.0.1 - - [13/Dec/2024 11:50:47] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:50:49,399 - No potential policies were found
+2024-12-13 11:50:49,399 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2088735673312>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '11:50:49'}}
+2024-12-13 11:50:49,400 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:50:49Z | Session ID: d4ed5d06e91cab6bddc83936ff047a6a | Status: fallimento 
+2024-12-13 11:50:49,400 - 127.0.0.1 - - [13/Dec/2024 11:50:49] "[32mPOST /account-settings HTTP/1.1[0m" 302 -
+2024-12-13 11:50:49,412 - 127.0.0.1 - - [13/Dec/2024 11:50:49] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:50:49,472 - 127.0.0.1 - - [13/Dec/2024 11:50:49] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:50:50,274 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-13T11:50:50Z | Session ID: d4ed5d06e91cab6bddc83936ff047a6a | Status: successo 
+2024-12-13 11:50:50,275 - 127.0.0.1 - - [13/Dec/2024 11:50:50] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 11:50:50,287 - 127.0.0.1 - - [13/Dec/2024 11:50:50] "GET / HTTP/1.1" 200 -
+2024-12-13 11:50:50,350 - 127.0.0.1 - - [13/Dec/2024 11:50:50] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-13 11:50:55,382 - User: giadaott | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:50:55Z | Session ID: 52ce43565505b7cd79b3701b69aceb46 | Status: successo 
+2024-12-13 11:50:55,398 - 127.0.0.1 - - [13/Dec/2024 11:50:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:50:55,411 - 127.0.0.1 - - [13/Dec/2024 11:50:55] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:50:55,466 - 127.0.0.1 - - [13/Dec/2024 11:50:55] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:50:56,439 - 127.0.0.1 - - [13/Dec/2024 11:50:56] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:50:58,161 - All matching policies have allow effect
+2024-12-13 11:50:58,162 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2088735926984>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '11:50:58'}}
+2024-12-13 11:50:58,195 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:50:58Z | Session ID: 52ce43565505b7cd79b3701b69aceb46 | Status: successo 
+2024-12-13 11:50:58,198 - 127.0.0.1 - - [13/Dec/2024 11:50:58] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:50:58,786 - All matching policies have allow effect
+2024-12-13 11:50:58,786 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2088735926536>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '11:50:58'}}
+2024-12-13 11:50:58,813 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:50:58Z | Session ID: 52ce43565505b7cd79b3701b69aceb46 | Status: successo 
+2024-12-13 11:50:58,815 - 127.0.0.1 - - [13/Dec/2024 11:50:58] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:50:59,356 - 127.0.0.1 - - [13/Dec/2024 11:50:59] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:50:59,401 - 127.0.0.1 - - [13/Dec/2024 11:50:59] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:51:00,279 - 127.0.0.1 - - [13/Dec/2024 11:51:00] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:51:01,333 - 127.0.0.1 - - [13/Dec/2024 11:51:01] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:51:01,393 - 127.0.0.1 - - [13/Dec/2024 11:51:01] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:51:04,859 - User: giadaott | Action: logout | Resource: sistema | Timestamp: 2024-12-13T11:51:04Z | Session ID: 52ce43565505b7cd79b3701b69aceb46 | Status: successo 
+2024-12-13 11:51:04,861 - 127.0.0.1 - - [13/Dec/2024 11:51:04] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 11:51:04,876 - 127.0.0.1 - - [13/Dec/2024 11:51:04] "GET / HTTP/1.1" 200 -
+2024-12-13 11:51:04,938 - 127.0.0.1 - - [13/Dec/2024 11:51:04] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-13 11:54:39,570 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2365360901312>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000226BA6DAEB8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000226BA6DAE48>], 'actions': [<vakt.rules.operator.Eq object at 0x00000226BA6DAE10>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000226BA7F0780>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:54:39,570 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2365360957424>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x00000226BA7FE710>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x00000226BA7FE668>], 'actions': [<vakt.rules.operator.Eq object at 0x00000226BA7FE6A0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000226BA7FE7B8>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-13 11:54:39,570 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2365360957816>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000226BA7FE898>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000226BA7FE828>], 'actions': [<vakt.rules.operator.Eq object at 0x00000226BA7FE860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000226BA7FE940>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:54:39,570 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2365360956976>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x00000226BA7FE4E0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000226BA7FE160>], 'actions': [<vakt.rules.operator.Eq object at 0x00000226BA7F0AC8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000226BA7FE5F8>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-13 11:54:40,443 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-13 11:54:40,443 - [33mPress CTRL+C to quit[0m
+2024-12-13 11:54:40,445 -  * Restarting with stat
+2024-12-13 11:54:41,308 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2091029888192>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001E6DB06BEB8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E6DB06BE80>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E6DB06BE48>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E6DB17F780>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:54:41,309 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2091029940208>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001E6DB18C710>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E6DB18C668>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E6DB18C6A0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E6DB18C7B8>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-13 11:54:41,309 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2091029940600>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001E6DB18C898>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E6DB18C828>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E6DB18C860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E6DB18C940>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:54:41,309 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2091029939760>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x000001E6DB18C4E0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E6DB18C160>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E6DB17FAC8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E6DB18C5F8>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-13 11:54:41,326 -  * Debugger is active!
+2024-12-13 11:54:41,332 -  * Debugger PIN: 589-825-161
+2024-12-13 11:54:41,558 - 127.0.0.1 - - [13/Dec/2024 11:54:41] "GET / HTTP/1.1" 200 -
+2024-12-13 11:54:41,597 - 127.0.0.1 - - [13/Dec/2024 11:54:41] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-13 11:54:45,071 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:54:44Z | Session ID: dc2ffcb9e66fc0edd84db0d76af44340 | Status: successo 
+2024-12-13 11:54:45,087 - 127.0.0.1 - - [13/Dec/2024 11:54:45] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:54:45,109 - 127.0.0.1 - - [13/Dec/2024 11:54:45] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:54:45,172 - 127.0.0.1 - - [13/Dec/2024 11:54:45] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:54:47,090 - 127.0.0.1 - - [13/Dec/2024 11:54:47] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:54:48,792 - All matching policies have allow effect
+2024-12-13 11:54:48,792 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2091033556696>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '11:54:48'}}
+2024-12-13 11:54:48,844 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:54:48Z | Session ID: dc2ffcb9e66fc0edd84db0d76af44340 | Status: successo 
+2024-12-13 11:54:48,845 - 127.0.0.1 - - [13/Dec/2024 11:54:48] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:54:49,433 - All matching policies have allow effect
+2024-12-13 11:54:49,434 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2091034413880>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '11:54:49'}}
+2024-12-13 11:54:49,475 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:54:49Z | Session ID: dc2ffcb9e66fc0edd84db0d76af44340 | Status: successo 
+2024-12-13 11:54:49,476 - 127.0.0.1 - - [13/Dec/2024 11:54:49] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:54:50,083 - 127.0.0.1 - - [13/Dec/2024 11:54:50] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:54:50,125 - 127.0.0.1 - - [13/Dec/2024 11:54:50] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:54:50,545 - 127.0.0.1 - - [13/Dec/2024 11:54:50] "GET /notes HTTP/1.1" 200 -
+2024-12-13 11:54:50,601 - 127.0.0.1 - - [13/Dec/2024 11:54:50] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-13 11:54:51,289 - 127.0.0.1 - - [13/Dec/2024 11:54:51] "GET /add-note HTTP/1.1" 200 -
+2024-12-13 11:54:52,427 - All matching policies have allow effect
+2024-12-13 11:54:52,428 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2091034413768>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '11:54:52'}}
+2024-12-13 11:54:52,434 - User: admin1 | Action: creazione | Resource: note | Timestamp: 2024-12-13T11:54:52Z | Session ID: dc2ffcb9e66fc0edd84db0d76af44340 | Status: successo 
+2024-12-13 11:54:52,445 - 127.0.0.1 - - [13/Dec/2024 11:54:52] "[32mPOST /add-note HTTP/1.1[0m" 302 -
+2024-12-13 11:54:52,460 - 127.0.0.1 - - [13/Dec/2024 11:54:52] "GET /notes HTTP/1.1" 200 -
+2024-12-13 11:54:52,514 - 127.0.0.1 - - [13/Dec/2024 11:54:52] "[36mGET /static/notes.css HTTP/1.1[0m" 304 -
+2024-12-13 11:54:53,630 - 127.0.0.1 - - [13/Dec/2024 11:54:53] "GET /edit-note/1 HTTP/1.1" 200 -
+2024-12-13 11:54:54,578 - All matching policies have allow effect
+2024-12-13 11:54:54,578 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2091034441712>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '11:54:54'}}
+2024-12-13 11:54:54,584 - User: admin1 | Action: modifica | Resource: note | Timestamp: 2024-12-13T11:54:54Z | Session ID: dc2ffcb9e66fc0edd84db0d76af44340 | Status: successo 
+2024-12-13 11:54:54,591 - 127.0.0.1 - - [13/Dec/2024 11:54:54] "[32mPOST /edit-note/1 HTTP/1.1[0m" 302 -
+2024-12-13 11:54:54,605 - 127.0.0.1 - - [13/Dec/2024 11:54:54] "GET /notes HTTP/1.1" 200 -
+2024-12-13 11:54:54,662 - 127.0.0.1 - - [13/Dec/2024 11:54:54] "[36mGET /static/notes.css HTTP/1.1[0m" 304 -
+2024-12-13 11:54:55,270 - All matching policies have allow effect
+2024-12-13 11:54:55,271 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2091034563696>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '11:54:55'}}
+2024-12-13 11:54:55,276 - User: admin1 | Action: eliminazione | Resource: note | Timestamp: 11:54:55 | Session ID: dc2ffcb9e66fc0edd84db0d76af44340 | Status: successo 
+2024-12-13 11:54:55,286 - 127.0.0.1 - - [13/Dec/2024 11:54:55] "[32mPOST /delete-note/1 HTTP/1.1[0m" 302 -
+2024-12-13 11:54:55,299 - 127.0.0.1 - - [13/Dec/2024 11:54:55] "GET /notes HTTP/1.1" 200 -
+2024-12-13 11:54:55,342 - 127.0.0.1 - - [13/Dec/2024 11:54:55] "[36mGET /static/notes.css HTTP/1.1[0m" 304 -
+2024-12-13 11:54:55,887 - 127.0.0.1 - - [13/Dec/2024 11:54:55] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:54:55,948 - 127.0.0.1 - - [13/Dec/2024 11:54:55] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:54:56,565 - 127.0.0.1 - - [13/Dec/2024 11:54:56] "GET /notifications HTTP/1.1" 200 -
+2024-12-13 11:54:56,629 - 127.0.0.1 - - [13/Dec/2024 11:54:56] "GET /static/notifications.css HTTP/1.1" 200 -
+2024-12-13 11:54:57,302 - 127.0.0.1 - - [13/Dec/2024 11:54:57] "[32mPOST /notifications/clear-all HTTP/1.1[0m" 302 -
+2024-12-13 11:54:57,319 - 127.0.0.1 - - [13/Dec/2024 11:54:57] "GET /notifications HTTP/1.1" 200 -
+2024-12-13 11:54:57,370 - 127.0.0.1 - - [13/Dec/2024 11:54:57] "[36mGET /static/notifications.css HTTP/1.1[0m" 304 -
+2024-12-13 11:54:57,997 - 127.0.0.1 - - [13/Dec/2024 11:54:57] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:54:58,056 - 127.0.0.1 - - [13/Dec/2024 11:54:58] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:54:58,692 - 127.0.0.1 - - [13/Dec/2024 11:54:58] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:55:01,904 - All matching policies have allow effect
+2024-12-13 11:55:01,905 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2091034719064>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '11:55:01'}}
+2024-12-13 11:55:01,948 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:55:01Z | Session ID: dc2ffcb9e66fc0edd84db0d76af44340 | Status: successo 
+2024-12-13 11:55:01,951 - 127.0.0.1 - - [13/Dec/2024 11:55:01] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:55:02,501 - All matching policies have allow effect
+2024-12-13 11:55:02,501 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2091034722144>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '11:55:02'}}
+2024-12-13 11:55:02,543 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:55:02Z | Session ID: dc2ffcb9e66fc0edd84db0d76af44340 | Status: successo 
+2024-12-13 11:55:02,544 - 127.0.0.1 - - [13/Dec/2024 11:55:02] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:55:03,091 - 127.0.0.1 - - [13/Dec/2024 11:55:03] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:55:03,130 - 127.0.0.1 - - [13/Dec/2024 11:55:03] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:55:03,675 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-13T11:55:03Z | Session ID: dc2ffcb9e66fc0edd84db0d76af44340 | Status: successo 
+2024-12-13 11:55:03,676 - 127.0.0.1 - - [13/Dec/2024 11:55:03] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 11:55:03,689 - 127.0.0.1 - - [13/Dec/2024 11:55:03] "GET / HTTP/1.1" 200 -
+2024-12-13 11:55:03,741 - 127.0.0.1 - - [13/Dec/2024 11:55:03] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-13 11:55:07,099 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:55:07Z | Session ID: 98cab95769190e086f5513a23962e252 | Status: successo 
+2024-12-13 11:55:07,115 - 127.0.0.1 - - [13/Dec/2024 11:55:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:55:07,128 - 127.0.0.1 - - [13/Dec/2024 11:55:07] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:55:07,182 - 127.0.0.1 - - [13/Dec/2024 11:55:07] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:55:09,373 - 127.0.0.1 - - [13/Dec/2024 11:55:09] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:55:10,797 - 127.0.0.1 - - [13/Dec/2024 11:55:10] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:55:10,841 - 127.0.0.1 - - [13/Dec/2024 11:55:10] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:55:44,089 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-13 11:55:44,160 -  * Restarting with stat
+2024-12-13 11:55:45,089 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2234813054144>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000208552BBEF0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000208552BBEB8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000208552BBE80>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000208553CF780>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:55:45,089 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2234813106160>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x00000208553DC710>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x00000208553DC668>], 'actions': [<vakt.rules.operator.Eq object at 0x00000208553DC6A0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000208553DC7B8>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-13 11:55:45,089 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2234813106552>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000208553DC898>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000208553DC828>], 'actions': [<vakt.rules.operator.Eq object at 0x00000208553DC860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000208553DC940>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:55:45,090 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2234813105712>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x00000208553DC4E0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000208553DC160>], 'actions': [<vakt.rules.operator.Eq object at 0x00000208553CFAC8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000208553DC5F8>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-13 11:55:45,110 -  * Debugger is active!
+2024-12-13 11:55:45,116 -  * Debugger PIN: 589-825-161
+2024-12-13 11:55:47,227 - 127.0.0.1 - - [13/Dec/2024 11:55:47] "[35m[1mGET /logout HTTP/1.1[0m" 500 -
+2024-12-13 11:55:47,292 - 127.0.0.1 - - [13/Dec/2024 11:55:47] "GET /logout?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-13 11:55:47,299 - 127.0.0.1 - - [13/Dec/2024 11:55:47] "GET /logout?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-13 11:56:03,485 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1237082111168>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000012007C5AE80>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000012007C5AE48>], 'actions': [<vakt.rules.operator.Eq object at 0x0000012007C5AE10>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000012007D6F780>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:56:03,485 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1237082167280>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000012007D7D710>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000012007D7D668>], 'actions': [<vakt.rules.operator.Eq object at 0x0000012007D7D6A0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000012007D7D7B8>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-13 11:56:03,485 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1237082167672>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000012007D7D898>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000012007D7D828>], 'actions': [<vakt.rules.operator.Eq object at 0x0000012007D7D860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000012007D7D940>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:56:03,485 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1237082166832>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x0000012007D7D4E0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000012007D7D160>], 'actions': [<vakt.rules.operator.Eq object at 0x0000012007D6FAC8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000012007D7D5F8>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-13 11:56:04,409 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-13 11:56:04,409 - [33mPress CTRL+C to quit[0m
+2024-12-13 11:56:04,411 -  * Restarting with stat
+2024-12-13 11:56:05,264 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1744594537608>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000019631DEBE48>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000019631DEBE10>], 'actions': [<vakt.rules.operator.Eq object at 0x0000019631DEBDD8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000019631F00748>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:56:05,264 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1744594585528>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000019631F0C6D8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000019631F0C630>], 'actions': [<vakt.rules.operator.Eq object at 0x0000019631F0C668>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000019631F0C780>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-13 11:56:05,264 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1744594585920>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000019631F0C860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000019631F0C7F0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000019631F0C828>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000019631F0C908>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:56:05,264 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1744594585080>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x0000019631F0C4A8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000019631F0C128>], 'actions': [<vakt.rules.operator.Eq object at 0x0000019631F00A90>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000019631F0C5C0>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-13 11:56:05,282 -  * Debugger is active!
+2024-12-13 11:56:05,288 -  * Debugger PIN: 589-825-161
+2024-12-13 11:56:05,315 - 127.0.0.1 - - [13/Dec/2024 11:56:05] "GET / HTTP/1.1" 200 -
+2024-12-13 11:56:05,356 - 127.0.0.1 - - [13/Dec/2024 11:56:05] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:56:08,540 - 127.0.0.1 - - [13/Dec/2024 11:56:08] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-13 11:56:08,605 - 127.0.0.1 - - [13/Dec/2024 11:56:08] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-13 11:56:08,611 - 127.0.0.1 - - [13/Dec/2024 11:56:08] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-13 11:56:08,672 - 127.0.0.1 - - [13/Dec/2024 11:56:08] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-13 11:56:17,449 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-13 11:56:17,519 -  * Restarting with stat
+2024-12-13 11:56:18,393 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2271364646728>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000210D7D0CE10>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000210D60B6748>], 'actions': [<vakt.rules.operator.Eq object at 0x00000210D7D0CDD8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000210D7D0CFD0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:56:18,393 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2271364700032>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x00000210D7E2D6A0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x00000210D7E2D5F8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000210D7E2D630>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000210D7E2D748>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-13 11:56:18,393 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2271364700424>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000210D7E2D828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000210D7E2D7B8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000210D7E2D7F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000210D7E2D8D0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:56:18,393 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2271364699584>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x00000210D7E2D128>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000210D7E20C88>], 'actions': [<vakt.rules.operator.Eq object at 0x00000210D7E20A90>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000210D7E2D588>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-13 11:56:18,412 -  * Debugger is active!
+2024-12-13 11:56:18,418 -  * Debugger PIN: 589-825-161
+2024-12-13 11:56:22,549 - 127.0.0.1 - - [13/Dec/2024 11:56:22] "GET / HTTP/1.1" 200 -
+2024-12-13 11:56:22,584 - 127.0.0.1 - - [13/Dec/2024 11:56:22] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:56:25,535 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T11:56:25Z | Session ID: 106e8c7ca5e417fa1f41bbfa3e49af12 | Status: successo 
+2024-12-13 11:56:25,549 - 127.0.0.1 - - [13/Dec/2024 11:56:25] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 11:56:25,569 - 127.0.0.1 - - [13/Dec/2024 11:56:25] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:56:25,627 - 127.0.0.1 - - [13/Dec/2024 11:56:25] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-13 11:56:28,738 - 127.0.0.1 - - [13/Dec/2024 11:56:28] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 11:56:31,467 - All matching policies have allow effect
+2024-12-13 11:56:31,467 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2271368957680>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '11:56:31'}}
+2024-12-13 11:56:31,508 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:56:31Z | Session ID: 106e8c7ca5e417fa1f41bbfa3e49af12 | Status: successo 
+2024-12-13 11:56:31,513 - 127.0.0.1 - - [13/Dec/2024 11:56:31] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:56:32,099 - All matching policies have allow effect
+2024-12-13 11:56:32,099 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2271369165232>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '11:56:32'}}
+2024-12-13 11:56:32,138 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T11:56:32Z | Session ID: 106e8c7ca5e417fa1f41bbfa3e49af12 | Status: successo 
+2024-12-13 11:56:32,141 - 127.0.0.1 - - [13/Dec/2024 11:56:32] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 11:56:32,922 - 127.0.0.1 - - [13/Dec/2024 11:56:32] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 11:56:32,967 - 127.0.0.1 - - [13/Dec/2024 11:56:32] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 11:57:36,210 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-13T11:57:36Z | Session ID: 106e8c7ca5e417fa1f41bbfa3e49af12 | Status: successo 
+2024-12-13 11:57:36,211 - 127.0.0.1 - - [13/Dec/2024 11:57:36] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 11:57:36,226 - 127.0.0.1 - - [13/Dec/2024 11:57:36] "GET / HTTP/1.1" 200 -
+2024-12-13 11:57:36,293 - 127.0.0.1 - - [13/Dec/2024 11:57:36] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 11:57:43,530 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\HW7\\app.py', reloading
+2024-12-13 11:57:43,595 -  * Restarting with stat
+2024-12-13 11:57:44,456 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3062817881392>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002C91E1ABEF0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002C91E1ABEB8>], 'actions': [<vakt.rules.operator.Eq object at 0x000002C91E1ABE80>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002C91E2BF7F0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 11:57:44,456 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3062817933408>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000002C91E2CC780>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000002C91E2CC6D8>], 'actions': [<vakt.rules.operator.Eq object at 0x000002C91E2CC710>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002C91E2CC828>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-13 11:57:44,456 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3062817933800>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002C91E2CC908>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002C91E2CC898>], 'actions': [<vakt.rules.operator.Eq object at 0x000002C91E2CC8D0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002C91E2CC9B0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 11:57:44,456 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 3062817932960>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x000002C91E2CC550>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002C91E2CC1D0>], 'actions': [<vakt.rules.operator.Eq object at 0x000002C91E2BFB38>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002C91E2CC668>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-13 11:57:44,477 -  * Debugger is active!
+2024-12-13 11:57:44,482 -  * Debugger PIN: 589-825-161
+2024-12-13 12:08:14,395 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2284980083736>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000214035BBE10>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000214035BBDD8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000214035BBDA0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000021401BD9B00>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 12:08:14,396 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2284980131656>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x00000214036DD668>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x00000214036DD5C0>], 'actions': [<vakt.rules.operator.Eq object at 0x00000214036DD5F8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000214036DD710>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-13 12:08:14,396 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2284980132048>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000214036DD7F0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000214036DD780>], 'actions': [<vakt.rules.operator.Eq object at 0x00000214036DD7B8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000214036DD898>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 12:08:14,396 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2284980131208>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x00000214036DD438>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000214036DD0B8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000214036D18D0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000214036DD550>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-13 12:08:15,272 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-13 12:08:15,272 - [33mPress CTRL+C to quit[0m
+2024-12-13 12:08:15,275 -  * Restarting with stat
+2024-12-13 12:08:16,070 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1286375214216>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000012B81DEBE80>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000012B81DEBE48>], 'actions': [<vakt.rules.operator.Eq object at 0x0000012B81DEBE10>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000012B81F00748>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-13 12:08:16,070 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1286375266232>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000012B81F0D6D8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000012B81F0D630>], 'actions': [<vakt.rules.operator.Eq object at 0x0000012B81F0D668>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000012B81F0D780>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-13 12:08:16,070 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1286375266624>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000012B81F0D860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000012B81F0D7F0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000012B81F0D828>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000012B81F0D908>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-13 12:08:16,070 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1286375265784>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x0000012B81F0D4A8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000012B81F0D128>], 'actions': [<vakt.rules.operator.Eq object at 0x0000012B81F00A90>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000012B81F0D5C0>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-13 12:08:16,087 -  * Debugger is active!
+2024-12-13 12:08:16,093 -  * Debugger PIN: 589-825-161
+2024-12-13 12:08:18,344 - 127.0.0.1 - - [13/Dec/2024 12:08:18] "GET / HTTP/1.1" 200 -
+2024-12-13 12:08:18,382 - 127.0.0.1 - - [13/Dec/2024 12:08:18] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-13 12:08:22,703 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-13T12:08:22Z | Session ID: ed02705c4cf6cb941e222dfb45c47d93 | Status: successo 
+2024-12-13 12:08:22,717 - 127.0.0.1 - - [13/Dec/2024 12:08:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-13 12:08:22,736 - 127.0.0.1 - - [13/Dec/2024 12:08:22] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 12:08:22,793 - 127.0.0.1 - - [13/Dec/2024 12:08:22] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-13 12:08:24,605 - 127.0.0.1 - - [13/Dec/2024 12:08:24] "GET /account-settings HTTP/1.1" 200 -
+2024-12-13 12:08:26,219 - All matching policies have allow effect
+2024-12-13 12:08:26,219 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1286378563512>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '12:08:26'}}
+2024-12-13 12:08:26,263 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T12:08:26Z | Session ID: ed02705c4cf6cb941e222dfb45c47d93 | Status: successo 
+2024-12-13 12:08:26,264 - 127.0.0.1 - - [13/Dec/2024 12:08:26] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 12:08:26,844 - All matching policies have allow effect
+2024-12-13 12:08:26,844 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1286379731600>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '12:08:26'}}
+2024-12-13 12:08:26,873 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-13T12:08:26Z | Session ID: ed02705c4cf6cb941e222dfb45c47d93 | Status: successo 
+2024-12-13 12:08:26,877 - 127.0.0.1 - - [13/Dec/2024 12:08:26] "POST /account-settings HTTP/1.1" 200 -
+2024-12-13 12:08:27,412 - 127.0.0.1 - - [13/Dec/2024 12:08:27] "GET /dashboard HTTP/1.1" 200 -
+2024-12-13 12:08:27,463 - 127.0.0.1 - - [13/Dec/2024 12:08:27] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-13 12:08:28,364 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-13T12:08:28Z | Session ID: ed02705c4cf6cb941e222dfb45c47d93 | Status: successo 
+2024-12-13 12:08:28,364 - 127.0.0.1 - - [13/Dec/2024 12:08:28] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-13 12:08:28,377 - 127.0.0.1 - - [13/Dec/2024 12:08:28] "GET / HTTP/1.1" 200 -
+2024-12-13 12:08:28,433 - 127.0.0.1 - - [13/Dec/2024 12:08:28] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-15 22:25:17,282 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2469208971920>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000023EE843CBE0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000023EE843CBA8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000023EE843CB70>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000023EE852D550>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-15 22:25:17,282 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2469209171392>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000023EE855E4E0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000023EE855E438>], 'actions': [<vakt.rules.operator.Eq object at 0x0000023EE855E470>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000023EE855E588>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-15 22:25:17,282 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2469209171784>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000023EE855E668>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000023EE855E5F8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000023EE855E630>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000023EE855E710>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-15 22:25:17,282 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2469209170944>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x0000023EE855E2B0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000023EE852D898>], 'actions': [<vakt.rules.operator.Eq object at 0x0000023EE852DEF0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000023EE855E3C8>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-15 22:25:18,199 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-15 22:25:18,199 - [33mPress CTRL+C to quit[0m
+2024-12-15 22:25:18,202 -  * Restarting with stat
+2024-12-15 22:25:19,092 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2056923777736>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001DEEA24BC18>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001DEEA24BBE0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001DEEA24BBA8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001DEEA360588>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-15 22:25:19,093 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2056923829752>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001DEEA36D518>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001DEEA36D470>], 'actions': [<vakt.rules.operator.Eq object at 0x000001DEEA36D4A8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001DEEA36D5C0>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-15 22:25:19,093 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2056923830144>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001DEEA36D6A0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001DEEA36D630>], 'actions': [<vakt.rules.operator.Eq object at 0x000001DEEA36D668>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001DEEA36D748>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-15 22:25:19,093 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2056923829304>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x000001DEEA36D2E8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001DEEA3608D0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001DEEA360F28>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001DEEA36D400>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-15 22:25:19,114 -  * Debugger is active!
+2024-12-15 22:25:19,126 -  * Debugger PIN: 589-825-161
+2024-12-15 22:25:31,242 - 127.0.0.1 - - [15/Dec/2024 22:25:31] "GET / HTTP/1.1" 200 -
+2024-12-15 22:25:31,306 - 127.0.0.1 - - [15/Dec/2024 22:25:31] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-15 22:25:31,441 - 127.0.0.1 - - [15/Dec/2024 22:25:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-15 22:25:37,108 - Errore durante la richiesta a Vault: 400 Client Error: Bad Request for url: https://127.0.0.1:8200/v1/auth/ldap/login/admin1
+2024-12-15 22:25:37,112 - 127.0.0.1 - - [15/Dec/2024 22:25:37] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-15 22:25:37,125 - 127.0.0.1 - - [15/Dec/2024 22:25:37] "GET / HTTP/1.1" 200 -
+2024-12-15 22:25:37,173 - 127.0.0.1 - - [15/Dec/2024 22:25:37] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-15 22:25:40,781 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-15T22:25:40Z | Session ID: e393278451340ad06eecad961998df42 | Status: successo 
+2024-12-15 22:25:40,852 - 127.0.0.1 - - [15/Dec/2024 22:25:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-15 22:25:40,873 - 127.0.0.1 - - [15/Dec/2024 22:25:40] "GET /dashboard HTTP/1.1" 200 -
+2024-12-15 22:25:40,938 - 127.0.0.1 - - [15/Dec/2024 22:25:40] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-15 22:25:43,291 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-15T22:25:43Z | Session ID: e393278451340ad06eecad961998df42 | Status: successo 
+2024-12-15 22:25:43,292 - 127.0.0.1 - - [15/Dec/2024 22:25:43] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-15 22:25:43,304 - 127.0.0.1 - - [15/Dec/2024 22:25:43] "GET / HTTP/1.1" 200 -
+2024-12-15 22:25:43,367 - 127.0.0.1 - - [15/Dec/2024 22:25:43] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-15 22:26:33,871 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2908778212488>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000002A5409FAE48>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002A5409FAE10>], 'actions': [<vakt.rules.operator.Eq object at 0x000002A5409FADD8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002A540B12748>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-15 22:26:33,871 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2908778268600>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000002A540B206D8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000002A540B20630>], 'actions': [<vakt.rules.operator.Eq object at 0x000002A540B20668>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002A540B20780>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-15 22:26:33,871 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2908778268992>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000002A540B20860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002A540B207F0>], 'actions': [<vakt.rules.operator.Eq object at 0x000002A540B20828>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002A540B20908>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-15 22:26:33,871 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2908778268152>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x000002A540B204A8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000002A540B20128>], 'actions': [<vakt.rules.operator.Eq object at 0x000002A540B12A90>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000002A540B205C0>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-15 22:26:34,765 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-15 22:26:34,765 - [33mPress CTRL+C to quit[0m
+2024-12-15 22:26:34,766 -  * Restarting with stat
+2024-12-15 22:26:35,720 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1914440068176>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001BDBD73BDD8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001BDBD73BDA0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001BDBD73BD68>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001BDBD852710>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-15 22:26:35,720 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1914440124288>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001BDBD8606A0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001BDBD8605F8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001BDBD860630>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001BDBD860748>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-15 22:26:35,720 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1914440124680>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001BDBD860828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001BDBD8607B8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001BDBD8607F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001BDBD8608D0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-15 22:26:35,720 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1914440123840>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x000001BDBD860470>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001BDBD8600F0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001BDBD852A58>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001BDBD860588>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-15 22:26:35,739 -  * Debugger is active!
+2024-12-15 22:26:35,745 -  * Debugger PIN: 589-825-161
+2024-12-15 22:26:35,838 - 127.0.0.1 - - [15/Dec/2024 22:26:35] "GET / HTTP/1.1" 200 -
+2024-12-15 22:26:35,893 - 127.0.0.1 - - [15/Dec/2024 22:26:35] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-15 22:26:36,534 - 127.0.0.1 - - [15/Dec/2024 22:26:36] "GET / HTTP/1.1" 200 -
+2024-12-15 22:26:36,572 - 127.0.0.1 - - [15/Dec/2024 22:26:36] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-15 22:26:39,644 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-15T22:26:39Z | Session ID: 3f3fb711cbf3bd575d4ed5b409870f92 | Status: successo 
+2024-12-15 22:26:39,661 - 127.0.0.1 - - [15/Dec/2024 22:26:39] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-15 22:26:39,681 - 127.0.0.1 - - [15/Dec/2024 22:26:39] "GET /dashboard HTTP/1.1" 200 -
+2024-12-15 22:26:39,744 - 127.0.0.1 - - [15/Dec/2024 22:26:39] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-15 22:26:42,297 - 127.0.0.1 - - [15/Dec/2024 22:26:42] "GET /account-settings HTTP/1.1" 200 -
+2024-12-15 22:26:43,692 - No potential policies were found
+2024-12-15 22:26:43,692 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1914443180352>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '22:26:43'}}
+2024-12-15 22:26:43,692 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-15T22:26:43Z | Session ID: 3f3fb711cbf3bd575d4ed5b409870f92 | Status: fallimento 
+2024-12-15 22:26:43,693 - 127.0.0.1 - - [15/Dec/2024 22:26:43] "[32mPOST /account-settings HTTP/1.1[0m" 302 -
+2024-12-15 22:26:43,707 - 127.0.0.1 - - [15/Dec/2024 22:26:43] "GET /dashboard HTTP/1.1" 200 -
+2024-12-15 22:26:43,791 - 127.0.0.1 - - [15/Dec/2024 22:26:43] "GET /static/dashboard.css HTTP/1.1" 200 -
+2024-12-15 22:26:45,799 - 127.0.0.1 - - [15/Dec/2024 22:26:45] "GET /notifications HTTP/1.1" 200 -
+2024-12-15 22:26:45,867 - 127.0.0.1 - - [15/Dec/2024 22:26:45] "GET /static/notifications.css HTTP/1.1" 200 -
+2024-12-15 22:26:46,886 - 127.0.0.1 - - [15/Dec/2024 22:26:46] "GET /dashboard HTTP/1.1" 200 -
+2024-12-15 22:26:46,941 - 127.0.0.1 - - [15/Dec/2024 22:26:46] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-15 22:26:47,641 - 127.0.0.1 - - [15/Dec/2024 22:26:47] "GET /notes HTTP/1.1" 200 -
+2024-12-15 22:26:47,753 - 127.0.0.1 - - [15/Dec/2024 22:26:47] "GET /static/notes.css HTTP/1.1" 200 -
+2024-12-15 22:26:48,683 - 127.0.0.1 - - [15/Dec/2024 22:26:48] "GET /add-note HTTP/1.1" 200 -
+2024-12-15 22:26:49,834 - No potential policies were found
+2024-12-15 22:26:49,834 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1914444695368>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '22:26:49'}}
+2024-12-15 22:26:49,834 - Accesso negato: policy restrictiva. Utente: admin1, Azione: modify, Risorsa: note.
+2024-12-15 22:26:49,834 - User: admin1 | Action: creazione | Resource: note | Timestamp: 2024-12-15T22:26:49Z | Session ID: 3f3fb711cbf3bd575d4ed5b409870f92 | Status: fallimento 
+2024-12-15 22:26:49,835 - 127.0.0.1 - - [15/Dec/2024 22:26:49] "POST /add-note HTTP/1.1" 200 -
+2024-12-15 22:26:51,345 - 127.0.0.1 - - [15/Dec/2024 22:26:51] "GET /dashboard HTTP/1.1" 200 -
+2024-12-15 22:26:51,391 - 127.0.0.1 - - [15/Dec/2024 22:26:51] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-15 22:26:52,839 - 127.0.0.1 - - [15/Dec/2024 22:26:52] "GET /add-note HTTP/1.1" 200 -
+2024-12-15 22:26:54,459 - No potential policies were found
+2024-12-15 22:26:54,459 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1914444614064>: {'resource': 'note', 'action': 'modify', 'subject': {'username': 'admin1'}, 'context': {'current_time': '22:26:54'}}
+2024-12-15 22:26:54,459 - Accesso negato: policy restrictiva. Utente: admin1, Azione: modify, Risorsa: note.
+2024-12-15 22:26:54,459 - User: admin1 | Action: creazione | Resource: note | Timestamp: 2024-12-15T22:26:54Z | Session ID: 3f3fb711cbf3bd575d4ed5b409870f92 | Status: fallimento 
+2024-12-15 22:26:54,460 - 127.0.0.1 - - [15/Dec/2024 22:26:54] "POST /add-note HTTP/1.1" 200 -
+2024-12-15 22:26:54,947 - 127.0.0.1 - - [15/Dec/2024 22:26:54] "GET /notes HTTP/1.1" 200 -
+2024-12-15 22:26:54,994 - 127.0.0.1 - - [15/Dec/2024 22:26:54] "[36mGET /static/notes.css HTTP/1.1[0m" 304 -
+2024-12-15 22:26:56,438 - 127.0.0.1 - - [15/Dec/2024 22:26:56] "GET /dashboard HTTP/1.1" 200 -
+2024-12-15 22:26:56,498 - 127.0.0.1 - - [15/Dec/2024 22:26:56] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-15 22:26:57,534 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-15T22:26:57Z | Session ID: 3f3fb711cbf3bd575d4ed5b409870f92 | Status: successo 
+2024-12-15 22:26:57,534 - 127.0.0.1 - - [15/Dec/2024 22:26:57] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-15 22:26:57,547 - 127.0.0.1 - - [15/Dec/2024 22:26:57] "GET / HTTP/1.1" 200 -
+2024-12-15 22:26:57,622 - 127.0.0.1 - - [15/Dec/2024 22:26:57] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-15 22:28:23,730 - Errore durante la richiesta a Vault: 400 Client Error: Bad Request for url: https://127.0.0.1:8200/v1/auth/ldap/login/admin1
+2024-12-15 22:28:23,732 - 127.0.0.1 - - [15/Dec/2024 22:28:23] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-15 22:28:23,753 - 127.0.0.1 - - [15/Dec/2024 22:28:23] "GET / HTTP/1.1" 200 -
+2024-12-15 22:28:23,824 - 127.0.0.1 - - [15/Dec/2024 22:28:23] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-15 22:29:11,137 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2607843515584>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000025F2F84AE10>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000025F2F84ADD8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000025F2F84ADA0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000025F2F961780>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-15 22:29:11,137 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2607843575792>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000025F2F970710>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000025F2F970668>], 'actions': [<vakt.rules.operator.Eq object at 0x0000025F2F9706A0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000025F2F9707B8>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-15 22:29:11,137 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2607843576184>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000025F2F970898>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000025F2F970828>], 'actions': [<vakt.rules.operator.Eq object at 0x0000025F2F970860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000025F2F970940>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-15 22:29:11,138 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2607843575344>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x0000025F2F9704E0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000025F2F970160>], 'actions': [<vakt.rules.operator.Eq object at 0x0000025F2F961AC8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000025F2F9705F8>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-15 22:29:12,023 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-15 22:29:12,024 - [33mPress CTRL+C to quit[0m
+2024-12-15 22:29:12,025 -  * Restarting with stat
+2024-12-15 22:29:12,920 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1290912536504>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000012C9050AE80>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000012C9050AE48>], 'actions': [<vakt.rules.operator.Eq object at 0x0000012C9050AE10>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000012C90517048>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-15 22:29:12,920 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1290912598000>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000012C90630710>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000012C90630668>], 'actions': [<vakt.rules.operator.Eq object at 0x0000012C906306A0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000012C906307B8>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-15 22:29:12,920 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1290912598392>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000012C90630898>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000012C90630828>], 'actions': [<vakt.rules.operator.Eq object at 0x0000012C90630860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000012C90630940>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-15 22:29:12,920 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1290912597552>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x0000012C90630198>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000012C90621CF8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000012C90621B00>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000012C906305F8>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-15 22:29:12,940 -  * Debugger is active!
+2024-12-15 22:29:12,947 -  * Debugger PIN: 589-825-161
+2024-12-15 22:29:12,974 - 127.0.0.1 - - [15/Dec/2024 22:29:12] "GET / HTTP/1.1" 200 -
+2024-12-15 22:29:13,017 - 127.0.0.1 - - [15/Dec/2024 22:29:13] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-15 22:29:16,957 - Errore durante la richiesta a Vault: 400 Client Error: Bad Request for url: https://127.0.0.1:8200/v1/auth/ldap/login/adas
+2024-12-15 22:29:17,001 - 127.0.0.1 - - [15/Dec/2024 22:29:17] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-15 22:29:17,113 - 127.0.0.1 - - [15/Dec/2024 22:29:17] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-15 22:29:17,136 - 127.0.0.1 - - [15/Dec/2024 22:29:17] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-15 22:29:17,224 - 127.0.0.1 - - [15/Dec/2024 22:29:17] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-15 22:29:24,850 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-15T22:29:24Z | Session ID: e005004f708a7258620ee5429025f55c | Status: successo 
+2024-12-15 22:29:24,865 - 127.0.0.1 - - [15/Dec/2024 22:29:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-15 22:29:24,888 - 127.0.0.1 - - [15/Dec/2024 22:29:24] "GET /dashboard HTTP/1.1" 200 -
+2024-12-15 22:29:24,949 - 127.0.0.1 - - [15/Dec/2024 22:29:24] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-15 22:29:37,273 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-15T22:29:37Z | Session ID: e005004f708a7258620ee5429025f55c | Status: successo 
+2024-12-15 22:29:37,274 - 127.0.0.1 - - [15/Dec/2024 22:29:37] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-15 22:29:37,288 - 127.0.0.1 - - [15/Dec/2024 22:29:37] "GET / HTTP/1.1" 200 -
+2024-12-15 22:29:37,366 - 127.0.0.1 - - [15/Dec/2024 22:29:37] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-15 22:29:39,922 - Errore durante la richiesta a Vault: 400 Client Error: Bad Request for url: https://127.0.0.1:8200/v1/auth/ldap/login/admin1
+2024-12-15 22:29:39,925 - 127.0.0.1 - - [15/Dec/2024 22:29:39] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2024-12-15 22:29:39,994 - 127.0.0.1 - - [15/Dec/2024 22:29:39] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-12-15 22:29:40,000 - 127.0.0.1 - - [15/Dec/2024 22:29:40] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-12-15 22:30:02,082 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2589174672352>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000025AD6C49D68>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000025AD6C49D30>], 'actions': [<vakt.rules.operator.Eq object at 0x0000025AD6C49CF8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000025AD6D626A0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-15 22:30:02,082 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2589174728464>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000025AD6D70630>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000025AD6D70588>], 'actions': [<vakt.rules.operator.Eq object at 0x0000025AD6D705C0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000025AD6D706D8>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-15 22:30:02,083 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2589174728856>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000025AD6D707B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000025AD6D70748>], 'actions': [<vakt.rules.operator.Eq object at 0x0000025AD6D70780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000025AD6D70860>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-15 22:30:02,083 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2589174728016>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x0000025AD6D70400>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000025AD6D70080>], 'actions': [<vakt.rules.operator.Eq object at 0x0000025AD6D629E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000025AD6D70518>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-15 22:30:02,951 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-15 22:30:02,951 - [33mPress CTRL+C to quit[0m
+2024-12-15 22:30:02,952 -  * Restarting with stat
+2024-12-15 22:30:03,847 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1640987438216>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000017E1267BDD8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000017E1267BDA0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000017E1267BD68>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000017E12792748>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-15 22:30:03,847 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1640987494328>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000017E127A06D8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000017E127A0630>], 'actions': [<vakt.rules.operator.Eq object at 0x0000017E127A0668>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000017E127A0780>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-15 22:30:03,847 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1640987494720>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000017E127A0860>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000017E127A07F0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000017E127A0828>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000017E127A0908>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-15 22:30:03,847 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1640987493880>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x0000017E127A04A8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000017E127A0128>], 'actions': [<vakt.rules.operator.Eq object at 0x0000017E12792A90>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000017E127A05C0>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-15 22:30:03,868 -  * Debugger is active!
+2024-12-15 22:30:03,873 -  * Debugger PIN: 589-825-161
+2024-12-15 22:30:03,900 - 127.0.0.1 - - [15/Dec/2024 22:30:03] "GET / HTTP/1.1" 200 -
+2024-12-15 22:30:03,941 - 127.0.0.1 - - [15/Dec/2024 22:30:03] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-15 22:30:07,830 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-15T22:30:07Z | Session ID: b284b449367451458fc06ab26d25612b | Status: successo 
+2024-12-15 22:30:07,846 - 127.0.0.1 - - [15/Dec/2024 22:30:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-15 22:30:07,868 - 127.0.0.1 - - [15/Dec/2024 22:30:07] "GET /dashboard HTTP/1.1" 200 -
+2024-12-15 22:30:07,940 - 127.0.0.1 - - [15/Dec/2024 22:30:07] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-15 22:30:09,909 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-15T22:30:09Z | Session ID: b284b449367451458fc06ab26d25612b | Status: successo 
+2024-12-15 22:30:09,910 - 127.0.0.1 - - [15/Dec/2024 22:30:09] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-15 22:30:09,924 - 127.0.0.1 - - [15/Dec/2024 22:30:09] "GET / HTTP/1.1" 200 -
+2024-12-15 22:30:10,014 - 127.0.0.1 - - [15/Dec/2024 22:30:10] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-15 22:30:12,613 - Errore durante la richiesta a Vault: 400 Client Error: Bad Request for url: https://127.0.0.1:8200/v1/auth/ldap/login/adm
+2024-12-15 22:30:12,613 - User: adm | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-15T22:30:12Z | Session ID: 0 | Status: fallimento 
+2024-12-15 22:30:12,614 - 127.0.0.1 - - [15/Dec/2024 22:30:12] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-15 22:30:12,632 - 127.0.0.1 - - [15/Dec/2024 22:30:12] "GET / HTTP/1.1" 200 -
+2024-12-15 22:30:12,699 - 127.0.0.1 - - [15/Dec/2024 22:30:12] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-15 22:32:26,255 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2094031768936>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001E78DF3AEF0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E78DF3AEB8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E78DF3AE80>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E78E050828>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-15 22:32:26,255 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2094031829144>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001E78E05F7B8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E78E05F710>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E78E05F748>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E78E05F860>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-15 22:32:26,255 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2094031829536>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001E78E05F940>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E78E05F8D0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E78E05F908>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E78E05F9E8>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-15 22:32:26,255 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2094031828696>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x000001E78E05F588>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001E78E05F208>], 'actions': [<vakt.rules.operator.Eq object at 0x000001E78E050B70>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001E78E05F6A0>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-15 22:32:27,141 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-15 22:32:27,141 - [33mPress CTRL+C to quit[0m
+2024-12-15 22:32:27,142 -  * Restarting with stat
+2024-12-15 22:32:28,009 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2781815442792>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000287B10DBF60>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000287B10DBF28>], 'actions': [<vakt.rules.operator.Eq object at 0x00000287B10DBEF0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000287B11F0828>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-15 22:32:28,009 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2781815503000>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x00000287B11FF7B8>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x00000287B11FF710>], 'actions': [<vakt.rules.operator.Eq object at 0x00000287B11FF748>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000287B11FF860>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-15 22:32:28,009 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2781815503392>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000287B11FF940>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000287B11FF8D0>], 'actions': [<vakt.rules.operator.Eq object at 0x00000287B11FF908>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000287B11FF9E8>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-15 22:32:28,009 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2781815502552>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x00000287B11FF588>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000287B11FF208>], 'actions': [<vakt.rules.operator.Eq object at 0x00000287B11F0B70>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000287B11FF6A0>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-15 22:32:28,028 -  * Debugger is active!
+2024-12-15 22:32:28,034 -  * Debugger PIN: 589-825-161
+2024-12-15 22:32:28,060 - 127.0.0.1 - - [15/Dec/2024 22:32:28] "GET / HTTP/1.1" 200 -
+2024-12-15 22:32:28,098 - 127.0.0.1 - - [15/Dec/2024 22:32:28] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-15 22:32:30,995 - User: admin1 | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-15T22:32:30Z | Session ID: a06a31632378fc706635292f28b87697 | Status: successo 
+2024-12-15 22:32:31,010 - 127.0.0.1 - - [15/Dec/2024 22:32:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-15 22:32:31,029 - 127.0.0.1 - - [15/Dec/2024 22:32:31] "GET /dashboard HTTP/1.1" 200 -
+2024-12-15 22:32:31,088 - 127.0.0.1 - - [15/Dec/2024 22:32:31] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-15 22:32:32,923 - 127.0.0.1 - - [15/Dec/2024 22:32:32] "GET /account-settings HTTP/1.1" 200 -
+2024-12-15 22:32:34,042 - No potential policies were found
+2024-12-15 22:32:34,042 - Incoming Inquiry was rejected. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 2781819897280>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'admin'}, 'context': {'current_time': '22:32:34'}}
+2024-12-15 22:32:34,042 - User: admin1 | Action: theme-change | Resource: account settings | Timestamp: 2024-12-15T22:32:34Z | Session ID: a06a31632378fc706635292f28b87697 | Status: fallimento 
+2024-12-15 22:32:34,043 - 127.0.0.1 - - [15/Dec/2024 22:32:34] "[32mPOST /account-settings HTTP/1.1[0m" 302 -
+2024-12-15 22:32:34,057 - 127.0.0.1 - - [15/Dec/2024 22:32:34] "GET /dashboard HTTP/1.1" 200 -
+2024-12-15 22:32:34,124 - 127.0.0.1 - - [15/Dec/2024 22:32:34] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-15 22:32:45,205 - User: admin1 | Action: logout | Resource: sistema | Timestamp: 2024-12-15T22:32:45Z | Session ID: a06a31632378fc706635292f28b87697 | Status: successo 
+2024-12-15 22:32:45,205 - 127.0.0.1 - - [15/Dec/2024 22:32:45] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-15 22:32:45,218 - 127.0.0.1 - - [15/Dec/2024 22:32:45] "GET / HTTP/1.1" 200 -
+2024-12-15 22:32:45,282 - 127.0.0.1 - - [15/Dec/2024 22:32:45] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-15 22:33:08,703 -  * Detected change in 'C:\\Users\\utente\\Desktop\\System Security\\hw7\\XACML\\vakt_manager.py', reloading
+2024-12-15 22:33:08,786 -  * Restarting with stat
+2024-12-15 22:33:11,146 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2378923384000>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x00000229E2D0AE48>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000229E2D0ADD8>], 'actions': [<vakt.rules.operator.Eq object at 0x00000229E2D0ADA0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000229E2E21780>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-15 22:33:11,147 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2378923444208>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x00000229E2E30710>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x00000229E2E30668>], 'actions': [<vakt.rules.operator.Eq object at 0x00000229E2E306A0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000229E2E307B8>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-15 22:33:11,147 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2378923444600>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x00000229E2E30898>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000229E2E30828>], 'actions': [<vakt.rules.operator.Eq object at 0x00000229E2E30860>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000229E2E30940>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-15 22:33:11,147 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2378923443760>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x00000229E2E304E0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x00000229E2E30160>], 'actions': [<vakt.rules.operator.Eq object at 0x00000229E2E21AC8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x00000229E2E305F8>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-15 22:33:12,023 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-15 22:33:12,023 - [33mPress CTRL+C to quit[0m
+2024-12-15 22:33:12,025 -  * Restarting with stat
+2024-12-15 22:33:12,905 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2121756445944>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001EE0278BE80>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001EE0278BE48>], 'actions': [<vakt.rules.operator.Eq object at 0x000001EE0278BE10>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001EE028A07B8>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-15 22:33:12,906 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2121756506152>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001EE028AF748>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001EE028AF6A0>], 'actions': [<vakt.rules.operator.Eq object at 0x000001EE028AF6D8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001EE028AF7F0>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-15 22:33:12,906 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2121756506544>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001EE028AF8D0>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001EE028AF860>], 'actions': [<vakt.rules.operator.Eq object at 0x000001EE028AF898>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001EE028AF978>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-15 22:33:12,906 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2121756505704>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x000001EE028AF518>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001EE028AF198>], 'actions': [<vakt.rules.operator.Eq object at 0x000001EE028A0B00>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001EE028AF630>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-15 22:33:12,925 -  * Debugger is active!
+2024-12-15 22:33:12,930 -  * Debugger PIN: 589-825-161
+2024-12-15 22:33:13,951 - 127.0.0.1 - - [15/Dec/2024 22:33:13] "GET / HTTP/1.1" 200 -
+2024-12-15 22:33:13,997 - 127.0.0.1 - - [15/Dec/2024 22:33:13] "[36mGET /static/login.css HTTP/1.1[0m" 304 -
+2024-12-15 22:33:18,506 - User: giadaott | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-15T22:33:18Z | Session ID: 06334f3536afee7dbf1d912bef1e93aa | Status: successo 
+2024-12-15 22:33:18,550 - 127.0.0.1 - - [15/Dec/2024 22:33:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-15 22:33:18,569 - 127.0.0.1 - - [15/Dec/2024 22:33:18] "GET /dashboard HTTP/1.1" 200 -
+2024-12-15 22:33:18,637 - 127.0.0.1 - - [15/Dec/2024 22:33:18] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-15 22:33:19,740 - 127.0.0.1 - - [15/Dec/2024 22:33:19] "GET /account-settings HTTP/1.1" 200 -
+2024-12-15 22:34:24,459 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2400810970192>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x0000022EFB6A9DD8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000022EFB6A9DA0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000022EFB6A9D68>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000022EFB7C2710>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-15 22:34:24,459 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2400811026304>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x0000022EFB7D06A0>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x0000022EFB7D05F8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000022EFB7D0630>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000022EFB7D0748>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-15 22:34:24,459 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2400811026696>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x0000022EFB7D0828>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000022EFB7D07B8>], 'actions': [<vakt.rules.operator.Eq object at 0x0000022EFB7D07F0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000022EFB7D08D0>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-15 22:34:24,459 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 2400811025856>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x0000022EFB7D0470>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x0000022EFB7D00F0>], 'actions': [<vakt.rules.operator.Eq object at 0x0000022EFB7C2A58>], 'context': {'current_time': <vakt.rules.logic.And object at 0x0000022EFB7D0588>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-15 22:34:25,356 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.1.41:5000
+2024-12-15 22:34:25,356 - [33mPress CTRL+C to quit[0m
+2024-12-15 22:34:25,358 -  * Restarting with stat
+2024-12-15 22:34:26,327 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1971513011168>: {'uid': 123456, 'type': 2, 'subjects': [{'username': <vakt.rules.logic.Any object at 0x000001CB0743CD30>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001CB0743CCF8>], 'actions': [<vakt.rules.operator.Eq object at 0x000001CB0743CCC0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001CB075526A0>}, 'description': 'Consenti la modifica delle note solo tra le 9:00 e le 18:00'}
+2024-12-15 22:34:26,327 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1971513067280>: {'uid': 123458, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Not object at 0x000001CB07560630>}], 'effect': 'deny', 'resources': [<vakt.rules.string.StartsWith object at 0x000001CB07560588>], 'actions': [<vakt.rules.operator.Eq object at 0x000001CB075605C0>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001CB075606D8>}, 'description': 'Negare la modifica del tema agli utenti non manager tra le 16:00 e le 7:59'}
+2024-12-15 22:34:26,327 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1971513067672>: {'uid': 123459, 'type': 2, 'subjects': [{'role': <vakt.rules.operator.Eq object at 0x000001CB075607B8>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001CB07560748>], 'actions': [<vakt.rules.operator.Eq object at 0x000001CB07560780>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001CB07560860>}, 'description': 'Permette ai manager di modificare il tema solo tra le 8:00 e le 17:00'}
+2024-12-15 22:34:26,327 - Added Policy: <class 'vakt.policy.Policy'> <Object ID 1971513066832>: {'uid': 123457, 'type': 2, 'subjects': [{'role': <vakt.rules.logic.Any object at 0x000001CB07560400>}], 'effect': 'allow', 'resources': [<vakt.rules.string.StartsWith object at 0x000001CB07560080>], 'actions': [<vakt.rules.operator.Eq object at 0x000001CB075529E8>], 'context': {'current_time': <vakt.rules.logic.And object at 0x000001CB07560518>}, 'description': 'Permette a tutti gli utenti di modificare il tema tra le 08:00 e le 16:00'}
+2024-12-15 22:34:26,348 -  * Debugger is active!
+2024-12-15 22:34:26,354 -  * Debugger PIN: 589-825-161
+2024-12-15 22:34:27,594 - 127.0.0.1 - - [15/Dec/2024 22:34:27] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2024-12-15 22:34:27,617 - 127.0.0.1 - - [15/Dec/2024 22:34:27] "GET / HTTP/1.1" 200 -
+2024-12-15 22:34:27,666 - 127.0.0.1 - - [15/Dec/2024 22:34:27] "GET /static/login.css HTTP/1.1" 200 -
+2024-12-15 22:34:31,176 - User: giadaott | Action: accesso | Resource: pagina di login | Timestamp: 2024-12-15T22:34:31Z | Session ID: ffc1c23ebfaa18889d69d6cd62370e01 | Status: successo 
+2024-12-15 22:34:31,193 - 127.0.0.1 - - [15/Dec/2024 22:34:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-15 22:34:31,214 - 127.0.0.1 - - [15/Dec/2024 22:34:31] "GET /dashboard HTTP/1.1" 200 -
+2024-12-15 22:34:31,284 - 127.0.0.1 - - [15/Dec/2024 22:34:31] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-15 22:34:32,206 - 127.0.0.1 - - [15/Dec/2024 22:34:32] "GET /account-settings HTTP/1.1" 200 -
+2024-12-15 22:34:34,123 - All matching policies have allow effect
+2024-12-15 22:34:34,123 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1971517503304>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '22:34:34'}}
+2024-12-15 22:34:34,180 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-15T22:34:34Z | Session ID: ffc1c23ebfaa18889d69d6cd62370e01 | Status: successo 
+2024-12-15 22:34:34,183 - 127.0.0.1 - - [15/Dec/2024 22:34:34] "POST /account-settings HTTP/1.1" 200 -
+2024-12-15 22:34:35,058 - All matching policies have allow effect
+2024-12-15 22:34:35,058 - Incoming Inquiry was allowed. Inquiry: <class 'vakt.guard.Inquiry'> <Object ID 1971517503808>: {'resource': 'theme', 'action': 'modify', 'subject': {'role': 'manager'}, 'context': {'current_time': '22:34:35'}}
+2024-12-15 22:34:35,100 - User: giadaott | Action: theme-change | Resource: account settings | Timestamp: 2024-12-15T22:34:35Z | Session ID: ffc1c23ebfaa18889d69d6cd62370e01 | Status: successo 
+2024-12-15 22:34:35,103 - 127.0.0.1 - - [15/Dec/2024 22:34:35] "POST /account-settings HTTP/1.1" 200 -
+2024-12-15 22:34:35,675 - 127.0.0.1 - - [15/Dec/2024 22:34:35] "GET /dashboard HTTP/1.1" 200 -
+2024-12-15 22:34:35,728 - 127.0.0.1 - - [15/Dec/2024 22:34:35] "[36mGET /static/dashboard.css HTTP/1.1[0m" 304 -
+2024-12-15 22:34:37,227 - User: giadaott | Action: logout | Resource: sistema | Timestamp: 2024-12-15T22:34:37Z | Session ID: ffc1c23ebfaa18889d69d6cd62370e01 | Status: successo 
+2024-12-15 22:34:37,228 - 127.0.0.1 - - [15/Dec/2024 22:34:37] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-15 22:34:37,244 - 127.0.0.1 - - [15/Dec/2024 22:34:37] "GET / HTTP/1.1" 200 -
+2024-12-15 22:34:37,313 - 127.0.0.1 - - [15/Dec/2024 22:34:37] "[36mGET /static/login.css HTTP/1.1[0m" 304 -

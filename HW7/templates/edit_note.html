@@ -89,7 +89,7 @@
     <div class="note-container">
         <form method="POST" class="note-form">
             {{ form.hidden_tag() }}
-            <textarea name="content" rows="4" cols="50">{{ form.content.data | e }}</textarea><br>
+            <textarea name="content" rows="4" cols="50">{{ form.content.data }}</textarea><br>
             <button type="submit">Salva Modifiche</button>
         </form>
 

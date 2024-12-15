@@ -17,7 +17,6 @@ def log_audit(username, action, resource, timestamp, session_id, status):
     :param timestamp: Timestamp dell'operazione.
     :param session_id: ID della sessione dell'utente.
     :param status: Stato dell'operazione (es. 'successo', 'fallimento').
-    :param error: Errore operazione.
     """
     
     log_message = f"User: {username} | Action: {action} | Resource: {resource} | Timestamp: {timestamp} | Session ID: {session_id} | Status: {status} "

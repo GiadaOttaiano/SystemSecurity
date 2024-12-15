@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SelectField, SubmitField
-from wtforms.validators import InputRequired
+from wtforms.validators import InputRequired, Length
 
 # Form per il login
 class LoginForm(FlaskForm):
@@ -13,7 +13,7 @@ class ThemeForm(FlaskForm):
     
 # Form per la creazione di una nuova nota
 class NoteForm(FlaskForm):
-    content = StringField('Contenuto', validators=[InputRequired()])
+    content = StringField('Contenuto', validators=[InputRequired(), Length(min=1, max=100)])
     
 # Form per la cancellazione di una nota
 class DeleteNoteForm(FlaskForm):

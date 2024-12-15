@@ -201,7 +201,7 @@
             {% for note in notes %}
                 <div class="note-card">
                     <h3>Nota scritta da: {{ note.username }}</h3>
-                    <p>{{ note.content | e }}</p>
+                    <p>{{ note.content }}</p>
                     <div class="note-actions">
                         <a href="/edit-note/{{ note.id }}" class="note-btn">Modifica</a>
                         <form action="/delete-note/{{ note.id }}" method="POST" style="display:inline;">

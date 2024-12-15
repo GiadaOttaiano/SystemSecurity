@@ -110,7 +110,7 @@
         <form method="POST" class="note-form">
             {{ form.hidden_tag() }}
             <label for="content">Contenuto della Nota:</label>
-            <textarea name="content" id="content" rows="4" cols="50">{{ form.content().data | e }}</textarea><br><br>
+            <textarea name="content" id="content" rows="4" cols="50">{{ form.content().data }}</textarea><br><br>
              <!-- Usa il form.content() per integrare il campo -->
             <button type="submit">Aggiungi Nota</button>
         </form>

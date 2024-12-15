@@ -7,8 +7,12 @@ import logging
 from form import LoginForm, ThemeForm, NoteForm, DeleteNoteForm, NotificationForm
 from flask_wtf.csrf import CSRFProtect
 from markupsafe import escape  
+from werkzeug.exceptions import BadRequest
 import logging_manager
 import XACML.vakt_manager
+import json
+import jsonschema
+import re
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(32)
@@ -32,6 +36,7 @@ storage = XACML.vakt_manager.vakt.MemoryStorage()
 storage.add(XACML.vakt_manager.policy_note)
 storage.add(XACML.vakt_manager.policy_theme_non_manager_deny)
 storage.add(XACML.vakt_manager.policy_theme)
+storage.add(XACML.vakt_manager.policy_theme_all_users_allow)
 guard = XACML.vakt_manager.vakt.Guard(storage, XACML.vakt_manager.vakt.RulesChecker())
 
 # Modelli di database
@@ -70,24 +75,21 @@ def create_notification(username, message):
     notification = Notification(username=username, message=message)
     db.session.add(notification)
     db.session.commit()
-    
-# Funzioni di sicurezza
-@app.after_request
-def add_security_headers(response):
-    response.headers['X-Content-Type-Options'] = 'nosniff'
-    response.headers['X-Frame-Options'] = 'DENY'
-    response.headers['X-XSS-Protection'] = '1; mode=block'
-    response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains; preload'
-    response.headers['Content-Security-Policy'] = (
-        "default-src 'self'; "
-        "script-src 'self'; "
-        "style-src 'self'; "
-        "img-src 'self'; "
-        "font-src 'self'; "
-        "connect-src 'self'; "
-        "frame-ancestors 'none';"
-    )
-    return response
+
+# Definizione di uno schema JSON per validare i dati di risposta da Vault
+vault_response_schema = {
+    "type": "object",
+    "properties": {
+        "auth": {
+            "type": "object",
+            "properties": {
+                "client_token": {"type": "string"},
+            },
+            "required": ["client_token"],
+        }
+    },
+    "required": ["auth"]
+}
 
 @app.before_request
 def check_session_timeout():
@@ -111,7 +113,6 @@ def check_session_timeout():
         # Aggiorna il timestamp nella sessione
         session["last_activity"] = datetime.now()
 
-
 @app.route("/", methods=["GET", "POST"])
 def index():
     form = LoginForm()
@@ -128,14 +129,20 @@ def login():
     password = request.form.get("password")
     
     timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
-
     url = f"{VAULT_ADDR}/v1/auth/ldap/login/{username}"
     payload = {"password": password}
+
     try:
-        response = requests.post(url, json=payload, verify=VAULT_VERIFY)
+        # Imposta header per evitare vulnerabilità legate a Content-Type
+        headers = {"Content-Type": "application/json"}
+
+        response = requests.post(url, json=payload, headers=headers, verify=VAULT_VERIFY)
         response.raise_for_status()
 
+        # Validazione del JSON di risposta
         data = response.json()
+        jsonschema.validate(instance=data, schema=vault_response_schema)
+
         session["vault_token"] = data["auth"]["client_token"]
         session["username"] = username
         session["last_activity"] = datetime.now()
@@ -159,23 +166,42 @@ def login():
         
         logging_manager.log_login(username, timestamp, "pagina di login", session["session_id"], True)
 
+        # Recupero del tema e del ruolo
         role = "standard"
         theme = "light"
         url = f"{VAULT_ADDR}/v1/kv/data/secret/webapp-ldap/{username}"
         headers = {"X-Vault-Token": session["vault_token"]}
         response = requests.get(url, headers=headers, verify=VAULT_VERIFY)
+
         if response.status_code == 200:
+            # Validazione del JSON segreto
             secret_data = response.json().get("data", {}).get("data", {})
+            if not isinstance(secret_data, dict):
+                raise ValueError("La struttura del JSON segreto non è valida.")
+
             theme = secret_data.get("theme", "light")
             role = secret_data.get("role", "standard")
+
         session["theme"] = theme
         session["role"] = role
 
         return redirect("/dashboard")
-    except requests.exceptions.RequestException:
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Errore durante la richiesta a Vault: {e}")
+        logging_manager.log_login(username, timestamp, "pagina di login", 0, False)
         flash("Credenziali non valide. Riprova.", "error")
         return redirect("/")
-    
+    except jsonschema.exceptions.ValidationError as e:
+        logging.error(f"JSON non valido ricevuto da Vault: {e}")
+        logging_manager.log_login(username, timestamp, "pagina di login", 0, False)
+        flash("Errore del server. Contatta l'amministratore.", "error")
+        return redirect("/")
+    except ValueError as e:
+        logging.error(f"Errore nella struttura JSON segreta: {e}")
+        logging_manager.log_login(username, timestamp, "pagina di login", 0, False)
+        flash("Errore del server. Contatta l'amministratore.", "error")
+        return redirect("/")
+
 @app.route("/dashboard", methods=["GET", "POST"])
 def dashboard():
     if "vault_token" not in session:
@@ -187,18 +213,44 @@ def dashboard():
 
     if request.method == "POST":
         new_theme = request.form.get("theme")
+        
+        # Aggiungere validazione per il theme (assicurarsi che sia un valore accettabile)
+        if not new_theme or not re.match("^[a-zA-Z0-9_-]+$", new_theme):
+            flash("Tema non valido. Scegli un tema valido.", "error")
+            return redirect("/dashboard")
+        
         try:
+            # Ottieni i dati da Vault
             url = f"{VAULT_ADDR}/v1/kv/data/secret/webapp-ldap/{username}"
             headers = {"X-Vault-Token": session["vault_token"]}
             response = requests.get(url, headers=headers, verify=VAULT_VERIFY)
             response.raise_for_status()
 
-            secret_data = response.json().get("data", {}).get("data", {})
+            # Validazione del JSON di risposta
+            data = response.json()
+            jsonschema.validate(instance=data, schema=vault_response_schema)  
+
+            # Dump dei dati JSON ricevuti (per log e debug)
+            secret_data = data.get("data", {}).get("data", {})
+            json_data = json.dumps(secret_data, indent=4)  # Serializzazione del JSON
+            logging.info(f"JSON ricevuto da Vault: {json_data}")  # Log del JSON
+
+            # Verifica che i dati siano nel formato corretto prima di aggiornarli
+            if not isinstance(secret_data, dict):
+                raise ValueError("La struttura del JSON segreto non è valida.")
+
             secret_data["theme"] = new_theme
 
             # Verifica che l'utente abbia il permesso di aggiornare il tema
             if role == "admin" or role == "standard":
                 payload = {"data": secret_data}
+
+                # Validazione JSON per il payload
+                try:
+                    json.dumps(payload)  # Verifica che il payload sia serializzabile in JSON
+                except (TypeError, ValueError) as e:
+                    raise BadRequest(f"Errore di serializzazione JSON: {e}")
+
                 response = requests.post(url, headers=headers, json=payload, verify=VAULT_VERIFY)
                 response.raise_for_status()
 
@@ -207,9 +259,23 @@ def dashboard():
                 flash("Non hai i permessi per modificare il tema.", "error")
 
         except requests.exceptions.RequestException as e:
-            return f"Failed to update theme: {e}", 500
+            flash(f"Failed to update theme: {e}", "error")
+            return redirect("/dashboard")
+        except BadRequest as e:
+            flash(f"Errore nella richiesta: {e}", "error")
+            return redirect("/dashboard")
+        except jsonschema.exceptions.ValidationError as e:
+            logging.error(f"JSON non valido ricevuto da Vault: {e}")
+            flash("Errore del server. Contatta l'amministratore.", "error")
+            return redirect("/dashboard")
+        except ValueError as e:
+            logging.error(f"Errore nella struttura JSON segreta: {e}")
+            flash("Errore del server. Contatta l'amministratore.", "error")
+            return redirect("/dashboard")
 
+    # Rendi visibile il tema e il ruolo nella dashboard
     return render_template("dashboard.html", username=username, theme=theme, role=role)
+
 
 @app.route("/account-settings", methods=["GET", "POST"])
 def account_settings():
@@ -229,7 +295,7 @@ def account_settings():
         inquiry = XACML.vakt_manager.vakt.Inquiry(
             action='modify',
             resource='theme',
-            subject={'role': session['role']},  # Solo per il manager
+            subject={'role': session['role']}, 
             context={'current_time': current_time}
         )
 
@@ -256,6 +322,7 @@ def account_settings():
             response.raise_for_status()
 
             session["theme"] = new_theme  # Aggiorna il tema nella sessione
+            session["last_activity"] = datetime.now()
             
             logging_manager.theme(username, timestamp, "account settings", session["session_id"], True)
             flash("Tema modificato con successo!", "success")
@@ -264,7 +331,6 @@ def account_settings():
             flash(f"Errore nell'aggiornamento del tema: {e}", "error")
 
     return render_template("account_settings.html", username=username, role=role, theme=theme, form=form)
-
 
 @app.route("/notifications", methods=["GET", "POST"])
 def notifications():
@@ -284,6 +350,7 @@ def notifications():
     if form.submit_clear_all.data and form.validate_on_submit():
         Notification.query.filter_by(username=username).delete()
         db.session.commit()
+        session["last_activity"] = datetime.now()
         flash("Tutte le notifiche sono state eliminate.", "success")
         return redirect("/notifications")
 
@@ -291,13 +358,13 @@ def notifications():
     form_delete = {}
     for notification in user_notifications:
         form_delete[notification.id] = NotificationForm()
+        session["last_activity"] = datetime.now()
 
     return render_template("notifications.html", 
                            notifications=user_notifications, 
                            theme=theme,
                            form=form,
                            form_delete=form_delete)
-
 
 @app.route("/notifications/clear-all", methods=["POST"])
 def clear_all_notifications():
@@ -340,8 +407,10 @@ def notes():
 
     if role == "admin" or role == "manager":
         all_notes = Note.query.all()
+        session["last_activity"] = datetime.now()
     else:
         all_notes = Note.query.filter_by(username=username).all()
+        session["last_activity"] = datetime.now()
 
     return render_template("notes.html", notes=all_notes, role=role, theme=theme, form=form)
 
@@ -363,6 +432,7 @@ def add_note():
             subject={'username': session['username']},
             context={'current_time': current_time}
         )
+        session["last_activity"] = datetime.now()
 
         if guard.is_allowed(inquiry):
             
@@ -417,6 +487,7 @@ def edit_note(id):
             subject={'username': session['username']},
             context={'current_time': current_time}
         )
+        session["last_activity"] = datetime.now()
 
         if guard.is_allowed(inquiry):  # Verifica se l'utente ha il permesso tramite guard
             if form.validate_on_submit():  # Se il form è valido
@@ -464,6 +535,7 @@ def delete_note(id):
             subject={'username': session['username']},
             context={'current_time': current_time}
         )
+        session["last_activity"] = datetime.now()
 
         if guard.is_allowed(inquiry):
             content = note.content
